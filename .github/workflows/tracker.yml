@@ -2,35 +2,39 @@ name: ME Legal Jobs Tracker
 
 on:
   schedule:
-    # Run full collection every day at 06:00 UTC (9:00 AM Dubai / GST)
+    # Full collection + training — daily at 06:00 UTC (09:00 Dubai/GST)
     - cron: "0 6 * * *"
-    # Weekly digest every Sunday at 08:00 UTC
+    # Weekly digest — Sunday 08:00 UTC
     - cron: "0 8 * * 0"
+    # Self-training only — every 2 hours (runs evolution engine against existing DB)
+    - cron: "0 */2 * * *"
   workflow_dispatch:
     inputs:
       mode:
-        description: "Run mode: 'collect' (default) or 'digest'"
+        description: "Run mode"
         required: false
         default: "collect"
+        type: choice
+        options:
+          - collect
+          - digest
+          - train
+          - dashboard
       firm:
-        description: "Single firm ID to test (e.g. latham, white_case)"
+        description: "Single firm ID (optional, e.g. latham)"
         required: false
         default: ""
 
 jobs:
   track:
     runs-on: ubuntu-latest
-    timeout-minutes: 120
-
-    # Write dashboard to GitHub Pages branch
-    permissions:
-      contents: write
-      pages: write
-      id-token: write
+    timeout-minutes: 55
 
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Set up Python 3.11
         uses: actions/setup-python@v5
@@ -50,54 +54,73 @@ jobs:
       - name: Restore database from cache
         uses: actions/cache@v4
         with:
-          path: me_legal_jobs.db
-          key: melegal-db-${{ github.run_id }}
-          restore-keys: melegal-db-
+          path: |
+            me_legal_jobs.db
+            learned_weights.json
+            learning/trend_report.json
+          key: db-${{ github.run_id }}
+          restore-keys: db-
 
-      # ── Collect mode (daily) ────────────────────────────────────────────
-      - name: Run tracker — daily collection
-        if: github.event_name == 'schedule' && github.event.schedule == '0 6 * * *'
-        env:
-          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
-          TELEGRAM_CHAT_ID:   ${{ secrets.TELEGRAM_CHAT_ID }}
-        run: python main.py
-
-      # ── Digest mode (Sunday) ────────────────────────────────────────────
-      - name: Run tracker — weekly digest
-        if: github.event_name == 'schedule' && github.event.schedule == '0 8 * * 0'
-        env:
-          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
-          TELEGRAM_CHAT_ID:   ${{ secrets.TELEGRAM_CHAT_ID }}
-        run: python main.py --digest
-
-      # ── Manual dispatch ─────────────────────────────────────────────────
-      - name: Run tracker — manual dispatch
-        if: github.event_name == 'workflow_dispatch'
-        env:
-          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
-          TELEGRAM_CHAT_ID:   ${{ secrets.TELEGRAM_CHAT_ID }}
+      - name: Determine run mode
+        id: mode
         run: |
-          if [ "${{ github.event.inputs.mode }}" = "digest" ]; then
+          GITHUB_EVENT="${{ github.event_name }}"
+          INPUT_MODE="${{ github.event.inputs.mode }}"
+          CRON_EXPR="${{ github.event.schedule }}"
+
+          if [ "$GITHUB_EVENT" = "workflow_dispatch" ]; then
+            echo "mode=$INPUT_MODE" >> $GITHUB_OUTPUT
+          elif [ "$CRON_EXPR" = "0 8 * * 0" ]; then
+            echo "mode=digest" >> $GITHUB_OUTPUT
+          elif [ "$CRON_EXPR" = "0 */2 * * *" ]; then
+            echo "mode=train" >> $GITHUB_OUTPUT
+          else
+            echo "mode=collect" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Run tracker — ${{ steps.mode.outputs.mode }}
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID:   ${{ secrets.TELEGRAM_CHAT_ID }}
+          DASHBOARD_URL:      "https://middle-east-jobs-tracker.vercel.app/"
+          ENABLE_SELF_TRAINING: "true"
+          TRAINING_INTERVAL_HOURS: "2"
+        run: |
+          MODE="${{ steps.mode.outputs.mode }}"
+          FIRM="${{ github.event.inputs.firm }}"
+          if [ "$MODE" = "digest" ]; then
             python main.py --digest
-          elif [ -n "${{ github.event.inputs.firm }}" ]; then
-            python main.py --firm ${{ github.event.inputs.firm }}
+          elif [ "$MODE" = "train" ]; then
+            python main.py --train
+          elif [ "$MODE" = "dashboard" ]; then
+            python main.py --dashboard
+          elif [ -n "$FIRM" ]; then
+            python main.py --firm "$FIRM"
           else
             python main.py
           fi
 
-      # ── Publish dashboard to GitHub Pages ──────────────────────────────
-      - name: Commit dashboard to docs/
+      - name: Commit dashboard + weights to repo
+        if: steps.mode.outputs.mode != 'train'
         run: |
           git config user.name  "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add docs/
-          git diff --cached --quiet || git commit -m "dashboard: update $(date -u '+%Y-%m-%d %H:%M UTC')"
+          git add docs/ learned_weights.json learning/ || true
+          git diff --cached --quiet || git commit -m "tracker: update $(date -u '+%Y-%m-%d %H:%M UTC') [${{ steps.mode.outputs.mode }}]"
           git push
 
-      # ── Upload log ──────────────────────────────────────────────────────
+      - name: Commit training weights only
+        if: steps.mode.outputs.mode == 'train'
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add learned_weights.json learning/ || true
+          git diff --cached --quiet || git commit -m "training: weight update $(date -u '+%Y-%m-%d %H:%M UTC')"
+          git push
+
       - name: Upload tracker log
-        uses: actions/upload-artifact@v4
         if: always()
+        uses: actions/upload-artifact@v4
         with:
           name: tracker-log-${{ github.run_id }}
           path: tracker.log
