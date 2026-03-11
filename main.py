@@ -1,25 +1,26 @@
 """
-ME Legal Jobs Tracker — main entry point  (v2)
+ME Legal Jobs Tracker — main entry point  (v3)
 
-CHANGES v2:
-  - 10 scrapers (added GoogleNewsScraper, Law360MEScraper, LinkedInPeopleScraper)
-  - Self-training evolution engine runs after every collection cycle
-  - Learning weights applied to every signal in real-time
-  - Circuit breaker report printed at end of each run
-  - Dashboard URL fixed to https://middle-east-jobs-tracker.vercel.app/
+v3 Changes:
+  - 13 scrapers: added LegalMediaScraper (The Oath/LexisNexis) + ALSPScraper
+  - 24 tracked US firms: added Paul Hastings, Morgan Lewis
+  - 24 recruiters in RecruiterScraper cache
+  - 14 job boards in JobBoardsScraper (GulfTalent, Jameson, 3× Indeed, Jooble, GulfJoblo…)
+  - FIXED: All Telegram alerts in ONE batched message (flush_instant_alerts)
+  - FIXED: efinancialcareers.ae, glassdoor.ae, arabianbusiness.com added to dead/ssl lists
+  - FIXED: GH Actions DB cache — save after every run so training job can find it
+  - Enhanced self-training: 7 training dimensions, source reliability report
+  - New signal types: regulatory_filing, contract_role
 
 Run modes:
-  python main.py                   — full collect + analyse + dashboard
-  python main.py --digest          — weekly digest from existing DB
-  python main.py --dashboard       — regenerate dashboard only
-  python main.py --train           — run evolution engine only
-  python main.py --firm latham     — single firm (testing)
-  python main.py --list-firms      — print all firm IDs
+  python main.py             — full collect → analyse → dashboard → 1 Telegram alert
+  python main.py --digest    — send weekly digest from existing DB
+  python main.py --dashboard — regenerate dashboard only
+  python main.py --train     — run evolution engine only (no scraping)
+  python main.py --firm X    — single firm
+  python main.py --list-firms
 """
-
-import argparse
-import logging
-import sys
+import argparse, logging, sys
 from datetime import datetime, timezone
 
 from config import Config
@@ -35,6 +36,9 @@ from scrapers.website import WebsiteScraper
 from scrapers.google_news import GoogleNewsScraper
 from scrapers.law360_me import Law360MEScraper
 from scrapers.linkedin_people import LinkedInPeopleScraper
+from scrapers.regulatory_registry import RegulatoryRegistryScraper
+from scrapers.legal_media import LegalMediaScraper
+from scrapers.alsp import ALSPScraper
 from analysis.signals import ExpansionAnalyzer
 from alerts.notifier import Notifier
 from dashboard.generator import DashboardGenerator
@@ -44,42 +48,48 @@ from scrapers.base import BaseScraper
 logging.basicConfig(
     level=logging.INFO,
     format="%(asctime)s [%(levelname)s] %(name)s: %(message)s",
-    handlers=[
-        logging.StreamHandler(sys.stdout),
-        logging.FileHandler("tracker.log"),
-    ],
+    handlers=[logging.StreamHandler(sys.stdout), logging.FileHandler("tracker.log")],
 )
 logger = logging.getLogger("main")
 
-# Ordered scraper classes
+# 13 scrapers — ordered by signal quality (fastest/highest confidence first)
 SCRAPER_CLASSES = [
-    JobsScraper,            # 1. Firm careers pages
-    RecruiterScraper,       # 2. ME recruiter agencies (cached globally)
-    JobBoardsScraper,       # 3. Bayt / Indeed UAE / LinkedIn / Glassdoor / Laimoon
-    GoogleNewsScraper,      # 4. Google News RSS (reliable on GH Actions)
-    Law360MEScraper,        # 5. Law360 + ALM RSS feeds
-    PressScraper,           # 6. Firm news + IFLR / Arabian Business
-    ChambersScraper,        # 7. Chambers Global ME + Legal 500 ME
-    RSSFeedScraper,         # 8. 17 RSS feeds
-    LinkedInPeopleScraper,  # 9. LinkedIn people (Google-indexed)
-    WebsiteScraper,         # 10. ME office page change detection
+    JobsScraper,               # 1  Firm careers pages — gold standard
+    RecruiterScraper,          # 2  24 ME legal recruiters (global cache)
+    RegulatoryRegistryScraper, # 3  DIFC/ADGM/QFC registries — 3-6mo lead time
+    LegalMediaScraper,         # 4  The Oath / LexisNexis ME / The Lawyer
+    Law360MEScraper,           # 5  Law360 + ALM RSS
+    GoogleNewsScraper,         # 6  Google News RSS
+    JobBoardsScraper,          # 7  14 boards: Bayt/GulfTalent/Jameson/Indeed×3/etc
+    ALSPScraper,               # 8  LOD / Axiom / Peerpoint contract pipeline
+    PressScraper,              # 9  Firm news + IFLR / Arabian Business
+    ChambersScraper,           # 10 Chambers Global + Legal 500 ME
+    RSSFeedScraper,            # 11 17 RSS feeds
+    LinkedInPeopleScraper,     # 12 Google-indexed LinkedIn profiles
+    WebsiteScraper,            # 13 ME office page change detection
 ]
+
+# Only these types trigger an instant queued alert
+ALERT_SIGNAL_TYPES = {
+    "job_posting", "recruiter_posting",
+    "regulatory_filing", "lateral_hire", "contract_role",
+}
 
 
 def run(firms_to_run=None, digest_only=False):
-    config   = Config()
-    db       = Database(config.DB_PATH)
-    notifier = Notifier(config)
-    analyzer = ExpansionAnalyzer(db)
-    dashboard= DashboardGenerator(db)
-    weights  = load_weights()
+    config    = Config()
+    db        = Database(config.DB_PATH)
+    notifier  = Notifier(config)
+    analyzer  = ExpansionAnalyzer(db)
+    dashboard = DashboardGenerator(db)
+    weights   = load_weights()
 
-    target_firms = firms_to_run or FIRMS
+    target_firms = [f for f in (firms_to_run or FIRMS) if "careers_url" in f or "me_offices" in f]
 
     logger.info("=" * 70)
     logger.info(f"ME Legal Jobs Tracker  —  {datetime.now(timezone.utc).strftime('%Y-%m-%d %H:%M UTC')}")
     logger.info(f"Scrapers: {len(SCRAPER_CLASSES)}  |  Firms: {len(target_firms)}")
-    logger.info(f"Self-training run #{weights.get('total_runs',0) + 1}")
+    logger.info(f"Self-training run #{weights.get('total_runs', 0) + 1}  |  Active sources: {len(weights.get('source_multipliers', {}))}")
     logger.info("=" * 70)
 
     if digest_only:
@@ -89,35 +99,27 @@ def run(firms_to_run=None, digest_only=False):
         return
 
     # ── Collection phase ──────────────────────────────────────────────────
-    static_scrapers = [cls() for cls in SCRAPER_CLASSES if cls is not WebsiteScraper]
-    all_new_signals = []
+    static_scrapers   = [cls() for cls in SCRAPER_CLASSES if cls is not WebsiteScraper]
+    all_new_signals: list[dict] = []
 
     for firm in target_firms:
         logger.info(f"\n{'─' * 55}")
-        logger.info(f"Processing: {firm['name']}")
-
+        logger.info(f"Processing: {firm['name']}  [{', '.join(firm.get('me_offices', {}).keys())}]")
         web_scraper = WebsiteScraper(known_hashes=db.get_website_hashes(firm["id"]))
 
         for scraper in static_scrapers + [web_scraper]:
             try:
                 fetched   = scraper.fetch(firm)
                 new_count = 0
-
                 for signal in fetched:
-                    # Apply learned weights before saving
                     signal = apply_learned_weights_to_signal(signal, weights)
-
                     if db.is_new_signal(signal):
                         db.save_signal(signal)
                         all_new_signals.append(signal)
                         new_count += 1
-
-                        if (signal["signal_type"] in ("job_posting", "recruiter_posting")
-                                and config.INSTANT_ALERT_ON_NEW_JOB):
-                            notifier.send_instant_alert(signal)
-
-                logger.info(f"  {scraper.name:<35} {len(fetched):>3} signals  ({new_count} new)")
-
+                        if signal["signal_type"] in ALERT_SIGNAL_TYPES:
+                            notifier.queue_instant_alert(signal)
+                logger.info(f"  {scraper.name:<40} {len(fetched):>3} signals  ({new_count} new)")
             except Exception as e:
                 logger.error(f"  {scraper.name} failed for {firm['short']}: {e}", exc_info=True)
 
@@ -126,34 +128,36 @@ def run(firms_to_run=None, digest_only=False):
 
     logger.info(f"\nTotal new signals this run: {len(all_new_signals)}")
 
-    # ── Circuit breaker report ────────────────────────────────────────────
+    # Circuit breaker summary
     cb = BaseScraper.get_circuit_breaker_report()
     if cb:
-        logger.info(f"Circuit breaker: {cb}")
+        logger.info(f"Circuit breaker trips: {cb}")
 
-    # ── Self-training evolution ───────────────────────────────────────────
+    # ── Self-training ──────────────────────────────────────────────────────
     if config.ENABLE_SELF_TRAINING:
-        logger.info("\nRunning self-training evolution...")
+        logger.info("\nRunning self-training evolution engine...")
         run_evolution(config.DB_PATH)
-        # Reload weights for analysis scoring
         weights = load_weights()
+        logger.info(f"  Training complete — run #{weights.get('total_runs', 0)}")
+        logger.info(f"  Source multipliers: {len(weights.get('source_multipliers', {}))}")
+        logger.info(f"  Partner signal ratio: {weights.get('partner_signal_ratio', 0):.1%}")
 
-    # ── Analysis + notifications ──────────────────────────────────────────
+    # ── Analysis ──────────────────────────────────────────────────────────
     weekly_signals   = db.get_signals_this_week()
     expansion_alerts = analyzer.analyze(weekly_signals)
-
     for alert in expansion_alerts:
         db.save_weekly_score(
-            firm_id=alert["firm_id"],
-            firm_name=alert["firm_name"],
-            department=alert["department"],
-            location=alert.get("location",""),
-            score=alert["expansion_score"],
-            signal_count=alert["signal_count"],
+            firm_id=alert["firm_id"], firm_name=alert["firm_name"],
+            department=alert["department"], location=alert.get("location", ""),
+            score=alert["expansion_score"], signal_count=alert["signal_count"],
             breakdown=alert["signal_breakdown"],
         )
+    logger.info(f"Expansion alerts this week: {len(expansion_alerts)}")
 
-    logger.info(f"Expansion alerts: {len(expansion_alerts)}")
+    # ── ONE batched Telegram alert (FIXED — was sending 16+ separate messages) ──
+    notifier.flush_instant_alerts()
+
+    # ── Weekly digest + dashboard ──────────────────────────────────────────
     _send_digest(db, analyzer, notifier, dashboard, new_signals=all_new_signals)
     db.close()
     logger.info("\nDone.\n")
@@ -162,53 +166,44 @@ def run(firms_to_run=None, digest_only=False):
 def _send_digest(db, analyzer, notifier, dashboard, new_signals=None):
     weekly_signals   = db.get_signals_this_week()
     expansion_alerts = analyzer.analyze(weekly_signals)
-    new_alerts = [
-        a for a in expansion_alerts
-        if not db.was_alert_sent(a["firm_id"], a["department"])
-    ]
+    new_alerts = [a for a in expansion_alerts
+                  if not db.was_alert_sent(a["firm_id"], a["department"])]
     notifier.send_combined_digest(new_alerts, [], new_signals=new_signals or [])
     for a in new_alerts:
         db.mark_alert_sent(a["firm_id"], a["department"], a["expansion_score"])
     dashboard.generate()
-    logger.info(f"Digest: {len(new_alerts)} new alert(s)")
+    logger.info(f"Digest: {len(new_alerts)} new alert(s) sent")
 
 
 if __name__ == "__main__":
-    parser = argparse.ArgumentParser(
-        description="ME Legal Jobs Tracker — US BigLaw associate jobs in the Middle East"
-    )
-    parser.add_argument("--digest",     action="store_true")
-    parser.add_argument("--dashboard",  action="store_true")
+    parser = argparse.ArgumentParser(description="ME Legal Jobs Tracker v3")
+    parser.add_argument("--digest",     action="store_true", help="Send digest from DB")
+    parser.add_argument("--dashboard",  action="store_true", help="Regenerate dashboard")
     parser.add_argument("--train",      action="store_true", help="Run self-training only")
-    parser.add_argument("--firm",       type=str)
-    parser.add_argument("--list-firms", action="store_true")
+    parser.add_argument("--firm",       type=str,            help="Single firm ID")
+    parser.add_argument("--list-firms", action="store_true", help="List all firm IDs")
     args = parser.parse_args()
 
     if args.list_firms:
+        import sys; sys.path.insert(0, ".")
+        from firms import FIRMS
         print("\nTracked US firms:\n")
-        for f in FIRMS:
-            offices = ", ".join(f.get("me_offices", {}).keys())
-            print(f"  {f['id']:<22} {f['short']:<28} ME offices: {offices}")
+        for f in [x for x in FIRMS if "careers_url" in x]:
+            print(f"  {f['id']:<22} {f['short']:<32} offices: {', '.join(f.get('me_offices',{}).keys())}")
         sys.exit(0)
 
     if args.dashboard:
-        config = Config()
-        db = Database(config.DB_PATH)
-        DashboardGenerator(db).generate()
-        db.close()
-        sys.exit(0)
+        cfg = Config(); db = Database(cfg.DB_PATH)
+        DashboardGenerator(db).generate(); db.close(); sys.exit(0)
 
     if args.train:
-        config = Config()
-        run_evolution(config.DB_PATH)
-        sys.exit(0)
+        run_evolution(Config().DB_PATH); sys.exit(0)
 
     target = None
     if args.firm:
         firm = FIRMS_BY_ID.get(args.firm)
         if not firm:
-            logger.error(f"Unknown firm ID: '{args.firm}'. Run --list-firms to see available IDs.")
-            sys.exit(1)
+            logger.error(f"Unknown firm: '{args.firm}'. Run --list-firms."); sys.exit(1)
         target = [firm]
 
     run(firms_to_run=target, digest_only=args.digest)
