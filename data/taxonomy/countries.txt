@@ -1,0 +1,21 @@
+# ISO 3166-1 alpha-2 country codes relevant to Middle East law firm expansion tracking.
+# Add entries in alphabetical order by code.
+AE
+BH
+DE
+EG
+FR
+GB
+IQ
+JO
+KW
+LB
+LY
+MA
+OM
+QA
+SA
+SY
+TR
+US
+YE

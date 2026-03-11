@@ -1,0 +1,24 @@
+record_id: kirkland-ellis-new-practice-group-dubai-2026
+firm_name: Kirkland & Ellis LLP
+expansion_type: new_practice_group
+practice_areas:
+  - Private Equity
+  - Restructuring & Insolvency
+country: AE
+region: Middle East
+city: Dubai
+announced_date: "2026-02-10"
+source_url: https://www.kirkland.com/en/news/2026/02/restructuring-practice-dubai
+source_type: firm_press_release
+confidence: confirmed
+status: published
+headcount: 4
+related_records: []
+tags:
+  - difc
+  - distressed-assets
+notes: "Kirkland adds dedicated restructuring capability in Dubai DIFC office, hiring two lateral partners."
+created_at: "2026-02-10T09:00:00Z"
+last_modified: "2026-02-11T16:00:00Z"
+schema_version: "1.0.0"
+created_by: shaheersinn
