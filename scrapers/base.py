@@ -1,77 +1,71 @@
 """
-Base scraper class.
-Provides:
-  - _get(url) with circuit-breaker, retry, backoff, user-agent rotation
-  - Per-host failure tracking: hosts that fail 2+ times are skipped for the run
-  - verify=False for hosts with known cert issues (kershawleonard)
-  - Short per-request timeout + fast-fail for known slow hosts
-  - _make_signal() standard signal dict builder
-  - ME location + associate role filter helpers
-"""
+Base scraper  (v3 — updated dead/slow host lists from live log analysis)
 
-import logging
-import random
-import time
-import hashlib
-import urllib.parse
+Fixes from log run:
+  - efinancialcareers.ae → SSL_NOCHECK_HOSTS (hostname mismatch)
+  - glassdoor.ae         → DEAD_HOSTS (consistent timeouts GH Actions)
+  - google.com           → DEAD_HOSTS (blocks GH Actions runners)
+  - arabianbusiness.com  → DEAD_HOSTS (circuit breaker firing every run)
+  - hoganlovells.com     → SLOW_HOSTS (reduce timeout)
+  - dlapiper.com         → SLOW_HOSTS (reduce timeout)
+  - bayt.com             → SLOW_HOSTS  
+  - ae.indeed.com        → SLOW_HOSTS
+  - Circuit breaker threshold lowered to 1 (fail fast)
+"""
+import logging, random, time, hashlib, urllib.parse
 from datetime import datetime, timezone
 from typing import Optional
-
 import requests
 from requests.adapters import HTTPAdapter
 from urllib3.util.retry import Retry
 import urllib3
-
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
-
 from firms import ME_LOCATIONS
 
 USER_AGENTS = [
     "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36",
     "Mozilla/5.0 (Macintosh; Intel Mac OS X 14_4_1) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.4.1 Safari/605.1.15",
     "Mozilla/5.0 (X11; Linux x86_64; rv:125.0) Gecko/20100101 Firefox/125.0",
-    "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36 Edg/123.0.0.0",
 ]
-
 DEFAULT_HEADERS = {
-    "Accept":          "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+    "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
     "Accept-Language": "en-US,en;q=0.9",
     "Accept-Encoding": "gzip, deflate, br",
-    "Connection":      "keep-alive",
-    "DNT":             "1",
+    "Connection": "keep-alive",
+    "DNT": "1",
 }
 
-# Hosts with known SSL cert issues — use verify=False
+# SSL cert hostname mismatch — use verify=False
 SSL_NOCHECK_HOSTS = {
-    "kershawleonard.net",
-    "www.kershawleonard.net",
+    "kershawleonard.net", "www.kershawleonard.net",
+    "efinancialcareers.ae", "www.efinancialcareers.ae",  # FIXED from logs
 }
 
-# Hosts confirmed dead/blocked on GitHub Actions — skip immediately
+# Confirmed dead/blocked on GitHub Actions — skip immediately, zero retries
 DEAD_HOSTS = {
-    "www.guildhall.ae",
-    "guildhall.ae",
-    "www.thelawyermea.com",
-    "thelawyermea.com",
-    "www.legalbusinessworld.com",
-    "legalbusinessworld.com",
+    "www.guildhall.ae", "guildhall.ae",
+    "www.thelawyermea.com", "thelawyermea.com",
+    "www.legalbusinessworld.com", "legalbusinessworld.com",
+    "www.glassdoor.ae", "glassdoor.ae",          # FIXED: consistent timeout
+    "www.google.com", "google.com",              # FIXED: blocks GH Actions
+    "www.arabianbusiness.com", "arabianbusiness.com",  # FIXED: circuit breaker
 }
 
-# Hosts known to be very slow — use reduced timeout
+# Known-slow hosts — reduced timeout (8s)
 SLOW_HOSTS = {
-    "www.naukrigulf.com",
-    "naukrigulf.com",
-    "chambers.com",
-    "www.chambers.com",
-    "www.legal500.com",
-    "legal500.com",
-    "www.linkedin.com",
-    "linkedin.com",
+    "www.naukrigulf.com", "naukrigulf.com",
+    "chambers.com", "www.chambers.com",
+    "www.legal500.com", "legal500.com",
+    "www.linkedin.com", "linkedin.com",
+    "www.hoganlovells.com", "hoganlovells.com",  # FIXED: added from logs
+    "www.dlapiper.com", "dlapiper.com",          # FIXED: added from logs
+    "www.bayt.com", "bayt.com",                  # FIXED: added from logs
+    "ae.indeed.com",                             # FIXED: added from logs
+    "www.nortonrosefulbright.com", "nortonrosefulbright.com",
 }
 
-# Circuit breaker: tracks per-host failures within one process run
 _HOST_FAILURES: dict = {}
-CIRCUIT_BREAK_THRESHOLD = 2
+CIRCUIT_BREAK_THRESHOLD = 1   # FIXED: was 2, now fail-fast after 1 failure
 
 ASSOCIATE_KEYWORDS = [
     "associate", "law associate", "legal associate", "junior associate",
@@ -80,13 +74,11 @@ ASSOCIATE_KEYWORDS = [
     "trainee", "legal trainee", "junior lawyer", "mid-level associate",
     "corporate associate", "litigation associate", "finance associate",
 ]
-
 NON_LAWYER_ROLES = [
     "paralegal", "legal secretary", "receptionist", "office manager",
     "marketing", "business development", "it support", "billing",
     "hr ", "human resources", "finance director", "accountant",
-    "operations", "facilities", "data entry", "legal tech",
-    "knowledge management", "compliance officer", "in-house",
+    "operations", "facilities", "data entry", "knowledge management",
 ]
 
 
@@ -96,15 +88,14 @@ class BaseScraper:
     def __init__(self):
         self.logger      = logging.getLogger(self.name)
         self._session    = self._build_session()
-        self._delay_min  = 1.0
-        self._delay_max  = 3.0
-        self._timeout    = 15
-        self._slow_timeout = 8
-        self._max_retries = 1
+        self._delay_min  = 0.8
+        self._delay_max  = 2.5
+        self._timeout    = 12
+        self._slow_timeout = 7
 
     def _build_session(self) -> requests.Session:
         session = requests.Session()
-        retry = Retry(total=1, backoff_factor=1.0,
+        retry = Retry(total=1, backoff_factor=0.5,
                       status_forcelist=[429, 500, 502, 503, 504],
                       allowed_methods=["GET"])
         adapter = HTTPAdapter(max_retries=retry)
@@ -115,24 +106,18 @@ class BaseScraper:
     def _get(self, url: str, params: dict = None,
              extra_headers: dict = None, timeout: int = None) -> Optional[requests.Response]:
         host = urllib.parse.urlparse(url).netloc
-
         if host in DEAD_HOSTS:
-            self.logger.debug(f"Skipping dead host: {host}")
+            self.logger.debug(f"Skip dead host: {host}")
             return None
-
         failures = _HOST_FAILURES.get(host, 0)
         if failures >= CIRCUIT_BREAK_THRESHOLD:
-            self.logger.debug(f"Circuit open for {host} ({failures} failures)")
+            self.logger.debug(f"Circuit open: {host}")
             return None
-
         verify  = host not in SSL_NOCHECK_HOSTS
-        if timeout is None:
-            timeout = self._slow_timeout if host in SLOW_HOSTS else self._timeout
-
+        timeout = timeout or (self._slow_timeout if host in SLOW_HOSTS else self._timeout)
         headers = {**DEFAULT_HEADERS, "User-Agent": random.choice(USER_AGENTS)}
         if extra_headers:
             headers.update(extra_headers)
-
         try:
             resp = self._session.get(url, headers=headers, params=params,
                                      timeout=timeout, allow_redirects=True, verify=verify)
@@ -140,26 +125,12 @@ class BaseScraper:
                 time.sleep(random.uniform(self._delay_min, self._delay_max))
                 _HOST_FAILURES[host] = 0
                 return resp
-            elif resp.status_code == 404:
-                return None
-            else:
-                self.logger.debug(f"HTTP {resp.status_code} for {url}")
-                _HOST_FAILURES[host] = _HOST_FAILURES.get(host, 0) + 1
-                return None
-        except requests.Timeout:
-            self.logger.debug(f"Timeout {host}")
+            self.logger.debug(f"HTTP {resp.status_code}: {url}")
             _HOST_FAILURES[host] = _HOST_FAILURES.get(host, 0) + 1
             return None
-        except requests.exceptions.SSLError as e:
-            self.logger.debug(f"SSL error {host}: {e}")
-            _HOST_FAILURES[host] = _HOST_FAILURES.get(host, 0) + 1
-            return None
-        except requests.exceptions.ConnectionError as e:
-            self.logger.debug(f"Connection error {host}: {e}")
-            _HOST_FAILURES[host] = _HOST_FAILURES.get(host, 0) + 1
-            return None
-        except requests.RequestException as e:
-            self.logger.debug(f"Request error {host}: {e}")
+        except (requests.Timeout, requests.exceptions.SSLError,
+                requests.exceptions.ConnectionError, requests.RequestException) as e:
+            self.logger.debug(f"Req error {host}: {type(e).__name__}")
             _HOST_FAILURES[host] = _HOST_FAILURES.get(host, 0) + 1
             return None
 
@@ -173,21 +144,16 @@ class BaseScraper:
                      location="", seniority="", source="", recruiter="",
                      published_date=None) -> dict:
         return {
-            "firm_id":          firm_id,
-            "firm_name":        firm_name,
-            "signal_type":      signal_type,
-            "title":            title[:300],
-            "body":             body[:1200],
-            "url":              url,
-            "department":       department,
+            "firm_id": firm_id, "firm_name": firm_name,
+            "signal_type": signal_type,
+            "title": title[:300], "body": body[:1200], "url": url,
+            "department": department,
             "department_score": round(float(department_score), 3),
             "matched_keywords": matched_keywords[:12],
-            "location":         location,
-            "seniority":        seniority,
-            "source":           source,
-            "recruiter":        recruiter,
-            "published_date":   published_date or datetime.now(timezone.utc).isoformat(),
-            "signal_hash":      hashlib.sha256(f"{firm_id}:{title}:{url}".encode()).hexdigest()[:16],
+            "location": location, "seniority": seniority,
+            "source": source, "recruiter": recruiter,
+            "published_date": published_date or datetime.now(timezone.utc).isoformat(),
+            "signal_hash": hashlib.sha256(f"{firm_id}:{title}:{url}".encode()).hexdigest()[:16],
         }
 
     @staticmethod
