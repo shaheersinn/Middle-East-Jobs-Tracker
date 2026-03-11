@@ -154,16 +154,24 @@ def run(firms_to_run=None, digest_only=False):
         )
     logger.info(f"Expansion alerts this week: {len(expansion_alerts)}")
 
-    # ── ONE batched Telegram alert (FIXED — was sending 16+ separate messages) ──
-    notifier.flush_instant_alerts()
+    # ── ONE Telegram message per run ──────────────────────────────────────
+    # FIXED: was calling flush_instant_alerts() + send_combined_digest() = 2 messages
+    # Now: pass queued signals directly into the digest so everything goes in ONE send
+    notifier.flush_and_digest(
+        db=db,
+        analyzer=analyzer,
+        new_signals=all_new_signals,
+    )
 
-    # ── Weekly digest + dashboard ──────────────────────────────────────────
-    _send_digest(db, analyzer, notifier, dashboard, new_signals=all_new_signals)
+    # ── Regenerate dashboard ───────────────────────────────────────────────
+    dashboard.generate()
+    logger.info("Dashboard regenerated → docs/index.html")
     db.close()
     logger.info("\nDone.\n")
 
 
 def _send_digest(db, analyzer, notifier, dashboard, new_signals=None):
+    """Weekly digest mode — sends combined message and regenerates dashboard."""
     weekly_signals   = db.get_signals_this_week()
     expansion_alerts = analyzer.analyze(weekly_signals)
     new_alerts = [a for a in expansion_alerts
