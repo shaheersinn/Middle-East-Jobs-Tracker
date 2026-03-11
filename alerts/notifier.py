@@ -75,14 +75,129 @@ class Notifier:
     def send_instant_alert(self, signal: dict):
         self.queue_instant_alert(signal)
 
-    def flush_instant_alerts(self):
-        """Send all queued signals as ONE batched Telegram message."""
-        if not self._pending_signals:
+    def flush_and_digest(self, db, analyzer, new_signals: list):
+        """
+        SINGLE Telegram message per collect run.
+        Combines: queued instant job alerts + expansion analysis + practice area trends.
+        Replaces the old flush_instant_alerts() + send_combined_digest() double-send.
+        """
+        from analysis.signals import ExpansionAnalyzer  # avoid circular at module level
+
+        weekly_signals   = db.get_signals_this_week()
+        expansion_alerts = analyzer.analyze(weekly_signals)
+        new_alerts = [a for a in expansion_alerts
+                      if not db.was_alert_sent(a["firm_id"], a["department"])]
+
+        # Nothing at all to report — skip silently
+        if not self._pending_signals and not new_signals and not new_alerts:
+            logger.info("Nothing new this run — skipping Telegram send")
+            self._pending_signals.clear()
             return
-        msg = self._format_batched_alerts(self._pending_signals)
+
+        msg = self._format_collect_run(
+            queued_signals=self._pending_signals,
+            new_signals=new_signals,
+            expansion_alerts=new_alerts,
+        )
         self._send(msg)
-        logger.info(f"Flushed {len(self._pending_signals)} alert(s) as single Telegram message")
+        logger.info(
+            f"Telegram: 1 message sent "
+            f"({len(self._pending_signals)} instant + {len(new_alerts)} expansion alerts)"
+        )
         self._pending_signals.clear()
+
+        # Mark expansion alerts as sent
+        for a in new_alerts:
+            db.mark_alert_sent(a["firm_id"], a["department"], a["expansion_score"])
+
+    def _format_collect_run(self, queued_signals: list, new_signals: list,
+                             expansion_alerts: list) -> str:
+        """
+        ONE unified message for a collect run.
+        Sections: job openings → expansion alerts → top practice areas.
+        """
+        top4  = get_top4_departments()
+        today = datetime.now(timezone.utc).strftime("%-d %b %Y %H:%M UTC")
+
+        # Deduplicate: use queued_signals for instant section (already filtered by ALERT_SIGNAL_TYPES)
+        jobs  = [s for s in queued_signals if s.get("signal_type") in ("job_posting", "recruiter_posting")]
+        hires = [s for s in queued_signals if s.get("signal_type") == "lateral_hire"]
+        reg   = [s for s in queued_signals if s.get("signal_type") == "regulatory_filing"]
+
+        lines = [
+            "⚖️ <b>ME Legal Jobs Tracker</b>",
+            f"📅 {today}",
+            f"🖥 <a href='{self._dashboard_url}'>Open Dashboard →</a>",
+            "─" * 32,
+            (f"💼 {len(jobs)} job(s)  "
+             f"🚀 {len(hires)} hire(s)  "
+             f"🏛 {len(reg)} filing(s)  "
+             f"📊 {len(expansion_alerts)} firm alert(s)"),
+            "",
+        ]
+
+        # ── Job openings ──
+        if jobs:
+            lines.append("💼 <b>New Job Openings</b>")
+            for s in jobs[:12]:
+                loc  = s.get("location", "ME")
+                dept = s.get("department", "")
+                de   = DEPT_EMOJI.get(dept, "⚖️")
+                via  = f" · {s['recruiter']}" if s.get("recruiter") else ""
+                url  = s.get("url", "#")
+                lines.append(f"  {de} <a href='{url}'>{s['title'][:65]}</a> 📍{loc}{via}")
+            if len(jobs) > 12:
+                lines.append(f"  <i>… and {len(jobs)-12} more</i>")
+            lines.append("")
+
+        # ── Lateral hires ──
+        if hires:
+            lines.append("🚀 <b>Lateral Hire Signals</b>")
+            for s in hires[:5]:
+                loc = s.get("location", "ME")
+                lines.append(f"  • <a href='{s.get('url','#')}'>{s['title'][:70]}</a> 📍{loc}")
+            lines.append("")
+
+        # ── Regulatory filings ──
+        if reg:
+            lines.append("🏛 <b>Regulatory Filings</b>")
+            for s in reg[:3]:
+                lines.append(f"  • {s['title'][:80]}")
+            lines.append("")
+
+        # ── Expansion alerts ──
+        if expansion_alerts:
+            lines.append("─" * 32)
+            lines.append("📈 <b>Firm Expansion Alerts</b>")
+            for i, alert in enumerate(expansion_alerts[:6], 1):
+                de  = DEPT_EMOJI.get(alert["department"], "⚖️")
+                loc = alert.get("location", "Middle East")
+                lines += [
+                    f"{i}. 🏛 <b>{alert['firm_name']}</b>",
+                    f"   {de} {alert['department']} — 📍{loc}",
+                    f"   Score: {alert['expansion_score']}  |  {alert['signal_count']} signal(s)",
+                ]
+                for sig in alert.get("signals", [])[:2]:
+                    e = SIGNAL_EMOJI.get(sig.get("signal_type", ""), "•")
+                    lines.append(f"   {e} {sig['title'][:70]}")
+                lines.append("")
+
+        # ── Top 4 practice areas ──
+        if top4:
+            lines.append("─" * 32)
+            lines.append("📊 <b>Top ME Practice Areas This Week</b>")
+            for i, dept in enumerate(top4[:4]):
+                d_name  = dept.get("department", "")
+                d_count = dept.get("signal_count", 0)
+                de      = DEPT_EMOJI.get(d_name, "⚖️")
+                medal   = MEDALS[i] if i < len(MEDALS) else f"{i+1}."
+                trend   = "↑" if dept.get("this_week", 0) > dept.get("last_week", 0) else ""
+                lines.append(f"{medal} {de} {d_name}  {d_count} signals {trend}")
+
+        lines.append(f"\n🖥 <a href='{self._dashboard_url}'>Full Dashboard →</a>")
+        return "\n".join(lines)
+
+
 
     def send_combined_digest(self, expansion_alerts: list, website_changes: list,
                              new_signals: list = None):
