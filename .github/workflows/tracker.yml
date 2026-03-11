@@ -18,16 +18,29 @@ on:
         required: false
         default: ""
 
+env:
+  # Silence Node 20 deprecation warnings — force Node 24 for all JS actions
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+
+concurrency:
+  group: tracker-${{ github.ref }}
+  cancel-in-progress: false   # never cancel mid-run; queue instead
+
 jobs:
   track:
     runs-on: ubuntu-latest
     timeout-minutes: 55
+
+    # FIXED: grant write access so git push works from github-actions[bot]
+    permissions:
+      contents: write
 
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
+          fetch-depth: 0      # full history so push never fails with "shallow update"
 
       - name: Set up Python 3.11
         uses: actions/setup-python@v5
@@ -109,8 +122,11 @@ jobs:
           git config user.name  "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add docs/ learned_weights.json learning/ || true
-          git diff --cached --quiet || git commit -m "tracker: ${{ steps.mode.outputs.mode }} $(date -u '+%Y-%m-%d %H:%M UTC')"
-          git push
+          git diff --cached --quiet || {
+            git pull --rebase origin main
+            git commit -m "tracker: ${{ steps.mode.outputs.mode }} $(date -u '+%Y-%m-%d %H:%M UTC')"
+            git push
+          }
 
       - name: Commit training weights
         if: steps.mode.outputs.mode == 'train'
@@ -118,8 +134,11 @@ jobs:
           git config user.name  "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add learned_weights.json learning/ || true
-          git diff --cached --quiet || git commit -m "training: weight update $(date -u '+%Y-%m-%d %H:%M UTC')"
-          git push
+          git diff --cached --quiet || {
+            git pull --rebase origin main
+            git commit -m "training: weight update $(date -u '+%Y-%m-%d %H:%M UTC')"
+            git push
+          }
 
       - name: Upload tracker log
         if: always()
