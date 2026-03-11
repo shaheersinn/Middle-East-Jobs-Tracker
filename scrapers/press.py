@@ -1,18 +1,8 @@
 """
-Press / News Scraper
-=====================
-Scrapes firm news pages and legal media for press releases about:
-  - New associate / lawyer hires in ME offices
-  - New ME office openings or expansions
-  - Lateral partner moves to ME
-
-Sources:
-  - Firm news pages
-  - The Lawyer (thelawyermea.com)
-  - Legal Business World (legalbusinessworld.com)
-  - Arabian Business
-  - IFLR Middle East
-  - Chambers Global ME news
+Press / News Scraper  (v2 — dead hosts removed)
+================================================
+FIXED: Removed thelawyermea.com (DNS fail) and legalbusinessworld.com (timeout)
+ADDED: Law.com International, Gulf News Business, AGBI (Arabian Gulf Business Insight)
 
 Signal type: press_release | lateral_hire
 """
@@ -26,22 +16,12 @@ from classifier.department import DepartmentClassifier
 
 classifier = DepartmentClassifier()
 
-# ME-focused legal media
+# Dead domains removed: thelawyermea.com, legalbusinessworld.com
 LEGAL_MEDIA = [
-    {
-        "name": "The Lawyer MEA",
-        "url":  "https://www.thelawyermea.com/news/",
-        "card": re.compile(r"post|article|news-item|entry", re.I),
-    },
     {
         "name": "IFLR Middle East",
         "url":  "https://www.iflr.com/middle-east",
         "card": re.compile(r"article|post|item|card|entry", re.I),
-    },
-    {
-        "name": "Legal Business World ME",
-        "url":  "https://www.legalbusinessworld.com/middle-east/",
-        "card": re.compile(r"post|article|item", re.I),
     },
     {
         "name": "Arabian Business Legal",
@@ -49,24 +29,31 @@ LEGAL_MEDIA = [
         "card": re.compile(r"article|card|item|post", re.I),
     },
     {
-        "name": "Chambers Global ME",
-        "url":  "https://chambers.com/articles/middle-east",
-        "card": re.compile(r"article|card|item|post", re.I),
+        "name": "Law.com International",
+        "url":  "https://www.law.com/international-edition/",
+        "card": re.compile(r"article|card|item|story|result", re.I),
+    },
+    {
+        "name": "Gulf News Business",
+        "url":  "https://gulfnews.com/business",
+        "card": re.compile(r"article|card|item|story|result", re.I),
+    },
+    {
+        "name": "AGBI Legal",
+        "url":  "https://agbi.com/legal/",
+        "card": re.compile(r"article|card|item|post|entry", re.I),
     },
 ]
 
-# Keywords signalling a hire or move
 HIRE_KEYWORDS = [
     "hire", "hires", "hired", "join", "joins", "joined", "appoint",
-    "appoints", "appointed", "welcome", "lateral", "move", "moves",
-    "expand", "expansion", "new associate", "new lawyer", "new counsel",
-    "new partner", "promoted", "promotion", "open", "opens", "opening",
+    "appointed", "lateral", "move", "welcome", "new partner", "new associate",
+    "new counsel", "new office", "expand",
 ]
 
-# ME expansion signals in text
-ME_EXPANSION_SIGNALS = [
-    "middle east", "dubai", "abu dhabi", "difc", "adgm", "doha", "qatar",
-    "riyadh", "bahrain", "gulf", "gcc",
+ME_HIRE_SIGNALS = [
+    "dubai", "abu dhabi", "riyadh", "doha", "manama", "kuwait", "muscat",
+    "difc", "adgm", "qfc", "middle east", "gulf", "uae", "ksa", "saudi",
 ]
 
 
@@ -79,61 +66,50 @@ class PressScraper(BaseScraper):
         signals.extend(self._scrape_legal_media(firm))
         return signals
 
-    # ── Firm news page ────────────────────────────────────────────────────
-
     def _scrape_firm_news(self, firm: dict) -> list[dict]:
-        signals = []
-        url = firm.get("news_url", "")
-        if not url:
-            return signals
+        news_url = firm.get("news_url", "")
+        if not news_url:
+            return []
 
-        resp = self._get(url)
+        resp = self._get(news_url)
         if not resp:
-            return signals
+            return []
 
-        soup = BeautifulSoup(resp.text, "html.parser")
-        articles = soup.find_all(
-            ["article", "div", "li"],
-            class_=re.compile(r"post|news|article|insight|update|item", re.I),
-        )[:30]
+        soup    = BeautifulSoup(resp.text, "html.parser")
+        signals = []
 
-        for art in articles:
-            text = art.get_text(" ", strip=True)
+        for article in soup.find_all(["article","div","li"],
+                                     class_=re.compile(r"post|news|press|article|item|entry", re.I))[:20]:
+            text = article.get_text(" ", strip=True)
             if len(text) < 50:
                 continue
 
-            # Only care about ME-related items
-            if not self._is_me_location(text.lower()):
+            is_hire = any(kw in text.lower() for kw in HIRE_KEYWORDS)
+            is_me   = any(loc in text.lower() for loc in ME_HIRE_SIGNALS)
+            is_lawyer = self._is_lawyer_role(text)
+
+            if not (is_hire and is_me):
                 continue
 
-            # Detect hire/move type
-            is_hire = any(kw in text.lower() for kw in HIRE_KEYWORDS)
+            title_tag = article.find(["h1","h2","h3","h4"])
+            title = title_tag.get_text(strip=True) if title_tag else text[:140]
+            link  = article.find("a", href=True)
+            url   = (link["href"] if link and link["href"].startswith("http")
+                     else urljoin(firm.get("news_url",""), link["href"]) if link else news_url)
 
-            title_tag = art.find(["h2", "h3", "h4", "a", "strong"])
-            title = title_tag.get_text(strip=True) if title_tag else text[:150]
-
-            link  = art.find("a", href=True)
-            art_url = link["href"] if link else url
-            if art_url.startswith("/"):
-                from urllib.parse import urlparse
-                base = "{u.scheme}://{u.netloc}".format(u=urlparse(url))
-                art_url = base + art_url
-
-            signal_type = "lateral_hire" if is_hire else "press_release"
-
-            dept = classifier.top_department(f"{title} {text[:400]}")
+            dept = classifier.top_department(f"{title} {text[:500]}")
             if not dept:
                 dept = {"department": "Corporate / M&A", "score": 1.0, "matched_keywords": []}
 
+            signal_type = "lateral_hire" if is_lawyer else "press_release"
+            weight = 3.0 if is_lawyer and is_hire else 1.5
+
             signals.append(self._make_signal(
-                firm_id=firm["id"],
-                firm_name=firm["name"],
+                firm_id=firm["id"], firm_name=firm["name"],
                 signal_type=signal_type,
-                title=f"[{firm['short']} News] {title}",
-                body=text[:900],
-                url=art_url,
+                title=f"[Firm News] {title}", body=text[:900], url=url,
                 department=dept["department"],
-                department_score=dept["score"] * (3.0 if is_hire else 1.5),
+                department_score=dept["score"] * weight,
                 matched_keywords=dept["matched_keywords"],
                 location=self._extract_location(text) or "Middle East",
                 source="Firm News",
@@ -142,76 +118,49 @@ class PressScraper(BaseScraper):
         self.logger.info(f"[{firm['short']}] Firm news: {len(signals)} item(s)")
         return signals
 
-    # ── Legal media ───────────────────────────────────────────────────────
-
     def _scrape_legal_media(self, firm: dict) -> list[dict]:
         signals = []
-        for media in LEGAL_MEDIA:
-            try:
-                found = self._scrape_one_media(media, firm)
-                signals.extend(found)
-            except Exception as e:
-                self.logger.debug(f"{media['name']} scrape error: {e}")
-
-        self.logger.info(f"[{firm['short']}] Legal media: {len(signals)} item(s)")
-        return signals
-
-    def _scrape_one_media(self, media: dict, firm: dict) -> list[dict]:
-        signals = []
-        resp = self._get(media["url"])
-        if not resp:
-            return signals
-
-        soup     = BeautifulSoup(resp.text, "html.parser")
-        articles = soup.find_all(
-            ["article", "div", "li"],
-            class_=media["card"],
-        )[:25]
-
         firm_names = [firm["short"], firm["name"]] + firm.get("alt_names", [])
 
-        for art in articles:
-            text = art.get_text(" ", strip=True)
-            if len(text) < 50:
+        for media in LEGAL_MEDIA:
+            resp = self._get(media["url"])
+            if not resp:
                 continue
 
-            # Must mention the firm
-            if not any(n.lower() in text.lower() for n in firm_names):
-                continue
+            soup = BeautifulSoup(resp.text, "html.parser")
+            for article in soup.find_all(["article","div","li"],
+                                          class_=media["card"])[:20]:
+                text = article.get_text(" ", strip=True)
+                if len(text) < 50:
+                    continue
+                if not any(n.lower() in text.lower() for n in firm_names):
+                    continue
+                if not any(loc in text.lower() for loc in ME_HIRE_SIGNALS):
+                    continue
+                is_hire = any(kw in text.lower() for kw in HIRE_KEYWORDS)
+                if not is_hire:
+                    continue
 
-            # Must mention ME location
-            if not self._is_me_location(text):
-                continue
+                title_tag = article.find(["h1","h2","h3","h4"])
+                title = title_tag.get_text(strip=True) if title_tag else text[:140]
+                link  = article.find("a", href=True)
+                url   = (link["href"] if link and link["href"].startswith("http")
+                         else urljoin(media["url"], link["href"]) if link else media["url"])
 
-            title_tag = art.find(["h2", "h3", "h4", "a", "strong"])
-            title = title_tag.get_text(strip=True) if title_tag else text[:150]
+                dept = classifier.top_department(f"{title} {text[:500]}")
+                if not dept:
+                    dept = {"department": "Corporate / M&A", "score": 1.0, "matched_keywords": []}
 
-            link = art.find("a", href=True)
-            art_url = (
-                link["href"] if link and link["href"].startswith("http")
-                else urljoin(media["url"], link["href"]) if link
-                else media["url"]
-            )
+                signals.append(self._make_signal(
+                    firm_id=firm["id"], firm_name=firm["name"],
+                    signal_type="lateral_hire" if self._is_lawyer_role(text) else "press_release",
+                    title=f"[{media['name']}] {title}", body=text[:900], url=url,
+                    department=dept["department"],
+                    department_score=dept["score"] * 2.5,
+                    matched_keywords=dept["matched_keywords"],
+                    location=self._extract_location(text) or "Middle East",
+                    source=media["name"],
+                ))
 
-            is_hire = any(kw in text.lower() for kw in HIRE_KEYWORDS)
-            signal_type = "lateral_hire" if is_hire else "press_release"
-
-            dept = classifier.top_department(f"{title} {text[:400]}")
-            if not dept:
-                dept = {"department": "Corporate / M&A", "score": 1.0, "matched_keywords": []}
-
-            signals.append(self._make_signal(
-                firm_id=firm["id"],
-                firm_name=firm["name"],
-                signal_type=signal_type,
-                title=f"[{media['name']}] {title}",
-                body=text[:900],
-                url=art_url,
-                department=dept["department"],
-                department_score=dept["score"] * (3.0 if is_hire else 1.5),
-                matched_keywords=dept["matched_keywords"],
-                location=self._extract_location(text) or "Middle East",
-                source=media["name"],
-            ))
-
+        self.logger.info(f"[{firm['short']}] Legal media: {len(signals)} item(s)")
         return signals
