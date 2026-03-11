@@ -1,0 +1,530 @@
+"""
+US law firms with active Middle East offices tracked by the ME Legal Jobs Tracker.
+
+Regions covered: Dubai (DIFC), Abu Dhabi (ADGM), Qatar (QFC), Bahrain,
+                 Saudi Arabia (Riyadh), Kuwait, Oman.
+
+Each entry has:
+  id            — short snake_case key used in CLI and DB
+  name          — full legal name
+  short         — abbreviated name used in signals / alerts
+  alt_names     — all known press/common variants (drives RSS + scraper matching)
+  website       — root URL
+  careers_url   — direct link to global/ME careers page
+  me_offices    — dict of city → office page URL
+  news_url      — press release / news page
+  linkedin_slug — company LinkedIn identifier
+  hq            — US headquarters city
+  founded       — year firm was founded
+  amlaw_rank    — most recent AmLaw 100/200 rank (0 = unranked / not in AmLaw)
+"""
+
+FIRMS = [
+    # ── AmLaw Elite (AmLaw 1–25) with ME presence ─────────────────────────
+    {
+        "id": "latham",
+        "name": "Latham & Watkins LLP",
+        "short": "Latham",
+        "alt_names": [
+            "Latham & Watkins", "Latham Watkins", "L&W", "LW",
+        ],
+        "website": "https://www.lw.com",
+        "careers_url": "https://www.lw.com/en/careers",
+        "me_offices": {
+            "Dubai": "https://www.lw.com/en/offices/dubai",
+            "Abu Dhabi": "https://www.lw.com/en/offices/abu-dhabi",
+            "Riyadh": "https://www.lw.com/en/offices/riyadh",
+        },
+        "news_url": "https://www.lw.com/en/news",
+        "linkedin_slug": "latham-watkins",
+        "hq": "Los Angeles",
+        "founded": 1934,
+        "amlaw_rank": 3,
+    },
+    {
+        "id": "kirkland",
+        "name": "Kirkland & Ellis LLP",
+        "short": "Kirkland",
+        "alt_names": [
+            "Kirkland & Ellis", "Kirkland Ellis", "K&E",
+        ],
+        "website": "https://www.kirkland.com",
+        "careers_url": "https://www.kirkland.com/en/careers",
+        "me_offices": {
+            "Dubai": "https://www.kirkland.com/offices/dubai",
+        },
+        "news_url": "https://www.kirkland.com/en/news",
+        "linkedin_slug": "kirkland-ellis",
+        "hq": "Chicago",
+        "founded": 1909,
+        "amlaw_rank": 1,
+    },
+    {
+        "id": "white_case",
+        "name": "White & Case LLP",
+        "short": "White & Case",
+        "alt_names": [
+            "White and Case", "White & Case LLP", "W&C",
+        ],
+        "website": "https://www.whitecase.com",
+        "careers_url": "https://www.whitecase.com/careers",
+        "me_offices": {
+            "Dubai": "https://www.whitecase.com/locations/middle-east/dubai",
+            "Abu Dhabi": "https://www.whitecase.com/locations/middle-east/abu-dhabi",
+            "Riyadh": "https://www.whitecase.com/locations/middle-east/riyadh",
+        },
+        "news_url": "https://www.whitecase.com/news",
+        "linkedin_slug": "white-case-llp",
+        "hq": "New York",
+        "founded": 1901,
+        "amlaw_rank": 15,
+    },
+    {
+        "id": "skadden",
+        "name": "Skadden, Arps, Slate, Meagher & Flom LLP",
+        "short": "Skadden",
+        "alt_names": [
+            "Skadden Arps", "Skadden, Arps", "Skadden, Arps, Slate, Meagher & Flom",
+        ],
+        "website": "https://www.skadden.com",
+        "careers_url": "https://www.skadden.com/careers",
+        "me_offices": {
+            "Abu Dhabi": "https://www.skadden.com/locations/abu-dhabi",
+        },
+        "news_url": "https://www.skadden.com/insights",
+        "linkedin_slug": "skadden-arps-slate-meagher-flom",
+        "hq": "New York",
+        "founded": 1948,
+        "amlaw_rank": 7,
+    },
+    {
+        "id": "gibson_dunn",
+        "name": "Gibson, Dunn & Crutcher LLP",
+        "short": "Gibson Dunn",
+        "alt_names": [
+            "Gibson Dunn & Crutcher", "Gibson, Dunn & Crutcher", "GDC",
+        ],
+        "website": "https://www.gibsondunn.com",
+        "careers_url": "https://www.gibsondunn.com/careers",
+        "me_offices": {
+            "Dubai": "https://www.gibsondunn.com/offices/dubai",
+            "Riyadh": "https://www.gibsondunn.com/offices/riyadh",
+        },
+        "news_url": "https://www.gibsondunn.com/news",
+        "linkedin_slug": "gibson-dunn-crutcher",
+        "hq": "Los Angeles",
+        "founded": 1890,
+        "amlaw_rank": 14,
+    },
+    {
+        "id": "jones_day",
+        "name": "Jones Day",
+        "short": "Jones Day",
+        "alt_names": ["Jones Day LLP", "Jones, Day"],
+        "website": "https://www.jonesday.com",
+        "careers_url": "https://www.jonesday.com/en/careers",
+        "me_offices": {
+            "Dubai": "https://www.jonesday.com/en/locations/dubai",
+            "Riyadh": "https://www.jonesday.com/en/locations/riyadh",
+        },
+        "news_url": "https://www.jonesday.com/en/news",
+        "linkedin_slug": "jones-day",
+        "hq": "Cleveland",
+        "founded": 1893,
+        "amlaw_rank": 9,
+    },
+    {
+        "id": "sullivan_cromwell",
+        "name": "Sullivan & Cromwell LLP",
+        "short": "Sullivan & Cromwell",
+        "alt_names": [
+            "Sullivan and Cromwell", "Sullivan & Cromwell LLP", "S&C",
+        ],
+        "website": "https://www.sullcrom.com",
+        "careers_url": "https://www.sullcrom.com/careers",
+        "me_offices": {
+            "Abu Dhabi": "https://www.sullcrom.com/offices/abu-dhabi",
+        },
+        "news_url": "https://www.sullcrom.com/news",
+        "linkedin_slug": "sullivan-cromwell",
+        "hq": "New York",
+        "founded": 1879,
+        "amlaw_rank": 12,
+    },
+    {
+        "id": "milbank",
+        "name": "Milbank LLP",
+        "short": "Milbank",
+        "alt_names": ["Milbank LLP", "Milbank Tweed"],
+        "website": "https://www.milbank.com",
+        "careers_url": "https://www.milbank.com/careers",
+        "me_offices": {
+            "Dubai": "https://www.milbank.com/offices/dubai",
+            "Abu Dhabi": "https://www.milbank.com/offices/abu-dhabi",
+        },
+        "news_url": "https://www.milbank.com/news",
+        "linkedin_slug": "milbank-llp",
+        "hq": "New York",
+        "founded": 1866,
+        "amlaw_rank": 18,
+    },
+    {
+        "id": "simpson_thacher",
+        "name": "Simpson Thacher & Bartlett LLP",
+        "short": "Simpson Thacher",
+        "alt_names": [
+            "Simpson Thacher & Bartlett", "STB", "Simpson Thacher Bartlett",
+        ],
+        "website": "https://www.stblaw.com",
+        "careers_url": "https://www.stblaw.com/careers",
+        "me_offices": {
+            "Dubai": "https://www.stblaw.com/content/offices/Dubai",
+        },
+        "news_url": "https://www.stblaw.com/content/practice",
+        "linkedin_slug": "simpson-thacher-bartlett",
+        "hq": "New York",
+        "founded": 1884,
+        "amlaw_rank": 11,
+    },
+    {
+        "id": "king_spalding",
+        "name": "King & Spalding LLP",
+        "short": "King & Spalding",
+        "alt_names": [
+            "King and Spalding", "King & Spalding LLP", "K&S",
+        ],
+        "website": "https://www.kslaw.com",
+        "careers_url": "https://www.kslaw.com/careers",
+        "me_offices": {
+            "Dubai": "https://www.kslaw.com/offices/dubai",
+            "Abu Dhabi": "https://www.kslaw.com/offices/abu-dhabi",
+            "Riyadh": "https://www.kslaw.com/offices/riyadh",
+        },
+        "news_url": "https://www.kslaw.com/news",
+        "linkedin_slug": "king-spalding",
+        "hq": "Atlanta",
+        "founded": 1885,
+        "amlaw_rank": 22,
+    },
+    # ── AmLaw Broad Global Network (AmLaw 26–100) ─────────────────────────
+    {
+        "id": "hogan_lovells",
+        "name": "Hogan Lovells US LLP",
+        "short": "Hogan Lovells",
+        "alt_names": [
+            "Hogan Lovells", "Hogan & Lovells", "HL",
+        ],
+        "website": "https://www.hoganlovells.com",
+        "careers_url": "https://www.hoganlovells.com/en/careers",
+        "me_offices": {
+            "Dubai": "https://www.hoganlovells.com/en/locations/dubai",
+            "Abu Dhabi": "https://www.hoganlovells.com/en/locations/abu-dhabi",
+            "Riyadh": "https://www.hoganlovells.com/en/locations/riyadh",
+        },
+        "news_url": "https://www.hoganlovells.com/en/news",
+        "linkedin_slug": "hogan-lovells",
+        "hq": "Washington DC",
+        "founded": 1904,
+        "amlaw_rank": 26,
+    },
+    {
+        "id": "baker_mckenzie",
+        "name": "Baker McKenzie",
+        "short": "Baker McKenzie",
+        "alt_names": [
+            "Baker & McKenzie", "BakerMcKenzie", "Baker McKenzie LLP",
+            "Baker and McKenzie",
+        ],
+        "website": "https://www.bakermckenzie.com",
+        "careers_url": "https://www.bakermckenzie.com/en/careers",
+        "me_offices": {
+            "Dubai": "https://www.bakermckenzie.com/en/locations/middle-east-africa/uae/dubai",
+            "Abu Dhabi": "https://www.bakermckenzie.com/en/locations/middle-east-africa/uae/abu-dhabi",
+            "Bahrain": "https://www.bakermckenzie.com/en/locations/middle-east-africa/bahrain/manama",
+            "Riyadh": "https://www.bakermckenzie.com/en/locations/middle-east-africa/saudi-arabia/riyadh",
+            "Qatar": "https://www.bakermckenzie.com/en/locations/middle-east-africa/qatar/doha",
+        },
+        "news_url": "https://www.bakermckenzie.com/en/insight",
+        "linkedin_slug": "baker-mckenzie",
+        "hq": "Chicago",
+        "founded": 1949,
+        "amlaw_rank": 5,
+    },
+    {
+        "id": "dla_piper",
+        "name": "DLA Piper LLP (US)",
+        "short": "DLA Piper",
+        "alt_names": [
+            "DLA Piper", "DLA Piper US", "DLA",
+        ],
+        "website": "https://www.dlapiper.com",
+        "careers_url": "https://www.dlapiper.com/en/us/careers",
+        "me_offices": {
+            "Dubai": "https://www.dlapiper.com/en/locations/middle-east/dubai",
+            "Abu Dhabi": "https://www.dlapiper.com/en/locations/middle-east/abu-dhabi",
+            "Qatar": "https://www.dlapiper.com/en/locations/middle-east/qatar",
+            "Bahrain": "https://www.dlapiper.com/en/locations/middle-east/bahrain",
+            "Saudi Arabia": "https://www.dlapiper.com/en/locations/middle-east/saudi-arabia",
+        },
+        "news_url": "https://www.dlapiper.com/en/insights",
+        "linkedin_slug": "dla-piper",
+        "hq": "Washington DC",
+        "founded": 2005,
+        "amlaw_rank": 4,
+    },
+    {
+        "id": "norton_rose",
+        "name": "Norton Rose Fulbright US LLP",
+        "short": "Norton Rose Fulbright",
+        "alt_names": [
+            "Norton Rose", "NRF", "Norton Rose Fulbright",
+            "Norton Rose Fulbright US",
+        ],
+        "website": "https://www.nortonrosefulbright.com",
+        "careers_url": "https://www.nortonrosefulbright.com/en/careers",
+        "me_offices": {
+            "Dubai": "https://www.nortonrosefulbright.com/en/locations/uae-dubai",
+            "Abu Dhabi": "https://www.nortonrosefulbright.com/en/locations/uae-abu-dhabi",
+            "Riyadh": "https://www.nortonrosefulbright.com/en/locations/saudi-arabia-riyadh",
+            "Bahrain": "https://www.nortonrosefulbright.com/en/locations/bahrain-manama",
+            "Qatar": "https://www.nortonrosefulbright.com/en/locations/qatar-doha",
+            "Kuwait": "https://www.nortonrosefulbright.com/en/locations/kuwait",
+        },
+        "news_url": "https://www.nortonrosefulbright.com/en/knowledge",
+        "linkedin_slug": "norton-rose-fulbright",
+        "hq": "Houston",
+        "founded": 1838,
+        "amlaw_rank": 16,
+    },
+    {
+        "id": "dentons",
+        "name": "Dentons US LLP",
+        "short": "Dentons",
+        "alt_names": ["Dentons", "Dentons LLP", "Dentons US"],
+        "website": "https://www.dentons.com",
+        "careers_url": "https://www.dentons.com/en/careers",
+        "me_offices": {
+            "Dubai": "https://www.dentons.com/en/about-dentons/offices/dubai",
+            "Abu Dhabi": "https://www.dentons.com/en/about-dentons/offices/abu-dhabi",
+            "Riyadh": "https://www.dentons.com/en/about-dentons/offices/riyadh",
+            "Qatar": "https://www.dentons.com/en/about-dentons/offices/doha",
+            "Kuwait": "https://www.dentons.com/en/about-dentons/offices/kuwait-city",
+            "Bahrain": "https://www.dentons.com/en/about-dentons/offices/manama",
+            "Oman": "https://www.dentons.com/en/about-dentons/offices/muscat",
+        },
+        "news_url": "https://www.dentons.com/en/insights",
+        "linkedin_slug": "dentons",
+        "hq": "Washington DC",
+        "founded": 2013,
+        "amlaw_rank": 2,
+    },
+    {
+        "id": "mayer_brown",
+        "name": "Mayer Brown LLP",
+        "short": "Mayer Brown",
+        "alt_names": ["Mayer Brown", "Mayer Brown LLP"],
+        "website": "https://www.mayerbrown.com",
+        "careers_url": "https://www.mayerbrown.com/en/careers",
+        "me_offices": {
+            "Dubai": "https://www.mayerbrown.com/en/locations/dubai",
+        },
+        "news_url": "https://www.mayerbrown.com/en/insights",
+        "linkedin_slug": "mayer-brown",
+        "hq": "Chicago",
+        "founded": 1881,
+        "amlaw_rank": 30,
+    },
+    {
+        "id": "squire_patton",
+        "name": "Squire Patton Boggs (US) LLP",
+        "short": "Squire Patton Boggs",
+        "alt_names": [
+            "Squire Patton Boggs", "SPB", "Squire Sanders",
+        ],
+        "website": "https://www.squirepattonboggs.com",
+        "careers_url": "https://www.squirepattonboggs.com/en/careers",
+        "me_offices": {
+            "Dubai": "https://www.squirepattonboggs.com/en/locations/dubai",
+            "Abu Dhabi": "https://www.squirepattonboggs.com/en/locations/abu-dhabi",
+            "Doha": "https://www.squirepattonboggs.com/en/locations/doha",
+            "Riyadh": "https://www.squirepattonboggs.com/en/locations/riyadh",
+        },
+        "news_url": "https://www.squirepattonboggs.com/en/insights",
+        "linkedin_slug": "squire-patton-boggs",
+        "hq": "Washington DC",
+        "founded": 1890,
+        "amlaw_rank": 35,
+    },
+    {
+        "id": "reed_smith",
+        "name": "Reed Smith LLP",
+        "short": "Reed Smith",
+        "alt_names": ["Reed Smith LLP", "Reed Smith"],
+        "website": "https://www.reedsmith.com",
+        "careers_url": "https://www.reedsmith.com/en/careers",
+        "me_offices": {
+            "Dubai": "https://www.reedsmith.com/en/offices/dubai",
+            "Abu Dhabi": "https://www.reedsmith.com/en/offices/abu-dhabi",
+            "Bahrain": "https://www.reedsmith.com/en/offices/bahrain",
+            "Riyadh": "https://www.reedsmith.com/en/offices/riyadh",
+        },
+        "news_url": "https://www.reedsmith.com/en/insights",
+        "linkedin_slug": "reed-smith-llp",
+        "hq": "Pittsburgh",
+        "founded": 1877,
+        "amlaw_rank": 28,
+    },
+    {
+        "id": "greenberg_traurig",
+        "name": "Greenberg Traurig LLP",
+        "short": "Greenberg Traurig",
+        "alt_names": [
+            "Greenberg Traurig", "GT", "Greenberg Traurig LLP",
+        ],
+        "website": "https://www.gtlaw.com",
+        "careers_url": "https://www.gtlaw.com/en/careers",
+        "me_offices": {
+            "Dubai": "https://www.gtlaw.com/en/locations/dubai",
+        },
+        "news_url": "https://www.gtlaw.com/en/insights",
+        "linkedin_slug": "greenberg-traurig",
+        "hq": "Miami",
+        "founded": 1967,
+        "amlaw_rank": 6,
+    },
+    {
+        "id": "mcdermott",
+        "name": "McDermott Will & Emery LLP",
+        "short": "McDermott",
+        "alt_names": [
+            "McDermott Will & Emery", "MWE", "McDermott Will and Emery",
+        ],
+        "website": "https://www.mwe.com",
+        "careers_url": "https://www.mwe.com/careers",
+        "me_offices": {
+            "Dubai": "https://www.mwe.com/offices/dubai",
+            "Riyadh": "https://www.mwe.com/offices/riyadh",
+        },
+        "news_url": "https://www.mwe.com/insights",
+        "linkedin_slug": "mcdermott-will-emery",
+        "hq": "Chicago",
+        "founded": 1934,
+        "amlaw_rank": 25,
+    },
+    {
+        "id": "omelveny",
+        "name": "O'Melveny & Myers LLP",
+        "short": "O'Melveny",
+        "alt_names": [
+            "O'Melveny & Myers", "O'Melveny Myers", "OMM",
+        ],
+        "website": "https://www.omm.com",
+        "careers_url": "https://www.omm.com/careers",
+        "me_offices": {
+            "Dubai": "https://www.omm.com/offices/dubai",
+        },
+        "news_url": "https://www.omm.com/insights",
+        "linkedin_slug": "omelveny-myers",
+        "hq": "Los Angeles",
+        "founded": 1885,
+        "amlaw_rank": 47,
+    },
+    {
+        "id": "shearman",
+        "name": "A&O Shearman",
+        "short": "A&O Shearman",
+        "alt_names": [
+            "Shearman & Sterling", "Shearman Sterling", "Allen Overy Shearman",
+            "A&O Shearman", "AOS",
+        ],
+        "website": "https://www.aoshearman.com",
+        "careers_url": "https://www.aoshearman.com/en/careers",
+        "me_offices": {
+            "Dubai": "https://www.aoshearman.com/en/locations/dubai",
+            "Abu Dhabi": "https://www.aoshearman.com/en/locations/abu-dhabi",
+            "Riyadh": "https://www.aoshearman.com/en/locations/riyadh",
+        },
+        "news_url": "https://www.aoshearman.com/en/insights",
+        "linkedin_slug": "aoshearman",
+        "hq": "New York",
+        "founded": 1873,
+        "amlaw_rank": 8,
+    },
+]
+
+# Lookup helpers
+FIRMS_BY_ID    = {f["id"]: f for f in FIRMS}
+FIRMS_BY_SHORT = {f["short"].lower(): f for f in FIRMS}
+
+# All ME locations tracked
+ME_LOCATIONS = [
+    "Dubai", "Abu Dhabi", "Sharjah", "UAE", "United Arab Emirates",
+    "Qatar", "Doha", "Bahrain", "Manama", "Saudi Arabia", "Riyadh",
+    "Jeddah", "NEOM", "Kuwait", "Kuwait City", "Oman", "Muscat",
+    "Middle East", "DIFC", "ADGM", "QFC",
+    "Gulf", "GCC",
+]
+
+# Recruiter agencies specialising in ME legal markets
+ME_LEGAL_RECRUITERS = [
+    {
+        "id": "kershaw_leonard",
+        "name": "Kershaw Leonard",
+        "jobs_url": "https://www.kershawleonard.net/jobs/?sector=legal&location=middle-east",
+        "rss": None,
+    },
+    {
+        "id": "mackenzie_jones",
+        "name": "Mackenzie Jones",
+        "jobs_url": "https://www.mackenziejones.com/jobs/?sector=legal",
+        "rss": None,
+    },
+    {
+        "id": "michael_page_legal",
+        "name": "Michael Page Legal ME",
+        "jobs_url": "https://www.michaelpage.ae/jobs/legal",
+        "rss": None,
+    },
+    {
+        "id": "heidrick_me",
+        "name": "Heidrick & Struggles ME",
+        "jobs_url": "https://www.heidrick.com/en/careers/open-positions",
+        "rss": None,
+    },
+    {
+        "id": "robert_half_legal",
+        "name": "Robert Half Legal UAE",
+        "jobs_url": "https://www.roberthalf.ae/find-work/legal",
+        "rss": None,
+    },
+    {
+        "id": "taylor_root",
+        "name": "Taylor Root",
+        "jobs_url": "https://www.taylorroot.com/jobs/?location=middle-east",
+        "rss": None,
+    },
+    {
+        "id": "the_legal_500_re",
+        "name": "Legal 500 Recruitment ME",
+        "jobs_url": "https://www.legal500.com/recruitment/middle-east/",
+        "rss": None,
+    },
+    {
+        "id": "gulftalent_legal",
+        "name": "GulfTalent Legal",
+        "jobs_url": "https://www.gulftalent.com/jobs?q=lawyer+associate&location=Dubai",
+        "rss": None,
+    },
+    {
+        "id": "naukrigulf_legal",
+        "name": "NaukriGulf Legal",
+        "jobs_url": "https://www.naukrigulf.com/legal-jobs-in-dubai",
+        "rss": None,
+    },
+    {
+        "id": "bayt_legal",
+        "name": "Bayt Legal Jobs",
+        "jobs_url": "https://www.bayt.com/en/uae/jobs/lawyer-jobs/",
+        "rss": None,
+    },
+]
