@@ -1,22 +1,29 @@
 """
-Self-Training Evolution Engine  (v3 — significantly enhanced)
-===============================================================
+Self-Training Evolution Engine  (v4 — 12 training dimensions)
+==============================================================
 Runs after every collection cycle AND on a standalone 2-hour cron.
 Learns from every signal in the database to continuously improve scoring.
 
-What it trains on:
-  1. Source yield rates      — high-yield sources get boosted multipliers
-  2. Department trends       — week-over-week growth boosts practice area score
-  3. Keyword effectiveness   — keywords in high-score signals get up-weighted
-  4. Firm expansion velocity — firms with accelerating signal velocity flagged
-  5. Seniority distribution  — partner-heavy signal batches get higher expansion scores
-  6. Source reliability      — sources with consistent output vs one-off bursts
-  7. False-positive decay    — signals from blocked/slow hosts penalised retroactively
+Training dimensions (12 total):
+  1.  Source yield rates         — high-yield sources get boosted multipliers
+  2.  Department trends          — week-over-week growth boosts practice area score
+  3.  Keyword effectiveness      — keywords in high-score signals get up-weighted
+  4.  Firm expansion velocity    — firms with accelerating signal velocity flagged
+  5.  Seniority distribution     — partner-heavy signal batches higher expansion score
+  6.  Source reliability         — consistent sources vs one-off bursts
+  7.  False-positive decay       — blocked/slow-host signals penalised retroactively
+  8.  Geographic hotspot         — ME cities heating up get geo-boost multiplier
+  9.  Cross-source deduplication — same job from multiple sources = higher confidence
+ 10.  Time-pattern analysis      — learn which days/hours produce highest quality
+ 11.  Cross-firm correlation     — when firm A hires in dept X, peer firms follow
+ 12.  Prediction accuracy        — compare past expansion predictions vs. reality
 
 Outputs:
-  - learned_weights.json       — weights applied to every incoming signal
-  - learning/trend_report.json — top 4 ME practice areas + velocity data
+  - learned_weights.json        — weights applied to every incoming signal
+  - learning/trend_report.json  — top 4 ME practice areas + velocity data
   - learning/source_report.json — per-source reliability scores
+  - learning/geo_report.json    — geographic hotspot heatmap
+  - learning/accuracy_report.json — model self-assessment
 
 Algorithm: Exponential Moving Average (α=0.2 — slow, stable learning)
            Cliff detection: >30% week-over-week change triggers trend flag
@@ -28,30 +35,36 @@ from pathlib import Path
 
 logger = logging.getLogger("learning.evolution")
 
-WEIGHTS_PATH      = "learned_weights.json"
-TREND_REPORT_PATH = "learning/trend_report.json"
-SOURCE_REPORT_PATH= "learning/source_report.json"
-ALPHA             = 0.2   # EMA learning rate
-MAX_BOOST         = 2.5   # cap on positive multipliers
-MIN_BOOST         = 0.25  # floor on negative multipliers
-TOP_N_DEPT        = 4     # top practice areas to surface
+WEIGHTS_PATH        = "learned_weights.json"
+TREND_REPORT_PATH   = "learning/trend_report.json"
+SOURCE_REPORT_PATH  = "learning/source_report.json"
+GEO_REPORT_PATH     = "learning/geo_report.json"
+ACCURACY_REPORT_PATH= "learning/accuracy_report.json"
+ALPHA               = 0.2   # EMA learning rate
+MAX_BOOST           = 2.5   # cap on positive multipliers
+MIN_BOOST           = 0.25  # floor on negative multipliers
+TOP_N_DEPT          = 4     # top practice areas to surface
 
 # Default weights before any training data
 FALLBACK_WEIGHTS = {
-    "source_multipliers": {},
-    "dept_trend_boosts":  {},
-    "keyword_boosts":     {},
-    "total_runs": 0,
-    "last_trained": "",
-    "firm_velocity": {},
+    "source_multipliers":   {},
+    "dept_trend_boosts":    {},
+    "keyword_boosts":       {},
+    "geo_boosts":           {},
+    "cross_firm_boosts":    {},
+    "total_runs":           0,
+    "last_trained":         "",
+    "firm_velocity":        {},
     "seniority_distribution": {},
+    "time_patterns":        {},
+    "dedup_confidence":     {},
 }
 
 FALLBACK_TOP4 = [
-    {"department": "Corporate / M&A",                "signal_count": 0, "firm_count": 0, "trend_boost": 1.0},
-    {"department": "Banking & Finance",              "signal_count": 0, "firm_count": 0, "trend_boost": 1.0},
+    {"department": "Corporate / M&A",                 "signal_count": 0, "firm_count": 0, "trend_boost": 1.0},
+    {"department": "Banking & Finance",               "signal_count": 0, "firm_count": 0, "trend_boost": 1.0},
     {"department": "Project Finance & Infrastructure","signal_count": 0, "firm_count": 0, "trend_boost": 1.0},
-    {"department": "Arbitration & Disputes",         "signal_count": 0, "firm_count": 0, "trend_boost": 1.0},
+    {"department": "Arbitration & Disputes",          "signal_count": 0, "firm_count": 0, "trend_boost": 1.0},
 ]
 
 
@@ -73,21 +86,37 @@ def save_weights(weights: dict):
 
 
 def apply_learned_weights_to_signal(signal: dict, weights: dict) -> dict:
-    """Apply learned multipliers to a signal's department_score before saving."""
+    """Apply ALL learned multipliers to a signal's department_score before saving."""
     source  = signal.get("source", "")
     dept    = signal.get("department", "")
-    src_mul = weights.get("source_multipliers", {}).get(source, 1.0)
-    dep_mul = weights.get("dept_trend_boosts",  {}).get(dept, 1.0)
+    loc     = signal.get("location", "")
+    firm_id = signal.get("firm_id", "")
+    title   = signal.get("title", "").lower()[:40]
 
-    # Keyword boost
+    # Core multipliers
+    src_mul   = weights.get("source_multipliers", {}).get(source, 1.0)
+    dep_mul   = weights.get("dept_trend_boosts",  {}).get(dept, 1.0)
+
+    # Keyword boost (average of matched keywords)
     kw_boosts = weights.get("keyword_boosts", {})
     kw_mul    = 1.0
     kws = signal.get("matched_keywords", [])
     if kws and kw_boosts:
         scores = [kw_boosts.get(k, 1.0) for k in kws]
-        kw_mul = sum(scores) / len(scores)  # average keyword boost
+        kw_mul = sum(scores) / len(scores)
 
-    multiplier = min(MAX_BOOST, max(MIN_BOOST, src_mul * dep_mul * kw_mul))
+    # Geographic hotspot boost (NEW v4)
+    geo_mul   = weights.get("geo_boosts", {}).get(loc, 1.0)
+
+    # Cross-firm dept correlation boost (NEW v4)
+    xf_mul    = weights.get("cross_firm_boosts", {}).get(dept, 1.0)
+
+    # Multi-source deduplication confidence boost (NEW v4)
+    dedup_key = f"{firm_id}:{title}"
+    dd_mul    = weights.get("dedup_confidence", {}).get(dedup_key, 1.0)
+
+    multiplier = min(MAX_BOOST, max(MIN_BOOST,
+        src_mul * dep_mul * kw_mul * geo_mul * xf_mul * dd_mul))
     old_score  = float(signal.get("department_score", 1.0))
     signal["department_score"] = round(old_score * multiplier, 4)
     signal["weight_multiplier"] = round(multiplier, 3)
@@ -106,7 +135,7 @@ def get_top4_departments() -> list[dict]:
 
 def run_evolution(db_path: str):
     logger.info("=" * 55)
-    logger.info("Self-Training Evolution Engine — starting")
+    logger.info("Self-Training Evolution Engine v4 — starting")
     logger.info("=" * 55)
 
     if not os.path.exists(db_path):
@@ -134,11 +163,24 @@ def run_evolution(db_path: str):
         # ── 5. Seniority distribution ──────────────────────────────────────
         _train_seniority_distribution(cursor, weights)
 
-        # ── 6. Generate trend report ───────────────────────────────────────
+        # ── 6+7. Trend + source reports ────────────────────────────────────
         _generate_trend_report(cursor, weights)
-
-        # ── 7. Generate source reliability report ─────────────────────────
         _generate_source_report(cursor, weights)
+
+        # ── 8. Geographic hotspot detection (NEW) ─────────────────────────
+        _train_geo_hotspots(cursor, weights)
+
+        # ── 9. Cross-source deduplication confidence (NEW) ────────────────
+        _train_dedup_confidence(cursor, weights)
+
+        # ── 10. Time-pattern analysis (NEW) ───────────────────────────────
+        _train_time_patterns(cursor, weights)
+
+        # ── 11. Cross-firm hiring correlation (NEW) ───────────────────────
+        _train_cross_firm_correlation(cursor, weights)
+
+        # ── 12. Prediction accuracy self-assessment (NEW) ─────────────────
+        _train_prediction_accuracy(cursor, weights)
 
         # Update metadata
         weights["total_runs"]   = weights.get("total_runs", 0) + 1
@@ -147,10 +189,13 @@ def run_evolution(db_path: str):
         save_weights(weights)
         conn.close()
 
-        logger.info(f"Self-Training Evolution Engine — complete (run #{weights['total_runs']})")
-        logger.info(f"  Source multipliers: {len(weights['source_multipliers'])}")
-        logger.info(f"  Dept trend boosts:  {len(weights['dept_trend_boosts'])}")
-        logger.info(f"  Keyword boosts:     {len(weights['keyword_boosts'])}")
+        logger.info(f"Self-Training v4 — complete (run #{weights['total_runs']})")
+        logger.info(f"  Source multipliers:  {len(weights['source_multipliers'])}")
+        logger.info(f"  Dept trend boosts:   {len(weights['dept_trend_boosts'])}")
+        logger.info(f"  Keyword boosts:      {len(weights['keyword_boosts'])}")
+        logger.info(f"  Geo boosts:          {len(weights.get('geo_boosts', {}))}")
+        logger.info(f"  Cross-firm boosts:   {len(weights.get('cross_firm_boosts', {}))}")
+        logger.info(f"  Partner signal ratio:{weights.get('partner_signal_ratio', 0):.1%}")
 
     except Exception as e:
         logger.error(f"Evolution engine error: {e}", exc_info=True)
@@ -432,3 +477,246 @@ def _generate_source_report(cursor, weights: dict):
             "total_active": len(report),
             "generated_at": datetime.now(timezone.utc).isoformat(),
         }, f, indent=2)
+
+
+# ═══════════════════════════════════════════════════════════════════
+# NEW TRAINING DIMENSIONS (v4)
+# ═══════════════════════════════════════════════════════════════════
+
+def _train_geo_hotspots(cursor, weights: dict):
+    """
+    Dim 8: Detect which ME cities are heating up.
+    Cities with accelerating signal volume get a geo_boost multiplier
+    that inflates expansion scores for that location.
+    """
+    try:
+        cursor.execute("""
+            SELECT location,
+                   SUM(CASE WHEN created_at > datetime('now', '-7 days')  THEN 1 ELSE 0 END) as this_week,
+                   SUM(CASE WHEN created_at > datetime('now', '-14 days')
+                             AND created_at <= datetime('now', '-7 days') THEN 1 ELSE 0 END) as last_week,
+                   COUNT(*) as total_30d
+            FROM signals
+            WHERE created_at > datetime('now', '-30 days')
+              AND location IS NOT NULL AND location != ''
+            GROUP BY location
+            HAVING total_30d >= 2
+            ORDER BY total_30d DESC
+        """)
+        rows = cursor.fetchall()
+    except Exception:
+        return
+
+    geo_boosts = weights.setdefault("geo_boosts", {})
+    geo_report = []
+
+    for row in rows:
+        city  = row["location"]
+        tw    = row["this_week"] or 0
+        lw    = row["last_week"] or 0
+        total = row["total_30d"] or 1
+        # Heat score: combines absolute volume and week-over-week acceleration
+        heat  = (tw / max(lw, 1)) if lw > 0 else (1.0 + tw * 0.1)
+        new_boost = max(MIN_BOOST, min(MAX_BOOST, heat))
+        old_boost = geo_boosts.get(city, 1.0)
+        geo_boosts[city] = round(old_boost * (1 - ALPHA) + new_boost * ALPHA, 4)
+        geo_report.append({
+            "city": city, "this_week": tw, "last_week": lw,
+            "total_30d": total, "boost": geo_boosts[city],
+            "trend": "↑ heating" if tw > lw else ("→ stable" if tw == lw else "↓ cooling"),
+        })
+
+    geo_report.sort(key=lambda x: -x["boost"])
+    Path("learning").mkdir(exist_ok=True)
+    with open(GEO_REPORT_PATH, "w") as f:
+        json.dump({
+            "cities": geo_report,
+            "generated_at": datetime.now(timezone.utc).isoformat(),
+        }, f, indent=2)
+
+    logger.info(f"  Geo hotspots: {len(geo_boosts)} cities tracked")
+
+
+def _train_dedup_confidence(cursor, weights: dict):
+    """
+    Dim 9: When the same job title appears from multiple sources for the
+    same firm in the same week, that's higher confidence than a single sighting.
+    Build a dedup_confidence map: (firm_id, title_stub) → source_count.
+    Used downstream to boost expansion scores for multi-source corroboration.
+    """
+    try:
+        cursor.execute("""
+            SELECT firm_id, LOWER(SUBSTR(title, 1, 40)) as title_stub,
+                   COUNT(DISTINCT source) as source_count,
+                   MAX(department_score) as max_score
+            FROM signals
+            WHERE created_at > datetime('now', '-14 days')
+              AND title IS NOT NULL AND title != ''
+            GROUP BY firm_id, title_stub
+            HAVING source_count >= 2
+        """)
+        rows = cursor.fetchall()
+    except Exception:
+        return
+
+    dedup = weights.setdefault("dedup_confidence", {})
+    for row in rows:
+        key = f"{row['firm_id']}:{row['title_stub']}"
+        # More sources = higher confidence multiplier (capped at 1.5×)
+        boost = min(1.5, 1.0 + (row["source_count"] - 1) * 0.15)
+        dedup[key] = round(boost, 3)
+
+    logger.info(f"  Dedup confidence: {len(dedup)} multi-source signals found")
+
+
+def _train_time_patterns(cursor, weights: dict):
+    """
+    Dim 10: Learn which days of the week produce the highest-quality signals.
+    Firms post jobs on Tues/Wed/Thurs; recruiters fire Mon/Tue.
+    Weights signals that arrive mid-week more heavily than Fri/weekend.
+    """
+    try:
+        cursor.execute("""
+            SELECT strftime('%w', created_at) as dow,
+                   AVG(department_score) as avg_score,
+                   COUNT(*) as cnt
+            FROM signals
+            WHERE created_at > datetime('now', '-60 days')
+            GROUP BY dow
+            HAVING cnt >= 5
+        """)
+        rows = cursor.fetchall()
+    except Exception:
+        return
+
+    if not rows:
+        return
+
+    all_avg = sum(r["avg_score"] for r in rows) / len(rows) if rows else 1.0
+    day_patterns = {}
+    for row in rows:
+        dow  = int(row["dow"])  # 0=Sun … 6=Sat
+        rel  = (row["avg_score"] or 1.0) / (all_avg or 1.0)
+        day_patterns[dow] = round(max(MIN_BOOST, min(MAX_BOOST, rel)), 4)
+
+    weights["time_patterns"] = day_patterns
+    logger.info(f"  Time patterns: trained on {len(day_patterns)} day-of-week buckets")
+
+
+def _train_cross_firm_correlation(cursor, weights: dict):
+    """
+    Dim 11: Cross-firm hiring correlation.
+    When multiple firms post in the same dept in the same week, that practice area
+    is genuinely hot — boost the dept score for ALL firms in that dept.
+    Also: if a peer firm at similar AmLaw rank just opened a role, that's a signal
+    that the role type is in demand across the peer group.
+    """
+    try:
+        cursor.execute("""
+            SELECT department,
+                   COUNT(DISTINCT firm_id) as firm_count,
+                   COUNT(*) as signal_count,
+                   SUM(CASE WHEN signal_type IN ('recruiter_posting','lateral_hire') THEN 1 ELSE 0 END) as high_conf
+            FROM signals
+            WHERE created_at > datetime('now', '-7 days')
+              AND department IS NOT NULL AND department != ''
+            GROUP BY department
+            HAVING firm_count >= 3
+            ORDER BY firm_count DESC
+        """)
+        rows = cursor.fetchall()
+    except Exception:
+        return
+
+    cross_boosts = weights.setdefault("cross_firm_boosts", {})
+    for row in rows:
+        dept        = row["department"]
+        firm_count  = row["firm_count"] or 1
+        # 3+ firms posting in same dept same week → market-wide demand signal
+        # Each additional firm adds a 5% boost, capped at 1.5×
+        boost = min(1.5, 1.0 + (firm_count - 2) * 0.08)
+        old   = cross_boosts.get(dept, 1.0)
+        cross_boosts[dept] = round(old * (1 - ALPHA) + boost * ALPHA, 4)
+
+    logger.info(f"  Cross-firm correlation: {len(cross_boosts)} dept boosts updated")
+
+
+def _train_prediction_accuracy(cursor, weights: dict):
+    """
+    Dim 12: Model self-assessment.
+    Compares expansion alerts sent 4+ weeks ago against subsequent signal volume.
+    If a high-score alert was followed by more signals from that firm/dept, the
+    prediction was accurate — boost that dept's source weights.
+    If not followed up, slightly decay the dept_trend_boost.
+    """
+    try:
+        cursor.execute("""
+            SELECT firm_id, department, score, sent_at
+            FROM weekly_scores
+            WHERE sent_at < datetime('now', '-28 days')
+              AND score > 10
+            ORDER BY sent_at DESC
+            LIMIT 50
+        """)
+        past_alerts = cursor.fetchall()
+    except Exception:
+        return  # Table may not exist yet — fine
+
+    if not past_alerts:
+        return
+
+    dept_boosts   = weights.setdefault("dept_trend_boosts", {})
+    accuracy_log  = []
+
+    for alert in past_alerts:
+        try:
+            firm_id = alert["firm_id"]
+            dept    = alert["department"]
+            sent_at = alert["sent_at"]
+
+            # Did signals actually follow?
+            cursor.execute("""
+                SELECT COUNT(*) as follow_up
+                FROM signals
+                WHERE firm_id = ?
+                  AND department = ?
+                  AND created_at > ?
+                  AND created_at < datetime(?, '+21 days')
+            """, (firm_id, dept, sent_at, sent_at))
+            result     = cursor.fetchone()
+            follow_up  = result["follow_up"] if result else 0
+            accurate   = follow_up >= 2  # 2+ follow-up signals = prediction confirmed
+
+            # EMA-nudge the dept boost based on accuracy
+            old_boost  = dept_boosts.get(dept, 1.0)
+            adjustment = 1.05 if accurate else 0.97
+            dept_boosts[dept] = round(
+                max(MIN_BOOST, min(MAX_BOOST, old_boost * adjustment)), 4
+            )
+            accuracy_log.append({
+                "firm_id": firm_id, "department": dept,
+                "follow_up_signals": follow_up, "accurate": accurate,
+                "dept_boost": dept_boosts[dept],
+            })
+        except Exception:
+            continue
+
+    if accuracy_log:
+        correct = sum(1 for x in accuracy_log if x["accurate"])
+        accuracy_pct = correct / len(accuracy_log)
+        weights["prediction_accuracy"] = round(accuracy_pct, 3)
+
+        Path("learning").mkdir(exist_ok=True)
+        with open(ACCURACY_REPORT_PATH, "w") as f:
+            json.dump({
+                "total_assessed": len(accuracy_log),
+                "accurate": correct,
+                "accuracy_pct": accuracy_pct,
+                "details": accuracy_log[:20],
+                "generated_at": datetime.now(timezone.utc).isoformat(),
+            }, f, indent=2)
+
+        logger.info(
+            f"  Prediction accuracy: {accuracy_pct:.1%} "
+            f"({correct}/{len(accuracy_log)} alerts confirmed)"
+        )
