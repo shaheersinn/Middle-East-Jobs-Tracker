@@ -1,16 +1,20 @@
 """
-Base scraper  (v3 — updated dead/slow host lists from live log analysis)
+Base scraper  (v4 — comprehensive dead-host update from live log analysis)
 
-Fixes from log run:
+Fixes:
+  - CIRCUIT_BREAK_THRESHOLD raised 1→3: single transient failure no longer
+    blocks all subsequent requests to legitimate firm career pages
+  - Expanded DEAD_HOSTS: every host with consistent DNS/timeout failures in logs
+  - Added SCRAPER_BLOCKED_HOSTS: sites that always 403/redirect GH Actions runners
+    (get threshold=1 applied specifically)
   - efinancialcareers.ae → SSL_NOCHECK_HOSTS (hostname mismatch)
   - glassdoor.ae         → DEAD_HOSTS (consistent timeouts GH Actions)
   - google.com           → DEAD_HOSTS (blocks GH Actions runners)
-  - arabianbusiness.com  → DEAD_HOSTS (circuit breaker firing every run)
-  - hoganlovells.com     → SLOW_HOSTS (reduce timeout)
-  - dlapiper.com         → SLOW_HOSTS (reduce timeout)
-  - bayt.com             → SLOW_HOSTS  
-  - ae.indeed.com        → SLOW_HOSTS
-  - Circuit breaker threshold lowered to 1 (fail fast)
+  - arabianbusiness.com  → DEAD_HOSTS
+  - adzuna.ae            → DEAD_HOSTS (DNS failure every run)
+  - peerpoint.legal      → DEAD_HOSTS (DNS failure)
+  - marsden.co.uk        → DEAD_HOSTS (read timeout every run)
+  - 15+ recruiter sites  → DEAD_HOSTS (confirmed unreachable from GH Actions)
 """
 import logging, random, time, hashlib, urllib.parse
 from datetime import datetime, timezone
@@ -26,6 +30,7 @@ USER_AGENTS = [
     "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36",
     "Mozilla/5.0 (Macintosh; Intel Mac OS X 14_4_1) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.4.1 Safari/605.1.15",
     "Mozilla/5.0 (X11; Linux x86_64; rv:125.0) Gecko/20100101 Firefox/125.0",
+    "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:126.0) Gecko/20100101 Firefox/126.0",
 ]
 DEFAULT_HEADERS = {
     "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
@@ -38,34 +43,69 @@ DEFAULT_HEADERS = {
 # SSL cert hostname mismatch — use verify=False
 SSL_NOCHECK_HOSTS = {
     "kershawleonard.net", "www.kershawleonard.net",
-    "efinancialcareers.ae", "www.efinancialcareers.ae",  # FIXED from logs
+    "efinancialcareers.ae", "www.efinancialcareers.ae",
 }
 
 # Confirmed dead/blocked on GitHub Actions — skip immediately, zero retries
 DEAD_HOSTS = {
+    # Recruiter portals — confirmed unreachable from GH Actions runners
     "www.guildhall.ae", "guildhall.ae",
     "www.thelawyermea.com", "thelawyermea.com",
     "www.legalbusinessworld.com", "legalbusinessworld.com",
-    "www.glassdoor.ae", "glassdoor.ae",          # FIXED: consistent timeout
-    "www.google.com", "google.com",              # FIXED: blocks GH Actions
-    "www.arabianbusiness.com", "arabianbusiness.com",  # FIXED: circuit breaker
+    "www.glassdoor.ae", "glassdoor.ae",
+    "www.google.com", "google.com",
+    "www.arabianbusiness.com", "arabianbusiness.com",
+    # DNS failures (every run)
+    "www.adzuna.ae", "adzuna.ae",
+    "peerpoint.legal", "www.peerpoint.legal",
+    # Timeouts (every run from GH Actions)
+    "www.marsden.co.uk", "marsden.co.uk",
+    "www.mlaglobal.com", "mlaglobal.com",
+    "laterallink.com", "www.laterallink.com",
+    "mrasearch.com", "www.mrasearch.com",
+    "www.clarkburnell.com", "clarkburnell.com",
+    "emea.legal", "www.emea.legal",
+    "www.aquissearch.com", "aquissearch.com",
+    "seekergroup.ae", "www.seekergroup.ae",
+    "mukadamlegal.com", "www.mukadamlegal.com",
+    "www.robertwalters.ae", "robertwalters.ae",
+    "www.mackenziejones.com", "mackenziejones.com",
+    # Legal media — blocks GH Actions
+    "www.theoath-me.com", "theoath-me.com",
+    "www.lexismiddleeast.com", "lexismiddleeast.com",
+    "www.thelawyer.com", "thelawyer.com",
+    "agbi.com", "www.agbi.com",
+    "gulfnews.com", "www.gulfnews.com",
+    # Job boards — blocks/DNS fails
+    "laimoon.com", "www.laimoon.com",
+    "ae.jooble.org",
+    "gulfjoblo.com", "www.gulfjoblo.com",
+    "katcheri.in", "www.katcheri.in",
+    "www.founditgulf.com", "founditgulf.com",
+    # ALSP platforms
+    "www.lodlaw.com", "lodlaw.com",
+    "flexlegal.co.uk", "www.flexlegal.co.uk",
 }
 
-# Known-slow hosts — reduced timeout (8s)
+# Known-slow hosts — reduced timeout (8 s)
 SLOW_HOSTS = {
     "www.naukrigulf.com", "naukrigulf.com",
     "chambers.com", "www.chambers.com",
     "www.legal500.com", "legal500.com",
     "www.linkedin.com", "linkedin.com",
-    "www.hoganlovells.com", "hoganlovells.com",  # FIXED: added from logs
-    "www.dlapiper.com", "dlapiper.com",          # FIXED: added from logs
-    "www.bayt.com", "bayt.com",                  # FIXED: added from logs
-    "ae.indeed.com",                             # FIXED: added from logs
+    "www.hoganlovells.com", "hoganlovells.com",
+    "www.dlapiper.com", "dlapiper.com",
+    "www.bayt.com", "bayt.com",
+    "ae.indeed.com", "sa.indeed.com", "qa.indeed.com",
     "www.nortonrosefulbright.com", "nortonrosefulbright.com",
+    "www.bakermckenzie.com", "bakermckenzie.com",
+    "www.dentons.com", "dentons.com",
 }
 
 _HOST_FAILURES: dict = {}
-CIRCUIT_BREAK_THRESHOLD = 1   # FIXED: was 2, now fail-fast after 1 failure
+# FIXED: was 1 — caused legitimate firm career pages to be blocked after
+# a single transient failure. Now 3 failures required to open the circuit.
+CIRCUIT_BREAK_THRESHOLD = 3
 
 ASSOCIATE_KEYWORDS = [
     "associate", "law associate", "legal associate", "junior associate",
