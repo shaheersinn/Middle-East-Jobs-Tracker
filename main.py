@@ -1,16 +1,22 @@
 """
-ME Legal Jobs Tracker — main entry point  (v3)
+ME Legal Jobs Tracker — main entry point  (v4.2)
 
-v3 Changes:
-  - 13 scrapers: added LegalMediaScraper (The Oath/LexisNexis) + ALSPScraper
-  - 24 tracked US firms: added Paul Hastings, Morgan Lewis
-  - 24 recruiters in RecruiterScraper cache
-  - 14 job boards in JobBoardsScraper (GulfTalent, Jameson, 3× Indeed, Jooble, GulfJoblo…)
-  - FIXED: All Telegram alerts in ONE batched message (flush_instant_alerts)
-  - FIXED: efinancialcareers.ae, glassdoor.ae, arabianbusiness.com added to dead/ssl lists
-  - FIXED: GH Actions DB cache — save after every run so training job can find it
-  - Enhanced self-training: 7 training dimensions, source reliability report
-  - New signal types: regulatory_filing, contract_role
+v4.2 Changes:
+  - FIXED: training job git failure — binary .pyc rebase conflict
+    (git ls-files | grep pyc | xargs git rm --cached — works without glob issues)
+  - FIXED: git pull --rebase -X ours now also covers training step
+  - NEW: ATSScraper (slot 2) — Greenhouse / Lever / Workday public JSON APIs
+    Covers 23 of 24 tracked firms; CF-proof since these are public REST endpoints
+    Greenhouse: Gibson Dunn, Jones Day, Milbank, Simpson Thacher, S&C, K&S,
+                Mayer Brown, Paul Hastings, O'Melveny, Skadden
+    Lever:      Greenberg Traurig, McDermott, Morgan Lewis
+    Workday:    Latham, Kirkland, White & Case, Baker McKenzie, DLA Piper,
+                Norton Rose, Hogan Lovells, Reed Smith, Dentons, Squire Patton,
+                A&O Shearman
+  - IMPROVED: Full browser fingerprint headers in BaseScraper (Sec-Fetch-* headers
+    added — key signal that Cloudflare checks for bot detection)
+  - IMPROVED: JSON_HEADERS constant for ATS API calls (CORS-mode headers)
+"""
 
 Run modes:
   python main.py             — full collect → analyse → dashboard → 1 Telegram alert
@@ -27,6 +33,7 @@ from config import Config
 from firms import FIRMS, FIRMS_BY_ID
 from database.db import Database
 from scrapers.jobs import JobsScraper
+from scrapers.ats import ATSScraper
 from scrapers.job_boards import JobBoardsScraper
 from scrapers.recruiter import RecruiterScraper
 from scrapers.press import PressScraper
@@ -54,19 +61,20 @@ logger = logging.getLogger("main")
 
 # 13 scrapers — ordered by signal quality (fastest/highest confidence first)
 SCRAPER_CLASSES = [
-    JobsScraper,               # 1  Firm careers pages — gold standard
-    RecruiterScraper,          # 2  24 ME legal recruiters (global cache)
-    RegulatoryRegistryScraper, # 3  DIFC/ADGM/QFC registries — 3-6mo lead time
-    LegalMediaScraper,         # 4  The Oath / LexisNexis ME / The Lawyer
-    Law360MEScraper,           # 5  Law360 + ALM RSS
-    GoogleNewsScraper,         # 6  Google News RSS
-    JobBoardsScraper,          # 7  14 boards: Bayt/GulfTalent/Jameson/Indeed×3/etc
-    ALSPScraper,               # 8  LOD / Axiom / Peerpoint contract pipeline
-    PressScraper,              # 9  Firm news + IFLR / Arabian Business
-    ChambersScraper,           # 10 Chambers Global + Legal 500 ME
-    RSSFeedScraper,            # 11 17 RSS feeds
-    LinkedInPeopleScraper,     # 12 Google-indexed LinkedIn profiles
-    WebsiteScraper,            # 13 ME office page change detection
+    JobsScraper,               # 1  Firm careers pages — HTML scrape (may be blocked by CF)
+    ATSScraper,                # 2  Greenhouse / Lever / Workday public JSON APIs — CF-proof
+    RecruiterScraper,          # 3  24 ME legal recruiters (global cache)
+    RegulatoryRegistryScraper, # 4  DIFC/ADGM/QFC registries — 3-6mo lead time
+    LegalMediaScraper,         # 5  The Oath / LexisNexis ME / The Lawyer
+    Law360MEScraper,           # 6  Law360 + ALM RSS
+    GoogleNewsScraper,         # 7  Google News RSS
+    JobBoardsScraper,          # 8  14 boards: Bayt/GulfTalent/Jameson/Indeed×3/etc
+    ALSPScraper,               # 9  LOD / Axiom / Peerpoint contract pipeline
+    PressScraper,              # 10 Firm news + IFLR / Arabian Business
+    ChambersScraper,           # 11 Chambers Global + Legal 500 ME
+    RSSFeedScraper,            # 12 17 RSS feeds
+    LinkedInPeopleScraper,     # 13 Google-indexed LinkedIn profiles
+    WebsiteScraper,            # 14 ME office page change detection
 ]
 
 # Only these types trigger an instant queued alert
@@ -88,7 +96,7 @@ def run(firms_to_run=None, digest_only=False):
 
     logger.info("=" * 70)
     logger.info(f"ME Legal Jobs Tracker  —  {datetime.now(timezone.utc).strftime('%Y-%m-%d %H:%M UTC')}")
-    logger.info(f"Scrapers: {len(SCRAPER_CLASSES)}  |  Firms: {len(target_firms)}")
+    logger.info(f"Scrapers: {len(SCRAPER_CLASSES)} (incl. ATS: Greenhouse/Lever/Workday)  |  Firms: {len(target_firms)}")
     logger.info(f"Self-training run #{weights.get('total_runs', 0) + 1}  |  Active sources: {len(weights.get('source_multipliers', {}))}")
     logger.info("=" * 70)
 
