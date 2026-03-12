@@ -16,7 +16,7 @@ Fixes:
   - marsden.co.uk        → DEAD_HOSTS (read timeout every run)
   - 15+ recruiter sites  → DEAD_HOSTS (confirmed unreachable from GH Actions)
 """
-import logging, random, time, hashlib, urllib.parse
+import logging, random, re, time, hashlib, urllib.parse
 from datetime import datetime, timezone
 from typing import Optional
 import requests
@@ -117,7 +117,7 @@ ASSOCIATE_KEYWORDS = [
 NON_LAWYER_ROLES = [
     "paralegal", "legal secretary", "receptionist", "office manager",
     "marketing", "business development", "it support", "billing",
-    "hr ", "human resources", "finance director", "accountant",
+    "hr", "human resources", "finance director", "accountant",
     "operations", "facilities", "data entry", "knowledge management",
 ]
 
@@ -212,8 +212,12 @@ class BaseScraper:
     @staticmethod
     def _is_lawyer_role(title: str) -> bool:
         t = title.lower()
-        return (any(kw in t for kw in ASSOCIATE_KEYWORDS) and
-                not any(kw in t for kw in NON_LAWYER_ROLES))
+        if not any(kw in t for kw in ASSOCIATE_KEYWORDS):
+            return False
+        return not any(
+            re.search(r"\b" + re.escape(kw) + r"\b", t)
+            for kw in NON_LAWYER_ROLES
+        )
 
     @staticmethod
     def _extract_seniority(title: str) -> str:
