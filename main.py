@@ -1,11 +1,11 @@
 """
-ME Legal Jobs Tracker — main entry point  (v4.2)
+ME Legal Jobs Tracker -- main entry point  (v4.2)
 
 v4.2 Changes:
-  - FIXED: training job git failure — binary .pyc rebase conflict
-    (git ls-files | grep pyc | xargs git rm --cached — works without glob issues)
+  - FIXED: training job git failure -- binary .pyc rebase conflict
+    (git ls-files | grep pyc | xargs git rm --cached)
   - FIXED: git pull --rebase -X ours now also covers training step
-  - NEW: ATSScraper (slot 2) — Greenhouse / Lever / Workday public JSON APIs
+  - NEW: ATSScraper (slot 2) -- Greenhouse / Lever / Workday public JSON APIs
     Covers 23 of 24 tracked firms; CF-proof since these are public REST endpoints
     Greenhouse: Gibson Dunn, Jones Day, Milbank, Simpson Thacher, S&C, K&S,
                 Mayer Brown, Paul Hastings, O'Melveny, Skadden
@@ -13,17 +13,15 @@ v4.2 Changes:
     Workday:    Latham, Kirkland, White & Case, Baker McKenzie, DLA Piper,
                 Norton Rose, Hogan Lovells, Reed Smith, Dentons, Squire Patton,
                 A&O Shearman
-  - IMPROVED: Full browser fingerprint headers in BaseScraper (Sec-Fetch-* headers
-    added — key signal that Cloudflare checks for bot detection)
+  - IMPROVED: Full browser fingerprint headers in BaseScraper (Sec-Fetch-* headers)
   - IMPROVED: JSON_HEADERS constant for ATS API calls (CORS-mode headers)
-"""
 
 Run modes:
-  python main.py             — full collect → analyse → dashboard → 1 Telegram alert
-  python main.py --digest    — send weekly digest from existing DB
-  python main.py --dashboard — regenerate dashboard only
-  python main.py --train     — run evolution engine only (no scraping)
-  python main.py --firm X    — single firm
+  python main.py             -- full collect -> analyse -> dashboard -> 1 Telegram alert
+  python main.py --digest    -- send weekly digest from existing DB
+  python main.py --dashboard -- regenerate dashboard only
+  python main.py --train     -- run evolution engine only (no scraping)
+  python main.py --firm X    -- single firm
   python main.py --list-firms
 """
 import argparse, logging, sys
