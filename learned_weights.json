@@ -1,6 +1,7 @@
 {
   "source_multipliers": {
-    "Firm Careers Page": 1.3707
+    "Firm Careers Page": 1.1466,
+    "Website Monitor": 1.3
   },
   "dept_trend_boosts": {
     "Banking & Finance": 1.0,
@@ -10,10 +11,13 @@
     "Real Estate": 1.0
   },
   "keyword_boosts": {
-    "development": 0.2586
+    "development": 0.2569,
+    "data": 1.0279,
+    "privacy": 0.9763,
+    "cybersecurity": 0.9763
   },
-  "total_runs": 20,
-  "last_trained": "2026-03-12T22:20:30.238035+00:00",
+  "total_runs": 21,
+  "last_trained": "2026-03-12T23:03:00.416066+00:00",
   "firm_velocity": {
     "baker_mckenzie": {
       "firm_name": "Baker McKenzie",
@@ -102,6 +106,14 @@
       "this_month": 1,
       "acceleration": 1.0,
       "status": "accelerating"
+    },
+    "mcdermott": {
+      "firm_name": "McDermott Will & Emery LLP",
+      "this_week": 4,
+      "last_week": 0,
+      "this_month": 4,
+      "acceleration": 4.0,
+      "status": "accelerating"
     }
   },
   "seniority_distribution": {
@@ -111,16 +123,18 @@
   },
   "partner_signal_ratio": 0,
   "geo_boosts": {
-    "Dubai": 2.4122,
-    "United Arab Emirates": 1.1912,
-    "Abu Dhabi": 1.1912
+    "Dubai": 2.4298,
+    "United Arab Emirates": 1.193,
+    "Abu Dhabi": 1.193,
+    "Riyadh": 1.04
   },
   "cross_firm_boosts": {
-    "Corporate / M&A": 1.3825,
-    "Real Estate": 1.0765
+    "Corporate / M&A": 1.386,
+    "Real Estate": 1.0772
   },
   "time_patterns": {
-    "3": 1.0
+    "3": 0.3515,
+    "4": 1.6485
   },
   "dedup_confidence": {}
 }

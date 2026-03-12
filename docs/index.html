@@ -2,19 +2,217 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8"/>
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
 <title>ME Legal Jobs Tracker</title>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
 <style>
-  body { background:#0d1117; color:#e6e1d5; font-family:sans-serif; display:flex; align-items:center; justify-content:center; min-height:100vh; margin:0; text-align:center; }
-  h1 { color:#d4a83c; }
-  p { color:#8b949e; margin-top:12px; }
+:root{--bg:#0E1624;--card:#162033;--card2:#1C293F;--gold:#D4A83C;--text:#E8E4D8;--muted:#8A95A8;--border:#253348;--red:#D45B5B;--green:#5BBD8A;--blue:#5BA8D4;font-size:15px}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;min-height:100vh}
+a{color:var(--gold);text-decoration:none}a:hover{text-decoration:underline}
+.header{background:linear-gradient(135deg,#0A1020 0%,#162033 100%);border-bottom:1px solid var(--border);padding:20px 28px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px}
+.header-left h1{font-size:1.35rem;font-weight:700;color:var(--gold)}.header-left p{font-size:.78rem;color:var(--muted);margin-top:3px}.header-right{font-size:.75rem;color:var(--muted);text-align:right}
+.stats-bar{display:flex;gap:14px;padding:16px 28px;background:var(--card);border-bottom:1px solid var(--border);flex-wrap:wrap}
+.stat-box{background:var(--card2);border:1px solid var(--border);border-radius:8px;padding:10px 16px;min-width:100px}
+.stat-box .val{font-size:1.4rem;font-weight:700;color:var(--gold)}.stat-box .lbl{font-size:.7rem;color:var(--muted);margin-top:2px}
+.ai-box{border-color:rgba(212,168,60,.3)}.acc-badge{display:inline-block;margin-top:4px;font-size:.68rem;color:var(--green);background:rgba(91,189,138,.1);border:1px solid rgba(91,189,138,.3);border-radius:3px;padding:1px 5px}
+.section{padding:20px 28px}
+.section-title{font-size:.85rem;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:1px;margin-bottom:14px;display:flex;align-items:center;gap:8px}
+.section-title::after{content:"";flex:1;height:1px;background:var(--border)}
+.top4-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px}
+.top4-card{background:var(--card);border:1px solid var(--border);border-top:3px solid var(--t4c,var(--gold));border-radius:10px;padding:14px 16px;display:flex;flex-direction:column;gap:5px;transition:transform .15s}
+.top4-card:hover{transform:translateY(-2px)}.t4-medal{font-size:1.25rem}.t4-emoji{font-size:1.5rem;margin-top:2px}
+.t4-name{font-size:.88rem;font-weight:600;color:var(--text);line-height:1.3}.t4-stats{display:flex;gap:8px;flex-wrap:wrap;margin-top:4px}
+.t4-count{font-size:.8rem;color:var(--gold);font-weight:600}.t4-firms{font-size:.73rem;color:var(--muted)}.t4-trend{font-size:.85rem;font-weight:700}
+.trend-up{color:var(--green)}.trend-dn{color:var(--red)}.trend-flat{color:var(--muted)}.muted{color:var(--muted);font-size:.85rem}
+.charts-row{display:grid;grid-template-columns:2fr 1fr;gap:16px;padding:0 28px 20px}
+.charts-row.single{grid-template-columns:1fr}
+.chart-card{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:18px}
+.chart-title{font-size:.82rem;font-weight:600;color:var(--muted);margin-bottom:14px;text-transform:uppercase;letter-spacing:.5px}
+.chart-wrap{height:260px;position:relative}.chart-pie-wrap{height:240px}.chart-geo-wrap{height:200px}
+@media(max-width:800px){.charts-row{grid-template-columns:1fr}.charts-row.single{grid-template-columns:1fr}}
+.tabs{display:flex;padding:0 28px;background:var(--card);border-bottom:1px solid var(--border)}
+.tab{padding:13px 20px;font-size:.85rem;font-weight:600;cursor:pointer;border-bottom:3px solid transparent;color:var(--muted);transition:color .15s,border-color .15s;background:none;border-top:none;border-left:none;border-right:none}
+.tab.active{color:var(--gold);border-bottom-color:var(--gold)}.tab-panel{display:none}.tab-panel.active{display:block}
+.firms-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(360px,1fr));gap:16px;padding:20px 28px}
+.firm-card{background:var(--card);border:1px solid var(--border);border-left:4px solid var(--accent,var(--gold));border-radius:10px;padding:18px;transition:box-shadow .15s}
+.firm-card:hover{box-shadow:0 4px 20px rgba(0,0,0,.4)}.firm-rank{font-size:.73rem;color:var(--muted);font-weight:700;margin-bottom:6px}
+.firm-header{display:flex;justify-content:space-between;margin-bottom:8px}.firm-name{font-size:1rem;font-weight:700;color:var(--text)}.firm-score{font-size:1.1rem;font-weight:700;color:var(--gold)}
+.firm-locs{display:flex;flex-wrap:wrap;gap:5px;margin-bottom:8px}.loc-badge{background:rgba(212,168,60,.1);color:var(--gold);border:1px solid rgba(212,168,60,.2);border-radius:4px;font-size:.7rem;padding:2px 7px}
+.firm-dept{font-size:.82rem;color:var(--muted);margin-bottom:8px}.firm-pills{display:flex;flex-wrap:wrap;gap:5px;margin-bottom:10px}
+.dept-pill{border:1px solid;border-radius:4px;font-size:.7rem;padding:2px 7px}.sig-row{display:flex;gap:8px;font-size:.77rem;margin-bottom:5px;flex-wrap:wrap;align-items:flex-start}
+.sig-badge{background:var(--card2);border:1px solid var(--border);color:var(--muted);border-radius:3px;padding:1px 5px;font-size:.68rem;white-space:nowrap;flex-shrink:0}
+.sig-loc{color:var(--muted);font-size:.7rem;white-space:nowrap}
+.jobs-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(340px,1fr));gap:14px;padding:20px 28px}
+.job-card{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:16px;transition:box-shadow .15s}.job-card:hover{box-shadow:0 4px 16px rgba(0,0,0,.35)}
+.job-top{display:flex;justify-content:space-between;margin-bottom:7px}.job-firm{font-size:.77rem;font-weight:700;color:var(--gold)}.job-date{font-size:.7rem;color:var(--muted)}
+.job-title{display:block;font-size:.88rem;font-weight:600;color:var(--text);margin-bottom:8px;line-height:1.35}.job-meta{display:flex;flex-wrap:wrap;gap:8px;font-size:.73rem}
+.job-loc{color:var(--blue)}.job-sen{color:var(--muted)}.job-src{color:var(--muted);background:var(--card2);border-radius:3px;padding:1px 5px}.via{color:var(--muted);font-style:italic}
+.footer{padding:14px 28px;border-top:1px solid var(--border);font-size:.7rem;color:var(--muted);display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
 </style>
 </head>
 <body>
-  <div>
-    <h1>⚖️ ME Legal Jobs Tracker</h1>
-    <p>Dashboard will appear here after the first GitHub Actions run.</p>
-    <p>US BigLaw associate openings in Dubai · Abu Dhabi · Qatar · Riyadh</p>
+<div class="header">
+  <div class="header-left"><h1>⚖️ ME Legal Jobs Tracker</h1><p>US BigLaw associate openings &amp; ME expansion intelligence</p></div>
+  <div class="header-right">Updated 12 Mar 2026 23:03 UTC<br><a href="https://middle-east-jobs-tracker.vercel.app/" target="_blank">🖥 Live Dashboard</a></div>
+</div>
+<div class="stats-bar">
+  <div class="stat-box"><div class="val">12</div><div class="lbl">Active Firms</div></div>
+  <div class="stat-box"><div class="val">19</div><div class="lbl">Jobs This Week</div></div>
+  <div class="stat-box"><div class="val">0</div><div class="lbl">Lateral Hires</div></div>
+  <div class="stat-box"><div class="val">1</div><div class="lbl">Regulatory Filings</div></div>
+  <div class="stat-box"><div class="val">19</div><div class="lbl">Total Jobs Logged</div></div>
+  <div class="stat-box ai-box"><div class="val">21</div><div class="lbl">AI Training Cycles</div></div>
+</div>
+
+<div class="section">
+  <div class="section-title">📊 Top 4 ME Practice Areas in Demand</div>
+  <div class="top4-grid"><div class="top4-card" style="--t4c:#D4A83C"><div class="t4-medal">🥇</div><div class="t4-emoji">🤝</div><div class="t4-name">Corporate / M&A</div><div class="t4-stats"><span class="t4-count">13 signals</span><span class="t4-firms">7 firm(s)</span><span class="t4-trend trend-flat">→</span></div></div><div class="top4-card" style="--t4c:#D45B8A"><div class="t4-medal">🥈</div><div class="t4-emoji">🔒</div><div class="t4-name">Data Privacy & Technology</div><div class="t4-stats"><span class="t4-count">5 signals</span><span class="t4-firms">2 firm(s)</span><span class="t4-trend trend-flat">→</span></div></div><div class="top4-card" style="--t4c:#5BBD8A"><div class="t4-medal">🥉</div><div class="t4-emoji">🏢</div><div class="t4-name">Real Estate</div><div class="t4-stats"><span class="t4-count">3 signals</span><span class="t4-firms">3 firm(s)</span><span class="t4-trend trend-flat">→</span></div></div><div class="top4-card" style="--t4c:#5BA8D4"><div class="t4-medal">4️⃣</div><div class="t4-emoji">🏦</div><div class="t4-name">Banking & Finance</div><div class="t4-stats"><span class="t4-count">2 signals</span><span class="t4-firms">2 firm(s)</span><span class="t4-trend trend-flat">→</span></div></div></div>
+</div>
+
+<div class="charts-row">
+  <div class="chart-card">
+    <div class="chart-title">📊 Practice Areas — Signal Volume (Last 30 Days)</div>
+    <div class="chart-wrap"><canvas id="barChart"></canvas></div>
   </div>
+  <div class="chart-card">
+    <div class="chart-title">🍕 Signal Type Breakdown</div>
+    <div class="chart-wrap chart-pie-wrap"><canvas id="pieChart"></canvas></div>
+  </div>
+</div>
+<div class="charts-row single">
+  <div class="chart-card">
+    <div class="chart-title">🌍 Geographic Hotspots — This Week's Signal Volume by City</div>
+    <div class="chart-wrap chart-geo-wrap"><canvas id="geoChart"></canvas></div>
+  </div>
+</div>
+
+<div class="tabs">
+  <button class="tab active" onclick="showTab('firms',this)">🏛 Firm Activity</button>
+  <button class="tab" onclick="showTab('jobs',this)">💼 Jobs Board</button>
+</div>
+<div id="tab-firms" class="tab-panel active">
+  <div class="firms-grid"><div class="firm-card" style="--accent:#D45B8A" id="firm-omelveny"><div class="firm-rank">#1</div><div class="firm-header"><div class="firm-name">O'Melveny & Myers LLP</div><div class="firm-score">145.5</div></div><div class="firm-locs"><span class="loc-badge">🇦🇪 Dubai</span> <span class="loc-badge">🇶🇦 Qatar</span></div><div class="firm-dept">🔒 <strong>Data Privacy & Technology</strong></div><div class="firm-pills"><span class="dept-pill" style="border-color:#D45B8A;color:#D45B8A">🔒 Data Privacy & Technology <b>1</b></span> <span class="dept-pill" style="border-color:#D4A83C;color:#D4A83C">🤝 Corporate / M&A <b>1</b></span> </div><div class="firm-signals"><div class="sig-row"><span class="sig-badge">Regulatory Filing</span><a href="https://qfc.qa/en/regulations/regulated-entities" target="_blank" rel="noopener">[QFC Authority] OMM — new registration</a><span class="sig-loc">🇶🇦 Qatar</span></div><div class="sig-row"><span class="sig-badge">Job Posting</span><a href="https://www.omm.com/careers" target="_blank" rel="noopener">[O'Melveny] Careers</a><span class="sig-loc">🇦🇪 Dubai</span></div></div></div><div class="firm-card" style="--accent:#D45B8A" id="firm-mcdermott"><div class="firm-rank">#2</div><div class="firm-header"><div class="firm-name">McDermott Will & Emery LLP</div><div class="firm-score">102.4</div></div><div class="firm-locs"><span class="loc-badge">🇸🇦 Riyadh</span> <span class="loc-badge">🇦🇪 Dubai</span></div><div class="firm-dept">🔒 <strong>Data Privacy & Technology</strong></div><div class="firm-pills"><span class="dept-pill" style="border-color:#D45B8A;color:#D45B8A">🔒 Data Privacy & Technology <b>4</b></span> </div><div class="firm-signals"><div class="sig-row"><span class="sig-badge">Site Change</span><a href="https://www.mwe.com/offices/dubai" target="_blank" rel="noopener">[McDermott Dubai] Website changed — lawyer content detected</a><span class="sig-loc">🇦🇪 Dubai</span></div><div class="sig-row"><span class="sig-badge">Site Change</span><a href="https://www.mwe.com/offices/dubai/en/people" target="_blank" rel="noopener">[McDermott Dubai] Website changed — lawyer content detected</a><span class="sig-loc">🇦🇪 Dubai</span></div><div class="sig-row"><span class="sig-badge">Site Change</span><a href="https://www.mwe.com/offices/riyadh" target="_blank" rel="noopener">[McDermott Riyadh] Website changed — lawyer content detected</a><span class="sig-loc">🇸🇦 Riyadh</span></div><div class="sig-row"><span class="sig-badge">Site Change</span><a href="https://www.mwe.com/offices/riyadh/en/people" target="_blank" rel="noopener">[McDermott Riyadh] Website changed — lawyer content detected</a><span class="sig-loc">🇸🇦 Riyadh</span></div></div></div><div class="firm-card" style="--accent:#5BA8D4" id="firm-hogan_lovells"><div class="firm-rank">#3</div><div class="firm-header"><div class="firm-name">Hogan Lovells US LLP</div><div class="firm-score">97.4</div></div><div class="firm-locs"><span class="loc-badge">🇦🇪 Dubai</span></div><div class="firm-dept">🏦 <strong>Banking & Finance</strong></div><div class="firm-pills"><span class="dept-pill" style="border-color:#5BA8D4;color:#5BA8D4">🏦 Banking & Finance <b>1</b></span> </div><div class="firm-signals"><div class="sig-row"><span class="sig-badge">Recruiter</span><a href="https://www.charterhouseme.ae/job/banking-and-finance-associate-4-7pqe-53672" target="_blank" rel="noopener">[Charterhouse ME] Banking & Finance Associate (4–7PQE)</a><span class="sig-loc">🇦🇪 Dubai</span></div></div></div><div class="firm-card" style="--accent:#D4A83C" id="firm-jones_day"><div class="firm-rank">#4</div><div class="firm-header"><div class="firm-name">Jones Day</div><div class="firm-score">32.2</div></div><div class="firm-locs"><span class="loc-badge">📍 United Arab Emirates</span> <span class="loc-badge">🇦🇪 Dubai</span></div><div class="firm-dept">🤝 <strong>Corporate / M&A</strong></div><div class="firm-pills"><span class="dept-pill" style="border-color:#D4A83C;color:#D4A83C">🤝 Corporate / M&A <b>6</b></span> <span class="dept-pill" style="border-color:#5BA8D4;color:#5BA8D4">🏦 Banking & Finance <b>1</b></span> <span class="dept-pill" style="border-color:#5BBD8A;color:#5BBD8A">🏢 Real Estate <b>1</b></span> </div><div class="firm-signals"><div class="sig-row"><span class="sig-badge">Job Posting</span><a href="https://www.jonesday.com/en/careers" target="_blank" rel="noopener">[Jones Day] Jones Day's commitment to client service means our lawyers w</a><span class="sig-loc">🇦🇪 Dubai</span></div><div class="sig-row"><span class="sig-badge">Job Posting</span><a href="https://www.jonesday.com/en/careers" target="_blank" rel="noopener">[Jones Day] Law Students and Entry-Level Lawyers (U.S.)</a><span class="sig-loc">🇦🇪 Dubai</span></div><div class="sig-row"><span class="sig-badge">Job Posting</span><a href="https://www.jonesday.com/en/careers" target="_blank" rel="noopener">[Jones Day] INCLUSIONJones Day is committed to providing equal opportuni</a><span class="sig-loc">🇦🇪 Dubai</span></div><div class="sig-row"><span class="sig-badge">Job Posting</span><a href="https://www.jonesday.com/en/careers" target="_blank" rel="noopener">[Jones Day] Read More About Our Recognitions</a><span class="sig-loc">🇦🇪 Dubai</span></div><div class="sig-row"><span class="sig-badge">Job Posting</span><a href="https://www.jonesday.com/en/careers" target="_blank" rel="noopener">[Jones Day] CAREEROPPORTUNITIES</a><span class="sig-loc">📍 United Arab Emirates</span></div><div class="sig-row"><span class="sig-badge">Job Posting</span><a href="https://www.jonesday.com/en/careers" target="_blank" rel="noopener">[Jones Day] Opportunities</a><span class="sig-loc">📍 United Arab Emirates</span></div></div></div><div class="firm-card" style="--accent:#D4A83C" id="firm-squire_patton"><div class="firm-rank">#5</div><div class="firm-header"><div class="firm-name">Squire Patton Boggs (US) LLP</div><div class="firm-score">8.2</div></div><div class="firm-locs"><span class="loc-badge">🇦🇪 Dubai</span></div><div class="firm-dept">🤝 <strong>Corporate / M&A</strong></div><div class="firm-pills"><span class="dept-pill" style="border-color:#D4A83C;color:#D4A83C">🤝 Corporate / M&A <b>2</b></span> </div><div class="firm-signals"><div class="sig-row"><span class="sig-badge">Job Posting</span><a href="https://www.squirepattonboggs.com/en/careers" target="_blank" rel="noopener">[Squire Patton Boggs] Gabriel Pennington: Tips for Creating an Ideal Wor</a><span class="sig-loc">🇦🇪 Dubai</span></div><div class="sig-row"><span class="sig-badge">Job Posting</span><a href="https://www.squirepattonboggs.com/en/careers" target="_blank" rel="noopener">[Squire Patton Boggs] Paul Mann: From Trainee to Rainmaker</a><span class="sig-loc">🇦🇪 Dubai</span></div></div></div><div class="firm-card" style="--accent:#D4A83C" id="firm-skadden"><div class="firm-rank">#6</div><div class="firm-header"><div class="firm-name">Skadden, Arps, Slate, Meagher & Flom LLP</div><div class="firm-score">4.5</div></div><div class="firm-locs"><span class="loc-badge">🇦🇪 Abu Dhabi</span></div><div class="firm-dept">🤝 <strong>Corporate / M&A</strong></div><div class="firm-pills"><span class="dept-pill" style="border-color:#D4A83C;color:#D4A83C">🤝 Corporate / M&A <b>1</b></span> </div><div class="firm-signals"><div class="sig-row"><span class="sig-badge">Job Posting</span><a href="https://www.skadden.com/careers/attorneys/carve-your-path" target="_blank" rel="noopener">[Skadden] Attorneys Discover more about Skadden as a law student or expe</a><span class="sig-loc">🇦🇪 Abu Dhabi</span></div></div></div><div class="firm-card" style="--accent:#5BBD8A" id="firm-gibson_dunn"><div class="firm-rank">#7</div><div class="firm-header"><div class="firm-name">Gibson, Dunn & Crutcher LLP</div><div class="firm-score">4.5</div></div><div class="firm-locs"><span class="loc-badge">🇦🇪 Dubai</span></div><div class="firm-dept">🏢 <strong>Real Estate</strong></div><div class="firm-pills"><span class="dept-pill" style="border-color:#5BBD8A;color:#5BBD8A">🏢 Real Estate <b>1</b></span> </div><div class="firm-signals"><div class="sig-row"><span class="sig-badge">Job Posting</span><a href="https://www.gibsondunn.com/careers/professional-development/" target="_blank" rel="noopener">[Gibson Dunn] Lawyer Professional Development</a><span class="sig-loc">🇦🇪 Dubai</span></div></div></div><div class="firm-card" style="--accent:#D4A83C" id="firm-sullivan_cromwell"><div class="firm-rank">#8</div><div class="firm-header"><div class="firm-name">Sullivan & Cromwell LLP</div><div class="firm-score">4.5</div></div><div class="firm-locs"><span class="loc-badge">🇦🇪 Abu Dhabi</span></div><div class="firm-dept">🤝 <strong>Corporate / M&A</strong></div><div class="firm-pills"><span class="dept-pill" style="border-color:#D4A83C;color:#D4A83C">🤝 Corporate / M&A <b>1</b></span> </div><div class="firm-signals"><div class="sig-row"><span class="sig-badge">Job Posting</span><a href="https://www.sullcrom.com/careers" target="_blank" rel="noopener">[Sullivan & Cromwell] Lawyers</a><span class="sig-loc">🇦🇪 Abu Dhabi</span></div></div></div><div class="firm-card" style="--accent:#5BBD8A" id="firm-king_spalding"><div class="firm-rank">#9</div><div class="firm-header"><div class="firm-name">King & Spalding LLP</div><div class="firm-score">4.5</div></div><div class="firm-locs"><span class="loc-badge">🇦🇪 Dubai</span></div><div class="firm-dept">🏢 <strong>Real Estate</strong></div><div class="firm-pills"><span class="dept-pill" style="border-color:#5BBD8A;color:#5BBD8A">🏢 Real Estate <b>1</b></span> </div><div class="firm-signals"><div class="sig-row"><span class="sig-badge">Job Posting</span><a href="https://www.kslaw.com/careers" target="_blank" rel="noopener">[King & Spalding] We believe our growth and the growth of our lawyers an</a><span class="sig-loc">🇦🇪 Dubai</span></div></div></div><div class="firm-card" style="--accent:#D4A83C" id="firm-mayer_brown"><div class="firm-rank">#10</div><div class="firm-header"><div class="firm-name">Mayer Brown LLP</div><div class="firm-score">4.5</div></div><div class="firm-locs"><span class="loc-badge">🇦🇪 Dubai</span></div><div class="firm-dept">🤝 <strong>Corporate / M&A</strong></div><div class="firm-pills"><span class="dept-pill" style="border-color:#D4A83C;color:#D4A83C">🤝 Corporate / M&A <b>1</b></span> </div><div class="firm-signals"><div class="sig-row"><span class="sig-badge">Job Posting</span><a href="https://www.mayerbrown.com/en/careers/experienced-lawyers" target="_blank" rel="noopener">[Mayer Brown] Experienced Lawyers</a><span class="sig-loc">🇦🇪 Dubai</span></div></div></div><div class="firm-card" style="--accent:#D4A83C" id="firm-white_case"><div class="firm-rank">#11</div><div class="firm-header"><div class="firm-name">White & Case LLP</div><div class="firm-score">3.8</div></div><div class="firm-locs"><span class="loc-badge">🇦🇪 Dubai</span></div><div class="firm-dept">🤝 <strong>Corporate / M&A</strong></div><div class="firm-pills"><span class="dept-pill" style="border-color:#D4A83C;color:#D4A83C">🤝 Corporate / M&A <b>1</b></span> </div><div class="firm-signals"><div class="sig-row"><span class="sig-badge">Job Posting</span><a href="https://www.whitecase.com/careers" target="_blank" rel="noopener">[White & Case] Students & Graduates</a><span class="sig-loc">🇦🇪 Dubai</span></div></div></div><div class="firm-card" style="--accent:#4B8EC4" id="firm-baker_mckenzie"><div class="firm-rank">#12</div><div class="firm-header"><div class="firm-name">Baker McKenzie</div><div class="firm-score">3.8</div></div><div class="firm-locs"><span class="loc-badge">🇦🇪 Dubai</span></div><div class="firm-dept">📈 <strong>Capital Markets</strong></div><div class="firm-pills"><span class="dept-pill" style="border-color:#4B8EC4;color:#4B8EC4">📈 Capital Markets <b>1</b></span> </div><div class="firm-signals"><div class="sig-row"><span class="sig-badge">Job Posting</span><a href="https://www.bakermckenzie.com/en/careers" target="_blank" rel="noopener">[Baker McKenzie] Global Opportunities</a><span class="sig-loc">🇦🇪 Dubai</span></div></div></div></div>
+</div>
+<div id="tab-jobs" class="tab-panel">
+  <div class="jobs-grid"><div class="job-card"><div class="job-top"><span class="job-firm">Hogan Lovells US LLP</span><span class="job-date">2026-03-12</span></div><a class="job-title" href="https://www.charterhouseme.ae/job/banking-and-finance-associate-4-7pqe-53672" target="_blank" rel="noopener">[Charterhouse ME] Banking & Finance Associate (4–7PQE)</a><div class="job-meta"><span class="job-loc">🇦🇪 Dubai</span><span class="job-sen">👤 Associate</span><span class="job-dept" style="color:#5BA8D4">🏦 Banking & Finance</span><span class="via">via Charterhouse ME</span><span class="job-src">Recruiter</span></div></div><div class="job-card"><div class="job-top"><span class="job-firm">O'Melveny & Myers LLP</span><span class="job-date">2026-03-11</span></div><a class="job-title" href="https://www.omm.com/careers" target="_blank" rel="noopener">[O'Melveny] Careers</a><div class="job-meta"><span class="job-loc">🇦🇪 Dubai</span><span class="job-sen">👤 Associate</span><span class="job-dept" style="color:#D4A83C">🤝 Corporate / M&A</span><span class="job-src">Firm Careers Page</span></div></div><div class="job-card"><div class="job-top"><span class="job-firm">Squire Patton Boggs (US) LLP</span><span class="job-date">2026-03-11</span></div><a class="job-title" href="https://www.squirepattonboggs.com/en/careers" target="_blank" rel="noopener">[Squire Patton Boggs] Paul Mann: From Trainee to Rainmaker</a><div class="job-meta"><span class="job-loc">🇦🇪 Dubai</span><span class="job-sen">👤 Junior Associate</span><span class="job-dept" style="color:#D4A83C">🤝 Corporate / M&A</span><span class="job-src">Firm Careers Page</span></div></div><div class="job-card"><div class="job-top"><span class="job-firm">Squire Patton Boggs (US) LLP</span><span class="job-date">2026-03-11</span></div><a class="job-title" href="https://www.squirepattonboggs.com/en/careers" target="_blank" rel="noopener">[Squire Patton Boggs] Gabriel Pennington: Tips for Creating an Ideal Work-life Balance as a Corporate Lawyer</a><div class="job-meta"><span class="job-loc">🇦🇪 Dubai</span><span class="job-sen">👤 Attorney / Lawyer</span><span class="job-dept" style="color:#D4A83C">🤝 Corporate / M&A</span><span class="job-src">Firm Careers Page</span></div></div><div class="job-card"><div class="job-top"><span class="job-firm">Mayer Brown LLP</span><span class="job-date">2026-03-11</span></div><a class="job-title" href="https://www.mayerbrown.com/en/careers/experienced-lawyers" target="_blank" rel="noopener">[Mayer Brown] Experienced Lawyers</a><div class="job-meta"><span class="job-loc">🇦🇪 Dubai</span><span class="job-sen">👤 Attorney / Lawyer</span><span class="job-dept" style="color:#D4A83C">🤝 Corporate / M&A</span><span class="job-src">Firm Careers Page</span></div></div><div class="job-card"><div class="job-top"><span class="job-firm">Baker McKenzie</span><span class="job-date">2026-03-11</span></div><a class="job-title" href="https://www.bakermckenzie.com/en/careers" target="_blank" rel="noopener">[Baker McKenzie] Global Opportunities</a><div class="job-meta"><span class="job-loc">🇦🇪 Dubai</span><span class="job-sen">👤 Associate</span><span class="job-dept" style="color:#4B8EC4">📈 Capital Markets</span><span class="job-src">Firm Careers Page</span></div></div><div class="job-card"><div class="job-top"><span class="job-firm">King & Spalding LLP</span><span class="job-date">2026-03-11</span></div><a class="job-title" href="https://www.kslaw.com/careers" target="_blank" rel="noopener">[King & Spalding] We believe our growth and the growth of our lawyers and business professionals go hand in hand. Our firm strategy, global platform, and development and mentoring programs — supported by a collegial culture — open doors and opportunities.</a><div class="job-meta"><span class="job-loc">🇦🇪 Dubai</span><span class="job-sen">👤 Attorney / Lawyer</span><span class="job-dept" style="color:#5BBD8A">🏢 Real Estate</span><span class="job-src">Firm Careers Page</span></div></div><div class="job-card"><div class="job-top"><span class="job-firm">Sullivan & Cromwell LLP</span><span class="job-date">2026-03-11</span></div><a class="job-title" href="https://www.sullcrom.com/careers" target="_blank" rel="noopener">[Sullivan & Cromwell] Lawyers</a><div class="job-meta"><span class="job-loc">🇦🇪 Abu Dhabi</span><span class="job-sen">👤 Attorney / Lawyer</span><span class="job-dept" style="color:#D4A83C">🤝 Corporate / M&A</span><span class="job-src">Firm Careers Page</span></div></div><div class="job-card"><div class="job-top"><span class="job-firm">Jones Day</span><span class="job-date">2026-03-11</span></div><a class="job-title" href="https://www.jonesday.com/en/careers" target="_blank" rel="noopener">[Jones Day] Jones Day's commitment to client service means our lawyers work together in a collaborative atmosphere where teamwork is essential, respect </a><div class="job-meta"><span class="job-loc">🇦🇪 Dubai</span><span class="job-sen">👤 Attorney / Lawyer</span><span class="job-dept" style="color:#5BA8D4">🏦 Banking & Finance</span><span class="job-src">Firm Careers Page</span></div></div><div class="job-card"><div class="job-top"><span class="job-firm">Jones Day</span><span class="job-date">2026-03-11</span></div><a class="job-title" href="https://www.jonesday.com/en/careers" target="_blank" rel="noopener">[Jones Day] Read More About Our Recognitions</a><div class="job-meta"><span class="job-loc">🇦🇪 Dubai</span><span class="job-sen">👤 Associate</span><span class="job-dept" style="color:#D4A83C">🤝 Corporate / M&A</span><span class="job-src">Firm Careers Page</span></div></div><div class="job-card"><div class="job-top"><span class="job-firm">Jones Day</span><span class="job-date">2026-03-11</span></div><a class="job-title" href="https://www.jonesday.com/en/careers" target="_blank" rel="noopener">[Jones Day] CAREEROPPORTUNITIES</a><div class="job-meta"><span class="job-loc">📍 United Arab Emirates</span><span class="job-sen">👤 Associate</span><span class="job-dept" style="color:#D4A83C">🤝 Corporate / M&A</span><span class="job-src">Firm Careers Page</span></div></div><div class="job-card"><div class="job-top"><span class="job-firm">Jones Day</span><span class="job-date">2026-03-11</span></div><a class="job-title" href="https://www.jonesday.com/en/careers" target="_blank" rel="noopener">[Jones Day] Opportunities</a><div class="job-meta"><span class="job-loc">📍 United Arab Emirates</span><span class="job-sen">👤 Associate</span><span class="job-dept" style="color:#D4A83C">🤝 Corporate / M&A</span><span class="job-src">Firm Careers Page</span></div></div><div class="job-card"><div class="job-top"><span class="job-firm">Jones Day</span><span class="job-date">2026-03-11</span></div><a class="job-title" href="https://www.jonesday.com/en/careers" target="_blank" rel="noopener">[Jones Day] Law Students and Entry-Level Lawyers (U.S.)</a><div class="job-meta"><span class="job-loc">🇦🇪 Dubai</span><span class="job-sen">👤 Attorney / Lawyer</span><span class="job-dept" style="color:#D4A83C">🤝 Corporate / M&A</span><span class="job-src">Firm Careers Page</span></div></div><div class="job-card"><div class="job-top"><span class="job-firm">Jones Day</span><span class="job-date">2026-03-11</span></div><a class="job-title" href="https://www.jonesday.com/en/careers" target="_blank" rel="noopener">[Jones Day] INCLUSIONJones Day is committed to providing equal opportunities in the legal profession; to being an inclusive environment; and to recruiting, retaining and promoting the best attorneys and law students from all backgrounds.Inclusion makes Jones Day better—for our clients and for our la</a><div class="job-meta"><span class="job-loc">🇦🇪 Dubai</span><span class="job-sen">👤 Attorney / Lawyer</span><span class="job-dept" style="color:#D4A83C">🤝 Corporate / M&A</span><span class="job-src">Firm Careers Page</span></div></div><div class="job-card"><div class="job-top"><span class="job-firm">Jones Day</span><span class="job-date">2026-03-11</span></div><a class="job-title" href="https://www.jonesday.com/en/careers" target="_blank" rel="noopener">[Jones Day] INCLUSION</a><div class="job-meta"><span class="job-loc">🇦🇪 Dubai</span><span class="job-sen">👤 Associate</span><span class="job-dept" style="color:#D4A83C">🤝 Corporate / M&A</span><span class="job-src">Firm Careers Page</span></div></div><div class="job-card"><div class="job-top"><span class="job-firm">Jones Day</span><span class="job-date">2026-03-11</span></div><a class="job-title" href="https://www.jonesday.com/en/careers" target="_blank" rel="noopener">[Jones Day] OUR WOMEN LEADERS</a><div class="job-meta"><span class="job-loc">🇦🇪 Dubai</span><span class="job-sen">👤 Associate</span><span class="job-dept" style="color:#5BBD8A">🏢 Real Estate</span><span class="job-src">Firm Careers Page</span></div></div><div class="job-card"><div class="job-top"><span class="job-firm">Gibson, Dunn & Crutcher LLP</span><span class="job-date">2026-03-11</span></div><a class="job-title" href="https://www.gibsondunn.com/careers/professional-development/" target="_blank" rel="noopener">[Gibson Dunn] Lawyer Professional Development</a><div class="job-meta"><span class="job-loc">🇦🇪 Dubai</span><span class="job-sen">👤 Attorney / Lawyer</span><span class="job-dept" style="color:#5BBD8A">🏢 Real Estate</span><span class="job-src">Firm Careers Page</span></div></div><div class="job-card"><div class="job-top"><span class="job-firm">Skadden, Arps, Slate, Meagher & Flom LLP</span><span class="job-date">2026-03-11</span></div><a class="job-title" href="https://www.skadden.com/careers/attorneys/carve-your-path" target="_blank" rel="noopener">[Skadden] Attorneys Discover more about Skadden as a law student or experienced lawyer.</a><div class="job-meta"><span class="job-loc">🇦🇪 Abu Dhabi</span><span class="job-sen">👤 Attorney / Lawyer</span><span class="job-dept" style="color:#D4A83C">🤝 Corporate / M&A</span><span class="job-src">Firm Careers Page</span></div></div><div class="job-card"><div class="job-top"><span class="job-firm">White & Case LLP</span><span class="job-date">2026-03-11</span></div><a class="job-title" href="https://www.whitecase.com/careers" target="_blank" rel="noopener">[White & Case] Students & Graduates</a><div class="job-meta"><span class="job-loc">🇦🇪 Dubai</span><span class="job-sen">👤 Associate</span><span class="job-dept" style="color:#D4A83C">🤝 Corporate / M&A</span><span class="job-src">Firm Careers Page</span></div></div></div>
+</div>
+
+<div class="footer">
+  <span>ME Legal Jobs Tracker · <a href="https://middle-east-jobs-tracker.vercel.app/">Vercel Dashboard</a></span>
+  <span>AI self-training: 21 cycles · Last: 2026-03-12</span>
+</div>
+
+<script>
+function showTab(id,btn){
+  document.querySelectorAll('.tab-panel').forEach(p=>p.classList.remove('active'));
+  document.querySelectorAll('.tab').forEach(t=>t.classList.remove('active'));
+  document.getElementById('tab-'+id).classList.add('active');
+  btn.classList.add('active');
+}
+
+// ── Bar chart ────────────────────────────────────────────────────────────
+const barCtx = document.getElementById('barChart').getContext('2d');
+new Chart(barCtx, {
+  type: 'bar',
+  data: {
+    labels: ["Corporate / M&A", "Data Privacy & Technology", "Real Estate", "Banking & Finance", "Capital Markets"],
+    datasets: [{
+      label: 'Signals',
+      data: [13, 5, 3, 2, 1],
+      backgroundColor: ["#D4A83C", "#D45B8A", "#5BBD8A", "#5BA8D4", "#4B8EC4"],
+      borderColor: ["#D4A83C", "#D45B8A", "#5BBD8A", "#5BA8D4", "#4B8EC4"],
+      borderWidth: 1,
+      borderRadius: 4,
+    }]
+  },
+  options: {
+    indexAxis: 'y',
+    responsive: true,
+    maintainAspectRatio: false,
+    plugins: {
+      legend: { display: false },
+      tooltip: { callbacks: { label: ctx => ' ' + ctx.parsed.x + ' signals' } }
+    },
+    scales: {
+      x: {
+        beginAtZero: true,
+        grid: { color: 'rgba(255,255,255,0.05)' },
+        ticks: { color: '#8A95A8', font: { size: 11 } }
+      },
+      y: {
+        grid: { display: false },
+        ticks: { color: '#E8E4D8', font: { size: 11 } }
+      }
+    }
+  }
+});
+
+// ── Pie / doughnut chart ─────────────────────────────────────────────────
+const pieCtx = document.getElementById('pieChart').getContext('2d');
+new Chart(pieCtx, {
+  type: 'doughnut',
+  data: {
+    labels: ["Site Change", "Recruiter", "Regulatory Filing", "Job Posting"],
+    datasets: [{
+      data: [4, 1, 1, 18],
+      backgroundColor: ["#D4A83C", "#5BA8D4", "#D45B5B", "#5BBD8A"],
+      borderColor: '#162033',
+      borderWidth: 2,
+      hoverOffset: 6,
+    }]
+  },
+  options: {
+    responsive: true,
+    maintainAspectRatio: false,
+    plugins: {
+      legend: {
+        position: 'right',
+        labels: { color: '#E8E4D8', font: { size: 11 }, boxWidth: 14, padding: 10 }
+      },
+      tooltip: {
+        callbacks: {
+          label: ctx => ' ' + ctx.label + ': ' + ctx.parsed + ' signals'
+        }
+      }
+    }
+  }
+});
+
+// ── Geo hotspot bar chart ─────────────────────────────────────────────────
+const geoCtx = document.getElementById('geoChart').getContext('2d');
+new Chart(geoCtx, {
+  type: 'bar',
+  data: {
+    labels: ["Dubai", "United Arab Emirates", "Abu Dhabi", "Riyadh"],
+    datasets: [{
+      label: 'Signals this week',
+      data: [17, 2, 2, 2],
+      backgroundColor: ["#D4A83C", "#D4A83C", "#D4A83C", "#D4A83C"],
+      borderRadius: 5,
+      borderWidth: 0,
+    }]
+  },
+  options: {
+    responsive: true,
+    maintainAspectRatio: false,
+    plugins: {
+      legend: { display: false },
+      tooltip: { callbacks: { label: ctx => ' ' + ctx.parsed.y + ' signals this week' } }
+    },
+    scales: {
+      x: {
+        grid: { display: false },
+        ticks: { color: '#E8E4D8', font: { size: 12 } }
+      },
+      y: {
+        beginAtZero: true,
+        grid: { color: 'rgba(255,255,255,0.05)' },
+        ticks: { color: '#8A95A8', font: { size: 11 }, precision: 0 }
+      }
+    }
+  }
+});
+</script>
 </body>
 </html>
