@@ -1,0 +1,33 @@
+{
+  "sources": [
+    {
+      "source": "Firm Careers Page",
+      "total_signals": 18,
+      "firm_coverage": 10,
+      "avg_score": 1.65,
+      "hire_signals": 0,
+      "last_seen": "2026-03-11",
+      "multiplier": 1.3618
+    },
+    {
+      "source": "Recruiter",
+      "total_signals": 1,
+      "firm_coverage": 1,
+      "avg_score": 24.36,
+      "hire_signals": 0,
+      "last_seen": "2026-03-12",
+      "multiplier": 1.0
+    },
+    {
+      "source": "QFC Authority",
+      "total_signals": 1,
+      "firm_coverage": 1,
+      "avg_score": 31.5,
+      "hire_signals": 0,
+      "last_seen": "2026-03-11",
+      "multiplier": 1.0
+    }
+  ],
+  "total_active": 3,
+  "generated_at": "2026-03-12T14:53:37.148371+00:00"
+}
