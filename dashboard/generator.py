@@ -81,6 +81,22 @@ class DashboardGenerator:
             except Exception:
                 pass
 
+        geo_data = {}
+        if os.path.exists("learning/geo_report.json"):
+            try:
+                with open("learning/geo_report.json") as f:
+                    geo_data = json.load(f)
+            except Exception:
+                pass
+
+        accuracy_data = {}
+        if os.path.exists("learning/accuracy_report.json"):
+            try:
+                with open("learning/accuracy_report.json") as f:
+                    accuracy_data = json.load(f)
+            except Exception:
+                pass
+
         # Aggregate per firm
         firms_data: dict = {}
         for sig in weekly_signals:
@@ -118,18 +134,23 @@ class DashboardGenerator:
             label = SIGNAL_LABEL.get(t, t)
             signal_type_counts[label] = signal_type_counts.get(label, 0) + 1
 
+        # Geo chart data from geo_report
+        geo_cities = geo_data.get("cities", [])[:8]
+
         # Sort dept_counts
         dept_sorted = sorted(dept_counts.items(), key=lambda x: -x[1])[:10]
 
         html = self._render(ranked, all_jobs, generated_at, weekly_signals,
-                            top4, training_stats, dept_sorted, signal_type_counts)
+                            top4, training_stats, dept_sorted, signal_type_counts,
+                            geo_cities, accuracy_data)
         Path(output_path).parent.mkdir(parents=True, exist_ok=True)
         Path(output_path).write_text(html, encoding="utf-8")
         logger.info(f"Dashboard written → {output_path}")
         return output_path
 
     def _render(self, ranked, all_jobs, generated_at, weekly_signals,
-                top4, training_stats, dept_sorted, signal_type_counts):
+                top4, training_stats, dept_sorted, signal_type_counts,
+                geo_cities=None, accuracy_data=None):
         job_count  = sum(1 for s in weekly_signals if s.get("signal_type") in ("job_posting","recruiter_posting"))
         hire_count = sum(1 for s in weekly_signals if s.get("signal_type") == "lateral_hire")
         reg_count  = sum(1 for s in weekly_signals if s.get("signal_type") == "regulatory_filing")
@@ -137,6 +158,9 @@ class DashboardGenerator:
         ts         = generated_at.strftime("%d %b %Y %H:%M UTC")
         train_runs = training_stats.get("total_runs", 0)
         last_train = (training_stats.get("last_trained","")[:10]) or "Not yet"
+        acc_pct    = accuracy_data.get("accuracy_pct", None) if accuracy_data else None
+        acc_html   = (f'<span class="acc-badge">🎯 {acc_pct:.0%} accurate</span>'
+                      if acc_pct is not None else "")
 
         # ── Top 4 cards ───────────────────────────────────────────────────
         top4_html = ""
@@ -175,6 +199,16 @@ class DashboardGenerator:
             "#D4A83C","#5BA8D4","#D45B5B","#5BBD8A",
             "#A87ED4","#F07C3E","#5BBDBD","#D45B8A",
         ][:len(signal_type_counts)])
+
+        # Geo bar chart
+        geo_cities = geo_cities or []
+        geo_labels = json.dumps([c["city"] for c in geo_cities])
+        geo_values = json.dumps([c["this_week"] for c in geo_cities])
+        geo_colors = json.dumps([
+            "#D4A83C" if c.get("trend","").startswith("↑") else
+            "#5BA8D4" if c.get("trend","").startswith("→") else "#D45B5B"
+            for c in geo_cities
+        ])
 
         # ── Firm cards ────────────────────────────────────────────────────
         firm_cards_html = ""
@@ -267,7 +301,7 @@ class DashboardGenerator:
   <div class="stat-box"><div class="val">{hire_count}</div><div class="lbl">Lateral Hires</div></div>
   <div class="stat-box"><div class="val">{reg_count}</div><div class="lbl">Regulatory Filings</div></div>
   <div class="stat-box"><div class="val">{len(all_jobs)}</div><div class="lbl">Total Jobs Logged</div></div>
-  <div class="stat-box"><div class="val">{train_runs}</div><div class="lbl">Training Cycles</div></div>
+  <div class="stat-box ai-box"><div class="val">{train_runs}</div><div class="lbl">AI Training Cycles</div>{acc_html}</div>
 </div>
 
 <div class="section">
@@ -285,6 +319,12 @@ class DashboardGenerator:
     <div class="chart-wrap chart-pie-wrap"><canvas id="pieChart"></canvas></div>
   </div>
 </div>
+<div class="charts-row single">
+  <div class="chart-card">
+    <div class="chart-title">🌍 Geographic Hotspots — This Week's Signal Volume by City</div>
+    <div class="chart-wrap chart-geo-wrap"><canvas id="geoChart"></canvas></div>
+  </div>
+</div>
 
 <div class="tabs">
   <button class="tab active" onclick="showTab('firms',this)">🏛 Firm Activity</button>
@@ -299,7 +339,7 @@ class DashboardGenerator:
 
 <div class="footer">
   <span>ME Legal Jobs Tracker · <a href="{VERCEL}">Vercel Dashboard</a></span>
-  <span>Self-training: {train_runs} cycles · Last: {last_train}</span>
+  <span>AI self-training: {train_runs} cycles · Last: {last_train}</span>
 </div>
 
 <script>
@@ -347,7 +387,7 @@ new Chart(barCtx, {{
   }}
 }});
 
-// ── Pie chart ────────────────────────────────────────────────────────────
+// ── Pie / doughnut chart ─────────────────────────────────────────────────
 const pieCtx = document.getElementById('pieChart').getContext('2d');
 new Chart(pieCtx, {{
   type: 'doughnut',
@@ -377,6 +417,41 @@ new Chart(pieCtx, {{
     }}
   }}
 }});
+
+// ── Geo hotspot bar chart ─────────────────────────────────────────────────
+const geoCtx = document.getElementById('geoChart').getContext('2d');
+new Chart(geoCtx, {{
+  type: 'bar',
+  data: {{
+    labels: {geo_labels},
+    datasets: [{{
+      label: 'Signals this week',
+      data: {geo_values},
+      backgroundColor: {geo_colors},
+      borderRadius: 5,
+      borderWidth: 0,
+    }}]
+  }},
+  options: {{
+    responsive: true,
+    maintainAspectRatio: false,
+    plugins: {{
+      legend: {{ display: false }},
+      tooltip: {{ callbacks: {{ label: ctx => ' ' + ctx.parsed.y + ' signals this week' }} }}
+    }},
+    scales: {{
+      x: {{
+        grid: {{ display: false }},
+        ticks: {{ color: '#E8E4D8', font: {{ size: 12 }} }}
+      }},
+      y: {{
+        beginAtZero: true,
+        grid: {{ color: 'rgba(255,255,255,0.05)' }},
+        ticks: {{ color: '#8A95A8', font: {{ size: 11 }}, precision: 0 }}
+      }}
+    }}
+  }}
+}});
 </script>
 </body>
 </html>"""
@@ -392,6 +467,7 @@ a{color:var(--gold);text-decoration:none}a:hover{text-decoration:underline}
 .stats-bar{display:flex;gap:14px;padding:16px 28px;background:var(--card);border-bottom:1px solid var(--border);flex-wrap:wrap}
 .stat-box{background:var(--card2);border:1px solid var(--border);border-radius:8px;padding:10px 16px;min-width:100px}
 .stat-box .val{font-size:1.4rem;font-weight:700;color:var(--gold)}.stat-box .lbl{font-size:.7rem;color:var(--muted);margin-top:2px}
+.ai-box{border-color:rgba(212,168,60,.3)}.acc-badge{display:inline-block;margin-top:4px;font-size:.68rem;color:var(--green);background:rgba(91,189,138,.1);border:1px solid rgba(91,189,138,.3);border-radius:3px;padding:1px 5px}
 .section{padding:20px 28px}
 .section-title{font-size:.85rem;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:1px;margin-bottom:14px;display:flex;align-items:center;gap:8px}
 .section-title::after{content:"";flex:1;height:1px;background:var(--border)}
@@ -402,10 +478,11 @@ a{color:var(--gold);text-decoration:none}a:hover{text-decoration:underline}
 .t4-count{font-size:.8rem;color:var(--gold);font-weight:600}.t4-firms{font-size:.73rem;color:var(--muted)}.t4-trend{font-size:.85rem;font-weight:700}
 .trend-up{color:var(--green)}.trend-dn{color:var(--red)}.trend-flat{color:var(--muted)}.muted{color:var(--muted);font-size:.85rem}
 .charts-row{display:grid;grid-template-columns:2fr 1fr;gap:16px;padding:0 28px 20px}
+.charts-row.single{grid-template-columns:1fr}
 .chart-card{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:18px}
 .chart-title{font-size:.82rem;font-weight:600;color:var(--muted);margin-bottom:14px;text-transform:uppercase;letter-spacing:.5px}
-.chart-wrap{height:260px;position:relative}.chart-pie-wrap{height:240px}
-@media(max-width:800px){.charts-row{grid-template-columns:1fr}}
+.chart-wrap{height:260px;position:relative}.chart-pie-wrap{height:240px}.chart-geo-wrap{height:200px}
+@media(max-width:800px){.charts-row{grid-template-columns:1fr}.charts-row.single{grid-template-columns:1fr}}
 .tabs{display:flex;padding:0 28px;background:var(--card);border-bottom:1px solid var(--border)}
 .tab{padding:13px 20px;font-size:.85rem;font-weight:600;cursor:pointer;border-bottom:3px solid transparent;color:var(--muted);transition:color .15s,border-color .15s;background:none;border-top:none;border-left:none;border-right:none}
 .tab.active{color:var(--gold);border-bottom-color:var(--gold)}.tab-panel{display:none}.tab-panel.active{display:block}
