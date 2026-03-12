@@ -122,11 +122,12 @@ jobs:
           git config user.name  "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add docs/ learned_weights.json learning/ || true
-          git diff --cached --quiet || {
-            git pull --rebase origin main
-            git commit -m "tracker: ${{ steps.mode.outputs.mode }} $(date -u '+%Y-%m-%d %H:%M UTC')"
-            git push
-          }
+          # Only proceed if there are staged changes
+          git diff --cached --quiet && echo "Nothing to commit" && exit 0
+          # Commit first (index is now clean), then rebase, then push
+          git commit -m "tracker: ${{ steps.mode.outputs.mode }} $(date -u '+%Y-%m-%d %H:%M UTC')"
+          git pull --rebase origin main
+          git push
 
       - name: Commit training weights
         if: steps.mode.outputs.mode == 'train'
@@ -134,11 +135,10 @@ jobs:
           git config user.name  "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add learned_weights.json learning/ || true
-          git diff --cached --quiet || {
-            git pull --rebase origin main
-            git commit -m "training: weight update $(date -u '+%Y-%m-%d %H:%M UTC')"
-            git push
-          }
+          git diff --cached --quiet && echo "Nothing to commit" && exit 0
+          git commit -m "training: weight update $(date -u '+%Y-%m-%d %H:%M UTC')"
+          git pull --rebase origin main
+          git push
 
       - name: Upload tracker log
         if: always()
