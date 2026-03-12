@@ -27,17 +27,44 @@ urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 from firms import ME_LOCATIONS
 
 USER_AGENTS = [
+    # Chrome 124 Windows
     "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36",
+    # Chrome 123 Mac
+    "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36",
+    # Safari 17 Mac
     "Mozilla/5.0 (Macintosh; Intel Mac OS X 14_4_1) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.4.1 Safari/605.1.15",
+    # Firefox 125 Linux
     "Mozilla/5.0 (X11; Linux x86_64; rv:125.0) Gecko/20100101 Firefox/125.0",
-    "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:126.0) Gecko/20100101 Firefox/126.0",
+    # Edge 124 Windows
+    "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36 Edg/124.0.0.0",
 ]
+
+# Full browser fingerprint headers — Sec-Fetch-* headers are the key signal
+# that Cloudflare and modern WAFs check. Requests without them look like bots.
 DEFAULT_HEADERS = {
-    "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+    "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8",
     "Accept-Language": "en-US,en;q=0.9",
     "Accept-Encoding": "gzip, deflate, br",
     "Connection": "keep-alive",
     "DNT": "1",
+    "Upgrade-Insecure-Requests": "1",
+    "Sec-Fetch-Dest": "document",
+    "Sec-Fetch-Mode": "navigate",
+    "Sec-Fetch-Site": "none",
+    "Sec-Fetch-User": "?1",
+    "Cache-Control": "max-age=0",
+}
+
+# JSON API headers — for ATS APIs (Greenhouse, Lever, Workday)
+JSON_HEADERS = {
+    "Accept": "application/json, text/plain, */*",
+    "Accept-Language": "en-US,en;q=0.9",
+    "Accept-Encoding": "gzip, deflate, br",
+    "Connection": "keep-alive",
+    "Sec-Fetch-Dest": "empty",
+    "Sec-Fetch-Mode": "cors",
+    "Sec-Fetch-Site": "same-origin",
+    "Cache-Control": "no-cache",
 }
 
 # SSL cert hostname mismatch — use verify=False
@@ -103,9 +130,48 @@ SLOW_HOSTS = {
 }
 
 _HOST_FAILURES: dict = {}
-# FIXED: was 1 — caused legitimate firm career pages to be blocked after
-# a single transient failure. Now 3 failures required to open the circuit.
-CIRCUIT_BREAK_THRESHOLD = 3
+
+# Two-tier circuit breaker thresholds:
+#
+#   FIRM_CB_THRESHOLD (6): Firm career pages (lw.com, kirkland.com etc.) are blocked
+#   by Cloudflare/WAF on GH Actions IPs but intermittently succeed. 6 failures
+#   required before giving up — this covers JobsScraper + WebsiteScraper + any
+#   secondary scraper all failing on the same host in one run.
+#
+#   DEFAULT_CB_THRESHOLD (3): Job boards and recruiter sites that consistently
+#   block CI runners — fail fast after 3 to save time.
+#
+FIRM_CB_THRESHOLD    = 6
+DEFAULT_CB_THRESHOLD = 3
+
+# Firm career/office domains — give these maximum retry tolerance
+FIRM_DOMAINS = {
+    "www.lw.com", "lw.com",
+    "www.kirkland.com", "kirkland.com",
+    "www.whitecase.com", "whitecase.com",
+    "www.skadden.com", "skadden.com",
+    "www.gibsondunn.com", "gibsondunn.com",
+    "www.jonesday.com", "jonesday.com",
+    "www.sullcrom.com", "sullcrom.com",
+    "www.milbank.com", "milbank.com",
+    "www.stblaw.com", "stblaw.com",
+    "www.kslaw.com", "kslaw.com",
+    "www.hoganlovells.com", "hoganlovells.com",
+    "www.bakermckenzie.com", "bakermckenzie.com",
+    "www.dlapiper.com", "dlapiper.com",
+    "www.nortonrosefulbright.com", "nortonrosefulbright.com",
+    "www.dentons.com", "dentons.com",
+    "www.mayerbrown.com", "mayerbrown.com",
+    "www.squirepattonboggs.com", "squirepattonboggs.com",
+    "www.reedsmith.com", "reedsmith.com",
+    "www.gtlaw.com", "gtlaw.com",
+    "www.mwe.com", "mwe.com",
+    "www.omm.com", "omm.com",
+    "www.aoshearman.com", "aoshearman.com",
+    "www.paulhastings.com", "paulhastings.com",
+    "www.morganlewis.com", "morganlewis.com",
+    "www.gibsondunn.com", "gibsondunn.com",
+}
 
 ASSOCIATE_KEYWORDS = [
     "associate", "law associate", "legal associate", "junior associate",
@@ -149,9 +215,10 @@ class BaseScraper:
         if host in DEAD_HOSTS:
             self.logger.debug(f"Skip dead host: {host}")
             return None
-        failures = _HOST_FAILURES.get(host, 0)
-        if failures >= CIRCUIT_BREAK_THRESHOLD:
-            self.logger.debug(f"Circuit open: {host}")
+        failures  = _HOST_FAILURES.get(host, 0)
+        threshold = FIRM_CB_THRESHOLD if host in FIRM_DOMAINS else DEFAULT_CB_THRESHOLD
+        if failures >= threshold:
+            self.logger.debug(f"Circuit open ({failures}/{threshold}): {host}")
             return None
         verify  = host not in SSL_NOCHECK_HOSTS
         timeout = timeout or (self._slow_timeout if host in SLOW_HOSTS else self._timeout)
