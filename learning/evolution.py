@@ -44,6 +44,8 @@ ALPHA               = 0.2   # EMA learning rate
 MAX_BOOST           = 2.5   # cap on positive multipliers
 MIN_BOOST           = 0.25  # floor on negative multipliers
 TOP_N_DEPT          = 4     # top practice areas to surface
+NEW_DEPT_TREND      = 2.0   # trend value for brand-new depts (last_week=0, this_week>0);
+                             # must exceed the DEPT_BOOST_THRESHOLD below to trigger a boost
 
 # Default weights before any training data
 FALLBACK_WEIGHTS = {
@@ -105,18 +107,37 @@ def apply_learned_weights_to_signal(signal: dict, weights: dict) -> dict:
         scores = [kw_boosts.get(k, 1.0) for k in kws]
         kw_mul = sum(scores) / len(scores)
 
-    # Geographic hotspot boost (NEW v4)
+    # Geographic hotspot boost (Dim 8)
     geo_mul   = weights.get("geo_boosts", {}).get(loc, 1.0)
 
-    # Cross-firm dept correlation boost (NEW v4)
+    # Cross-firm dept correlation boost (Dim 11)
     xf_mul    = weights.get("cross_firm_boosts", {}).get(dept, 1.0)
 
-    # Multi-source deduplication confidence boost (NEW v4)
+    # Multi-source deduplication confidence boost (Dim 9)
     dedup_key = f"{firm_id}:{title}"
     dd_mul    = weights.get("dedup_confidence", {}).get(dedup_key, 1.0)
 
+    # Time-pattern boost (Dim 10): mid-week signals (Tue–Thu) get a quality boost.
+    # SQLite strftime('%w') convention: 0=Sun, 1=Mon, …, 6=Sat.
+    # Python weekday(): 0=Mon, …, 6=Sun → convert via (weekday + 1) % 7.
+    time_mul  = 1.0
+    time_patterns = weights.get("time_patterns", {})
+    if time_patterns:
+        sqlite_dow = str((datetime.now().weekday() + 1) % 7)  # 0=Sun, 1=Mon, …, 6=Sat
+        time_mul = time_patterns.get(sqlite_dow, 1.0)
+
+    # Firm velocity boost (Dim 4): signals from accelerating firms get a small lift
+    firm_mul  = 1.0
+    firm_velocity = weights.get("firm_velocity", {})
+    if firm_velocity and firm_id in firm_velocity:
+        status = firm_velocity[firm_id].get("status", "stable")
+        if status == "accelerating":
+            firm_mul = 1.10
+        elif status == "decelerating":
+            firm_mul = 0.95
+
     multiplier = min(MAX_BOOST, max(MIN_BOOST,
-        src_mul * dep_mul * kw_mul * geo_mul * xf_mul * dd_mul))
+        src_mul * dep_mul * kw_mul * geo_mul * xf_mul * dd_mul * time_mul * firm_mul))
     old_score  = float(signal.get("department_score", 1.0))
     signal["department_score"] = round(old_score * multiplier, 4)
     signal["weight_multiplier"] = round(multiplier, 3)
@@ -263,7 +284,9 @@ def _train_dept_trends(cursor, weights: dict):
         this_week = row["this_week"] or 0
         last_week = row["last_week"] or 0
         if last_week == 0:
-            trend = 1.0 if this_week == 0 else 1.3
+            # New department with no history — treat as a meaningful new trend signal;
+            # use NEW_DEPT_TREND so it clearly exceeds the > 1.30 boost threshold below.
+            trend = 1.0 if this_week == 0 else NEW_DEPT_TREND
         else:
             trend = this_week / last_week
 
@@ -651,11 +674,11 @@ def _train_prediction_accuracy(cursor, weights: dict):
     """
     try:
         cursor.execute("""
-            SELECT firm_id, department, score, sent_at
+            SELECT firm_id, department, score, created_at
             FROM weekly_scores
-            WHERE sent_at < datetime('now', '-28 days')
+            WHERE created_at < datetime('now', '-28 days')
               AND score > 10
-            ORDER BY sent_at DESC
+            ORDER BY created_at DESC
             LIMIT 50
         """)
         past_alerts = cursor.fetchall()
@@ -672,7 +695,7 @@ def _train_prediction_accuracy(cursor, weights: dict):
         try:
             firm_id = alert["firm_id"]
             dept    = alert["department"]
-            sent_at = alert["sent_at"]
+            sent_at = alert["created_at"]
 
             # Did signals actually follow?
             cursor.execute("""

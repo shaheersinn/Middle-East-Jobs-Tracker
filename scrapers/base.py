@@ -286,7 +286,9 @@ class BaseScraper:
     def _extract_seniority(title: str) -> str:
         t = title.lower()
         if "partner" in t:                               return "Partner"
-        if "senior counsel" in t or "senior associate" in t: return "Senior Associate"
+        if "senior counsel" in t:                        return "Senior Counsel"
+        if "senior associate" in t:                      return "Senior Associate"
+        if "of counsel" in t:                            return "Of Counsel"
         if "mid-level" in t or "mid level" in t:         return "Mid-Level Associate"
         if "junior" in t or "trainee" in t:              return "Junior Associate"
         if "counsel" in t:                               return "Counsel"
