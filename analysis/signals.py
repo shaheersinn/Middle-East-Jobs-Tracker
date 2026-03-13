@@ -11,6 +11,7 @@ Scoring methodology:
 
 Signal type weights:
   recruiter_posting  4.0  (recruiter is paid to fill the role — high confidence)
+  regulatory_filing  4.0  (DIFC/ADGM/QFC registry entry — authoritative)
   lateral_hire       3.5  (confirmed person movement)
   ranking            3.0  (independent validation of ME presence)
   job_posting        2.5  (firm is actively hiring)
@@ -27,6 +28,7 @@ logger = logging.getLogger("analysis.signals")
 
 SIGNAL_WEIGHTS = {
     "recruiter_posting": 4.0,
+    "regulatory_filing": 4.0,
     "lateral_hire":      3.5,
     "ranking":           3.0,
     "job_posting":       2.5,
