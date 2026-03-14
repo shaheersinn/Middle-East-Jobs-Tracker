@@ -1,7 +1,7 @@
 {
   "source_multipliers": {
-    "Firm Careers Page": 0.2542,
-    "Website Monitor": 2.4944
+    "Firm Careers Page": 0.2534,
+    "Website Monitor": 2.4955
   },
   "dept_trend_boosts": {
     "Banking & Finance": 1.0,
@@ -12,12 +12,12 @@
   },
   "keyword_boosts": {
     "development": 0.2502,
-    "data": 1.1388,
-    "privacy": 0.8822,
-    "cybersecurity": 0.8822
+    "data": 1.1389,
+    "privacy": 0.8821,
+    "cybersecurity": 0.8821
   },
-  "total_runs": 45,
-  "last_trained": "2026-03-14T16:25:22.353168+00:00",
+  "total_runs": 46,
+  "last_trained": "2026-03-14T18:31:28.009516+00:00",
   "firm_velocity": {
     "baker_mckenzie": {
       "firm_name": "Baker McKenzie",
@@ -123,10 +123,10 @@
   },
   "partner_signal_ratio": 0,
   "geo_boosts": {
-    "Dubai": 2.4997,
+    "Dubai": 2.4998,
     "United Arab Emirates": 1.1998,
     "Abu Dhabi": 1.1998,
-    "Riyadh": 1.1993
+    "Riyadh": 1.1994
   },
   "cross_firm_boosts": {
     "Corporate / M&A": 1.3998,
