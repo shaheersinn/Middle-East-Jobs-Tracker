@@ -17,7 +17,7 @@
       "trend": "\u2191 heating"
     },
     {
-      "city": "Abu Dhabi",
+      "city": "Riyadh",
       "this_week": 2,
       "last_week": 0,
       "total_30d": 2,
@@ -25,13 +25,13 @@
       "trend": "\u2191 heating"
     },
     {
-      "city": "Riyadh",
+      "city": "Abu Dhabi",
       "this_week": 2,
       "last_week": 0,
       "total_30d": 2,
-      "boost": 1.1997,
+      "boost": 1.1998,
       "trend": "\u2191 heating"
     }
   ],
-  "generated_at": "2026-03-15T01:57:28.385233+00:00"
+  "generated_at": "2026-03-15T04:33:50.124231+00:00"
 }
