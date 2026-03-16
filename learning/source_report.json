@@ -16,7 +16,7 @@
       "avg_score": 12.8,
       "hire_signals": 0,
       "last_seen": "2026-03-12",
-      "multiplier": 1.978
+      "multiplier": 1.9503
     },
     {
       "source": "Recruiter",
@@ -25,7 +25,7 @@
       "avg_score": 17.43,
       "hire_signals": 0,
       "last_seen": "2026-03-16",
-      "multiplier": 2.1854
+      "multiplier": 2.2483
     },
     {
       "source": "QFC Authority",
@@ -38,5 +38,5 @@
     }
   ],
   "total_active": 4,
-  "generated_at": "2026-03-16T18:55:39.209739+00:00"
+  "generated_at": "2026-03-16T20:33:43.217295+00:00"
 }
