@@ -1,8 +1,8 @@
 {
   "source_multipliers": {
     "Firm Careers Page": 0.2502,
-    "Website Monitor": 1.8849,
-    "Recruiter": 2.3969
+    "Website Monitor": 1.8758,
+    "Recruiter": 2.4175
   },
   "dept_trend_boosts": {
     "Banking & Finance": 1.0,
@@ -13,12 +13,12 @@
   },
   "keyword_boosts": {
     "development": 0.2502,
-    "data": 1.1508,
-    "privacy": 0.8906,
-    "cybersecurity": 0.8906
+    "data": 1.151,
+    "privacy": 0.8907,
+    "cybersecurity": 0.8907
   },
-  "total_runs": 75,
-  "last_trained": "2026-03-17T06:58:47.091745+00:00",
+  "total_runs": 76,
+  "last_trained": "2026-03-17T07:20:57.657947+00:00",
   "firm_velocity": {
     "baker_mckenzie": {
       "firm_name": "Baker McKenzie",
@@ -86,10 +86,10 @@
     },
     "sullivan_cromwell": {
       "firm_name": "Sullivan & Cromwell LLP",
-      "this_week": 1,
+      "this_week": 2,
       "last_week": 0,
-      "this_month": 1,
-      "acceleration": 1.0,
+      "this_month": 2,
+      "acceleration": 2.0,
       "status": "accelerating"
     },
     "white_case": {
@@ -134,11 +134,11 @@
   "geo_boosts": {
     "Dubai": 2.4998,
     "United Arab Emirates": 1.1998,
-    "Abu Dhabi": 1.2931,
+    "Abu Dhabi": 1.2945,
     "Riyadh": 1.1998
   },
   "cross_firm_boosts": {
-    "Corporate / M&A": 1.4745,
+    "Corporate / M&A": 1.4756,
     "Real Estate": 1.0798
   },
   "time_patterns": {
