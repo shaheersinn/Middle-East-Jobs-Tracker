@@ -5,35 +5,35 @@
       "signal_count": 15,
       "firm_count": 8,
       "high_conf": 1,
-      "this_week": 15,
-      "last_week": 0,
-      "trend_boost": 1.0
+      "this_week": 2,
+      "last_week": 13,
+      "trend_boost": 0.9323
     },
     {
       "department": "Data Privacy & Technology",
       "signal_count": 5,
       "firm_count": 2,
       "high_conf": 1,
-      "this_week": 5,
-      "last_week": 0,
-      "trend_boost": 1.0
+      "this_week": 4,
+      "last_week": 1,
+      "trend_boost": 1.3
     },
     {
       "department": "Real Estate",
       "signal_count": 3,
       "firm_count": 3,
       "high_conf": 0,
-      "this_week": 3,
-      "last_week": 0,
-      "trend_boost": 1.0
+      "this_week": 0,
+      "last_week": 3,
+      "trend_boost": 0.92
     },
     {
       "department": "Banking & Finance",
       "signal_count": 2,
       "firm_count": 2,
       "high_conf": 0,
-      "this_week": 2,
-      "last_week": 0,
+      "this_week": 1,
+      "last_week": 1,
       "trend_boost": 1.0
     }
   ],
@@ -43,37 +43,37 @@
       "signal_count": 15,
       "firm_count": 8,
       "high_conf": 1,
-      "this_week": 15,
-      "last_week": 0,
-      "trend_boost": 1.0
+      "this_week": 2,
+      "last_week": 13,
+      "trend_boost": 0.9323
     },
     {
       "department": "Data Privacy & Technology",
       "signal_count": 5,
       "firm_count": 2,
       "high_conf": 1,
-      "this_week": 5,
-      "last_week": 0,
-      "trend_boost": 1.0
+      "this_week": 4,
+      "last_week": 1,
+      "trend_boost": 1.3
     },
     {
       "department": "Real Estate",
       "signal_count": 3,
       "firm_count": 3,
       "high_conf": 0,
-      "this_week": 3,
-      "last_week": 0,
-      "trend_boost": 1.0
+      "this_week": 0,
+      "last_week": 3,
+      "trend_boost": 0.92
     },
     {
       "department": "Banking & Finance",
       "signal_count": 2,
       "firm_count": 2,
       "high_conf": 0,
-      "this_week": 2,
-      "last_week": 0,
+      "this_week": 1,
+      "last_week": 1,
       "trend_boost": 1.0
     }
   ],
-  "generated_at": "2026-03-18T13:00:37.181726+00:00"
+  "generated_at": "2026-03-18T14:58:23.240386+00:00"
 }
