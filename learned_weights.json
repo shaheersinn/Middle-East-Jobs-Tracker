@@ -1,8 +1,8 @@
 {
   "source_multipliers": {
     "Firm Careers Page": 0.2502,
-    "Website Monitor": 1.8411,
-    "Recruiter": 2.4964
+    "Website Monitor": 1.8408,
+    "Recruiter": 2.4971
   },
   "dept_trend_boosts": {
     "Banking & Finance": 1.0,
@@ -17,8 +17,8 @@
     "privacy": 0.891,
     "cybersecurity": 0.891
   },
-  "total_runs": 90,
-  "last_trained": "2026-03-18T10:46:49.760986+00:00",
+  "total_runs": 91,
+  "last_trained": "2026-03-18T13:00:37.183354+00:00",
   "firm_velocity": {
     "baker_mckenzie": {
       "firm_name": "Baker McKenzie",
