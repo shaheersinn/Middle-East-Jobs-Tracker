@@ -7,7 +7,7 @@
       "high_conf": 1,
       "this_week": 4,
       "last_week": 1,
-      "trend_boost": 2.2986
+      "trend_boost": 2.3389
     },
     {
       "department": "Corporate / M&A",
@@ -16,7 +16,7 @@
       "high_conf": 1,
       "this_week": 2,
       "last_week": 13,
-      "trend_boost": 0.7069
+      "trend_boost": 0.6978
     },
     {
       "department": "Banking & Finance",
@@ -34,7 +34,7 @@
       "high_conf": 0,
       "this_week": 0,
       "last_week": 3,
-      "trend_boost": 0.6536
+      "trend_boost": 0.6429
     }
   ],
   "all_depts": [
@@ -45,7 +45,7 @@
       "high_conf": 1,
       "this_week": 4,
       "last_week": 1,
-      "trend_boost": 2.2986
+      "trend_boost": 2.3389
     },
     {
       "department": "Corporate / M&A",
@@ -54,7 +54,7 @@
       "high_conf": 1,
       "this_week": 2,
       "last_week": 13,
-      "trend_boost": 0.7069
+      "trend_boost": 0.6978
     },
     {
       "department": "Banking & Finance",
@@ -72,8 +72,8 @@
       "high_conf": 0,
       "this_week": 0,
       "last_week": 3,
-      "trend_boost": 0.6536
+      "trend_boost": 0.6429
     }
   ],
-  "generated_at": "2026-03-19T07:22:39.779105+00:00"
+  "generated_at": "2026-03-19T08:37:01.401580+00:00"
 }
