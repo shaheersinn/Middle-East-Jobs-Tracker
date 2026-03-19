@@ -7,7 +7,7 @@
       "high_conf": 1,
       "this_week": 4,
       "last_week": 1,
-      "trend_boost": 2.4175
+      "trend_boost": 2.434
     },
     {
       "department": "Corporate / M&A",
@@ -16,16 +16,7 @@
       "high_conf": 1,
       "this_week": 2,
       "last_week": 13,
-      "trend_boost": 0.6801
-    },
-    {
-      "department": "Banking & Finance",
-      "signal_count": 2,
-      "firm_count": 2,
-      "high_conf": 0,
-      "this_week": 1,
-      "last_week": 1,
-      "trend_boost": 1.0
+      "trend_boost": 0.6764
     },
     {
       "department": "Real Estate",
@@ -34,7 +25,16 @@
       "high_conf": 0,
       "this_week": 0,
       "last_week": 3,
-      "trend_boost": 0.6219
+      "trend_boost": 0.6175
+    },
+    {
+      "department": "Banking & Finance",
+      "signal_count": 2,
+      "firm_count": 2,
+      "high_conf": 0,
+      "this_week": 0,
+      "last_week": 2,
+      "trend_boost": 0.92
     }
   ],
   "all_depts": [
@@ -45,7 +45,7 @@
       "high_conf": 1,
       "this_week": 4,
       "last_week": 1,
-      "trend_boost": 2.4175
+      "trend_boost": 2.434
     },
     {
       "department": "Corporate / M&A",
@@ -54,16 +54,7 @@
       "high_conf": 1,
       "this_week": 2,
       "last_week": 13,
-      "trend_boost": 0.6801
-    },
-    {
-      "department": "Banking & Finance",
-      "signal_count": 2,
-      "firm_count": 2,
-      "high_conf": 0,
-      "this_week": 1,
-      "last_week": 1,
-      "trend_boost": 1.0
+      "trend_boost": 0.6764
     },
     {
       "department": "Real Estate",
@@ -72,8 +63,17 @@
       "high_conf": 0,
       "this_week": 0,
       "last_week": 3,
-      "trend_boost": 0.6219
+      "trend_boost": 0.6175
+    },
+    {
+      "department": "Banking & Finance",
+      "signal_count": 2,
+      "firm_count": 2,
+      "high_conf": 0,
+      "this_week": 0,
+      "last_week": 2,
+      "trend_boost": 0.92
     }
   ],
-  "generated_at": "2026-03-19T14:43:15.170267+00:00"
+  "generated_at": "2026-03-19T16:53:32.528206+00:00"
 }
