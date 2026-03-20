@@ -5,9 +5,9 @@
       "signal_count": 5,
       "firm_count": 2,
       "high_conf": 1,
-      "this_week": 4,
-      "last_week": 1,
-      "trend_boost": 2.4662
+      "this_week": 0,
+      "last_week": 5,
+      "trend_boost": 2.093
     },
     {
       "department": "Corporate / M&A",
@@ -16,7 +16,7 @@
       "high_conf": 1,
       "this_week": 2,
       "last_week": 13,
-      "trend_boost": 0.6691
+      "trend_boost": 0.6676
     },
     {
       "department": "Real Estate",
@@ -25,7 +25,7 @@
       "high_conf": 0,
       "this_week": 0,
       "last_week": 3,
-      "trend_boost": 0.609
+      "trend_boost": 0.6072
     },
     {
       "department": "Banking & Finance",
@@ -34,7 +34,7 @@
       "high_conf": 0,
       "this_week": 0,
       "last_week": 2,
-      "trend_boost": 0.7638
+      "trend_boost": 0.731
     }
   ],
   "all_depts": [
@@ -43,9 +43,9 @@
       "signal_count": 5,
       "firm_count": 2,
       "high_conf": 1,
-      "this_week": 4,
-      "last_week": 1,
-      "trend_boost": 2.4662
+      "this_week": 0,
+      "last_week": 5,
+      "trend_boost": 2.093
     },
     {
       "department": "Corporate / M&A",
@@ -54,7 +54,7 @@
       "high_conf": 1,
       "this_week": 2,
       "last_week": 13,
-      "trend_boost": 0.6691
+      "trend_boost": 0.6676
     },
     {
       "department": "Real Estate",
@@ -63,7 +63,7 @@
       "high_conf": 0,
       "this_week": 0,
       "last_week": 3,
-      "trend_boost": 0.609
+      "trend_boost": 0.6072
     },
     {
       "department": "Banking & Finance",
@@ -72,8 +72,8 @@
       "high_conf": 0,
       "this_week": 0,
       "last_week": 2,
-      "trend_boost": 0.7638
+      "trend_boost": 0.731
     }
   ],
-  "generated_at": "2026-03-19T22:23:08.554838+00:00"
+  "generated_at": "2026-03-20T01:46:22.499469+00:00"
 }
