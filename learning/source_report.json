@@ -16,7 +16,7 @@
       "avg_score": 12.59,
       "hire_signals": 0,
       "last_seen": "2026-03-21",
-      "multiplier": 1.8146
+      "multiplier": 1.8136
     },
     {
       "source": "Recruiter",
@@ -47,5 +47,5 @@
     }
   ],
   "total_active": 5,
-  "generated_at": "2026-03-21T20:21:02.753814+00:00"
+  "generated_at": "2026-03-21T22:19:20.660620+00:00"
 }
