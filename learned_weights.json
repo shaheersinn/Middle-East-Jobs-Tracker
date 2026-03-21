@@ -1,24 +1,24 @@
 {
   "source_multipliers": {
     "Firm Careers Page": 0.2502,
-    "Website Monitor": 1.8397,
+    "Website Monitor": 1.8337,
     "Recruiter": 2.4998
   },
   "dept_trend_boosts": {
-    "Banking & Finance": 0.6058,
-    "Capital Markets": 0.6003,
+    "Banking & Finance": 0.6046,
+    "Capital Markets": 0.6802,
     "Corporate / M&A": 0.6617,
-    "Data Privacy & Technology": 0.6657,
-    "Real Estate": 0.6003
+    "Data Privacy & Technology": 0.6526,
+    "Real Estate": 0.6002
   },
   "keyword_boosts": {
     "development": 0.2502,
-    "data": 1.1515,
-    "privacy": 0.891,
-    "cybersecurity": 0.891
+    "data": 1.1573,
+    "privacy": 0.8955,
+    "cybersecurity": 0.8955
   },
-  "total_runs": 123,
-  "last_trained": "2026-03-21T06:37:12.460708+00:00",
+  "total_runs": 124,
+  "last_trained": "2026-03-21T07:02:54.942008+00:00",
   "firm_velocity": {
     "baker_mckenzie": {
       "firm_name": "Baker McKenzie",
@@ -46,11 +46,11 @@
     },
     "king_spalding": {
       "firm_name": "King & Spalding LLP",
-      "this_week": 0,
+      "this_week": 1,
       "last_week": 1,
-      "this_month": 1,
-      "acceleration": -1.0,
-      "status": "decelerating"
+      "this_month": 2,
+      "acceleration": 0.0,
+      "status": "stable"
     },
     "mayer_brown": {
       "firm_name": "Mayer Brown LLP",
@@ -132,10 +132,10 @@
   },
   "partner_signal_ratio": 0,
   "geo_boosts": {
-    "Dubai": 0.2518,
-    "United Arab Emirates": 0.2507,
-    "Abu Dhabi": 0.5006,
-    "Riyadh": 0.2834
+    "Dubai": 0.2514,
+    "United Arab Emirates": 0.2506,
+    "Abu Dhabi": 0.6005,
+    "Riyadh": 0.2767
   },
   "cross_firm_boosts": {
     "Corporate / M&A": 1.4798,
