@@ -16,7 +16,7 @@
       "high_conf": 1,
       "this_week": 0,
       "last_week": 5,
-      "trend_boost": 0.6007
+      "trend_boost": 0.6006
     },
     {
       "department": "Capital Markets",
@@ -25,7 +25,7 @@
       "high_conf": 0,
       "this_week": 1,
       "last_week": 1,
-      "trend_boost": 0.9954
+      "trend_boost": 0.9963
     },
     {
       "department": "Real Estate",
@@ -54,7 +54,7 @@
       "high_conf": 1,
       "this_week": 0,
       "last_week": 5,
-      "trend_boost": 0.6007
+      "trend_boost": 0.6006
     },
     {
       "department": "Capital Markets",
@@ -63,7 +63,7 @@
       "high_conf": 0,
       "this_week": 1,
       "last_week": 1,
-      "trend_boost": 0.9954
+      "trend_boost": 0.9963
     },
     {
       "department": "Real Estate",
@@ -85,5 +85,5 @@
       "_rank_score": 1.2004
     }
   ],
-  "generated_at": "2026-03-22T20:21:07.840655+00:00"
+  "generated_at": "2026-03-22T22:20:28.998102+00:00"
 }
