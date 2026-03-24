@@ -7,7 +7,7 @@
   "dept_trend_boosts": {
     "Banking & Finance": 0.6002,
     "Capital Markets": 0.9998,
-    "Corporate / M&A": 0.6315,
+    "Corporate / M&A": 0.6252,
     "Data Privacy & Technology": 0.6002,
     "Real Estate": 0.6002
   },
@@ -17,8 +17,8 @@
     "privacy": 0.9131,
     "cybersecurity": 0.9131
   },
-  "total_runs": 159,
-  "last_trained": "2026-03-24T06:58:48.930346+00:00",
+  "total_runs": 160,
+  "last_trained": "2026-03-24T07:22:56.470596+00:00",
   "firm_velocity": {
     "baker_mckenzie": {
       "firm_name": "Baker McKenzie",
@@ -86,11 +86,11 @@
     },
     "sullivan_cromwell": {
       "firm_name": "Sullivan & Cromwell LLP",
-      "this_week": 1,
-      "last_week": 1,
+      "this_week": 0,
+      "last_week": 2,
       "this_month": 2,
-      "acceleration": 0.0,
-      "status": "stable"
+      "acceleration": -1.0,
+      "status": "decelerating"
     },
     "white_case": {
       "firm_name": "White & Case LLP",
@@ -134,7 +134,7 @@
   "geo_boosts": {
     "Dubai": 0.2502,
     "United Arab Emirates": 0.2502,
-    "Abu Dhabi": 0.3904,
+    "Abu Dhabi": 0.379,
     "Riyadh": 0.2502
   },
   "cross_firm_boosts": {
