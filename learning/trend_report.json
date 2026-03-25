@@ -6,8 +6,8 @@
       "firm_count": 8,
       "high_conf": 1,
       "this_week": 0,
-      "last_week": 15,
-      "trend_boost": 0.6009
+      "last_week": 2,
+      "trend_boost": 0.6007
     },
     {
       "department": "Data Privacy & Technology",
@@ -15,7 +15,7 @@
       "firm_count": 2,
       "high_conf": 1,
       "this_week": 0,
-      "last_week": 5,
+      "last_week": 4,
       "trend_boost": 0.6002
     },
     {
@@ -24,7 +24,7 @@
       "firm_count": 2,
       "high_conf": 0,
       "this_week": 1,
-      "last_week": 1,
+      "last_week": 0,
       "trend_boost": 0.9998
     },
     {
@@ -33,7 +33,7 @@
       "firm_count": 3,
       "high_conf": 0,
       "this_week": 0,
-      "last_week": 3,
+      "last_week": 0,
       "trend_boost": 0.6002
     }
   ],
@@ -44,8 +44,8 @@
       "firm_count": 8,
       "high_conf": 1,
       "this_week": 0,
-      "last_week": 15,
-      "trend_boost": 0.6009
+      "last_week": 2,
+      "trend_boost": 0.6007
     },
     {
       "department": "Data Privacy & Technology",
@@ -53,7 +53,7 @@
       "firm_count": 2,
       "high_conf": 1,
       "this_week": 0,
-      "last_week": 5,
+      "last_week": 4,
       "trend_boost": 0.6002
     },
     {
@@ -62,7 +62,7 @@
       "firm_count": 2,
       "high_conf": 0,
       "this_week": 1,
-      "last_week": 1,
+      "last_week": 0,
       "trend_boost": 0.9998
     },
     {
@@ -71,7 +71,7 @@
       "firm_count": 3,
       "high_conf": 0,
       "this_week": 0,
-      "last_week": 3,
+      "last_week": 0,
       "trend_boost": 0.6002
     },
     {
@@ -80,10 +80,10 @@
       "firm_count": 2,
       "high_conf": 0,
       "this_week": 0,
-      "last_week": 2,
+      "last_week": 1,
       "trend_boost": 0.6002,
       "_rank_score": 1.2004
     }
   ],
-  "generated_at": "2026-03-25T12:58:40.640073+00:00"
+  "generated_at": "2026-03-25T14:54:53.277194+00:00"
 }
