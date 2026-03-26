@@ -17,8 +17,8 @@
     "privacy": 0.9131,
     "cybersecurity": 0.9131
   },
-  "total_runs": 182,
-  "last_trained": "2026-03-26T04:32:44.896134+00:00",
+  "total_runs": 183,
+  "last_trained": "2026-03-26T07:02:18.856143+00:00",
   "firm_velocity": {
     "baker_mckenzie": {
       "firm_name": "Baker McKenzie",
@@ -133,8 +133,8 @@
   "partner_signal_ratio": 0,
   "geo_boosts": {
     "Dubai": 0.2502,
-    "United Arab Emirates": 0.8428,
-    "Abu Dhabi": 0.8606,
+    "United Arab Emirates": 0.8742,
+    "Abu Dhabi": 0.8885,
     "Riyadh": 0.2502
   },
   "cross_firm_boosts": {
