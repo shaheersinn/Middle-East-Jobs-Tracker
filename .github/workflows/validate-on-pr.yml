@@ -1,0 +1,61 @@
+name: Validate Expansion Records
+
+on:
+  push:
+    paths:
+      - "data/firms/**/*.yaml"
+      - "data/schema/**"
+      - "scripts/validate.py"
+      - "tests/test_validate.py"
+      - "tests/fixtures/**"
+  pull_request:
+    branches: ["main"]
+    paths:
+      - "data/firms/**/*.yaml"
+      - "data/schema/**"
+      - "scripts/validate.py"
+      - "tests/test_validate.py"
+      - "tests/fixtures/**"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    name: Validate expansion records and run tests
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Cache pip dependencies
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/pip
+          key: ${{ runner.os }}-pip-validate-${{ hashFiles('requirements.txt') }}
+          restore-keys: ${{ runner.os }}-pip-validate-
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Lint (syntax errors and undefined names only)
+        run: |
+          pip install flake8 -q
+          flake8 . --count --select=E9,F63,F7,F82 --show-source --statistics
+
+      - name: Validate all expansion YAML records
+        run: |
+          python scripts/validate.py
+        # Non-zero exit if any record has an ERROR. Warnings are reported but do not block.
+
+      - name: Run validator unit tests
+        run: |
+          pip install pytest -q
+          pytest tests/test_validate.py -v
