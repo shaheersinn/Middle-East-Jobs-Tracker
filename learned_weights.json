@@ -1,24 +1,29 @@
 {
   "source_multipliers": {
     "Firm Careers Page": 0.2502,
-    "Website Monitor": 1.8098,
-    "Recruiter": 2.4998
+    "Website Monitor": 1.7957,
+    "Recruiter": 2.4998,
+    "Google News": 0.8914
   },
   "dept_trend_boosts": {
     "Banking & Finance": 0.6002,
     "Capital Markets": 0.9998,
-    "Corporate / M&A": 0.6002,
+    "Corporate / M&A": 0.6402,
     "Data Privacy & Technology": 0.6002,
     "Real Estate": 0.6002
   },
   "keyword_boosts": {
     "development": 0.2502,
-    "data": 1.1801,
-    "privacy": 0.9131,
-    "cybersecurity": 0.9131
+    "data": 1.1892,
+    "privacy": 0.9201,
+    "cybersecurity": 0.9201,
+    "capital markets": 0.9584,
+    "debt capital markets": 0.9584,
+    "equity capital markets": 0.9584,
+    "equity": 0.9584
   },
-  "total_runs": 183,
-  "last_trained": "2026-03-26T07:02:18.856143+00:00",
+  "total_runs": 184,
+  "last_trained": "2026-03-26T07:29:37.428820+00:00",
   "firm_velocity": {
     "baker_mckenzie": {
       "firm_name": "Baker McKenzie",
@@ -46,19 +51,19 @@
     },
     "king_spalding": {
       "firm_name": "King & Spalding LLP",
+      "this_week": 2,
+      "last_week": 0,
+      "this_month": 2,
+      "acceleration": 2.0,
+      "status": "accelerating"
+    },
+    "mayer_brown": {
+      "firm_name": "Mayer Brown LLP",
       "this_week": 1,
       "last_week": 0,
       "this_month": 1,
       "acceleration": 1.0,
       "status": "accelerating"
-    },
-    "mayer_brown": {
-      "firm_name": "Mayer Brown LLP",
-      "this_week": 0,
-      "last_week": 1,
-      "this_month": 1,
-      "acceleration": -1.0,
-      "status": "decelerating"
     },
     "omelveny": {
       "firm_name": "O'Melveny & Myers LLP",
@@ -132,9 +137,9 @@
   },
   "partner_signal_ratio": 0,
   "geo_boosts": {
-    "Dubai": 0.2502,
-    "United Arab Emirates": 0.8742,
-    "Abu Dhabi": 0.8885,
+    "Dubai": 0.2668,
+    "United Arab Emirates": 0.8994,
+    "Abu Dhabi": 0.9108,
     "Riyadh": 0.2502
   },
   "cross_firm_boosts": {
@@ -142,8 +147,8 @@
     "Real Estate": 1.0798
   },
   "time_patterns": {
-    "3": 0.3515,
-    "4": 1.6485
+    "3": 0.4119,
+    "4": 1.5881
   },
   "dedup_confidence": {}
 }
