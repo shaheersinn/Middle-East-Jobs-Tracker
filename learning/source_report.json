@@ -11,12 +11,12 @@
     },
     {
       "source": "Website Monitor",
-      "total_signals": 6,
-      "firm_coverage": 2,
-      "avg_score": 12.09,
+      "total_signals": 8,
+      "firm_coverage": 3,
+      "avg_score": 11.04,
       "hire_signals": 0,
-      "last_seen": "2026-03-26",
-      "multiplier": 1.744
+      "last_seen": "2026-03-27",
+      "multiplier": 1.713
     },
     {
       "source": "Recruiter",
@@ -34,7 +34,7 @@
       "avg_score": 3.1,
       "hire_signals": 1,
       "last_seen": "2026-03-26",
-      "multiplier": 0.4942
+      "multiplier": 0.4867
     },
     {
       "source": "QFC Authority",
@@ -47,5 +47,5 @@
     }
   ],
   "total_active": 5,
-  "generated_at": "2026-03-27T07:01:07.413426+00:00"
+  "generated_at": "2026-03-27T07:24:52.012452+00:00"
 }

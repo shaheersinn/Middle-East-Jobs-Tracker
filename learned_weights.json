@@ -1,29 +1,31 @@
 {
   "source_multipliers": {
     "Firm Careers Page": 0.2502,
-    "Website Monitor": 1.744,
+    "Website Monitor": 1.713,
     "Recruiter": 2.4998,
-    "Google News": 0.4942
+    "Google News": 0.4867
   },
   "dept_trend_boosts": {
     "Banking & Finance": 0.6002,
     "Capital Markets": 0.9998,
-    "Corporate / M&A": 0.7863,
-    "Data Privacy & Technology": 0.6002,
+    "Corporate / M&A": 0.829,
+    "Data Privacy & Technology": 0.6802,
     "Real Estate": 0.6002
   },
   "keyword_boosts": {
     "development": 0.2502,
-    "data": 1.2224,
-    "privacy": 0.9459,
-    "cybersecurity": 0.9459,
-    "capital markets": 0.8061,
-    "debt capital markets": 0.8061,
-    "equity capital markets": 0.8061,
-    "equity": 0.8061
+    "data": 1.225,
+    "privacy": 0.9475,
+    "cybersecurity": 0.9475,
+    "capital markets": 0.8045,
+    "debt capital markets": 0.8045,
+    "equity capital markets": 0.8045,
+    "equity": 0.8045,
+    "digital assets": 1.1298,
+    "digital": 1.1298
   },
-  "total_runs": 195,
-  "last_trained": "2026-03-27T07:01:07.414496+00:00",
+  "total_runs": 196,
+  "last_trained": "2026-03-27T07:24:52.013555+00:00",
   "firm_velocity": {
     "baker_mckenzie": {
       "firm_name": "Baker McKenzie",
@@ -51,18 +53,18 @@
     },
     "king_spalding": {
       "firm_name": "King & Spalding LLP",
-      "this_week": 2,
+      "this_week": 3,
       "last_week": 0,
-      "this_month": 2,
-      "acceleration": 2.0,
+      "this_month": 3,
+      "acceleration": 3.0,
       "status": "accelerating"
     },
     "mayer_brown": {
       "firm_name": "Mayer Brown LLP",
-      "this_week": 1,
+      "this_week": 2,
       "last_week": 0,
-      "this_month": 1,
-      "acceleration": 1.0,
+      "this_month": 2,
+      "acceleration": 2.0,
       "status": "accelerating"
     },
     "omelveny": {
@@ -137,10 +139,10 @@
   },
   "partner_signal_ratio": 0,
   "geo_boosts": {
-    "Dubai": 0.7591,
-    "United Arab Emirates": 0.9914,
-    "Abu Dhabi": 0.9923,
-    "Riyadh": 0.6162
+    "Dubai": 0.8473,
+    "United Arab Emirates": 0.9931,
+    "Abu Dhabi": 0.9938,
+    "Riyadh": 0.713
   },
   "cross_firm_boosts": {
     "Corporate / M&A": 1.4798,
