@@ -7,7 +7,7 @@
       "high_conf": 1,
       "this_week": 1,
       "last_week": 2,
-      "trend_boost": 0.7786
+      "trend_boost": 0.7829
     },
     {
       "department": "Data Privacy & Technology",
@@ -45,7 +45,7 @@
       "high_conf": 1,
       "this_week": 1,
       "last_week": 2,
-      "trend_boost": 0.7786
+      "trend_boost": 0.7829
     },
     {
       "department": "Data Privacy & Technology",
@@ -85,5 +85,5 @@
       "_rank_score": 1.2004
     }
   ],
-  "generated_at": "2026-03-27T01:56:36.424878+00:00"
+  "generated_at": "2026-03-27T04:33:33.701490+00:00"
 }
