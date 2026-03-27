@@ -1,31 +1,31 @@
 {
   "source_multipliers": {
     "Firm Careers Page": 0.2502,
-    "Website Monitor": 1.6524,
+    "Website Monitor": 1.6397,
     "Recruiter": 2.4998,
-    "Google News": 0.4721
+    "Google News": 0.469
   },
   "dept_trend_boosts": {
     "Banking & Finance": 0.6002,
     "Capital Markets": 0.9998,
-    "Corporate / M&A": 0.9125,
-    "Data Privacy & Technology": 0.8363,
+    "Corporate / M&A": 0.93,
+    "Data Privacy & Technology": 0.869,
     "Real Estate": 0.6002
   },
   "keyword_boosts": {
     "development": 0.2502,
-    "data": 1.2302,
-    "privacy": 0.9505,
-    "cybersecurity": 0.9505,
-    "capital markets": 0.8015,
-    "debt capital markets": 0.8015,
-    "equity capital markets": 0.8015,
-    "equity": 0.8015,
-    "digital assets": 1.383,
-    "digital": 1.383
+    "data": 1.2313,
+    "privacy": 0.9511,
+    "cybersecurity": 0.9511,
+    "capital markets": 0.8009,
+    "debt capital markets": 0.8009,
+    "equity capital markets": 0.8009,
+    "equity": 0.8009,
+    "digital assets": 1.4362,
+    "digital": 1.4362
   },
-  "total_runs": 199,
-  "last_trained": "2026-03-27T12:55:52.173252+00:00",
+  "total_runs": 200,
+  "last_trained": "2026-03-27T14:45:53.663989+00:00",
   "firm_velocity": {
     "baker_mckenzie": {
       "firm_name": "Baker McKenzie",
@@ -139,10 +139,10 @@
   },
   "partner_signal_ratio": 0,
   "geo_boosts": {
-    "Dubai": 1.0194,
-    "United Arab Emirates": 0.9965,
-    "Abu Dhabi": 0.9968,
-    "Riyadh": 0.9018
+    "Dubai": 1.0555,
+    "United Arab Emirates": 0.9972,
+    "Abu Dhabi": 0.9974,
+    "Riyadh": 0.9414
   },
   "cross_firm_boosts": {
     "Corporate / M&A": 1.4798,
