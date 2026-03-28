@@ -1,31 +1,32 @@
 {
   "source_multipliers": {
     "Firm Careers Page": 0.2502,
-    "Website Monitor": 1.5995,
+    "Website Monitor": 1.5531,
     "Recruiter": 2.4998,
-    "Google News": 0.4594
+    "Google News": 0.4589
   },
   "dept_trend_boosts": {
     "Banking & Finance": 0.6002,
     "Capital Markets": 0.9998,
-    "Corporate / M&A": 0.9854,
-    "Data Privacy & Technology": 0.9726,
-    "Real Estate": 0.6002
+    "Corporate / M&A": 0.9883,
+    "Data Privacy & Technology": 0.9781,
+    "Real Estate": 0.6802
   },
   "keyword_boosts": {
     "development": 0.2502,
-    "data": 1.2347,
-    "privacy": 0.9531,
-    "cybersecurity": 0.9531,
-    "capital markets": 0.7989,
-    "debt capital markets": 0.7989,
-    "equity capital markets": 0.7989,
-    "equity": 0.7989,
-    "digital assets": 1.6042,
-    "digital": 1.6042
+    "data": 1.2536,
+    "privacy": 0.9676,
+    "cybersecurity": 0.9676,
+    "capital markets": 0.8109,
+    "debt capital markets": 0.8109,
+    "equity capital markets": 0.8109,
+    "equity": 0.8109,
+    "digital assets": 1.638,
+    "digital": 1.638,
+    "property": 0.8526
   },
-  "total_runs": 207,
-  "last_trained": "2026-03-28T06:53:15.894836+00:00",
+  "total_runs": 208,
+  "last_trained": "2026-03-28T07:17:13.462488+00:00",
   "firm_velocity": {
     "baker_mckenzie": {
       "firm_name": "Baker McKenzie",
@@ -85,11 +86,11 @@
     },
     "squire_patton": {
       "firm_name": "Squire Patton Boggs (US) LLP",
-      "this_week": 0,
-      "last_week": 2,
+      "this_week": 2,
+      "last_week": 0,
       "this_month": 2,
-      "acceleration": -1.0,
-      "status": "decelerating"
+      "acceleration": 2.0,
+      "status": "accelerating"
     },
     "sullivan_cromwell": {
       "firm_name": "Sullivan & Cromwell LLP",
@@ -139,10 +140,10 @@
   },
   "partner_signal_ratio": 0,
   "geo_boosts": {
-    "Dubai": 1.1697,
-    "United Arab Emirates": 0.9994,
-    "Abu Dhabi": 0.8494,
-    "Riyadh": 1.0667
+    "Dubai": 1.1958,
+    "United Arab Emirates": 0.9995,
+    "Abu Dhabi": 0.7795,
+    "Riyadh": 1.0734
   },
   "cross_firm_boosts": {
     "Corporate / M&A": 1.4798,
