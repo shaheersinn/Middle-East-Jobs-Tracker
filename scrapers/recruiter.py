@@ -141,7 +141,6 @@ class RecruiterScraper(BaseScraper):
         return signals
 
     def _populate_cache(self):
-        global _RECRUITER_CACHE
         total = 0
         for rec in RECRUITERS:
             try:
