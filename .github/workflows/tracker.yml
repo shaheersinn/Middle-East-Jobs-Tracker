@@ -30,6 +30,8 @@ jobs:
   track:
     runs-on: ubuntu-latest
     timeout-minutes: 55
+    permissions:
+      contents: write
 
     # FIXED: grant write access so git push works from github-actions[bot]
     permissions:
