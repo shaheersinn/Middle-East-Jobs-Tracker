@@ -5,7 +5,7 @@
       "this_week": 3,
       "last_week": 0,
       "total_30d": 20,
-      "boost": 1.2994,
+      "boost": 1.2995,
       "trend": "\u2191 heating"
     },
     {
@@ -27,11 +27,11 @@
     {
       "city": "Abu Dhabi",
       "this_week": 1,
-      "last_week": 2,
+      "last_week": 1,
       "total_30d": 5,
-      "boost": 0.5017,
-      "trend": "\u2193 cooling"
+      "boost": 0.6014,
+      "trend": "\u2192 stable"
     }
   ],
-  "generated_at": "2026-03-30T07:26:01.853381+00:00"
+  "generated_at": "2026-03-30T07:48:30.321109+00:00"
 }
