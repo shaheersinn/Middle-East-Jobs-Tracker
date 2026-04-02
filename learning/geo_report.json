@@ -17,21 +17,21 @@
       "trend": "\u2191 heating"
     },
     {
+      "city": "Abu Dhabi",
+      "this_week": 1,
+      "last_week": 1,
+      "total_30d": 5,
+      "boost": 0.9998,
+      "trend": "\u2192 stable"
+    },
+    {
       "city": "United Arab Emirates",
       "this_week": 0,
       "last_week": 0,
       "total_30d": 2,
       "boost": 0.9998,
       "trend": "\u2192 stable"
-    },
-    {
-      "city": "Abu Dhabi",
-      "this_week": 1,
-      "last_week": 1,
-      "total_30d": 5,
-      "boost": 0.9997,
-      "trend": "\u2192 stable"
     }
   ],
-  "generated_at": "2026-04-01T22:32:44.766973+00:00"
+  "generated_at": "2026-04-02T01:53:56.737825+00:00"
 }
