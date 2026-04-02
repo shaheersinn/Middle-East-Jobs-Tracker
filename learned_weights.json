@@ -7,8 +7,8 @@
   },
   "dept_trend_boosts": {
     "Banking & Finance": 0.6002,
-    "Capital Markets": 0.9998,
-    "Corporate / M&A": 1.0027,
+    "Capital Markets": 0.9198,
+    "Corporate / M&A": 1.0022,
     "Data Privacy & Technology": 0.9998,
     "Real Estate": 0.9998
   },
@@ -25,8 +25,8 @@
     "digital": 1.7732,
     "property": 0.2631
   },
-  "total_runs": 267,
-  "last_trained": "2026-04-02T07:06:09.109490+00:00",
+  "total_runs": 268,
+  "last_trained": "2026-04-02T07:31:06.716605+00:00",
   "firm_velocity": {
     "baker_mckenzie": {
       "firm_name": "Baker McKenzie",
@@ -54,19 +54,19 @@
     },
     "king_spalding": {
       "firm_name": "King & Spalding LLP",
-      "this_week": 2,
-      "last_week": 1,
+      "this_week": 1,
+      "last_week": 2,
       "this_month": 3,
-      "acceleration": 1.0,
-      "status": "accelerating"
+      "acceleration": -0.5,
+      "status": "decelerating"
     },
     "mayer_brown": {
       "firm_name": "Mayer Brown LLP",
-      "this_week": 2,
-      "last_week": 0,
+      "this_week": 1,
+      "last_week": 1,
       "this_month": 2,
-      "acceleration": 2.0,
-      "status": "accelerating"
+      "acceleration": 0.0,
+      "status": "stable"
     },
     "omelveny": {
       "firm_name": "O'Melveny & Myers LLP",
@@ -140,7 +140,7 @@
   },
   "partner_signal_ratio": 0,
   "geo_boosts": {
-    "Dubai": 1.2998,
+    "Dubai": 1.4398,
     "United Arab Emirates": 0.9998,
     "Abu Dhabi": 0.9998,
     "Riyadh": 1.0998
