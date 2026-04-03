@@ -34,7 +34,7 @@
       "high_conf": 0,
       "this_week": 0,
       "last_week": 2,
-      "trend_boost": 0.6343
+      "trend_boost": 0.6274
     }
   ],
   "all_depts": [
@@ -72,7 +72,7 @@
       "high_conf": 0,
       "this_week": 0,
       "last_week": 2,
-      "trend_boost": 0.6343
+      "trend_boost": 0.6274
     },
     {
       "department": "Banking & Finance",
@@ -85,5 +85,5 @@
       "_rank_score": 1.2004
     }
   ],
-  "generated_at": "2026-04-03T04:27:28.853571+00:00"
+  "generated_at": "2026-04-03T07:02:11.303012+00:00"
 }
