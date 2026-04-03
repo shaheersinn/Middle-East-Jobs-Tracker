@@ -7,16 +7,7 @@
       "high_conf": 1,
       "this_week": 1,
       "last_week": 2,
-      "trend_boost": 0.8526
-    },
-    {
-      "department": "Data Privacy & Technology",
-      "signal_count": 6,
-      "firm_count": 3,
-      "high_conf": 1,
-      "this_week": 0,
-      "last_week": 1,
-      "trend_boost": 0.7048
+      "trend_boost": 0.8421
     },
     {
       "department": "Real Estate",
@@ -28,13 +19,22 @@
       "trend_boost": 0.9998
     },
     {
+      "department": "Data Privacy & Technology",
+      "signal_count": 6,
+      "firm_count": 3,
+      "high_conf": 1,
+      "this_week": 0,
+      "last_week": 1,
+      "trend_boost": 0.6838
+    },
+    {
       "department": "Capital Markets",
       "signal_count": 3,
       "firm_count": 2,
       "high_conf": 0,
       "this_week": 0,
       "last_week": 2,
-      "trend_boost": 0.6072
+      "trend_boost": 0.6058
     }
   ],
   "all_depts": [
@@ -45,16 +45,7 @@
       "high_conf": 1,
       "this_week": 1,
       "last_week": 2,
-      "trend_boost": 0.8526
-    },
-    {
-      "department": "Data Privacy & Technology",
-      "signal_count": 6,
-      "firm_count": 3,
-      "high_conf": 1,
-      "this_week": 0,
-      "last_week": 1,
-      "trend_boost": 0.7048
+      "trend_boost": 0.8421
     },
     {
       "department": "Real Estate",
@@ -66,13 +57,22 @@
       "trend_boost": 0.9998
     },
     {
+      "department": "Data Privacy & Technology",
+      "signal_count": 6,
+      "firm_count": 3,
+      "high_conf": 1,
+      "this_week": 0,
+      "last_week": 1,
+      "trend_boost": 0.6838
+    },
+    {
       "department": "Capital Markets",
       "signal_count": 3,
       "firm_count": 2,
       "high_conf": 0,
       "this_week": 0,
       "last_week": 2,
-      "trend_boost": 0.6072
+      "trend_boost": 0.6058
     },
     {
       "department": "Banking & Finance",
@@ -85,5 +85,5 @@
       "_rank_score": 1.2004
     }
   ],
-  "generated_at": "2026-04-03T16:34:55.458285+00:00"
+  "generated_at": "2026-04-03T18:39:36.876794+00:00"
 }
