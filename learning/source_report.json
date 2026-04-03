@@ -11,12 +11,12 @@
     },
     {
       "source": "Website Monitor",
-      "total_signals": 10,
-      "firm_coverage": 4,
-      "avg_score": 9.49,
+      "total_signals": 11,
+      "firm_coverage": 5,
+      "avg_score": 9.19,
       "hire_signals": 0,
-      "last_seen": "2026-03-28",
-      "multiplier": 1.3676
+      "last_seen": "2026-04-03",
+      "multiplier": 1.3592
     },
     {
       "source": "Recruiter",
@@ -47,5 +47,5 @@
     }
   ],
   "total_active": 5,
-  "generated_at": "2026-04-03T07:02:11.303398+00:00"
+  "generated_at": "2026-04-03T07:28:17.225933+00:00"
 }
