@@ -1,7 +1,7 @@
 {
   "source_multipliers": {
     "Firm Careers Page": 0.2502,
-    "Website Monitor": 2.4997,
+    "Website Monitor": 2.4998,
     "Recruiter": 2.3464,
     "Google News": 0.6824
   },
@@ -25,8 +25,8 @@
     "digital": 1.7732,
     "property": 0.2631
   },
-  "total_runs": 340,
-  "last_trained": "2026-04-08T07:36:35.369796+00:00",
+  "total_runs": 341,
+  "last_trained": "2026-04-08T08:55:41.520841+00:00",
   "firm_velocity": {
     "baker_mckenzie": {
       "firm_name": "Baker McKenzie",
