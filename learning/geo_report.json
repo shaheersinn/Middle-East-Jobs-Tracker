@@ -3,9 +3,9 @@
     {
       "city": "Dubai",
       "this_week": 4,
-      "last_week": 3,
+      "last_week": 2,
       "total_30d": 24,
-      "boost": 1.3331,
+      "boost": 1.4665,
       "trend": "\u2191 heating"
     },
     {
@@ -33,5 +33,5 @@
       "trend": "\u2193 cooling"
     }
   ],
-  "generated_at": "2026-04-09T07:15:44.466457+00:00"
+  "generated_at": "2026-04-09T07:41:10.863087+00:00"
 }
