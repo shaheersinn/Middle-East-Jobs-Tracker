@@ -1,15 +1,6 @@
 {
   "sources": [
     {
-      "source": "Firm Careers Page",
-      "total_signals": 18,
-      "firm_coverage": 10,
-      "avg_score": 1.65,
-      "hire_signals": 0,
-      "last_seen": "2026-03-11",
-      "multiplier": 0.2502
-    },
-    {
       "source": "Website Monitor",
       "total_signals": 11,
       "firm_coverage": 5,
@@ -25,7 +16,7 @@
       "avg_score": 8.68,
       "hire_signals": 0,
       "last_seen": "2026-04-05",
-      "multiplier": 2.3464
+      "multiplier": 2.339
     },
     {
       "source": "Google News",
@@ -34,18 +25,9 @@
       "avg_score": 3.1,
       "hire_signals": 1,
       "last_seen": "2026-03-26",
-      "multiplier": 0.6824
-    },
-    {
-      "source": "QFC Authority",
-      "total_signals": 1,
-      "firm_coverage": 1,
-      "avg_score": 31.5,
-      "hire_signals": 0,
-      "last_seen": "2026-03-11",
-      "multiplier": 1.0
+      "multiplier": 0.5959
     }
   ],
-  "total_active": 5,
-  "generated_at": "2026-04-10T12:59:33.825334+00:00"
+  "total_active": 3,
+  "generated_at": "2026-04-10T14:43:07.944063+00:00"
 }

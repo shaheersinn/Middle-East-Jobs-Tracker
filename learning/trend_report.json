@@ -2,26 +2,26 @@
   "top4": [
     {
       "department": "Corporate / M&A",
-      "signal_count": 21,
-      "firm_count": 11,
+      "signal_count": 8,
+      "firm_count": 7,
       "high_conf": 1,
       "this_week": 3,
       "last_week": 1,
-      "trend_boost": 2.273
+      "trend_boost": 2.2584
     },
     {
       "department": "Data Privacy & Technology",
-      "signal_count": 6,
-      "firm_count": 3,
-      "high_conf": 1,
+      "signal_count": 5,
+      "firm_count": 2,
+      "high_conf": 0,
       "this_week": 0,
       "last_week": 0,
       "trend_boost": 0.6002
     },
     {
       "department": "Real Estate",
-      "signal_count": 5,
-      "firm_count": 4,
+      "signal_count": 2,
+      "firm_count": 1,
       "high_conf": 0,
       "this_week": 0,
       "last_week": 2,
@@ -29,8 +29,8 @@
     },
     {
       "department": "Capital Markets",
-      "signal_count": 3,
-      "firm_count": 2,
+      "signal_count": 2,
+      "firm_count": 1,
       "high_conf": 0,
       "this_week": 0,
       "last_week": 0,
@@ -40,26 +40,26 @@
   "all_depts": [
     {
       "department": "Corporate / M&A",
-      "signal_count": 21,
-      "firm_count": 11,
+      "signal_count": 8,
+      "firm_count": 7,
       "high_conf": 1,
       "this_week": 3,
       "last_week": 1,
-      "trend_boost": 2.273
+      "trend_boost": 2.2584
     },
     {
       "department": "Data Privacy & Technology",
-      "signal_count": 6,
-      "firm_count": 3,
-      "high_conf": 1,
+      "signal_count": 5,
+      "firm_count": 2,
+      "high_conf": 0,
       "this_week": 0,
       "last_week": 0,
       "trend_boost": 0.6002
     },
     {
       "department": "Real Estate",
-      "signal_count": 5,
-      "firm_count": 4,
+      "signal_count": 2,
+      "firm_count": 1,
       "high_conf": 0,
       "this_week": 0,
       "last_week": 2,
@@ -67,23 +67,13 @@
     },
     {
       "department": "Capital Markets",
-      "signal_count": 3,
-      "firm_count": 2,
+      "signal_count": 2,
+      "firm_count": 1,
       "high_conf": 0,
       "this_week": 0,
       "last_week": 0,
       "trend_boost": 0.6002
-    },
-    {
-      "department": "Banking & Finance",
-      "signal_count": 2,
-      "firm_count": 2,
-      "high_conf": 0,
-      "this_week": 0,
-      "last_week": 0,
-      "trend_boost": 0.6002,
-      "_rank_score": 1.2004
     }
   ],
-  "generated_at": "2026-04-10T12:59:33.824896+00:00"
+  "generated_at": "2026-04-10T14:43:07.943683+00:00"
 }
