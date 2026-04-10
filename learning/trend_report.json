@@ -5,9 +5,9 @@
       "signal_count": 21,
       "firm_count": 11,
       "high_conf": 1,
-      "this_week": 4,
+      "this_week": 3,
       "last_week": 1,
-      "trend_boost": 2.4227
+      "trend_boost": 2.3782
     },
     {
       "department": "Data Privacy & Technology",
@@ -15,7 +15,7 @@
       "firm_count": 3,
       "high_conf": 1,
       "this_week": 0,
-      "last_week": 1,
+      "last_week": 0,
       "trend_boost": 0.6002
     },
     {
@@ -43,9 +43,9 @@
       "signal_count": 21,
       "firm_count": 11,
       "high_conf": 1,
-      "this_week": 4,
+      "this_week": 3,
       "last_week": 1,
-      "trend_boost": 2.4227
+      "trend_boost": 2.3782
     },
     {
       "department": "Data Privacy & Technology",
@@ -53,7 +53,7 @@
       "firm_count": 3,
       "high_conf": 1,
       "this_week": 0,
-      "last_week": 1,
+      "last_week": 0,
       "trend_boost": 0.6002
     },
     {
@@ -85,5 +85,5 @@
       "_rank_score": 1.2004
     }
   ],
-  "generated_at": "2026-04-10T05:54:53.744500+00:00"
+  "generated_at": "2026-04-10T07:20:36.526144+00:00"
 }

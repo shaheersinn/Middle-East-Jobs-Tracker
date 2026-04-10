@@ -8,7 +8,7 @@
   "dept_trend_boosts": {
     "Banking & Finance": 0.6002,
     "Capital Markets": 0.6002,
-    "Corporate / M&A": 2.4227,
+    "Corporate / M&A": 2.3782,
     "Data Privacy & Technology": 0.6002,
     "Real Estate": 0.6002
   },
@@ -25,8 +25,8 @@
     "digital": 1.7732,
     "property": 0.2631
   },
-  "total_runs": 362,
-  "last_trained": "2026-04-10T05:54:53.745970+00:00",
+  "total_runs": 363,
+  "last_trained": "2026-04-10T07:20:36.527364+00:00",
   "firm_velocity": {
     "baker_mckenzie": {
       "firm_name": "Baker McKenzie",
@@ -38,11 +38,11 @@
     },
     "gibson_dunn": {
       "firm_name": "Gibson, Dunn & Crutcher LLP",
-      "this_week": 1,
-      "last_week": 0,
+      "this_week": 0,
+      "last_week": 1,
       "this_month": 1,
-      "acceleration": 1.0,
-      "status": "accelerating"
+      "acceleration": -1.0,
+      "status": "decelerating"
     },
     "jones_day": {
       "firm_name": "Jones Day",
@@ -148,13 +148,13 @@
   },
   "partner_signal_ratio": 0,
   "geo_boosts": {
-    "Dubai": 1.9428,
+    "Dubai": 1.8542,
     "United Arab Emirates": 0.9998,
     "Abu Dhabi": 0.2502,
-    "Riyadh": 0.2502
+    "Riyadh": 0.4002
   },
   "cross_firm_boosts": {
-    "Corporate / M&A": 1.1602,
+    "Corporate / M&A": 1.1442,
     "Real Estate": 1.0798
   },
   "time_patterns": {
