@@ -2,31 +2,31 @@
   "source_multipliers": {
     "Firm Careers Page": 0.2502,
     "Website Monitor": 2.4998,
-    "Recruiter": 1.318,
-    "Google News": 0.255
+    "Recruiter": 1.2892,
+    "Google News": 0.254
   },
   "dept_trend_boosts": {
     "Banking & Finance": 0.6002,
     "Capital Markets": 0.6002,
-    "Corporate / M&A": 2.2009,
+    "Corporate / M&A": 1.8807,
     "Data Privacy & Technology": 0.6002,
     "Real Estate": 0.6002
   },
   "keyword_boosts": {
-    "development": 0.3144,
+    "development": 0.3199,
     "data": 1.1355,
     "privacy": 1.1258,
     "cybersecurity": 1.1258,
-    "capital markets": 1.0275,
-    "debt capital markets": 1.0275,
-    "equity capital markets": 1.0275,
-    "equity": 1.0275,
+    "capital markets": 1.0453,
+    "debt capital markets": 1.0453,
+    "equity capital markets": 1.0453,
+    "equity": 1.0453,
     "digital assets": 1.7732,
     "digital": 1.7732,
-    "property": 0.3146
+    "property": 0.3201
   },
-  "total_runs": 387,
-  "last_trained": "2026-04-12T07:07:53.850945+00:00",
+  "total_runs": 388,
+  "last_trained": "2026-04-12T07:41:49.482692+00:00",
   "firm_velocity": {
     "baker_mckenzie": {
       "firm_name": "Baker McKenzie",
@@ -70,11 +70,11 @@
     },
     "omelveny": {
       "firm_name": "O'Melveny & Myers LLP",
-      "this_week": 1,
-      "last_week": 0,
+      "this_week": 0,
+      "last_week": 1,
       "this_month": 1,
-      "acceleration": 1.0,
-      "status": "accelerating"
+      "acceleration": -1.0,
+      "status": "decelerating"
     },
     "skadden": {
       "firm_name": "Skadden, Arps, Slate, Meagher & Flom LLP",
@@ -126,19 +126,19 @@
     },
     "paul_hastings": {
       "firm_name": "Paul Hastings LLP",
-      "this_week": 1,
-      "last_week": 0,
+      "this_week": 0,
+      "last_week": 1,
       "this_month": 1,
-      "acceleration": 1.0,
-      "status": "accelerating"
+      "acceleration": -1.0,
+      "status": "decelerating"
     },
     "greenberg_traurig": {
       "firm_name": "Greenberg Traurig LLP",
-      "this_week": 1,
-      "last_week": 0,
+      "this_week": 0,
+      "last_week": 1,
       "this_month": 1,
-      "acceleration": 1.0,
-      "status": "accelerating"
+      "acceleration": -1.0,
+      "status": "decelerating"
     }
   },
   "seniority_distribution": {
@@ -146,9 +146,9 @@
   },
   "partner_signal_ratio": 0,
   "geo_boosts": {
-    "Dubai": 2.433,
+    "Dubai": 1.9964,
     "United Arab Emirates": 0.9998,
-    "Abu Dhabi": 0.9485,
+    "Abu Dhabi": 0.9588,
     "Riyadh": 0.9945
   },
   "cross_firm_boosts": {

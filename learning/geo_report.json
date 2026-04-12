@@ -2,20 +2,20 @@
   "cities": [
     {
       "city": "Dubai",
-      "this_week": 3,
-      "last_week": 1,
+      "this_week": 0,
+      "last_week": 4,
       "total_30d": 7,
-      "boost": 2.433,
-      "trend": "\u2191 heating"
+      "boost": 1.9964,
+      "trend": "\u2193 cooling"
     },
     {
       "city": "Abu Dhabi",
       "this_week": 0,
       "last_week": 0,
       "total_30d": 3,
-      "boost": 0.9485,
+      "boost": 0.9588,
       "trend": "\u2192 stable"
     }
   ],
-  "generated_at": "2026-04-12T07:07:53.850077+00:00"
+  "generated_at": "2026-04-12T07:41:49.481938+00:00"
 }
