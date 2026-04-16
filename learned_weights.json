@@ -2,13 +2,13 @@
   "source_multipliers": {
     "Firm Careers Page": 0.2502,
     "Website Monitor": 2.4998,
-    "Recruiter": 0.6052,
+    "Recruiter": 0.6205,
     "Google News": 0.2502
   },
   "dept_trend_boosts": {
     "Banking & Finance": 0.6002,
     "Capital Markets": 0.6002,
-    "Corporate / M&A": 0.7986,
+    "Corporate / M&A": 0.7989,
     "Data Privacy & Technology": 0.6002,
     "Real Estate": 0.6002
   },
@@ -25,8 +25,8 @@
     "digital": 1.7732,
     "property": 0.3436
   },
-  "total_runs": 440,
-  "last_trained": "2026-04-16T17:09:34.339657+00:00",
+  "total_runs": 441,
+  "last_trained": "2026-04-16T19:05:56.877547+00:00",
   "firm_velocity": {
     "baker_mckenzie": {
       "firm_name": "Baker McKenzie",
