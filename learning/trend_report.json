@@ -7,7 +7,7 @@
       "high_conf": 1,
       "this_week": 3,
       "last_week": 0,
-      "trend_boost": 0.9924
+      "trend_boost": 0.9939
     },
     {
       "department": "Real Estate",
@@ -36,7 +36,7 @@
       "high_conf": 1,
       "this_week": 3,
       "last_week": 0,
-      "trend_boost": 0.9924
+      "trend_boost": 0.9939
     },
     {
       "department": "Real Estate",
@@ -57,5 +57,5 @@
       "trend_boost": 0.6002
     }
   ],
-  "generated_at": "2026-04-19T07:37:07.946648+00:00"
+  "generated_at": "2026-04-19T08:48:08.967414+00:00"
 }
