@@ -11,11 +11,11 @@
     {
       "city": "Dubai",
       "this_week": 1,
-      "last_week": 3,
+      "last_week": 0,
       "total_30d": 8,
-      "boost": 0.3329,
-      "trend": "\u2193 cooling"
+      "boost": 0.4863,
+      "trend": "\u2191 heating"
     }
   ],
-  "generated_at": "2026-04-19T07:13:54.790250+00:00"
+  "generated_at": "2026-04-19T07:37:07.947347+00:00"
 }

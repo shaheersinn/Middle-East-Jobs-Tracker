@@ -6,8 +6,8 @@
       "firm_count": 8,
       "high_conf": 1,
       "this_week": 3,
-      "last_week": 3,
-      "trend_boost": 0.9905
+      "last_week": 0,
+      "trend_boost": 0.9924
     },
     {
       "department": "Real Estate",
@@ -35,8 +35,8 @@
       "firm_count": 8,
       "high_conf": 1,
       "this_week": 3,
-      "last_week": 3,
-      "trend_boost": 0.9905
+      "last_week": 0,
+      "trend_boost": 0.9924
     },
     {
       "department": "Real Estate",
@@ -57,5 +57,5 @@
       "trend_boost": 0.6002
     }
   ],
-  "generated_at": "2026-04-19T07:13:54.789654+00:00"
+  "generated_at": "2026-04-19T07:37:07.946648+00:00"
 }
