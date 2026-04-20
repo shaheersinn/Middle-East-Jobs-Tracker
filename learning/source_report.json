@@ -2,9 +2,9 @@
   "sources": [
     {
       "source": "Website Monitor",
-      "total_signals": 7,
+      "total_signals": 6,
       "firm_coverage": 4,
-      "avg_score": 7.13,
+      "avg_score": 6.36,
       "hire_signals": 0,
       "last_seen": "2026-04-03",
       "multiplier": 2.4998
@@ -16,7 +16,7 @@
       "avg_score": 2.39,
       "hire_signals": 0,
       "last_seen": "2026-04-13",
-      "multiplier": 0.6816
+      "multiplier": 0.6947
     },
     {
       "source": "Google News",
@@ -38,5 +38,5 @@
     }
   ],
   "total_active": 4,
-  "generated_at": "2026-04-20T06:11:30.422129+00:00"
+  "generated_at": "2026-04-20T08:23:51.644924+00:00"
 }

@@ -2,18 +2,18 @@
   "source_multipliers": {
     "Firm Careers Page": 0.2502,
     "Website Monitor": 2.4998,
-    "Recruiter": 0.6816,
+    "Recruiter": 0.6947,
     "Google News": 0.2502
   },
   "dept_trend_boosts": {
     "Banking & Finance": 0.6002,
     "Capital Markets": 0.6002,
-    "Corporate / M&A": 0.9992,
+    "Corporate / M&A": 1.1194,
     "Data Privacy & Technology": 0.6002,
     "Real Estate": 0.6002
   },
   "keyword_boosts": {
-    "development": 0.3436,
+    "development": 0.349,
     "data": 1.1355,
     "privacy": 1.1258,
     "cybersecurity": 1.1258,
@@ -23,10 +23,10 @@
     "equity": 1.1229,
     "digital assets": 1.7732,
     "digital": 1.7732,
-    "property": 0.3436
+    "property": 0.349
   },
-  "total_runs": 480,
-  "last_trained": "2026-04-20T06:11:30.423322+00:00",
+  "total_runs": 481,
+  "last_trained": "2026-04-20T08:23:51.646007+00:00",
   "firm_velocity": {
     "baker_mckenzie": {
       "firm_name": "Baker McKenzie",
@@ -110,11 +110,11 @@
     },
     "hogan_lovells": {
       "firm_name": "Hogan Lovells US LLP",
-      "this_week": 1,
-      "last_week": 0,
+      "this_week": 0,
+      "last_week": 1,
       "this_month": 1,
-      "acceleration": 1.0,
-      "status": "accelerating"
+      "acceleration": -1.0,
+      "status": "decelerating"
     },
     "mcdermott": {
       "firm_name": "McDermott Will & Emery LLP",
@@ -147,7 +147,7 @@
   },
   "partner_signal_ratio": 0,
   "geo_boosts": {
-    "Dubai": 1.0341,
+    "Dubai": 0.8773,
     "United Arab Emirates": 0.9998,
     "Abu Dhabi": 0.9998,
     "Riyadh": 0.9945
