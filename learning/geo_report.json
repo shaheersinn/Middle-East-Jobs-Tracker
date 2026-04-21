@@ -1,13 +1,21 @@
 {
   "cities": [
     {
+      "city": "Riyadh",
+      "this_week": 1,
+      "last_week": 0,
+      "total_30d": 2,
+      "boost": 1.0156,
+      "trend": "\u2191 heating"
+    },
+    {
       "city": "Dubai",
       "this_week": 0,
       "last_week": 1,
       "total_30d": 8,
-      "boost": 0.3174,
+      "boost": 0.3039,
       "trend": "\u2193 cooling"
     }
   ],
-  "generated_at": "2026-04-21T05:59:28.737821+00:00"
+  "generated_at": "2026-04-21T08:08:06.320478+00:00"
 }
