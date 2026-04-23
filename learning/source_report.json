@@ -11,12 +11,12 @@
     },
     {
       "source": "Recruiter",
-      "total_signals": 5,
+      "total_signals": 6,
       "firm_coverage": 4,
-      "avg_score": 2.53,
+      "avg_score": 2.89,
       "hire_signals": 0,
-      "last_seen": "2026-04-21",
-      "multiplier": 0.8078
+      "last_seen": "2026-04-23",
+      "multiplier": 0.8399
     },
     {
       "source": "Google News",
@@ -38,5 +38,5 @@
     }
   ],
   "total_active": 4,
-  "generated_at": "2026-04-23T06:02:37.968491+00:00"
+  "generated_at": "2026-04-23T08:11:01.283017+00:00"
 }
