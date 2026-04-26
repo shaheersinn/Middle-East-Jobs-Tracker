@@ -2,12 +2,12 @@
   "top4": [
     {
       "department": "Corporate / M&A",
-      "signal_count": 10,
+      "signal_count": 9,
       "firm_count": 7,
       "high_conf": 1,
       "this_week": 2,
       "last_week": 3,
-      "trend_boost": 0.9038
+      "trend_boost": 0.8964
     },
     {
       "department": "Real Estate",
@@ -22,12 +22,12 @@
   "all_depts": [
     {
       "department": "Corporate / M&A",
-      "signal_count": 10,
+      "signal_count": 9,
       "firm_count": 7,
       "high_conf": 1,
       "this_week": 2,
       "last_week": 3,
-      "trend_boost": 0.9038
+      "trend_boost": 0.8964
     },
     {
       "department": "Real Estate",
@@ -39,5 +39,5 @@
       "trend_boost": 0.6002
     }
   ],
-  "generated_at": "2026-04-26T06:03:51.395225+00:00"
+  "generated_at": "2026-04-26T07:44:15.153326+00:00"
 }
