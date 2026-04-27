@@ -7,13 +7,22 @@
       "avg_score": 3.24,
       "hire_signals": 0,
       "last_seen": "2026-04-25",
-      "multiplier": 0.2553
+      "multiplier": 0.7042
+    },
+    {
+      "source": "Google News",
+      "total_signals": 2,
+      "firm_coverage": 2,
+      "avg_score": 0.75,
+      "hire_signals": 2,
+      "last_seen": "2026-04-27",
+      "multiplier": 0.2502
     },
     {
       "source": "Website Monitor",
-      "total_signals": 3,
-      "firm_coverage": 2,
-      "avg_score": 4.26,
+      "total_signals": 1,
+      "firm_coverage": 1,
+      "avg_score": 6.25,
       "hire_signals": 0,
       "last_seen": "2026-04-03",
       "multiplier": 2.4998
@@ -26,17 +35,8 @@
       "hire_signals": 0,
       "last_seen": "2026-04-18",
       "multiplier": 1.0
-    },
-    {
-      "source": "Google News",
-      "total_signals": 1,
-      "firm_coverage": 1,
-      "avg_score": 0.75,
-      "hire_signals": 1,
-      "last_seen": "2026-04-15",
-      "multiplier": 0.2502
     }
   ],
   "total_active": 4,
-  "generated_at": "2026-04-27T06:24:25.904869+00:00"
+  "generated_at": "2026-04-27T08:41:36.311098+00:00"
 }

@@ -2,13 +2,13 @@
   "source_multipliers": {
     "Firm Careers Page": 0.2502,
     "Website Monitor": 2.4998,
-    "Recruiter": 0.2553,
+    "Recruiter": 0.7042,
     "Google News": 0.2502
   },
   "dept_trend_boosts": {
     "Banking & Finance": 0.6002,
     "Capital Markets": 0.6002,
-    "Corporate / M&A": 0.8699,
+    "Corporate / M&A": 0.9559,
     "Data Privacy & Technology": 0.6002,
     "Real Estate": 0.6002,
     "Project Finance & Infrastructure": 1.0
@@ -25,10 +25,10 @@
     "digital assets": 1.7732,
     "digital": 1.7732,
     "property": 0.7823,
-    "corporate": 0.9313
+    "corporate": 0.9134
   },
-  "total_runs": 559,
-  "last_trained": "2026-04-27T06:24:25.906031+00:00",
+  "total_runs": 560,
+  "last_trained": "2026-04-27T08:41:36.312217+00:00",
   "firm_velocity": {
     "baker_mckenzie": {
       "firm_name": "Baker McKenzie",
@@ -96,11 +96,11 @@
     },
     "sullivan_cromwell": {
       "firm_name": "Sullivan & Cromwell LLP",
-      "this_week": 0,
-      "last_week": 1,
+      "this_week": 1,
+      "last_week": 0,
       "this_month": 1,
-      "acceleration": -1.0,
-      "status": "decelerating"
+      "acceleration": 1.0,
+      "status": "accelerating"
     },
     "white_case": {
       "firm_name": "White & Case LLP",
@@ -113,10 +113,10 @@
     "hogan_lovells": {
       "firm_name": "Hogan Lovells US LLP",
       "this_week": 1,
-      "last_week": 1,
-      "this_month": 2,
-      "acceleration": 0.0,
-      "status": "stable"
+      "last_week": 0,
+      "this_month": 1,
+      "acceleration": 1.0,
+      "status": "accelerating"
     },
     "mcdermott": {
       "firm_name": "McDermott Will & Emery LLP",
@@ -149,10 +149,11 @@
   },
   "partner_signal_ratio": 0,
   "geo_boosts": {
-    "Dubai": 0.2502,
+    "Dubai": 0.4002,
     "United Arab Emirates": 0.9998,
     "Abu Dhabi": 1.0998,
-    "Riyadh": 1.1993
+    "Riyadh": 1.1994,
+    "UAE": 1.0
   },
   "cross_firm_boosts": {
     "Corporate / M&A": 1.0802,
