@@ -7,7 +7,7 @@
       "high_conf": 2,
       "this_week": 3,
       "last_week": 2,
-      "trend_boost": 1.2278
+      "trend_boost": 1.2422
     }
   ],
   "all_depts": [
@@ -18,8 +18,8 @@
       "high_conf": 2,
       "this_week": 3,
       "last_week": 2,
-      "trend_boost": 1.2278
+      "trend_boost": 1.2422
     }
   ],
-  "generated_at": "2026-04-27T22:45:27.141453+00:00"
+  "generated_at": "2026-04-28T02:30:57.206400+00:00"
 }
