@@ -2,13 +2,13 @@
   "source_multipliers": {
     "Firm Careers Page": 0.2502,
     "Website Monitor": 2.4998,
-    "Recruiter": 2.259,
+    "Recruiter": 2.3072,
     "Google News": 0.2502
   },
   "dept_trend_boosts": {
     "Banking & Finance": 0.6002,
     "Capital Markets": 0.6002,
-    "Corporate / M&A": 1.2538,
+    "Corporate / M&A": 1.1764,
     "Data Privacy & Technology": 0.6002,
     "Real Estate": 0.6002,
     "Project Finance & Infrastructure": 1.0
@@ -25,10 +25,10 @@
     "digital assets": 1.7732,
     "digital": 1.7732,
     "property": 0.7823,
-    "corporate": 0.8513
+    "corporate": 0.8494
   },
-  "total_runs": 569,
-  "last_trained": "2026-04-28T06:26:09.329498+00:00",
+  "total_runs": 570,
+  "last_trained": "2026-04-28T08:42:35.759608+00:00",
   "firm_velocity": {
     "baker_mckenzie": {
       "firm_name": "Baker McKenzie",
@@ -72,11 +72,11 @@
     },
     "omelveny": {
       "firm_name": "O'Melveny & Myers LLP",
-      "this_week": 2,
-      "last_week": 0,
+      "this_week": 1,
+      "last_week": 1,
       "this_month": 2,
-      "acceleration": 2.0,
-      "status": "accelerating"
+      "acceleration": 0.0,
+      "status": "stable"
     },
     "skadden": {
       "firm_name": "Skadden, Arps, Slate, Meagher & Flom LLP",
@@ -149,10 +149,10 @@
   },
   "partner_signal_ratio": 0,
   "geo_boosts": {
-    "Dubai": 0.9195,
+    "Dubai": 0.9356,
     "United Arab Emirates": 0.9998,
     "Abu Dhabi": 1.0998,
-    "Riyadh": 1.1998,
+    "Riyadh": 1.1598,
     "UAE": 1.0
   },
   "cross_firm_boosts": {
