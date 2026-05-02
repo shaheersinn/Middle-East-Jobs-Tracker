@@ -2,11 +2,11 @@
   "sources": [
     {
       "source": "Recruiter",
-      "total_signals": 7,
+      "total_signals": 9,
       "firm_coverage": 4,
-      "avg_score": 3.24,
+      "avg_score": 5.07,
       "hire_signals": 0,
-      "last_seen": "2026-04-25",
+      "last_seen": "2026-05-02",
       "multiplier": 2.4998
     },
     {
@@ -38,5 +38,5 @@
     }
   ],
   "total_active": 4,
-  "generated_at": "2026-05-02T06:03:38.829726+00:00"
+  "generated_at": "2026-05-02T07:58:07.235305+00:00"
 }
