@@ -13,7 +13,7 @@
       "this_week": 1,
       "last_week": 0,
       "total_30d": 5,
-      "boost": 1.0978,
+      "boost": 1.0982,
       "trend": "\u2191 heating"
     },
     {
@@ -21,9 +21,9 @@
       "this_week": 0,
       "last_week": 2,
       "total_30d": 2,
-      "boost": 0.2669,
+      "boost": 0.2635,
       "trend": "\u2193 cooling"
     }
   ],
-  "generated_at": "2026-05-03T16:42:25.187318+00:00"
+  "generated_at": "2026-05-03T18:52:25.230789+00:00"
 }
