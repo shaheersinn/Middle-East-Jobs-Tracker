@@ -8,10 +8,10 @@
   "dept_trend_boosts": {
     "Banking & Finance": 0.6002,
     "Capital Markets": 0.6002,
-    "Corporate / M&A": 0.7617,
+    "Corporate / M&A": 0.7694,
     "Data Privacy & Technology": 0.6002,
     "Real Estate": 0.6002,
-    "Project Finance & Infrastructure": 0.6003,
+    "Project Finance & Infrastructure": 0.6002,
     "Energy & Natural Resources": 1.0
   },
   "keyword_boosts": {
@@ -26,10 +26,10 @@
     "digital assets": 1.7732,
     "digital": 1.7732,
     "property": 0.7823,
-    "corporate": 0.43
+    "corporate": 0.4386
   },
-  "total_runs": 640,
-  "last_trained": "2026-05-05T06:11:38.403461+00:00",
+  "total_runs": 641,
+  "last_trained": "2026-05-05T08:25:51.320584+00:00",
   "firm_velocity": {
     "baker_mckenzie": {
       "firm_name": "Baker McKenzie",
@@ -65,19 +65,19 @@
     },
     "mayer_brown": {
       "firm_name": "Mayer Brown LLP",
-      "this_week": 0,
-      "last_week": 1,
+      "this_week": 1,
+      "last_week": 0,
       "this_month": 1,
-      "acceleration": -1.0,
-      "status": "decelerating"
+      "acceleration": 1.0,
+      "status": "accelerating"
     },
     "omelveny": {
       "firm_name": "O'Melveny & Myers LLP",
       "this_week": 2,
-      "last_week": 2,
-      "this_month": 4,
-      "acceleration": 0.0,
-      "status": "stable"
+      "last_week": 1,
+      "this_month": 3,
+      "acceleration": 1.0,
+      "status": "accelerating"
     },
     "skadden": {
       "firm_name": "Skadden, Arps, Slate, Meagher & Flom LLP",
@@ -145,16 +145,16 @@
     }
   },
   "seniority_distribution": {
-    "Associate": 0.9,
-    "Counsel": 0.1
+    "Associate": 0.857,
+    "Counsel": 0.143
   },
   "partner_signal_ratio": 0,
   "geo_boosts": {
     "Dubai": 1.0998,
     "United Arab Emirates": 0.9998,
-    "Abu Dhabi": 1.0998,
-    "Riyadh": 0.2506,
-    "UAE": 0.3413
+    "Abu Dhabi": 1.0798,
+    "Riyadh": 0.2505,
+    "UAE": 0.323
   },
   "cross_firm_boosts": {
     "Corporate / M&A": 1.0802,
