@@ -7,7 +7,7 @@
       "high_conf": 2,
       "this_week": 1,
       "last_week": 2,
-      "trend_boost": 0.7919
+      "trend_boost": 0.7935
     },
     {
       "department": "Energy & Natural Resources",
@@ -27,7 +27,7 @@
       "high_conf": 2,
       "this_week": 1,
       "last_week": 2,
-      "trend_boost": 0.7919
+      "trend_boost": 0.7935
     },
     {
       "department": "Energy & Natural Resources",
@@ -39,5 +39,5 @@
       "trend_boost": 1.0
     }
   ],
-  "generated_at": "2026-05-05T19:12:15.829502+00:00"
+  "generated_at": "2026-05-05T20:57:45.068573+00:00"
 }
