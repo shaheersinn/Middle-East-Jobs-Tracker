@@ -6,8 +6,8 @@
       "firm_count": 5,
       "high_conf": 2,
       "this_week": 1,
-      "last_week": 2,
-      "trend_boost": 0.7995
+      "last_week": 1,
+      "trend_boost": 0.8396
     },
     {
       "department": "Energy & Natural Resources",
@@ -26,8 +26,8 @@
       "firm_count": 5,
       "high_conf": 2,
       "this_week": 1,
-      "last_week": 2,
-      "trend_boost": 0.7995
+      "last_week": 1,
+      "trend_boost": 0.8396
     },
     {
       "department": "Energy & Natural Resources",
@@ -39,5 +39,5 @@
       "trend_boost": 1.0
     }
   ],
-  "generated_at": "2026-05-07T06:31:38.477824+00:00"
+  "generated_at": "2026-05-07T08:51:18.882176+00:00"
 }
