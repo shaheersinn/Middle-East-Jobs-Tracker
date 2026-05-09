@@ -7,12 +7,12 @@
   },
   "dept_trend_boosts": {
     "Banking & Finance": 0.6002,
-    "Capital Markets": 0.6002,
-    "Corporate / M&A": 0.9982,
+    "Capital Markets": 0.6802,
+    "Corporate / M&A": 0.9586,
     "Data Privacy & Technology": 0.6002,
     "Real Estate": 0.6002,
     "Project Finance & Infrastructure": 0.6002,
-    "Energy & Natural Resources": 1.0
+    "Energy & Natural Resources": 1.12
   },
   "keyword_boosts": {
     "development": 0.7823,
@@ -26,11 +26,11 @@
     "digital assets": 1.7732,
     "digital": 1.7732,
     "property": 0.7823,
-    "corporate": 0.5114,
-    "energy": 0.3144
+    "corporate": 0.5205,
+    "energy": 0.3015
   },
-  "total_runs": 681,
-  "last_trained": "2026-05-09T06:12:05.738790+00:00",
+  "total_runs": 682,
+  "last_trained": "2026-05-09T08:14:59.311406+00:00",
   "firm_velocity": {
     "baker_mckenzie": {
       "firm_name": "Baker McKenzie",
@@ -74,11 +74,11 @@
     },
     "omelveny": {
       "firm_name": "O'Melveny & Myers LLP",
-      "this_week": 2,
-      "last_week": 1,
+      "this_week": 1,
+      "last_week": 2,
       "this_month": 3,
-      "acceleration": 1.0,
-      "status": "accelerating"
+      "acceleration": -0.5,
+      "status": "decelerating"
     },
     "skadden": {
       "firm_name": "Skadden, Arps, Slate, Meagher & Flom LLP",
@@ -151,19 +151,28 @@
       "this_month": 1,
       "acceleration": 1.0,
       "status": "accelerating"
+    },
+    "norton_rose": {
+      "firm_name": "Norton Rose Fulbright US LLP",
+      "this_week": 1,
+      "last_week": 0,
+      "this_month": 1,
+      "acceleration": 1.0,
+      "status": "accelerating"
     }
   },
   "seniority_distribution": {
-    "Associate": 0.857,
-    "Counsel": 0.143
+    "Associate": 0.875,
+    "Counsel": 0.125
   },
   "partner_signal_ratio": 0,
   "geo_boosts": {
-    "Dubai": 1.0998,
+    "Dubai": 1.0798,
     "United Arab Emirates": 0.9998,
-    "Abu Dhabi": 1.1905,
-    "Riyadh": 0.2502,
-    "UAE": 0.2502
+    "Abu Dhabi": 1.1924,
+    "Riyadh": 0.4002,
+    "UAE": 0.2502,
+    "Middle East": 1.0
   },
   "cross_firm_boosts": {
     "Corporate / M&A": 1.0802,
@@ -171,9 +180,9 @@
     "Energy & Natural Resources": 1.0731
   },
   "time_patterns": {
-    "3": 0.4315,
-    "4": 1.5959,
-    "6": 0.9726
+    "3": 0.4476,
+    "4": 1.6554,
+    "6": 0.897
   },
   "dedup_confidence": {}
 }
