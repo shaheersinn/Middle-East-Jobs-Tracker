@@ -19,6 +19,15 @@
       "multiplier": 0.2502
     },
     {
+      "source": "Website Monitor",
+      "total_signals": 1,
+      "firm_coverage": 1,
+      "avg_score": 9.56,
+      "hire_signals": 0,
+      "last_seen": "2026-05-10",
+      "multiplier": 2.4998
+    },
+    {
       "source": "LinkedIn",
       "total_signals": 1,
       "firm_coverage": 1,
@@ -28,6 +37,6 @@
       "multiplier": 1.0
     }
   ],
-  "total_active": 3,
-  "generated_at": "2026-05-10T06:30:06.601239+00:00"
+  "total_active": 4,
+  "generated_at": "2026-05-10T08:22:19.101422+00:00"
 }
