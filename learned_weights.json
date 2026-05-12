@@ -3,16 +3,17 @@
     "Firm Careers Page": 0.2502,
     "Website Monitor": 2.4998,
     "Recruiter": 2.4998,
-    "Google News": 0.2502
+    "Google News": 0.2502,
+    "LinkedIn": 0.9495
   },
   "dept_trend_boosts": {
     "Banking & Finance": 0.6002,
-    "Capital Markets": 0.9996,
-    "Corporate / M&A": 0.9733,
-    "Data Privacy & Technology": 0.9954,
-    "Real Estate": 0.6002,
+    "Capital Markets": 0.9997,
+    "Corporate / M&A": 0.9786,
+    "Data Privacy & Technology": 0.9963,
+    "Real Estate": 0.6802,
     "Project Finance & Infrastructure": 0.6002,
-    "Energy & Natural Resources": 1.5994
+    "Energy & Natural Resources": 1.4395
   },
   "keyword_boosts": {
     "development": 0.7823,
@@ -26,11 +27,11 @@
     "digital assets": 1.7732,
     "digital": 1.7732,
     "property": 0.7823,
-    "corporate": 0.5318,
+    "corporate": 0.5376,
     "energy": 0.2502
   },
-  "total_runs": 712,
-  "last_trained": "2026-05-12T06:33:13.279859+00:00",
+  "total_runs": 713,
+  "last_trained": "2026-05-12T08:54:19.177103+00:00",
   "firm_velocity": {
     "baker_mckenzie": {
       "firm_name": "Baker McKenzie",
@@ -66,11 +67,11 @@
     },
     "mayer_brown": {
       "firm_name": "Mayer Brown LLP",
-      "this_week": 1,
-      "last_week": 0,
+      "this_week": 0,
+      "last_week": 1,
       "this_month": 1,
-      "acceleration": 1.0,
-      "status": "accelerating"
+      "acceleration": -1.0,
+      "status": "decelerating"
     },
     "omelveny": {
       "firm_name": "O'Melveny & Myers LLP",
@@ -159,19 +160,28 @@
       "this_month": 1,
       "acceleration": 1.0,
       "status": "accelerating"
+    },
+    "dentons": {
+      "firm_name": "Dentons US LLP",
+      "this_week": 1,
+      "last_week": 0,
+      "this_month": 1,
+      "acceleration": 1.0,
+      "status": "accelerating"
     }
   },
   "seniority_distribution": {
-    "Associate": 0.875,
-    "Counsel": 0.125
+    "Associate": 0.778,
+    "Counsel": 0.111,
+    "Senior Associate": 0.111
   },
   "partner_signal_ratio": 0,
   "geo_boosts": {
     "Dubai": 1.0002,
     "United Arab Emirates": 0.9998,
-    "Abu Dhabi": 1.2989,
-    "Riyadh": 0.9993,
-    "UAE": 0.8994,
+    "Abu Dhabi": 1.4391,
+    "Riyadh": 0.9994,
+    "UAE": 0.9195,
     "Middle East": 1.0
   },
   "cross_firm_boosts": {
