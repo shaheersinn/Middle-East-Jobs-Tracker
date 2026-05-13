@@ -2,9 +2,9 @@
   "sources": [
     {
       "source": "Recruiter",
-      "total_signals": 7,
+      "total_signals": 6,
       "firm_coverage": 2,
-      "avg_score": 6.19,
+      "avg_score": 7.05,
       "hire_signals": 0,
       "last_seen": "2026-05-09",
       "multiplier": 2.4998
@@ -25,7 +25,7 @@
       "avg_score": 1.97,
       "hire_signals": 0,
       "last_seen": "2026-05-12",
-      "multiplier": 0.7812
+      "multiplier": 0.7608
     },
     {
       "source": "Website Monitor",
@@ -38,5 +38,5 @@
     }
   ],
   "total_active": 4,
-  "generated_at": "2026-05-13T06:43:47.539591+00:00"
+  "generated_at": "2026-05-13T09:01:23.948522+00:00"
 }
