@@ -20,12 +20,12 @@
     },
     {
       "source": "LinkedIn",
-      "total_signals": 2,
-      "firm_coverage": 2,
-      "avg_score": 1.97,
+      "total_signals": 4,
+      "firm_coverage": 3,
+      "avg_score": 1.74,
       "hire_signals": 0,
-      "last_seen": "2026-05-12",
-      "multiplier": 0.6928
+      "last_seen": "2026-05-14",
+      "multiplier": 0.6729
     },
     {
       "source": "Website Monitor",
@@ -38,5 +38,5 @@
     }
   ],
   "total_active": 4,
-  "generated_at": "2026-05-14T06:42:57.961692+00:00"
+  "generated_at": "2026-05-14T08:54:09.398503+00:00"
 }
