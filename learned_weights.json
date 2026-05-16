@@ -4,16 +4,16 @@
     "Website Monitor": 2.4998,
     "Recruiter": 2.4998,
     "Google News": 0.2502,
-    "LinkedIn": 0.5932
+    "LinkedIn": 0.5928
   },
   "dept_trend_boosts": {
     "Banking & Finance": 0.6002,
-    "Capital Markets": 0.9998,
-    "Corporate / M&A": 2.1784,
+    "Capital Markets": 0.9198,
+    "Corporate / M&A": 2.0627,
     "Data Privacy & Technology": 0.9998,
     "Real Estate": 0.9998,
     "Project Finance & Infrastructure": 0.6002,
-    "Energy & Natural Resources": 0.6271
+    "Energy & Natural Resources": 0.6217
   },
   "keyword_boosts": {
     "development": 0.7823,
@@ -30,8 +30,8 @@
     "corporate": 0.5607,
     "energy": 0.2502
   },
-  "total_runs": 748,
-  "last_trained": "2026-05-16T06:17:45.860763+00:00",
+  "total_runs": 749,
+  "last_trained": "2026-05-16T08:20:51.456716+00:00",
   "firm_velocity": {
     "baker_mckenzie": {
       "firm_name": "Baker McKenzie",
@@ -75,10 +75,10 @@
     },
     "omelveny": {
       "firm_name": "O'Melveny & Myers LLP",
-      "this_week": 1,
-      "last_week": 2,
-      "this_month": 3,
-      "acceleration": -0.5,
+      "this_week": 0,
+      "last_week": 1,
+      "this_month": 1,
+      "acceleration": -1.0,
       "status": "decelerating"
     },
     "skadden": {
@@ -155,11 +155,11 @@
     },
     "norton_rose": {
       "firm_name": "Norton Rose Fulbright US LLP",
-      "this_week": 1,
-      "last_week": 0,
+      "this_week": 0,
+      "last_week": 1,
       "this_month": 1,
-      "acceleration": 1.0,
-      "status": "accelerating"
+      "acceleration": -1.0,
+      "status": "decelerating"
     },
     "dentons": {
       "firm_name": "Dentons US LLP",
@@ -186,14 +186,14 @@
   },
   "partner_signal_ratio": 0,
   "geo_boosts": {
-    "Dubai": 1.0002,
+    "Dubai": 0.8502,
     "United Arab Emirates": 0.9998,
-    "Abu Dhabi": 0.7011,
+    "Abu Dhabi": 0.6609,
     "Riyadh": 0.9998,
     "UAE": 0.9998,
-    "Middle East": 1.0,
-    "Dubai, United Arab Emirates": 1.1964,
-    "Dubai, Dubai, United Arab Emirates": 1.0982
+    "Middle East": 0.85,
+    "Dubai, United Arab Emirates": 1.1971,
+    "Dubai, Dubai, United Arab Emirates": 1.0986
   },
   "cross_firm_boosts": {
     "Corporate / M&A": 1.0802,
