@@ -7,7 +7,7 @@
       "high_conf": 1,
       "this_week": 2,
       "last_week": 1,
-      "trend_boost": 1.8962
+      "trend_boost": 1.837
     },
     {
       "department": "Energy & Natural Resources",
@@ -16,7 +16,7 @@
       "high_conf": 2,
       "this_week": 0,
       "last_week": 2,
-      "trend_boost": 0.6139
+      "trend_boost": 0.6111
     }
   ],
   "all_depts": [
@@ -27,7 +27,7 @@
       "high_conf": 1,
       "this_week": 2,
       "last_week": 1,
-      "trend_boost": 1.8962
+      "trend_boost": 1.837
     },
     {
       "department": "Energy & Natural Resources",
@@ -36,8 +36,8 @@
       "high_conf": 2,
       "this_week": 0,
       "last_week": 2,
-      "trend_boost": 0.6139
+      "trend_boost": 0.6111
     }
   ],
-  "generated_at": "2026-05-16T10:58:27.112856+00:00"
+  "generated_at": "2026-05-16T13:11:46.946083+00:00"
 }
