@@ -8,12 +8,12 @@
   },
   "dept_trend_boosts": {
     "Banking & Finance": 0.6002,
-    "Capital Markets": 0.6343,
-    "Corporate / M&A": 1.6498,
-    "Data Privacy & Technology": 0.9998,
+    "Capital Markets": 0.6274,
+    "Corporate / M&A": 1.6398,
+    "Data Privacy & Technology": 0.9198,
     "Real Estate": 0.9998,
     "Project Finance & Infrastructure": 0.6002,
-    "Energy & Natural Resources": 0.6024
+    "Energy & Natural Resources": 0.6019
   },
   "keyword_boosts": {
     "development": 0.7823,
@@ -30,8 +30,8 @@
     "corporate": 0.5607,
     "energy": 0.2502
   },
-  "total_runs": 759,
-  "last_trained": "2026-05-17T06:41:10.216348+00:00",
+  "total_runs": 760,
+  "last_trained": "2026-05-17T08:38:01.670934+00:00",
   "firm_velocity": {
     "baker_mckenzie": {
       "firm_name": "Baker McKenzie",
@@ -83,11 +83,11 @@
     },
     "skadden": {
       "firm_name": "Skadden, Arps, Slate, Meagher & Flom LLP",
-      "this_week": 1,
-      "last_week": 0,
+      "this_week": 0,
+      "last_week": 1,
       "this_month": 1,
-      "acceleration": 1.0,
-      "status": "accelerating"
+      "acceleration": -1.0,
+      "status": "decelerating"
     },
     "squire_patton": {
       "firm_name": "Squire Patton Boggs (US) LLP",
@@ -186,13 +186,13 @@
   },
   "partner_signal_ratio": 0,
   "geo_boosts": {
-    "Dubai": 0.3145,
+    "Dubai": 0.3016,
     "United Arab Emirates": 0.9998,
-    "Abu Dhabi": 0.5173,
+    "Abu Dhabi": 0.4638,
     "Riyadh": 0.9998,
     "UAE": 0.9998,
-    "Middle East": 0.3144,
-    "Dubai, United Arab Emirates": 1.1997,
+    "Middle East": 0.3015,
+    "Dubai, United Arab Emirates": 1.1998,
     "Dubai, Dubai, United Arab Emirates": 1.0998
   },
   "cross_firm_boosts": {
