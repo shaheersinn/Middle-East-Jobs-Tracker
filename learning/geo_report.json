@@ -21,7 +21,7 @@
       "this_week": 0,
       "last_week": 3,
       "total_30d": 4,
-      "boost": 0.2646,
+      "boost": 0.2617,
       "trend": "\u2193 cooling"
     },
     {
@@ -29,7 +29,7 @@
       "this_week": 0,
       "last_week": 1,
       "total_30d": 2,
-      "boost": 0.2535,
+      "boost": 0.2528,
       "trend": "\u2193 cooling"
     },
     {
@@ -37,9 +37,9 @@
       "this_week": 0,
       "last_week": 1,
       "total_30d": 2,
-      "boost": 0.2535,
+      "boost": 0.2528,
       "trend": "\u2193 cooling"
     }
   ],
-  "generated_at": "2026-05-18T11:45:38.537252+00:00"
+  "generated_at": "2026-05-18T15:18:44.034546+00:00"
 }
