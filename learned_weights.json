@@ -4,14 +4,14 @@
     "Website Monitor": 2.4998,
     "Recruiter": 2.4998,
     "Google News": 0.2502,
-    "LinkedIn": 0.493
+    "LinkedIn": 0.4864
   },
   "dept_trend_boosts": {
     "Banking & Finance": 0.6002,
     "Capital Markets": 0.6002,
-    "Corporate / M&A": 2.0994,
+    "Corporate / M&A": 1.8262,
     "Data Privacy & Technology": 0.6002,
-    "Real Estate": 0.6112,
+    "Real Estate": 0.609,
     "Project Finance & Infrastructure": 0.6002,
     "Energy & Natural Resources": 0.6002
   },
@@ -27,11 +27,11 @@
     "digital assets": 1.7732,
     "digital": 1.7732,
     "property": 0.7823,
-    "corporate": 0.5607,
+    "corporate": 0.5686,
     "energy": 0.2502
   },
-  "total_runs": 795,
-  "last_trained": "2026-05-21T07:44:11.260979+00:00",
+  "total_runs": 796,
+  "last_trained": "2026-05-21T09:57:04.660892+00:00",
   "firm_velocity": {
     "baker_mckenzie": {
       "firm_name": "Baker McKenzie",
@@ -171,17 +171,17 @@
     },
     "shearman": {
       "firm_name": "A&O Shearman",
-      "this_week": 2,
-      "last_week": 0,
+      "this_week": 0,
+      "last_week": 2,
       "this_month": 2,
-      "acceleration": 2.0,
-      "status": "accelerating"
+      "acceleration": -1.0,
+      "status": "decelerating"
     }
   },
   "seniority_distribution": {
-    "Associate": 0.667,
-    "Attorney / Lawyer": 0.222,
-    "Senior Associate": 0.111
+    "Associate": 0.625,
+    "Attorney / Lawyer": 0.25,
+    "Senior Associate": 0.125
   },
   "partner_signal_ratio": 0,
   "geo_boosts": {
@@ -191,7 +191,7 @@
     "Riyadh": 0.9998,
     "UAE": 0.9998,
     "Middle East": 0.2502,
-    "Dubai, United Arab Emirates": 1.0056,
+    "Dubai, United Arab Emirates": 0.8545,
     "Dubai, Dubai, United Arab Emirates": 1.0998
   },
   "cross_firm_boosts": {
