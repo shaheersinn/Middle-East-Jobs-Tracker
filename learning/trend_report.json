@@ -2,17 +2,17 @@
   "top4": [
     {
       "department": "Corporate / M&A",
-      "signal_count": 6,
+      "signal_count": 5,
       "firm_count": 4,
       "high_conf": 1,
       "this_week": 0,
       "last_week": 2,
-      "trend_boost": 0.6536
+      "trend_boost": 0.6429
     },
     {
       "department": "Energy & Natural Resources",
-      "signal_count": 3,
-      "firm_count": 3,
+      "signal_count": 2,
+      "firm_count": 2,
       "high_conf": 2,
       "this_week": 0,
       "last_week": 0,
@@ -22,22 +22,22 @@
   "all_depts": [
     {
       "department": "Corporate / M&A",
-      "signal_count": 6,
+      "signal_count": 5,
       "firm_count": 4,
       "high_conf": 1,
       "this_week": 0,
       "last_week": 2,
-      "trend_boost": 0.6536
+      "trend_boost": 0.6429
     },
     {
       "department": "Energy & Natural Resources",
-      "signal_count": 3,
-      "firm_count": 3,
+      "signal_count": 2,
+      "firm_count": 2,
       "high_conf": 2,
       "this_week": 0,
       "last_week": 0,
       "trend_boost": 0.6002
     }
   ],
-  "generated_at": "2026-06-01T03:32:34.028393+00:00"
+  "generated_at": "2026-06-01T09:20:39.378630+00:00"
 }

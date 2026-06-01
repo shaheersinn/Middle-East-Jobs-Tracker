@@ -4,12 +4,12 @@
     "Website Monitor": 2.4998,
     "Recruiter": 2.4998,
     "Google News": 0.2502,
-    "LinkedIn": 0.4272
+    "LinkedIn": 0.8418
   },
   "dept_trend_boosts": {
     "Banking & Finance": 0.6002,
     "Capital Markets": 0.6002,
-    "Corporate / M&A": 0.6536,
+    "Corporate / M&A": 0.6429,
     "Data Privacy & Technology": 0.6002,
     "Real Estate": 0.6002,
     "Project Finance & Infrastructure": 0.6002,
@@ -30,8 +30,8 @@
     "corporate": 0.5996,
     "energy": 0.2502
   },
-  "total_runs": 894,
-  "last_trained": "2026-06-01T03:32:34.029912+00:00",
+  "total_runs": 895,
+  "last_trained": "2026-06-01T09:20:39.380067+00:00",
   "firm_velocity": {
     "baker_mckenzie": {
       "firm_name": "Baker McKenzie",
@@ -179,9 +179,9 @@
     }
   },
   "seniority_distribution": {
-    "Associate": 0.5,
-    "Attorney / Lawyer": 0.333,
-    "Senior Associate": 0.167
+    "Associate": 0.25,
+    "Attorney / Lawyer": 0.5,
+    "Senior Associate": 0.25
   },
   "partner_signal_ratio": 0,
   "geo_boosts": {
