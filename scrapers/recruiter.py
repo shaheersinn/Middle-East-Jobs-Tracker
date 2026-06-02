@@ -141,7 +141,6 @@ class RecruiterScraper(BaseScraper):
         return signals
 
     def _populate_cache(self):
-        global _RECRUITER_CACHE
         total = 0
         for rec in RECRUITERS:
             try:
@@ -186,8 +185,14 @@ class RecruiterScraper(BaseScraper):
         return results
 
     def _matches_firm(self, raw: str, firm: dict) -> bool:
-        return any(c.lower() in raw for c in
-                   [firm["short"], firm["name"]] + firm.get("alt_names", []))
+        for c in [firm["short"], firm["name"]] + firm.get("alt_names", []):
+            name = c.lower()
+            if len(name) <= 3:
+                if re.search(r"\b" + re.escape(name) + r"\b", raw):
+                    return True
+            elif name in raw:
+                return True
+        return False
 
     def _to_signal(self, p: dict, firm: dict, rec_name: str) -> dict:
         return self._make_signal(
