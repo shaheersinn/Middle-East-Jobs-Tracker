@@ -1,0 +1,15 @@
+# Invalid: bad country code, bad date format, bad source_url, bad record_id.
+record_id: BAD_RECORD_ID_UPPERCASE
+firm_name: "Test Firm LLP"
+expansion_type: new_office
+practice_areas:
+  - "IP"
+country: "United Kingdom"
+announced_date: "15-01-2025"
+source_url: "not-a-url"
+source_type: legal_news
+confidence: confirmed
+status: draft
+created_at: "2025-01-15T10:00:00Z"
+last_modified: "2025-01-15T10:00:00Z"
+schema_version: "1.0.0"

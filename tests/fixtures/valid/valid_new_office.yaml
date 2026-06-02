@@ -1,0 +1,26 @@
+record_id: clifford-chance-new-office-dubai-2025
+firm_name: Clifford Chance LLP
+expansion_type: new_office
+practice_areas:
+  - Corporate & M&A
+  - Capital Markets
+  - Banking & Finance
+country: AE
+region: Middle East
+city: Dubai
+announced_date: "2025-06-01"
+effective_date: "2025-09-01"
+source_url: https://www.cliffordchance.com/news/2025/06/new-dubai-office.html
+source_type: firm_press_release
+confidence: confirmed
+status: published
+headcount: 20
+related_records: []
+tags:
+  - difc
+  - expansion
+notes: "New full-service Dubai DIFC office announced June 2025."
+created_at: "2025-06-01T08:00:00Z"
+last_modified: "2025-06-15T10:00:00Z"
+schema_version: "1.0.0"
+created_by: test_user

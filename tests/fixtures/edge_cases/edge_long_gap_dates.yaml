@@ -1,0 +1,27 @@
+# Edge case: announced_date is known but effective_date is 18+ months later.
+# Also: no city (country-level expansion only), no headcount.
+# This is valid per schema rules.
+record_id: freshfields-new-jurisdiction-license-sa-2025
+firm_name: Freshfields Bruckhaus Deringer LLP
+expansion_type: new_jurisdiction_license
+practice_areas:
+  - Regulatory & Compliance
+  - Corporate & M&A
+country: SA
+region: Middle East
+announced_date: "2025-01-10"
+effective_date: "2026-07-10"
+source_url: https://www.freshfields.com/en-gb/news/2025/01/saudi-license.html
+source_type: firm_press_release
+confidence: confirmed
+status: verified
+tags:
+  - saudi-license
+  - vision-2030
+notes: >
+  License application submitted Jan 2025; approval and operational start expected
+  mid-2026 based on regulatory timeline. No city specified as license covers
+  all KSA offices.
+created_at: "2025-01-10T09:00:00Z"
+last_modified: "2025-03-01T12:00:00Z"
+schema_version: "1.0.0"

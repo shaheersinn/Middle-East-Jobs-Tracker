@@ -1,0 +1,17 @@
+# Invalid: self-referencing related_records and unverified + published.
+record_id: self-ref-record-test
+firm_name: "Test & Partners LLP"
+expansion_type: new_practice_group
+practice_areas:
+  - Tax
+country: AE
+announced_date: "2025-05-01"
+source_url: https://example.com/press-release
+source_type: firm_press_release
+confidence: unverified
+status: published
+related_records:
+  - self-ref-record-test
+created_at: "2025-05-01T10:00:00Z"
+last_modified: "2025-05-01T10:00:00Z"
+schema_version: "1.0.0"
