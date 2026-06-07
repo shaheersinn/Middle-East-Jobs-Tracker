@@ -9,9 +9,9 @@
   "dept_trend_boosts": {
     "Banking & Finance": 0.6002,
     "Capital Markets": 0.6002,
-    "Corporate / M&A": 2.495,
+    "Corporate / M&A": 2.196,
     "Data Privacy & Technology": 0.6002,
-    "Real Estate": 0.6002,
+    "Real Estate": 0.6802,
     "Project Finance & Infrastructure": 0.6002,
     "Energy & Natural Resources": 0.6002
   },
@@ -28,18 +28,19 @@
     "digital": 1.7732,
     "property": 0.7823,
     "corporate": 0.5996,
-    "energy": 0.2502
+    "energy": 0.2502,
+    "real estate": 0.9171
   },
-  "total_runs": 940,
-  "last_trained": "2026-06-07T07:50:26.953394+00:00",
+  "total_runs": 941,
+  "last_trained": "2026-06-07T09:11:46.361611+00:00",
   "firm_velocity": {
     "baker_mckenzie": {
       "firm_name": "Baker McKenzie",
-      "this_week": 0,
-      "last_week": 1,
+      "this_week": 1,
+      "last_week": 0,
       "this_month": 1,
-      "acceleration": -1.0,
-      "status": "decelerating"
+      "acceleration": 1.0,
+      "status": "accelerating"
     },
     "gibson_dunn": {
       "firm_name": "Gibson, Dunn & Crutcher LLP",
@@ -179,9 +180,9 @@
     }
   },
   "seniority_distribution": {
-    "Associate": 0.25,
-    "Attorney / Lawyer": 0.5,
-    "Senior Associate": 0.25
+    "Associate": 0.2,
+    "Attorney / Lawyer": 0.4,
+    "Senior Associate": 0.4
   },
   "partner_signal_ratio": 0,
   "geo_boosts": {
@@ -189,8 +190,8 @@
     "United Arab Emirates": 0.9998,
     "Abu Dhabi": 0.9998,
     "Riyadh": 0.9998,
-    "UAE": 1.0002,
-    "Middle East": 1.2986,
+    "UAE": 1.0202,
+    "Middle East": 1.2989,
     "Dubai, United Arab Emirates": 0.9998,
     "Dubai, Dubai, United Arab Emirates": 1.0998
   },
