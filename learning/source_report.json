@@ -2,10 +2,10 @@
   "sources": [
     {
       "source": "Google News",
-      "total_signals": 8,
-      "firm_coverage": 6,
-      "avg_score": 0.96,
-      "hire_signals": 7,
+      "total_signals": 7,
+      "firm_coverage": 5,
+      "avg_score": 0.98,
+      "hire_signals": 6,
       "last_seen": "2026-06-05",
       "multiplier": 0.2502
     },
@@ -38,5 +38,5 @@
     }
   ],
   "total_active": 4,
-  "generated_at": "2026-06-07T03:23:49.406740+00:00"
+  "generated_at": "2026-06-07T07:50:26.952278+00:00"
 }
