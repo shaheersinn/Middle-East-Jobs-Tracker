@@ -17,17 +17,8 @@
       "hire_signals": 0,
       "last_seen": "2026-06-07",
       "multiplier": 2.4998
-    },
-    {
-      "source": "Website Monitor",
-      "total_signals": 1,
-      "firm_coverage": 1,
-      "avg_score": 9.56,
-      "hire_signals": 0,
-      "last_seen": "2026-05-10",
-      "multiplier": 2.4998
     }
   ],
-  "total_active": 3,
-  "generated_at": "2026-06-09T07:42:06.553903+00:00"
+  "total_active": 2,
+  "generated_at": "2026-06-09T09:56:37.943530+00:00"
 }
