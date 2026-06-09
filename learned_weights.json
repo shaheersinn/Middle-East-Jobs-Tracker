@@ -9,9 +9,9 @@
   "dept_trend_boosts": {
     "Banking & Finance": 0.6002,
     "Capital Markets": 0.6002,
-    "Corporate / M&A": 1.027,
+    "Corporate / M&A": 0.9683,
     "Data Privacy & Technology": 0.6002,
-    "Real Estate": 0.9928,
+    "Real Estate": 0.9942,
     "Project Finance & Infrastructure": 0.6002,
     "Energy & Natural Resources": 0.6002
   },
@@ -29,10 +29,10 @@
     "property": 0.7823,
     "corporate": 0.5996,
     "energy": 0.2502,
-    "real estate": 0.607
+    "real estate": 0.6856
   },
-  "total_runs": 958,
-  "last_trained": "2026-06-09T09:56:37.944594+00:00",
+  "total_runs": 959,
+  "last_trained": "2026-06-09T10:56:10.363462+00:00",
   "firm_velocity": {
     "baker_mckenzie": {
       "firm_name": "Baker McKenzie",
@@ -52,11 +52,11 @@
     },
     "jones_day": {
       "firm_name": "Jones Day",
-      "this_week": 1,
-      "last_week": 0,
+      "this_week": 0,
+      "last_week": 1,
       "this_month": 1,
-      "acceleration": 1.0,
-      "status": "accelerating"
+      "acceleration": -1.0,
+      "status": "decelerating"
     },
     "king_spalding": {
       "firm_name": "King & Spalding LLP",
@@ -116,11 +116,11 @@
     },
     "hogan_lovells": {
       "firm_name": "Hogan Lovells US LLP",
-      "this_week": 3,
-      "last_week": 0,
+      "this_week": 1,
+      "last_week": 2,
       "this_month": 3,
-      "acceleration": 3.0,
-      "status": "accelerating"
+      "acceleration": -0.5,
+      "status": "decelerating"
     },
     "mcdermott": {
       "firm_name": "McDermott Will & Emery LLP",
@@ -189,8 +189,8 @@
     "United Arab Emirates": 0.9998,
     "Abu Dhabi": 0.9998,
     "Riyadh": 0.9998,
-    "UAE": 1.0982,
-    "Middle East": 1.2998,
+    "UAE": 0.9286,
+    "Middle East": 1.1398,
     "Dubai, United Arab Emirates": 0.9998,
     "Dubai, Dubai, United Arab Emirates": 1.0998
   },
