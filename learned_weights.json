@@ -9,9 +9,9 @@
   "dept_trend_boosts": {
     "Banking & Finance": 0.6002,
     "Capital Markets": 0.6002,
-    "Corporate / M&A": 0.8295,
+    "Corporate / M&A": 0.8103,
     "Data Privacy & Technology": 0.6002,
-    "Real Estate": 0.9976,
+    "Real Estate": 0.9981,
     "Project Finance & Infrastructure": 0.6002,
     "Energy & Natural Resources": 0.6002
   },
@@ -29,10 +29,10 @@
     "property": 0.7823,
     "corporate": 0.5996,
     "energy": 0.2502,
-    "real estate": 0.8712
+    "real estate": 0.897
   },
-  "total_runs": 963,
-  "last_trained": "2026-06-09T23:14:59.303226+00:00",
+  "total_runs": 964,
+  "last_trained": "2026-06-10T02:53:56.335669+00:00",
   "firm_velocity": {
     "baker_mckenzie": {
       "firm_name": "Baker McKenzie",
@@ -189,8 +189,8 @@
     "United Arab Emirates": 0.9998,
     "Abu Dhabi": 0.9998,
     "Riyadh": 0.9998,
-    "UAE": 0.5279,
-    "Middle East": 0.762,
+    "UAE": 0.4723,
+    "Middle East": 0.7096,
     "Dubai, United Arab Emirates": 0.9998,
     "Dubai, Dubai, United Arab Emirates": 1.0998
   },
