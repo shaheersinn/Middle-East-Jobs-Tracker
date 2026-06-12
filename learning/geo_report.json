@@ -10,10 +10,10 @@
     },
     {
       "city": "Middle East",
-      "this_week": 1,
-      "last_week": 2,
+      "this_week": 0,
+      "last_week": 3,
       "total_30d": 3,
-      "boost": 0.5074,
+      "boost": 0.4559,
       "trend": "\u2193 cooling"
     },
     {
@@ -21,9 +21,9 @@
       "this_week": 0,
       "last_week": 1,
       "total_30d": 2,
-      "boost": 0.2578,
+      "boost": 0.2562,
       "trend": "\u2193 cooling"
     }
   ],
-  "generated_at": "2026-06-12T08:19:39.052823+00:00"
+  "generated_at": "2026-06-12T10:29:22.468302+00:00"
 }
