@@ -3,15 +3,15 @@
     "Firm Careers Page": 0.2502,
     "Website Monitor": 2.4998,
     "Recruiter": 2.4998,
-    "Google News": 0.2783,
+    "Google News": 0.2726,
     "LinkedIn": 2.4998
   },
   "dept_trend_boosts": {
     "Banking & Finance": 0.6002,
     "Capital Markets": 0.6002,
-    "Corporate / M&A": 0.6973,
+    "Corporate / M&A": 0.7578,
     "Data Privacy & Technology": 0.6002,
-    "Real Estate": 0.6112,
+    "Real Estate": 0.609,
     "Project Finance & Infrastructure": 0.6002,
     "Energy & Natural Resources": 0.6002
   },
@@ -31,8 +31,8 @@
     "energy": 0.2502,
     "real estate": 0.9827
   },
-  "total_runs": 1012,
-  "last_trained": "2026-06-16T09:21:16.369648+00:00",
+  "total_runs": 1013,
+  "last_trained": "2026-06-16T11:25:56.116473+00:00",
   "firm_velocity": {
     "baker_mckenzie": {
       "firm_name": "Baker McKenzie",
@@ -117,8 +117,8 @@
     "hogan_lovells": {
       "firm_name": "Hogan Lovells US LLP",
       "this_week": 0,
-      "last_week": 3,
-      "this_month": 3,
+      "last_week": 1,
+      "this_month": 1,
       "acceleration": -1.0,
       "status": "decelerating"
     },
@@ -189,7 +189,7 @@
     "United Arab Emirates": 0.9998,
     "Abu Dhabi": 0.9998,
     "Riyadh": 0.9998,
-    "UAE": 0.2502,
+    "UAE": 0.4002,
     "Middle East": 0.2502,
     "Dubai, United Arab Emirates": 0.9998,
     "Dubai, Dubai, United Arab Emirates": 1.0998
