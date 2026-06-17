@@ -5,7 +5,7 @@
       "this_week": 0,
       "last_week": 0,
       "total_30d": 2,
-      "boost": 0.693,
+      "boost": 0.7544,
       "trend": "\u2192 stable"
     },
     {
@@ -17,5 +17,5 @@
       "trend": "\u2193 cooling"
     }
   ],
-  "generated_at": "2026-06-16T22:07:40.857297+00:00"
+  "generated_at": "2026-06-17T03:34:14.118910+00:00"
 }
