@@ -5,9 +5,9 @@
       "signal_count": 6,
       "firm_count": 4,
       "high_conf": 4,
-      "this_week": 1,
-      "last_week": 0,
-      "trend_boost": 0.9998
+      "this_week": 0,
+      "last_week": 1,
+      "trend_boost": 0.9198
     }
   ],
   "all_depts": [
@@ -16,10 +16,10 @@
       "signal_count": 6,
       "firm_count": 4,
       "high_conf": 4,
-      "this_week": 1,
-      "last_week": 0,
-      "trend_boost": 0.9998
+      "this_week": 0,
+      "last_week": 1,
+      "trend_boost": 0.9198
     }
   ],
-  "generated_at": "2026-06-21T08:24:33.293230+00:00"
+  "generated_at": "2026-06-21T10:02:45.478745+00:00"
 }
