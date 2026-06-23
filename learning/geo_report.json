@@ -1,21 +1,13 @@
 {
   "cities": [
     {
-      "city": "UAE",
-      "this_week": 0,
-      "last_week": 0,
-      "total_30d": 2,
-      "boost": 0.9998,
-      "trend": "\u2192 stable"
-    },
-    {
       "city": "Middle East",
       "this_week": 0,
       "last_week": 0,
       "total_30d": 3,
-      "boost": 0.9996,
+      "boost": 0.9997,
       "trend": "\u2192 stable"
     }
   ],
-  "generated_at": "2026-06-23T07:42:42.312304+00:00"
+  "generated_at": "2026-06-23T09:53:37.020759+00:00"
 }
