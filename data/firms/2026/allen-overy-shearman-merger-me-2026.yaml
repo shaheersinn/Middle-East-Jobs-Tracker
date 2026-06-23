@@ -1,0 +1,30 @@
+record_id: allen-overy-shearman-merger-me-2026
+firm_name: A&O Shearman
+expansion_type: merger
+practice_areas:
+  - Corporate & M&A
+  - Capital Markets
+  - Banking & Finance
+  - Arbitration & Mediation
+  - Energy & Natural Resources
+country: AE
+region: Middle East
+city: Dubai
+announced_date: "2026-03-01"
+effective_date: "2026-05-01"
+source_url: https://www.aoshearman.com/en/news/2026/03/middle-east-integration-complete
+source_type: firm_press_release
+confidence: confirmed
+status: verified
+related_records:
+  - allen-overy-shearman-merger-me-riyadh-2026
+tags:
+  - merger
+  - global-integration
+notes: >
+  Post-merger integration of Allen & Overy and Shearman & Sterling Middle East offices.
+  Combined practice spans Dubai, Abu Dhabi, and Riyadh. Effective date is provisional.
+created_at: "2026-03-01T08:00:00Z"
+last_modified: "2026-03-05T12:00:00Z"
+schema_version: "1.0.0"
+created_by: shaheersinn
