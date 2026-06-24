@@ -9,7 +9,7 @@
   "dept_trend_boosts": {
     "Banking & Finance": 0.6002,
     "Capital Markets": 0.9998,
-    "Corporate / M&A": 0.6024,
+    "Corporate / M&A": 0.6019,
     "Data Privacy & Technology": 0.6002,
     "Real Estate": 0.6002,
     "Project Finance & Infrastructure": 0.6002,
@@ -31,8 +31,8 @@
     "energy": 0.2502,
     "real estate": 0.9827
   },
-  "total_runs": 1073,
-  "last_trained": "2026-06-23T23:04:15.310747+00:00",
+  "total_runs": 1074,
+  "last_trained": "2026-06-24T02:46:24.769851+00:00",
   "firm_velocity": {
     "baker_mckenzie": {
       "firm_name": "Baker McKenzie",
