@@ -1,6 +1,14 @@
 {
   "cities": [
     {
+      "city": "Dubai, Dubai, United Arab Emirates",
+      "this_week": 2,
+      "last_week": 0,
+      "total_30d": 3,
+      "boost": 1.1198,
+      "trend": "\u2191 heating"
+    },
+    {
       "city": "Middle East",
       "this_week": 0,
       "last_week": 0,
@@ -9,5 +17,5 @@
       "trend": "\u2192 stable"
     }
   ],
-  "generated_at": "2026-06-25T07:37:50.129778+00:00"
+  "generated_at": "2026-06-25T09:35:10.853497+00:00"
 }
