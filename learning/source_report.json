@@ -1,6 +1,15 @@
 {
   "sources": [
     {
+      "source": "Google News",
+      "total_signals": 5,
+      "firm_coverage": 3,
+      "avg_score": 1.02,
+      "hire_signals": 5,
+      "last_seen": "2026-06-26",
+      "multiplier": 0.2502
+    },
+    {
       "source": "LinkedIn",
       "total_signals": 4,
       "firm_coverage": 4,
@@ -8,15 +17,6 @@
       "hire_signals": 0,
       "last_seen": "2026-06-25",
       "multiplier": 2.4998
-    },
-    {
-      "source": "Google News",
-      "total_signals": 4,
-      "firm_coverage": 2,
-      "avg_score": 1.09,
-      "hire_signals": 4,
-      "last_seen": "2026-06-05",
-      "multiplier": 0.2502
     },
     {
       "source": "Website Monitor",
@@ -29,5 +29,5 @@
     }
   ],
   "total_active": 3,
-  "generated_at": "2026-06-26T07:44:43.815269+00:00"
+  "generated_at": "2026-06-26T09:40:43.337301+00:00"
 }
