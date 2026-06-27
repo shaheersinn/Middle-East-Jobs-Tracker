@@ -8,8 +8,8 @@
   },
   "dept_trend_boosts": {
     "Banking & Finance": 0.6002,
-    "Capital Markets": 0.667,
-    "Corporate / M&A": 1.5105,
+    "Capital Markets": 0.6536,
+    "Corporate / M&A": 1.6484,
     "Data Privacy & Technology": 0.6002,
     "Real Estate": 0.6002,
     "Project Finance & Infrastructure": 0.6002,
@@ -32,8 +32,8 @@
     "energy": 0.2502,
     "real estate": 0.9827
   },
-  "total_runs": 1101,
-  "last_trained": "2026-06-27T06:48:52.415734+00:00",
+  "total_runs": 1102,
+  "last_trained": "2026-06-27T08:50:36.853441+00:00",
   "firm_velocity": {
     "baker_mckenzie": {
       "firm_name": "Baker McKenzie",
@@ -117,10 +117,10 @@
     },
     "hogan_lovells": {
       "firm_name": "Hogan Lovells US LLP",
-      "this_week": 1,
+      "this_week": 2,
       "last_week": 0,
-      "this_month": 1,
-      "acceleration": 1.0,
+      "this_month": 2,
+      "acceleration": 2.0,
       "status": "accelerating"
     },
     "mcdermott": {
@@ -181,8 +181,8 @@
     }
   },
   "seniority_distribution": {
-    "Associate": 0.25,
-    "Senior Associate": 0.75
+    "Associate": 0.4,
+    "Senior Associate": 0.6
   },
   "partner_signal_ratio": 0,
   "geo_boosts": {
@@ -190,10 +190,10 @@
     "United Arab Emirates": 0.9998,
     "Abu Dhabi": 0.9998,
     "Riyadh": 0.9998,
-    "UAE": 1.0866,
+    "UAE": 1.0893,
     "Middle East": 0.9998,
     "Dubai, United Arab Emirates": 0.9998,
-    "Dubai, Dubai, United Arab Emirates": 1.1978
+    "Dubai, Dubai, United Arab Emirates": 1.1982
   },
   "cross_firm_boosts": {
     "Corporate / M&A": 1.0802,
@@ -201,7 +201,8 @@
     "Energy & Natural Resources": 1.0731
   },
   "time_patterns": {
-    "2": 1.0
+    "2": 0.25,
+    "6": 1.763
   },
   "dedup_confidence": {}
 }
