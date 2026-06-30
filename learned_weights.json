@@ -9,7 +9,7 @@
   "dept_trend_boosts": {
     "Banking & Finance": 0.6002,
     "Capital Markets": 0.6002,
-    "Corporate / M&A": 1.0322,
+    "Corporate / M&A": 1.0258,
     "Data Privacy & Technology": 0.6002,
     "Real Estate": 0.6002,
     "Project Finance & Infrastructure": 0.6002,
@@ -32,8 +32,8 @@
     "energy": 0.2502,
     "real estate": 0.9827
   },
-  "total_runs": 1128,
-  "last_trained": "2026-06-30T07:48:43.660774+00:00",
+  "total_runs": 1129,
+  "last_trained": "2026-06-30T09:48:51.620263+00:00",
   "firm_velocity": {
     "baker_mckenzie": {
       "firm_name": "Baker McKenzie",
@@ -125,11 +125,11 @@
     },
     "mcdermott": {
       "firm_name": "McDermott Will & Emery LLP",
-      "this_week": 0,
-      "last_week": 4,
-      "this_month": 4,
-      "acceleration": -1.0,
-      "status": "decelerating"
+      "this_week": 1,
+      "last_week": 0,
+      "this_month": 1,
+      "acceleration": 1.0,
+      "status": "accelerating"
     },
     "paul_hastings": {
       "firm_name": "Paul Hastings LLP",
@@ -181,8 +181,8 @@
     }
   },
   "seniority_distribution": {
-    "Associate": 0.4,
-    "Senior Associate": 0.6
+    "Associate": 0.5,
+    "Senior Associate": 0.5
   },
   "partner_signal_ratio": 0,
   "geo_boosts": {
@@ -192,7 +192,7 @@
     "Riyadh": 0.9998,
     "UAE": 1.0998,
     "Middle East": 0.9998,
-    "Dubai, United Arab Emirates": 1.0972,
+    "Dubai, United Arab Emirates": 1.0978,
     "Dubai, Dubai, United Arab Emirates": 1.1998
   },
   "cross_firm_boosts": {
@@ -202,7 +202,7 @@
   },
   "time_patterns": {
     "2": 0.25,
-    "6": 1.763
+    "6": 1.7825
   },
   "dedup_confidence": {}
 }
