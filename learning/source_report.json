@@ -11,12 +11,12 @@
     },
     {
       "source": "Google News",
-      "total_signals": 5,
-      "firm_coverage": 3,
-      "avg_score": 1.02,
-      "hire_signals": 5,
+      "total_signals": 2,
+      "firm_coverage": 2,
+      "avg_score": 1.42,
+      "hire_signals": 2,
       "last_seen": "2026-06-26",
-      "multiplier": 0.2946
+      "multiplier": 0.3597
     },
     {
       "source": "Firm Careers Page",
@@ -38,5 +38,5 @@
     }
   ],
   "total_active": 4,
-  "generated_at": "2026-07-02T09:07:31.467951+00:00"
+  "generated_at": "2026-07-02T10:32:37.920419+00:00"
 }
