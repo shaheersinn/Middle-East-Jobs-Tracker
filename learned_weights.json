@@ -3,18 +3,18 @@
     "Firm Careers Page": 0.2502,
     "Website Monitor": 2.4998,
     "Recruiter": 2.4998,
-    "Google News": 0.5978,
+    "Google News": 0.6023,
     "LinkedIn": 2.4998
   },
   "dept_trend_boosts": {
     "Banking & Finance": 0.6002,
     "Capital Markets": 0.6002,
-    "Corporate / M&A": 1.8114,
+    "Corporate / M&A": 1.7091,
     "Data Privacy & Technology": 0.6002,
     "Real Estate": 0.6002,
     "Project Finance & Infrastructure": 0.6002,
     "Energy & Natural Resources": 0.6002,
-    "Arbitration & Disputes": 0.6274
+    "Arbitration & Disputes": 0.6219
   },
   "keyword_boosts": {
     "development": 0.7823,
@@ -32,8 +32,8 @@
     "energy": 0.2502,
     "real estate": 0.9827
   },
-  "total_runs": 1158,
-  "last_trained": "2026-07-03T15:50:13.816891+00:00",
+  "total_runs": 1159,
+  "last_trained": "2026-07-03T17:19:10.920346+00:00",
   "firm_velocity": {
     "baker_mckenzie": {
       "firm_name": "Baker McKenzie",
@@ -193,10 +193,10 @@
     "UAE": 1.0998,
     "Middle East": 0.9998,
     "Dubai, United Arab Emirates": 1.0998,
-    "Dubai, Dubai, United Arab Emirates": 0.3153
+    "Dubai, Dubai, United Arab Emirates": 0.3022
   },
   "cross_firm_boosts": {
-    "Corporate / M&A": 1.1166,
+    "Corporate / M&A": 1.1093,
     "Real Estate": 1.0798,
     "Energy & Natural Resources": 1.0731
   },
