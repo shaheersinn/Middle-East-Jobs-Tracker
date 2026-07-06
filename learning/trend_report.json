@@ -7,7 +7,7 @@
       "high_conf": 1,
       "this_week": 3,
       "last_week": 3,
-      "trend_boost": 0.8986
+      "trend_boost": 0.9189
     },
     {
       "department": "Banking & Finance",
@@ -16,7 +16,7 @@
       "high_conf": 0,
       "this_week": 2,
       "last_week": 0,
-      "trend_boost": 0.6802
+      "trend_boost": 0.7442
     }
   ],
   "all_depts": [
@@ -27,7 +27,7 @@
       "high_conf": 1,
       "this_week": 3,
       "last_week": 3,
-      "trend_boost": 0.8986
+      "trend_boost": 0.9189
     },
     {
       "department": "Banking & Finance",
@@ -36,8 +36,8 @@
       "high_conf": 0,
       "this_week": 2,
       "last_week": 0,
-      "trend_boost": 0.6802
+      "trend_boost": 0.7442
     }
   ],
-  "generated_at": "2026-07-06T10:33:52.727264+00:00"
+  "generated_at": "2026-07-06T13:40:27.311687+00:00"
 }
