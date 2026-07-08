@@ -7,10 +7,10 @@
     "LinkedIn": 2.4998
   },
   "dept_trend_boosts": {
-    "Banking & Finance": 0.991,
+    "Banking & Finance": 0.9928,
     "Capital Markets": 0.6002,
-    "Corporate / M&A": 0.824,
-    "Data Privacy & Technology": 0.9464,
+    "Corporate / M&A": 0.8192,
+    "Data Privacy & Technology": 0.9571,
     "Real Estate": 0.6002,
     "Project Finance & Infrastructure": 0.6002,
     "Energy & Natural Resources": 0.6002,
@@ -18,8 +18,8 @@
   },
   "keyword_boosts": {
     "development": 0.7823,
-    "data": 0.8895,
-    "privacy": 0.8882,
+    "data": 0.8443,
+    "privacy": 0.8433,
     "cybersecurity": 1.1258,
     "capital markets": 1.1229,
     "debt capital markets": 1.1229,
@@ -31,14 +31,14 @@
     "corporate": 0.5996,
     "energy": 0.2502,
     "real estate": 0.9827,
-    "banking and finance": 0.6043,
-    "banking": 0.6043,
-    "finance": 0.6043,
-    "data privacy": 0.8713,
-    "technology": 0.8713
+    "banking and finance": 0.6755,
+    "banking": 0.6755,
+    "finance": 0.6755,
+    "data privacy": 0.8298,
+    "technology": 0.8298
   },
-  "total_runs": 1201,
-  "last_trained": "2026-07-08T06:23:27.790615+00:00",
+  "total_runs": 1202,
+  "last_trained": "2026-07-08T08:41:25.471199+00:00",
   "firm_velocity": {
     "baker_mckenzie": {
       "firm_name": "Baker McKenzie",
@@ -122,10 +122,10 @@
     },
     "hogan_lovells": {
       "firm_name": "Hogan Lovells US LLP",
-      "this_week": 0,
+      "this_week": 1,
       "last_week": 2,
-      "this_month": 2,
-      "acceleration": -1.0,
+      "this_month": 3,
+      "acceleration": -0.5,
       "status": "decelerating"
     },
     "mcdermott": {
@@ -186,21 +186,21 @@
     }
   },
   "seniority_distribution": {
-    "Associate": 0.455,
-    "Attorney / Lawyer": 0.273,
-    "Junior Associate": 0.091,
-    "Senior Associate": 0.182
+    "Associate": 0.417,
+    "Attorney / Lawyer": 0.333,
+    "Junior Associate": 0.083,
+    "Senior Associate": 0.167
   },
   "partner_signal_ratio": 0,
   "geo_boosts": {
-    "Dubai": 2.3434,
+    "Dubai": 2.3747,
     "United Arab Emirates": 0.9998,
     "Abu Dhabi": 0.9998,
     "Riyadh": 0.9998,
     "UAE": 1.0998,
     "Middle East": 0.9998,
     "Dubai, United Arab Emirates": 0.2502,
-    "Dubai, Dubai, United Arab Emirates": 0.2502
+    "Dubai, Dubai, United Arab Emirates": 0.3002
   },
   "cross_firm_boosts": {
     "Corporate / M&A": 1.0817,
