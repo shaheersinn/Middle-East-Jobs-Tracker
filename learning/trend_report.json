@@ -7,7 +7,7 @@
       "high_conf": 1,
       "this_week": 2,
       "last_week": 4,
-      "trend_boost": 0.8032
+      "trend_boost": 0.8026
     },
     {
       "department": "Banking & Finance",
@@ -16,7 +16,7 @@
       "high_conf": 0,
       "this_week": 3,
       "last_week": 0,
-      "trend_boost": 0.9988
+      "trend_boost": 0.999
     },
     {
       "department": "Data Privacy & Technology",
@@ -25,7 +25,7 @@
       "high_conf": 0,
       "this_week": 2,
       "last_week": 0,
-      "trend_boost": 0.9928
+      "trend_boost": 0.9942
     }
   ],
   "all_depts": [
@@ -36,7 +36,7 @@
       "high_conf": 1,
       "this_week": 2,
       "last_week": 4,
-      "trend_boost": 0.8032
+      "trend_boost": 0.8026
     },
     {
       "department": "Banking & Finance",
@@ -45,7 +45,7 @@
       "high_conf": 0,
       "this_week": 3,
       "last_week": 0,
-      "trend_boost": 0.9988
+      "trend_boost": 0.999
     },
     {
       "department": "Data Privacy & Technology",
@@ -54,8 +54,8 @@
       "high_conf": 0,
       "this_week": 2,
       "last_week": 0,
-      "trend_boost": 0.9928
+      "trend_boost": 0.9942
     }
   ],
-  "generated_at": "2026-07-09T02:29:04.763334+00:00"
+  "generated_at": "2026-07-09T07:32:36.164672+00:00"
 }
