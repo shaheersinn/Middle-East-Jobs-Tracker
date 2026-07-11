@@ -8,8 +8,8 @@
   },
   "dept_trend_boosts": {
     "Banking & Finance": 0.9998,
-    "Capital Markets": 0.8363,
-    "Corporate / M&A": 0.7648,
+    "Capital Markets": 0.869,
+    "Corporate / M&A": 0.7718,
     "Data Privacy & Technology": 0.9998,
     "Real Estate": 0.6002,
     "Project Finance & Infrastructure": 0.6002,
@@ -18,8 +18,8 @@
   },
   "keyword_boosts": {
     "development": 0.7823,
-    "data": 0.5976,
-    "privacy": 0.5976,
+    "data": 0.5984,
+    "privacy": 0.5984,
     "cybersecurity": 1.1258,
     "capital markets": 1.1229,
     "debt capital markets": 1.1229,
@@ -31,14 +31,14 @@
     "corporate": 0.5996,
     "energy": 0.2502,
     "real estate": 0.9827,
-    "banking and finance": 0.8642,
-    "banking": 0.8642,
-    "finance": 0.8642,
-    "data privacy": 0.5976,
-    "technology": 1.1554
+    "banking and finance": 0.8654,
+    "banking": 0.8654,
+    "finance": 0.8654,
+    "data privacy": 0.5984,
+    "technology": 1.1642
   },
-  "total_runs": 1233,
-  "last_trained": "2026-07-11T13:06:54.092026+00:00",
+  "total_runs": 1234,
+  "last_trained": "2026-07-11T14:47:37.785168+00:00",
   "firm_velocity": {
     "baker_mckenzie": {
       "firm_name": "Baker McKenzie",
@@ -200,8 +200,8 @@
     "Riyadh": 0.9998,
     "UAE": 1.0998,
     "Middle East": 0.9998,
-    "Dubai, United Arab Emirates": 0.6162,
-    "Dubai, Dubai, United Arab Emirates": 1.0954
+    "Dubai, United Arab Emirates": 0.693,
+    "Dubai, Dubai, United Arab Emirates": 1.0963
   },
   "cross_firm_boosts": {
     "Corporate / M&A": 1.0817,
