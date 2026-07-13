@@ -7,7 +7,7 @@
       "high_conf": 1,
       "this_week": 2,
       "last_week": 2,
-      "trend_boost": 0.9822
+      "trend_boost": 0.9858
     },
     {
       "department": "Data Privacy & Technology",
@@ -34,7 +34,7 @@
       "high_conf": 0,
       "this_week": 1,
       "last_week": 0,
-      "trend_boost": 0.997
+      "trend_boost": 0.9976
     }
   ],
   "all_depts": [
@@ -45,7 +45,7 @@
       "high_conf": 1,
       "this_week": 2,
       "last_week": 2,
-      "trend_boost": 0.9822
+      "trend_boost": 0.9858
     },
     {
       "department": "Data Privacy & Technology",
@@ -72,8 +72,8 @@
       "high_conf": 0,
       "this_week": 1,
       "last_week": 0,
-      "trend_boost": 0.997
+      "trend_boost": 0.9976
     }
   ],
-  "generated_at": "2026-07-13T06:48:40.275418+00:00"
+  "generated_at": "2026-07-13T09:37:49.537566+00:00"
 }
