@@ -7,9 +7,9 @@
     "LinkedIn": 2.4998
   },
   "dept_trend_boosts": {
-    "Banking & Finance": 0.9998,
-    "Capital Markets": 0.9976,
-    "Corporate / M&A": 0.9858,
+    "Banking & Finance": 0.9598,
+    "Capital Markets": 0.9981,
+    "Corporate / M&A": 0.9353,
     "Data Privacy & Technology": 0.9998,
     "Real Estate": 0.6002,
     "Project Finance & Infrastructure": 0.6002,
@@ -35,10 +35,10 @@
     "banking": 0.87,
     "finance": 0.87,
     "data privacy": 0.6012,
-    "technology": 1.1988
+    "technology": 1.1989
   },
-  "total_runs": 1252,
-  "last_trained": "2026-07-13T09:37:49.539251+00:00",
+  "total_runs": 1253,
+  "last_trained": "2026-07-13T10:54:45.762871+00:00",
   "firm_velocity": {
     "baker_mckenzie": {
       "firm_name": "Baker McKenzie",
@@ -178,11 +178,11 @@
     },
     "shearman": {
       "firm_name": "A&O Shearman",
-      "this_week": 7,
-      "last_week": 0,
+      "this_week": 4,
+      "last_week": 3,
       "this_month": 7,
-      "acceleration": 7.0,
-      "status": "accelerating"
+      "acceleration": 0.333,
+      "status": "stable"
     }
   },
   "seniority_distribution": {
@@ -194,13 +194,13 @@
   },
   "partner_signal_ratio": 0,
   "geo_boosts": {
-    "Dubai": 2.4998,
+    "Dubai": 2.1998,
     "United Arab Emirates": 0.9998,
     "Abu Dhabi": 0.9998,
     "Riyadh": 0.9998,
     "UAE": 1.0998,
     "Middle East": 0.9998,
-    "Dubai, United Arab Emirates": 0.9945,
+    "Dubai, United Arab Emirates": 0.9956,
     "Dubai, Dubai, United Arab Emirates": 1.0998
   },
   "cross_firm_boosts": {
