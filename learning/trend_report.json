@@ -7,7 +7,7 @@
       "high_conf": 1,
       "this_week": 1,
       "last_week": 3,
-      "trend_boost": 0.7863
+      "trend_boost": 0.7757
     },
     {
       "department": "Data Privacy & Technology",
@@ -25,7 +25,7 @@
       "high_conf": 0,
       "this_week": 1,
       "last_week": 2,
-      "trend_boost": 0.8418
+      "trend_boost": 0.8334
     },
     {
       "department": "Capital Markets",
@@ -34,7 +34,7 @@
       "high_conf": 0,
       "this_week": 1,
       "last_week": 0,
-      "trend_boost": 0.9995
+      "trend_boost": 0.9996
     }
   ],
   "all_depts": [
@@ -45,7 +45,7 @@
       "high_conf": 1,
       "this_week": 1,
       "last_week": 3,
-      "trend_boost": 0.7863
+      "trend_boost": 0.7757
     },
     {
       "department": "Data Privacy & Technology",
@@ -63,7 +63,7 @@
       "high_conf": 0,
       "this_week": 1,
       "last_week": 2,
-      "trend_boost": 0.8418
+      "trend_boost": 0.8334
     },
     {
       "department": "Capital Markets",
@@ -72,8 +72,8 @@
       "high_conf": 0,
       "this_week": 1,
       "last_week": 0,
-      "trend_boost": 0.9995
+      "trend_boost": 0.9996
     }
   ],
-  "generated_at": "2026-07-14T01:59:20.184212+00:00"
+  "generated_at": "2026-07-14T04:55:55.442185+00:00"
 }
