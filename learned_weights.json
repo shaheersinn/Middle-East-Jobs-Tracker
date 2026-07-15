@@ -7,10 +7,10 @@
     "LinkedIn": 2.4998
   },
   "dept_trend_boosts": {
-    "Banking & Finance": 0.8018,
+    "Banking & Finance": 0.8014,
     "Capital Markets": 0.9998,
-    "Corporate / M&A": 0.7966,
-    "Data Privacy & Technology": 0.8171,
+    "Corporate / M&A": 1.1373,
+    "Data Privacy & Technology": 0.8137,
     "Real Estate": 0.6002,
     "Project Finance & Infrastructure": 0.6002,
     "Energy & Natural Resources": 0.6002,
@@ -18,8 +18,8 @@
   },
   "keyword_boosts": {
     "development": 0.7823,
-    "data": 0.6012,
-    "privacy": 0.6012,
+    "data": 0.6325,
+    "privacy": 0.6325,
     "cybersecurity": 1.1258,
     "capital markets": 1.1229,
     "debt capital markets": 1.1229,
@@ -31,14 +31,15 @@
     "corporate": 0.5996,
     "energy": 0.2502,
     "real estate": 0.9827,
-    "banking and finance": 0.87,
-    "banking": 0.87,
-    "finance": 0.87,
-    "data privacy": 0.6012,
-    "technology": 1.1992
+    "banking and finance": 0.9153,
+    "banking": 0.9153,
+    "finance": 0.9153,
+    "data privacy": 0.6325,
+    "technology": 1.2616,
+    "acquisition": 0.85
   },
-  "total_runs": 1273,
-  "last_trained": "2026-07-15T07:58:23.441034+00:00",
+  "total_runs": 1274,
+  "last_trained": "2026-07-15T08:22:47.238871+00:00",
   "firm_velocity": {
     "baker_mckenzie": {
       "firm_name": "Baker McKenzie",
@@ -130,11 +131,11 @@
     },
     "mcdermott": {
       "firm_name": "McDermott Will & Emery LLP",
-      "this_week": 0,
-      "last_week": 1,
-      "this_month": 1,
-      "acceleration": -1.0,
-      "status": "decelerating"
+      "this_week": 12,
+      "last_week": 0,
+      "this_month": 12,
+      "acceleration": 12.0,
+      "status": "accelerating"
     },
     "paul_hastings": {
       "firm_name": "Paul Hastings LLP",
@@ -186,15 +187,16 @@
     }
   },
   "seniority_distribution": {
-    "Associate": 0.286,
-    "Attorney / Lawyer": 0.357,
-    "Counsel": 0.071,
-    "Junior Associate": 0.143,
-    "Senior Associate": 0.143
+    "Associate": 0.538,
+    "Attorney / Lawyer": 0.231,
+    "Counsel": 0.038,
+    "Junior Associate": 0.077,
+    "Partner": 0.038,
+    "Senior Associate": 0.077
   },
-  "partner_signal_ratio": 0,
+  "partner_signal_ratio": 0.038,
   "geo_boosts": {
-    "Dubai": 0.4654,
+    "Dubai": 0.8723,
     "United Arab Emirates": 0.9998,
     "Abu Dhabi": 0.9998,
     "Riyadh": 0.9998,
@@ -209,7 +211,8 @@
     "Energy & Natural Resources": 1.0731
   },
   "time_patterns": {
-    "2": 1.0
+    "2": 1.1319,
+    "3": 0.8681
   },
   "dedup_confidence": {}
 }

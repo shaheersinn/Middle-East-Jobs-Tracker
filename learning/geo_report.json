@@ -10,12 +10,12 @@
     },
     {
       "city": "Dubai",
-      "this_week": 2,
+      "this_week": 14,
       "last_week": 5,
-      "total_30d": 8,
-      "boost": 0.4654,
-      "trend": "\u2193 cooling"
+      "total_30d": 20,
+      "boost": 0.8723,
+      "trend": "\u2191 heating"
     }
   ],
-  "generated_at": "2026-07-15T07:58:23.440431+00:00"
+  "generated_at": "2026-07-15T08:22:47.238031+00:00"
 }
