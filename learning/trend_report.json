@@ -7,7 +7,7 @@
       "high_conf": 1,
       "this_week": 15,
       "last_week": 1,
-      "trend_boost": 2.4948
+      "trend_boost": 2.4958
     },
     {
       "department": "Capital Markets",
@@ -25,16 +25,16 @@
       "high_conf": 0,
       "this_week": 0,
       "last_week": 3,
-      "trend_boost": 0.6657
+      "trend_boost": 0.6526
     },
     {
-      "department": "Banking & Finance",
-      "signal_count": 3,
-      "firm_count": 2,
+      "department": "Arbitration & Disputes",
+      "signal_count": 2,
+      "firm_count": 1,
       "high_conf": 0,
-      "this_week": 0,
-      "last_week": 3,
-      "trend_boost": 0.6007
+      "this_week": 1,
+      "last_week": 0,
+      "trend_boost": 0.9162
     }
   ],
   "all_depts": [
@@ -45,7 +45,7 @@
       "high_conf": 1,
       "this_week": 15,
       "last_week": 1,
-      "trend_boost": 2.4948
+      "trend_boost": 2.4958
     },
     {
       "department": "Capital Markets",
@@ -63,16 +63,7 @@
       "high_conf": 0,
       "this_week": 0,
       "last_week": 3,
-      "trend_boost": 0.6657
-    },
-    {
-      "department": "Banking & Finance",
-      "signal_count": 3,
-      "firm_count": 2,
-      "high_conf": 0,
-      "this_week": 0,
-      "last_week": 3,
-      "trend_boost": 0.6007
+      "trend_boost": 0.6526
     },
     {
       "department": "Arbitration & Disputes",
@@ -81,9 +72,18 @@
       "high_conf": 0,
       "this_week": 1,
       "last_week": 0,
-      "trend_boost": 0.8952,
-      "_rank_score": 1.7904
+      "trend_boost": 0.9162
+    },
+    {
+      "department": "Banking & Finance",
+      "signal_count": 3,
+      "firm_count": 2,
+      "high_conf": 0,
+      "this_week": 0,
+      "last_week": 3,
+      "trend_boost": 0.6006,
+      "_rank_score": 1.8018
     }
   ],
-  "generated_at": "2026-07-17T17:06:18.577257+00:00"
+  "generated_at": "2026-07-17T18:59:30.124062+00:00"
 }
