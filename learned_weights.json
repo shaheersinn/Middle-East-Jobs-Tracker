@@ -8,19 +8,19 @@
   },
   "dept_trend_boosts": {
     "Banking & Finance": 0.6002,
-    "Capital Markets": 0.7637,
-    "Corporate / M&A": 2.4995,
-    "Data Privacy & Technology": 0.6056,
-    "Real Estate": 0.869,
+    "Capital Markets": 0.731,
+    "Corporate / M&A": 2.4996,
+    "Data Privacy & Technology": 0.6045,
+    "Real Estate": 0.8952,
     "Project Finance & Infrastructure": 0.6002,
     "Energy & Natural Resources": 0.6002,
-    "Arbitration & Disputes": 0.991,
+    "Arbitration & Disputes": 0.9928,
     "Regulatory & Compliance": 1.0
   },
   "keyword_boosts": {
     "development": 0.7823,
-    "data": 0.8016,
-    "privacy": 0.8016,
+    "data": 0.8049,
+    "privacy": 0.8049,
     "cybersecurity": 1.1258,
     "capital markets": 1.1229,
     "debt capital markets": 1.1229,
@@ -31,17 +31,17 @@
     "property": 0.7823,
     "corporate": 0.5996,
     "energy": 0.2502,
-    "real estate": 0.4902,
-    "banking and finance": 1.1599,
-    "banking": 1.1599,
-    "finance": 1.1599,
-    "data privacy": 0.8016,
-    "technology": 1.5987,
+    "real estate": 0.4422,
+    "banking and finance": 1.1646,
+    "banking": 1.1646,
+    "finance": 1.1646,
+    "data privacy": 0.8049,
+    "technology": 1.6052,
     "acquisition": 0.2502,
-    "disputes associate": 2.4662
+    "disputes associate": 2.473
   },
-  "total_runs": 1310,
-  "last_trained": "2026-07-18T14:46:12.326323+00:00",
+  "total_runs": 1311,
+  "last_trained": "2026-07-18T16:51:20.645391+00:00",
   "firm_velocity": {
     "baker_mckenzie": {
       "firm_name": "Baker McKenzie",
@@ -198,14 +198,14 @@
   },
   "partner_signal_ratio": 0.031,
   "geo_boosts": {
-    "Dubai": 2.4994,
+    "Dubai": 2.4995,
     "United Arab Emirates": 0.9998,
     "Abu Dhabi": 0.9998,
     "Riyadh": 0.9998,
     "UAE": 1.0998,
     "Middle East": 0.9998,
     "Dubai, United Arab Emirates": 0.9994,
-    "Dubai, Dubai, United Arab Emirates": 0.2503
+    "Dubai, Dubai, United Arab Emirates": 0.2502
   },
   "cross_firm_boosts": {
     "Corporate / M&A": 1.0817,
