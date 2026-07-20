@@ -8,10 +8,10 @@
   },
   "dept_trend_boosts": {
     "Banking & Finance": 0.6002,
-    "Capital Markets": 0.603,
+    "Capital Markets": 0.6024,
     "Corporate / M&A": 2.4998,
     "Data Privacy & Technology": 0.6002,
-    "Real Estate": 0.9976,
+    "Real Estate": 0.9981,
     "Project Finance & Infrastructure": 0.6002,
     "Energy & Natural Resources": 0.6002,
     "Arbitration & Disputes": 0.9998,
@@ -19,8 +19,8 @@
   },
   "keyword_boosts": {
     "development": 0.7823,
-    "data": 0.8216,
-    "privacy": 0.8216,
+    "data": 0.8217,
+    "privacy": 0.8217,
     "cybersecurity": 1.1258,
     "capital markets": 1.1229,
     "debt capital markets": 1.1229,
@@ -31,17 +31,17 @@
     "property": 0.7823,
     "corporate": 0.5996,
     "energy": 0.2502,
-    "real estate": 0.2543,
-    "banking and finance": 1.1886,
-    "banking": 1.1886,
-    "finance": 1.1886,
-    "data privacy": 0.8216,
-    "technology": 1.6383,
+    "real estate": 0.2534,
+    "banking and finance": 1.1888,
+    "banking": 1.1888,
+    "finance": 1.1888,
+    "data privacy": 0.8217,
+    "technology": 1.6386,
     "acquisition": 0.2502,
-    "disputes associate": 2.4994
+    "disputes associate": 2.4995
   },
-  "total_runs": 1328,
-  "last_trained": "2026-07-20T09:11:15.236699+00:00",
+  "total_runs": 1329,
+  "last_trained": "2026-07-20T10:46:12.391752+00:00",
   "firm_velocity": {
     "baker_mckenzie": {
       "firm_name": "Baker McKenzie",
@@ -182,9 +182,9 @@
     "shearman": {
       "firm_name": "A&O Shearman",
       "this_week": 6,
-      "last_week": 7,
-      "this_month": 13,
-      "acceleration": -0.143,
+      "last_week": 4,
+      "this_month": 10,
+      "acceleration": 0.5,
       "status": "stable"
     }
   },
