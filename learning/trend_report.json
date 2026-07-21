@@ -33,7 +33,7 @@
       "firm_count": 2,
       "high_conf": 0,
       "this_week": 0,
-      "last_week": 3,
+      "last_week": 1,
       "trend_boost": 0.6002
     }
   ],
@@ -71,7 +71,7 @@
       "firm_count": 2,
       "high_conf": 0,
       "this_week": 0,
-      "last_week": 3,
+      "last_week": 1,
       "trend_boost": 0.6002
     },
     {
@@ -85,5 +85,5 @@
       "_rank_score": 1.8005999999999998
     }
   ],
-  "generated_at": "2026-07-21T08:42:10.710000+00:00"
+  "generated_at": "2026-07-21T10:20:44.165939+00:00"
 }
