@@ -2,21 +2,12 @@
   "top4": [
     {
       "department": "Corporate / M&A",
-      "signal_count": 27,
+      "signal_count": 26,
       "firm_count": 7,
       "high_conf": 2,
       "this_week": 5,
       "last_week": 16,
-      "trend_boost": 0.7592
-    },
-    {
-      "department": "Real Estate",
-      "signal_count": 2,
-      "firm_count": 1,
-      "high_conf": 0,
-      "this_week": 0,
-      "last_week": 2,
-      "trend_boost": 0.9198
+      "trend_boost": 0.7524
     },
     {
       "department": "Data Privacy & Technology",
@@ -35,26 +26,26 @@
       "this_week": 0,
       "last_week": 0,
       "trend_boost": 0.6002
+    },
+    {
+      "department": "Real Estate",
+      "signal_count": 2,
+      "firm_count": 1,
+      "high_conf": 0,
+      "this_week": 0,
+      "last_week": 2,
+      "trend_boost": 0.8558
     }
   ],
   "all_depts": [
     {
       "department": "Corporate / M&A",
-      "signal_count": 27,
+      "signal_count": 26,
       "firm_count": 7,
       "high_conf": 2,
       "this_week": 5,
       "last_week": 16,
-      "trend_boost": 0.7592
-    },
-    {
-      "department": "Real Estate",
-      "signal_count": 2,
-      "firm_count": 1,
-      "high_conf": 0,
-      "this_week": 0,
-      "last_week": 2,
-      "trend_boost": 0.9198
+      "trend_boost": 0.7524
     },
     {
       "department": "Data Privacy & Technology",
@@ -75,15 +66,14 @@
       "trend_boost": 0.6002
     },
     {
-      "department": "Arbitration & Disputes",
+      "department": "Real Estate",
       "signal_count": 2,
       "firm_count": 1,
       "high_conf": 0,
       "this_week": 0,
-      "last_week": 1,
-      "trend_boost": 0.6343,
-      "_rank_score": 1.2686
+      "last_week": 2,
+      "trend_boost": 0.8558
     }
   ],
-  "generated_at": "2026-07-25T08:18:07.638975+00:00"
+  "generated_at": "2026-07-25T09:41:21.580689+00:00"
 }
