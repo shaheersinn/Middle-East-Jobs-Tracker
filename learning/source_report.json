@@ -7,7 +7,7 @@
       "avg_score": 1.25,
       "hire_signals": 0,
       "last_seen": "2026-07-23",
-      "multiplier": 0.254
+      "multiplier": 0.2532
     },
     {
       "source": "LinkedIn",
@@ -47,5 +47,5 @@
     }
   ],
   "total_active": 5,
-  "generated_at": "2026-07-26T20:51:41.940878+00:00"
+  "generated_at": "2026-07-26T22:55:52.861546+00:00"
 }
