@@ -2,12 +2,12 @@
   "top4": [
     {
       "department": "Corporate / M&A",
-      "signal_count": 25,
-      "firm_count": 7,
+      "signal_count": 24,
+      "firm_count": 6,
       "high_conf": 1,
       "this_week": 5,
       "last_week": 15,
-      "trend_boost": 0.7329
+      "trend_boost": 0.733
     },
     {
       "department": "Data Privacy & Technology",
@@ -34,18 +34,18 @@
       "high_conf": 0,
       "this_week": 0,
       "last_week": 2,
-      "trend_boost": 0.603
+      "trend_boost": 0.6024
     }
   ],
   "all_depts": [
     {
       "department": "Corporate / M&A",
-      "signal_count": 25,
-      "firm_count": 7,
+      "signal_count": 24,
+      "firm_count": 6,
       "high_conf": 1,
       "this_week": 5,
       "last_week": 15,
-      "trend_boost": 0.7329
+      "trend_boost": 0.733
     },
     {
       "department": "Data Privacy & Technology",
@@ -72,8 +72,8 @@
       "high_conf": 0,
       "this_week": 0,
       "last_week": 2,
-      "trend_boost": 0.603
+      "trend_boost": 0.6024
     }
   ],
-  "generated_at": "2026-07-27T06:57:41.329281+00:00"
+  "generated_at": "2026-07-27T10:07:48.772175+00:00"
 }
