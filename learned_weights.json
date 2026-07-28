@@ -1,6 +1,6 @@
 {
   "source_multipliers": {
-    "Firm Careers Page": 0.2505,
+    "Firm Careers Page": 0.2504,
     "Website Monitor": 2.4998,
     "Recruiter": 2.4998,
     "Google News": 0.2527,
@@ -11,11 +11,11 @@
     "Capital Markets": 0.6002,
     "Corporate / M&A": 0.7331,
     "Data Privacy & Technology": 0.6002,
-    "Real Estate": 0.6006,
+    "Real Estate": 0.6005,
     "Project Finance & Infrastructure": 0.6002,
     "Energy & Natural Resources": 0.6002,
     "Arbitration & Disputes": 0.6002,
-    "Regulatory & Compliance": 0.6006,
+    "Regulatory & Compliance": 0.6005,
     "Restructuring & Insolvency": 1.0
   },
   "keyword_boosts": {
@@ -30,20 +30,20 @@
     "digital assets": 1.7732,
     "digital": 1.7732,
     "property": 0.7823,
-    "corporate": 1.4408,
+    "corporate": 1.4407,
     "energy": 0.2502,
     "real estate": 0.2502,
-    "banking and finance": 1.2834,
-    "banking": 1.2834,
-    "finance": 1.2834,
+    "banking and finance": 1.2833,
+    "banking": 1.2833,
+    "finance": 1.2833,
     "data privacy": 0.887,
-    "technology": 1.7689,
+    "technology": 1.7688,
     "acquisition": 0.2502,
     "disputes associate": 2.4998,
     "deal": 0.421
   },
-  "total_runs": 1406,
-  "last_trained": "2026-07-27T22:55:43.177342+00:00",
+  "total_runs": 1407,
+  "last_trained": "2026-07-28T02:02:51.361196+00:00",
   "firm_velocity": {
     "baker_mckenzie": {
       "firm_name": "Baker McKenzie",
