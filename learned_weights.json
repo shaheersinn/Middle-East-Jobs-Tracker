@@ -1,6 +1,6 @@
 {
   "source_multipliers": {
-    "Firm Careers Page": 0.2503,
+    "Firm Careers Page": 0.2502,
     "Website Monitor": 2.4998,
     "Recruiter": 2.4998,
     "Google News": 0.2527,
@@ -9,14 +9,14 @@
   "dept_trend_boosts": {
     "Banking & Finance": 0.6002,
     "Capital Markets": 0.6002,
-    "Corporate / M&A": 0.7331,
+    "Corporate / M&A": 0.7265,
     "Data Privacy & Technology": 0.6002,
-    "Real Estate": 0.6004,
+    "Real Estate": 0.6003,
     "Project Finance & Infrastructure": 0.6002,
     "Energy & Natural Resources": 0.6002,
     "Arbitration & Disputes": 0.6002,
-    "Regulatory & Compliance": 0.6004,
-    "Restructuring & Insolvency": 1.0
+    "Regulatory & Compliance": 0.6003,
+    "Restructuring & Insolvency": 0.92
   },
   "keyword_boosts": {
     "development": 0.7823,
@@ -37,13 +37,13 @@
     "banking": 1.2833,
     "finance": 1.2833,
     "data privacy": 0.887,
-    "technology": 1.7687,
+    "technology": 1.7686,
     "acquisition": 0.2502,
     "disputes associate": 2.4998,
     "deal": 0.421
   },
-  "total_runs": 1408,
-  "last_trained": "2026-07-28T06:21:15.996554+00:00",
+  "total_runs": 1409,
+  "last_trained": "2026-07-28T08:46:18.682305+00:00",
   "firm_velocity": {
     "baker_mckenzie": {
       "firm_name": "Baker McKenzie",
@@ -183,10 +183,10 @@
     },
     "shearman": {
       "firm_name": "A&O Shearman",
-      "this_week": 3,
-      "last_week": 6,
+      "this_week": 1,
+      "last_week": 8,
       "this_month": 9,
-      "acceleration": -0.5,
+      "acceleration": -0.875,
       "status": "decelerating"
     }
   },
