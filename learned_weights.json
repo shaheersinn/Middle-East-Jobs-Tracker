@@ -9,14 +9,14 @@
   "dept_trend_boosts": {
     "Banking & Finance": 0.6002,
     "Capital Markets": 0.6002,
-    "Corporate / M&A": 0.7212,
+    "Corporate / M&A": 0.717,
     "Data Privacy & Technology": 0.6002,
     "Real Estate": 0.6002,
     "Project Finance & Infrastructure": 0.6002,
     "Energy & Natural Resources": 0.6002,
     "Arbitration & Disputes": 0.6002,
     "Regulatory & Compliance": 0.6002,
-    "Restructuring & Insolvency": 0.856
+    "Restructuring & Insolvency": 0.8048
   },
   "keyword_boosts": {
     "development": 0.7823,
@@ -42,8 +42,8 @@
     "disputes associate": 2.4998,
     "deal": 0.421
   },
-  "total_runs": 1410,
-  "last_trained": "2026-07-28T10:28:55.304232+00:00",
+  "total_runs": 1411,
+  "last_trained": "2026-07-28T13:52:25.417917+00:00",
   "firm_velocity": {
     "baker_mckenzie": {
       "firm_name": "Baker McKenzie",
