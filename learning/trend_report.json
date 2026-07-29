@@ -7,7 +7,16 @@
       "high_conf": 1,
       "this_week": 3,
       "last_week": 6,
-      "trend_boost": 0.775
+      "trend_boost": 0.78
+    },
+    {
+      "department": "Regulatory & Compliance",
+      "signal_count": 2,
+      "firm_count": 2,
+      "high_conf": 0,
+      "this_week": 1,
+      "last_week": 1,
+      "trend_boost": 0.9162
     },
     {
       "department": "Data Privacy & Technology",
@@ -26,15 +35,6 @@
       "this_week": 0,
       "last_week": 0,
       "trend_boost": 0.6002
-    },
-    {
-      "department": "Regulatory & Compliance",
-      "signal_count": 2,
-      "firm_count": 2,
-      "high_conf": 0,
-      "this_week": 1,
-      "last_week": 1,
-      "trend_boost": 0.8952
     }
   ],
   "all_depts": [
@@ -45,7 +45,16 @@
       "high_conf": 1,
       "this_week": 3,
       "last_week": 6,
-      "trend_boost": 0.775
+      "trend_boost": 0.78
+    },
+    {
+      "department": "Regulatory & Compliance",
+      "signal_count": 2,
+      "firm_count": 2,
+      "high_conf": 0,
+      "this_week": 1,
+      "last_week": 1,
+      "trend_boost": 0.9162
     },
     {
       "department": "Data Privacy & Technology",
@@ -64,15 +73,6 @@
       "this_week": 0,
       "last_week": 0,
       "trend_boost": 0.6002
-    },
-    {
-      "department": "Regulatory & Compliance",
-      "signal_count": 2,
-      "firm_count": 2,
-      "high_conf": 0,
-      "this_week": 1,
-      "last_week": 1,
-      "trend_boost": 0.8952
     },
     {
       "department": "Real Estate",
@@ -85,5 +85,5 @@
       "_rank_score": 1.2004
     }
   ],
-  "generated_at": "2026-07-29T19:05:25.585953+00:00"
+  "generated_at": "2026-07-29T20:49:03.538913+00:00"
 }
