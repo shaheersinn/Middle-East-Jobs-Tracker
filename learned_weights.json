@@ -9,19 +9,19 @@
   "dept_trend_boosts": {
     "Banking & Finance": 0.6002,
     "Capital Markets": 0.6002,
-    "Corporate / M&A": 0.7511,
+    "Corporate / M&A": 0.7609,
     "Data Privacy & Technology": 0.6002,
     "Real Estate": 0.6002,
     "Project Finance & Infrastructure": 0.6002,
     "Energy & Natural Resources": 0.6002,
     "Arbitration & Disputes": 0.6002,
-    "Regulatory & Compliance": 0.7954,
-    "Restructuring & Insolvency": 0.6274
+    "Regulatory & Compliance": 0.8363,
+    "Restructuring & Insolvency": 0.6219
   },
   "keyword_boosts": {
     "development": 0.7823,
-    "data": 0.9068,
-    "privacy": 0.9068,
+    "data": 0.911,
+    "privacy": 0.911,
     "cybersecurity": 1.1258,
     "capital markets": 1.1229,
     "debt capital markets": 1.1229,
@@ -30,20 +30,20 @@
     "digital assets": 1.7732,
     "digital": 1.7732,
     "property": 0.7823,
-    "corporate": 1.4729,
+    "corporate": 1.4797,
     "energy": 0.2502,
     "real estate": 0.2502,
-    "banking and finance": 1.3121,
-    "banking": 1.3121,
-    "finance": 1.3121,
-    "data privacy": 0.9068,
-    "technology": 1.8083,
+    "banking and finance": 1.3181,
+    "banking": 1.3181,
+    "finance": 1.3181,
+    "data privacy": 0.911,
+    "technology": 1.8166,
     "acquisition": 0.2502,
     "disputes associate": 2.4998,
     "deal": 0.421
   },
-  "total_runs": 1420,
-  "last_trained": "2026-07-29T13:57:18.539485+00:00",
+  "total_runs": 1421,
+  "last_trained": "2026-07-29T15:48:41.094846+00:00",
   "firm_velocity": {
     "baker_mckenzie": {
       "firm_name": "Baker McKenzie",
@@ -200,14 +200,14 @@
   },
   "partner_signal_ratio": 0.028,
   "geo_boosts": {
-    "Dubai": 0.3112,
+    "Dubai": 0.324,
     "United Arab Emirates": 0.9998,
     "Abu Dhabi": 0.9998,
     "Riyadh": 0.9998,
     "UAE": 0.3084,
     "Middle East": 0.9998,
     "Dubai, United Arab Emirates": 0.9994,
-    "Dubai, Dubai, United Arab Emirates": 0.7362
+    "Dubai, Dubai, United Arab Emirates": 0.639
   },
   "cross_firm_boosts": {
     "Corporate / M&A": 1.1598,
