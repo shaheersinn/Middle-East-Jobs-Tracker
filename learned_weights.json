@@ -9,19 +9,19 @@
   "dept_trend_boosts": {
     "Banking & Finance": 0.6002,
     "Capital Markets": 0.6002,
-    "Corporate / M&A": 0.7236,
+    "Corporate / M&A": 0.7389,
     "Data Privacy & Technology": 0.6002,
     "Real Estate": 0.6002,
     "Project Finance & Infrastructure": 0.6002,
     "Energy & Natural Resources": 0.6002,
     "Arbitration & Disputes": 0.6002,
-    "Regulatory & Compliance": 0.6802,
-    "Restructuring & Insolvency": 0.6429
+    "Regulatory & Compliance": 0.7442,
+    "Restructuring & Insolvency": 0.6343
   },
   "keyword_boosts": {
     "development": 0.7823,
-    "data": 0.8951,
-    "privacy": 0.8951,
+    "data": 0.9016,
+    "privacy": 0.9016,
     "cybersecurity": 1.1258,
     "capital markets": 1.1229,
     "debt capital markets": 1.1229,
@@ -30,20 +30,20 @@
     "digital assets": 1.7732,
     "digital": 1.7732,
     "property": 0.7823,
-    "corporate": 1.4538,
+    "corporate": 1.4644,
     "energy": 0.2502,
     "real estate": 0.2502,
-    "banking and finance": 1.2951,
-    "banking": 1.2951,
-    "finance": 1.2951,
-    "data privacy": 0.8951,
-    "technology": 1.7849,
+    "banking and finance": 1.3045,
+    "banking": 1.3045,
+    "finance": 1.3045,
+    "data privacy": 0.9016,
+    "technology": 1.7979,
     "acquisition": 0.2502,
     "disputes associate": 2.4998,
     "deal": 0.421
   },
-  "total_runs": 1418,
-  "last_trained": "2026-07-29T08:56:44.350929+00:00",
+  "total_runs": 1419,
+  "last_trained": "2026-07-29T10:33:33.880726+00:00",
   "firm_velocity": {
     "baker_mckenzie": {
       "firm_name": "Baker McKenzie",
@@ -200,14 +200,14 @@
   },
   "partner_signal_ratio": 0.028,
   "geo_boosts": {
-    "Dubai": 0.2752,
+    "Dubai": 0.2952,
     "United Arab Emirates": 0.9998,
     "Abu Dhabi": 0.9998,
     "Riyadh": 0.9998,
     "UAE": 0.3084,
     "Middle East": 0.9998,
     "Dubai, United Arab Emirates": 0.9994,
-    "Dubai, Dubai, United Arab Emirates": 1.0098
+    "Dubai, Dubai, United Arab Emirates": 0.8578
   },
   "cross_firm_boosts": {
     "Corporate / M&A": 1.1598,
