@@ -9,19 +9,19 @@
   "dept_trend_boosts": {
     "Banking & Finance": 0.6002,
     "Capital Markets": 0.6002,
-    "Corporate / M&A": 0.7045,
+    "Corporate / M&A": 0.7236,
     "Data Privacy & Technology": 0.6002,
     "Real Estate": 0.6002,
     "Project Finance & Infrastructure": 0.6002,
     "Energy & Natural Resources": 0.6002,
     "Arbitration & Disputes": 0.6002,
-    "Regulatory & Compliance": 0.6002,
-    "Restructuring & Insolvency": 0.6536
+    "Regulatory & Compliance": 0.6802,
+    "Restructuring & Insolvency": 0.6429
   },
   "keyword_boosts": {
     "development": 0.7823,
-    "data": 0.887,
-    "privacy": 0.887,
+    "data": 0.8951,
+    "privacy": 0.8951,
     "cybersecurity": 1.1258,
     "capital markets": 1.1229,
     "debt capital markets": 1.1229,
@@ -30,20 +30,20 @@
     "digital assets": 1.7732,
     "digital": 1.7732,
     "property": 0.7823,
-    "corporate": 1.4406,
+    "corporate": 1.4538,
     "energy": 0.2502,
     "real estate": 0.2502,
-    "banking and finance": 1.2833,
-    "banking": 1.2833,
-    "finance": 1.2833,
-    "data privacy": 0.887,
-    "technology": 1.7686,
+    "banking and finance": 1.2951,
+    "banking": 1.2951,
+    "finance": 1.2951,
+    "data privacy": 0.8951,
+    "technology": 1.7849,
     "acquisition": 0.2502,
     "disputes associate": 2.4998,
     "deal": 0.421
   },
-  "total_runs": 1417,
-  "last_trained": "2026-07-29T06:26:21.594953+00:00",
+  "total_runs": 1418,
+  "last_trained": "2026-07-29T08:56:44.350929+00:00",
   "firm_velocity": {
     "baker_mckenzie": {
       "firm_name": "Baker McKenzie",
@@ -87,11 +87,11 @@
     },
     "omelveny": {
       "firm_name": "O'Melveny & Myers LLP",
-      "this_week": 1,
-      "last_week": 0,
+      "this_week": 0,
+      "last_week": 1,
       "this_month": 1,
-      "acceleration": 1.0,
-      "status": "accelerating"
+      "acceleration": -1.0,
+      "status": "decelerating"
     },
     "skadden": {
       "firm_name": "Skadden, Arps, Slate, Meagher & Flom LLP",
@@ -151,11 +151,11 @@
     },
     "greenberg_traurig": {
       "firm_name": "Greenberg Traurig LLP",
-      "this_week": 1,
-      "last_week": 0,
+      "this_week": 0,
+      "last_week": 1,
       "this_month": 1,
-      "acceleration": 1.0,
-      "status": "accelerating"
+      "acceleration": -1.0,
+      "status": "decelerating"
     },
     "kirkland": {
       "firm_name": "Kirkland & Ellis LLP",
@@ -183,31 +183,31 @@
     },
     "shearman": {
       "firm_name": "A&O Shearman",
-      "this_week": 1,
+      "this_week": 3,
       "last_week": 8,
-      "this_month": 9,
-      "acceleration": -0.875,
+      "this_month": 11,
+      "acceleration": -0.625,
       "status": "decelerating"
     }
   },
   "seniority_distribution": {
-    "Associate": 0.529,
-    "Attorney / Lawyer": 0.206,
-    "Counsel": 0.088,
-    "Junior Associate": 0.088,
-    "Partner": 0.029,
-    "Senior Associate": 0.059
+    "Associate": 0.528,
+    "Attorney / Lawyer": 0.222,
+    "Counsel": 0.083,
+    "Junior Associate": 0.083,
+    "Partner": 0.028,
+    "Senior Associate": 0.056
   },
-  "partner_signal_ratio": 0.029,
+  "partner_signal_ratio": 0.028,
   "geo_boosts": {
-    "Dubai": 0.2502,
+    "Dubai": 0.2752,
     "United Arab Emirates": 0.9998,
     "Abu Dhabi": 0.9998,
     "Riyadh": 0.9998,
     "UAE": 0.3084,
     "Middle East": 0.9998,
     "Dubai, United Arab Emirates": 0.9994,
-    "Dubai, Dubai, United Arab Emirates": 1.1998
+    "Dubai, Dubai, United Arab Emirates": 1.0098
   },
   "cross_firm_boosts": {
     "Corporate / M&A": 1.1598,
@@ -215,10 +215,10 @@
     "Energy & Natural Resources": 1.0731
   },
   "time_patterns": {
-    "2": 0.8847,
-    "3": 0.6123,
-    "5": 1.5248,
-    "6": 0.9782
+    "2": 0.8957,
+    "3": 0.5701,
+    "5": 1.5438,
+    "6": 0.9904
   },
   "dedup_confidence": {}
 }

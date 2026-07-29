@@ -2,12 +2,12 @@
   "top4": [
     {
       "department": "Corporate / M&A",
-      "signal_count": 24,
+      "signal_count": 25,
       "firm_count": 6,
       "high_conf": 1,
-      "this_week": 4,
-      "last_week": 16,
-      "trend_boost": 0.7045
+      "this_week": 3,
+      "last_week": 6,
+      "trend_boost": 0.7236
     },
     {
       "department": "Data Privacy & Technology",
@@ -28,24 +28,24 @@
       "trend_boost": 0.6002
     },
     {
-      "department": "Real Estate",
+      "department": "Regulatory & Compliance",
       "signal_count": 2,
-      "firm_count": 1,
+      "firm_count": 2,
       "high_conf": 0,
-      "this_week": 0,
-      "last_week": 2,
-      "trend_boost": 0.6002
+      "this_week": 1,
+      "last_week": 1,
+      "trend_boost": 0.6802
     }
   ],
   "all_depts": [
     {
       "department": "Corporate / M&A",
-      "signal_count": 24,
+      "signal_count": 25,
       "firm_count": 6,
       "high_conf": 1,
-      "this_week": 4,
-      "last_week": 16,
-      "trend_boost": 0.7045
+      "this_week": 3,
+      "last_week": 6,
+      "trend_boost": 0.7236
     },
     {
       "department": "Data Privacy & Technology",
@@ -66,14 +66,24 @@
       "trend_boost": 0.6002
     },
     {
+      "department": "Regulatory & Compliance",
+      "signal_count": 2,
+      "firm_count": 2,
+      "high_conf": 0,
+      "this_week": 1,
+      "last_week": 1,
+      "trend_boost": 0.6802
+    },
+    {
       "department": "Real Estate",
       "signal_count": 2,
       "firm_count": 1,
       "high_conf": 0,
       "this_week": 0,
       "last_week": 2,
-      "trend_boost": 0.6002
+      "trend_boost": 0.6002,
+      "_rank_score": 1.2004
     }
   ],
-  "generated_at": "2026-07-29T06:26:21.593330+00:00"
+  "generated_at": "2026-07-29T08:56:44.348044+00:00"
 }
