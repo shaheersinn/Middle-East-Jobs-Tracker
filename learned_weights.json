@@ -7,21 +7,21 @@
     "LinkedIn": 2.4998
   },
   "dept_trend_boosts": {
-    "Banking & Finance": 0.7954,
+    "Banking & Finance": 0.8363,
     "Capital Markets": 0.6002,
-    "Corporate / M&A": 0.794,
+    "Corporate / M&A": 0.7895,
     "Data Privacy & Technology": 0.6002,
     "Real Estate": 0.6002,
     "Project Finance & Infrastructure": 0.6002,
     "Energy & Natural Resources": 0.6002,
     "Arbitration & Disputes": 0.6002,
-    "Regulatory & Compliance": 0.9825,
-    "Restructuring & Insolvency": 0.6024
+    "Regulatory & Compliance": 0.986,
+    "Restructuring & Insolvency": 0.6019
   },
   "keyword_boosts": {
     "development": 0.7823,
-    "data": 0.9359,
-    "privacy": 0.9359,
+    "data": 0.9384,
+    "privacy": 0.9384,
     "cybersecurity": 1.1258,
     "capital markets": 1.1229,
     "debt capital markets": 1.1229,
@@ -30,20 +30,20 @@
     "digital assets": 1.7732,
     "digital": 1.7732,
     "property": 0.7823,
-    "corporate": 1.5202,
+    "corporate": 1.5242,
     "energy": 0.2502,
-    "real estate": 0.2515,
-    "banking and finance": 1.3542,
-    "banking": 1.3542,
-    "finance": 1.3542,
-    "data privacy": 0.9359,
-    "technology": 1.8664,
+    "real estate": 0.2518,
+    "banking and finance": 1.3578,
+    "banking": 1.3578,
+    "finance": 1.3578,
+    "data privacy": 0.9384,
+    "technology": 1.8713,
     "acquisition": 0.2502,
     "disputes associate": 2.4998,
     "deal": 0.421
   },
-  "total_runs": 1431,
-  "last_trained": "2026-07-30T13:46:27.453887+00:00",
+  "total_runs": 1432,
+  "last_trained": "2026-07-30T15:47:59.096727+00:00",
   "firm_velocity": {
     "baker_mckenzie": {
       "firm_name": "Baker McKenzie",
@@ -200,14 +200,14 @@
   },
   "partner_signal_ratio": 0.027,
   "geo_boosts": {
-    "Dubai": 0.4265,
+    "Dubai": 0.4301,
     "United Arab Emirates": 0.9998,
     "Abu Dhabi": 0.9998,
     "Riyadh": 0.9998,
     "UAE": 0.3084,
     "Middle East": 0.9998,
     "Dubai, United Arab Emirates": 0.9994,
-    "Dubai, Dubai, United Arab Emirates": 0.2918
+    "Dubai, Dubai, United Arab Emirates": 0.2834
   },
   "cross_firm_boosts": {
     "Corporate / M&A": 1.1598,
