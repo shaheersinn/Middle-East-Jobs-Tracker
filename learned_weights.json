@@ -7,21 +7,21 @@
     "LinkedIn": 2.4998
   },
   "dept_trend_boosts": {
-    "Banking & Finance": 0.9726,
+    "Banking & Finance": 0.9781,
     "Capital Markets": 0.6002,
-    "Corporate / M&A": 0.7607,
+    "Corporate / M&A": 0.7552,
     "Data Privacy & Technology": 0.6002,
     "Real Estate": 0.6002,
     "Project Finance & Infrastructure": 0.6002,
     "Energy & Natural Resources": 0.6002,
     "Arbitration & Disputes": 0.6002,
-    "Regulatory & Compliance": 0.9976,
-    "Restructuring & Insolvency": 0.6003
+    "Regulatory & Compliance": 0.9981,
+    "Restructuring & Insolvency": 0.6002
   },
   "keyword_boosts": {
     "development": 0.7823,
-    "data": 0.9465,
-    "privacy": 0.9465,
+    "data": 0.9468,
+    "privacy": 0.9468,
     "cybersecurity": 1.1258,
     "capital markets": 1.1229,
     "debt capital markets": 1.1229,
@@ -30,20 +30,20 @@
     "digital assets": 1.7732,
     "digital": 1.7732,
     "property": 0.7823,
-    "corporate": 1.5375,
+    "corporate": 1.538,
     "energy": 0.2502,
     "real estate": 0.2527,
-    "banking and finance": 1.3696,
-    "banking": 1.3696,
-    "finance": 1.3696,
-    "data privacy": 0.9465,
-    "technology": 1.8876,
+    "banking and finance": 1.3701,
+    "banking": 1.3701,
+    "finance": 1.3701,
+    "data privacy": 0.9468,
+    "technology": 1.8883,
     "acquisition": 0.2502,
     "disputes associate": 2.4998,
     "deal": 0.421
   },
-  "total_runs": 1440,
-  "last_trained": "2026-07-31T10:32:43.642899+00:00",
+  "total_runs": 1441,
+  "last_trained": "2026-07-31T13:51:33.889020+00:00",
   "firm_velocity": {
     "baker_mckenzie": {
       "firm_name": "Baker McKenzie",
@@ -200,14 +200,14 @@
   },
   "partner_signal_ratio": 0.027,
   "geo_boosts": {
-    "Dubai": 0.5221,
+    "Dubai": 0.551,
     "United Arab Emirates": 0.9998,
     "Abu Dhabi": 0.9998,
     "Riyadh": 0.9998,
     "UAE": 0.3084,
     "Middle East": 0.9998,
     "Dubai, United Arab Emirates": 0.9994,
-    "Dubai, Dubai, United Arab Emirates": 0.2556
+    "Dubai, Dubai, United Arab Emirates": 0.2545
   },
   "cross_firm_boosts": {
     "Corporate / M&A": 1.1598,
