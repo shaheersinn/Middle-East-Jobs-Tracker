@@ -7,21 +7,21 @@
     "LinkedIn": 2.4998
   },
   "dept_trend_boosts": {
-    "Banking & Finance": 0.9464,
+    "Banking & Finance": 0.9571,
     "Capital Markets": 0.6002,
-    "Corporate / M&A": 0.7773,
+    "Corporate / M&A": 0.7761,
     "Data Privacy & Technology": 0.6002,
     "Real Estate": 0.6002,
     "Project Finance & Infrastructure": 0.6002,
     "Energy & Natural Resources": 0.6002,
     "Arbitration & Disputes": 0.6002,
-    "Regulatory & Compliance": 0.9954,
-    "Restructuring & Insolvency": 0.6006
+    "Regulatory & Compliance": 0.9963,
+    "Restructuring & Insolvency": 0.6005
   },
   "keyword_boosts": {
     "development": 0.7823,
-    "data": 0.945,
-    "privacy": 0.945,
+    "data": 0.9456,
+    "privacy": 0.9456,
     "cybersecurity": 1.1258,
     "capital markets": 1.1229,
     "debt capital markets": 1.1229,
@@ -30,20 +30,20 @@
     "digital assets": 1.7732,
     "digital": 1.7732,
     "property": 0.7823,
-    "corporate": 1.5349,
+    "corporate": 1.536,
     "energy": 0.2502,
-    "real estate": 0.2525,
-    "banking and finance": 1.3674,
-    "banking": 1.3674,
-    "finance": 1.3674,
-    "data privacy": 0.945,
-    "technology": 1.8845,
+    "real estate": 0.2526,
+    "banking and finance": 1.3683,
+    "banking": 1.3683,
+    "finance": 1.3683,
+    "data privacy": 0.9456,
+    "technology": 1.8858,
     "acquisition": 0.2502,
     "disputes associate": 2.4998,
     "deal": 0.421
   },
-  "total_runs": 1437,
-  "last_trained": "2026-07-31T02:14:20.999442+00:00",
+  "total_runs": 1438,
+  "last_trained": "2026-07-31T06:39:04.949700+00:00",
   "firm_velocity": {
     "baker_mckenzie": {
       "firm_name": "Baker McKenzie",
@@ -200,14 +200,14 @@
   },
   "partner_signal_ratio": 0.027,
   "geo_boosts": {
-    "Dubai": 0.4398,
+    "Dubai": 0.4407,
     "United Arab Emirates": 0.9998,
     "Abu Dhabi": 0.9998,
     "Riyadh": 0.9998,
     "UAE": 0.3084,
     "Middle East": 0.9998,
     "Dubai, United Arab Emirates": 0.9994,
-    "Dubai, Dubai, United Arab Emirates": 0.261
+    "Dubai, Dubai, United Arab Emirates": 0.2588
   },
   "cross_firm_boosts": {
     "Corporate / M&A": 1.1598,
