@@ -9,7 +9,7 @@
   "dept_trend_boosts": {
     "Banking & Finance": 0.9998,
     "Capital Markets": 0.6002,
-    "Corporate / M&A": 0.8393,
+    "Corporate / M&A": 0.8714,
     "Data Privacy & Technology": 0.6002,
     "Real Estate": 0.6002,
     "Project Finance & Infrastructure": 0.6002,
@@ -20,8 +20,8 @@
   },
   "keyword_boosts": {
     "development": 0.7823,
-    "data": 0.9673,
-    "privacy": 0.9673,
+    "data": 0.9708,
+    "privacy": 0.9708,
     "cybersecurity": 1.1258,
     "capital markets": 1.1229,
     "debt capital markets": 1.1229,
@@ -30,21 +30,21 @@
     "digital assets": 1.7732,
     "digital": 1.7732,
     "property": 0.7823,
-    "corporate": 1.5714,
+    "corporate": 1.577,
     "energy": 0.2502,
-    "real estate": 0.2578,
-    "banking and finance": 1.3998,
-    "banking": 1.3998,
-    "finance": 1.3998,
-    "data privacy": 0.9673,
-    "technology": 1.9292,
+    "real estate": 0.2588,
+    "banking and finance": 1.4048,
+    "banking": 1.4048,
+    "finance": 1.4048,
+    "data privacy": 0.9708,
+    "technology": 1.9361,
     "acquisition": 0.2502,
     "disputes associate": 2.4998,
     "deal": 0.421,
-    "m&a": 1.1933
+    "m&a": 1.1349
   },
-  "total_runs": 1470,
-  "last_trained": "2026-08-03T06:54:33.097405+00:00",
+  "total_runs": 1471,
+  "last_trained": "2026-08-03T09:55:02.823506+00:00",
   "firm_velocity": {
     "baker_mckenzie": {
       "firm_name": "Baker McKenzie",
@@ -184,24 +184,24 @@
     },
     "shearman": {
       "firm_name": "A&O Shearman",
-      "this_week": 5,
+      "this_week": 6,
       "last_week": 3,
-      "this_month": 8,
-      "acceleration": 0.667,
+      "this_month": 9,
+      "acceleration": 1.0,
       "status": "accelerating"
     }
   },
   "seniority_distribution": {
-    "Associate": 0.514,
-    "Attorney / Lawyer": 0.216,
-    "Counsel": 0.081,
-    "Junior Associate": 0.108,
-    "Partner": 0.027,
-    "Senior Associate": 0.054
+    "Associate": 0.526,
+    "Attorney / Lawyer": 0.211,
+    "Counsel": 0.079,
+    "Junior Associate": 0.105,
+    "Partner": 0.026,
+    "Senior Associate": 0.053
   },
-  "partner_signal_ratio": 0.027,
+  "partner_signal_ratio": 0.026,
   "geo_boosts": {
-    "Dubai": 1.6592,
+    "Dubai": 1.7274,
     "United Arab Emirates": 0.9998,
     "Abu Dhabi": 0.9998,
     "Riyadh": 0.9998,
