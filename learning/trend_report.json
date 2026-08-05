@@ -6,8 +6,8 @@
       "firm_count": 6,
       "high_conf": 2,
       "this_week": 6,
-      "last_week": 4,
-      "trend_boost": 1.2655
+      "last_week": 2,
+      "trend_boost": 1.4524
     },
     {
       "department": "Banking & Finance",
@@ -44,8 +44,8 @@
       "firm_count": 6,
       "high_conf": 2,
       "this_week": 6,
-      "last_week": 4,
-      "trend_boost": 1.2655
+      "last_week": 2,
+      "trend_boost": 1.4524
     },
     {
       "department": "Banking & Finance",
@@ -85,5 +85,5 @@
       "_rank_score": 1.2004
     }
   ],
-  "generated_at": "2026-08-05T08:27:08.708149+00:00"
+  "generated_at": "2026-08-05T08:50:59.255674+00:00"
 }
