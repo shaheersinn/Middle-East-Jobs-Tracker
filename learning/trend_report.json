@@ -7,7 +7,7 @@
       "high_conf": 2,
       "this_week": 5,
       "last_week": 3,
-      "trend_boost": 1.4268
+      "trend_boost": 1.4214
     },
     {
       "department": "Banking & Finance",
@@ -34,7 +34,7 @@
       "high_conf": 0,
       "this_week": 0,
       "last_week": 1,
-      "trend_boost": 0.8046
+      "trend_boost": 0.7637
     }
   ],
   "all_depts": [
@@ -45,7 +45,7 @@
       "high_conf": 2,
       "this_week": 5,
       "last_week": 3,
-      "trend_boost": 1.4268
+      "trend_boost": 1.4214
     },
     {
       "department": "Banking & Finance",
@@ -72,7 +72,7 @@
       "high_conf": 0,
       "this_week": 0,
       "last_week": 1,
-      "trend_boost": 0.8046
+      "trend_boost": 0.7637
     },
     {
       "department": "Real Estate",
@@ -85,5 +85,5 @@
       "_rank_score": 1.2004
     }
   ],
-  "generated_at": "2026-08-05T15:58:50.676579+00:00"
+  "generated_at": "2026-08-05T17:43:46.217158+00:00"
 }
