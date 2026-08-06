@@ -5,7 +5,7 @@
       "this_week": 4,
       "last_week": 4,
       "total_30d": 31,
-      "boost": 1.3954,
+      "boost": 1.3163,
       "trend": "\u2192 stable"
     },
     {
@@ -21,9 +21,9 @@
       "this_week": 0,
       "last_week": 0,
       "total_30d": 3,
-      "boost": 0.9588,
+      "boost": 0.967,
       "trend": "\u2192 stable"
     }
   ],
-  "generated_at": "2026-08-06T13:52:36.166700+00:00"
+  "generated_at": "2026-08-06T23:53:03.607606+00:00"
 }
