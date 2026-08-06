@@ -4,8 +4,8 @@
       "city": "Dubai",
       "this_week": 4,
       "last_week": 4,
-      "total_30d": 33,
-      "boost": 1.6178,
+      "total_30d": 31,
+      "boost": 1.4942,
       "trend": "\u2192 stable"
     },
     {
@@ -21,9 +21,9 @@
       "this_week": 0,
       "last_week": 0,
       "total_30d": 3,
-      "boost": 0.9356,
+      "boost": 0.9485,
       "trend": "\u2192 stable"
     }
   ],
-  "generated_at": "2026-08-06T08:46:45.333393+00:00"
+  "generated_at": "2026-08-06T10:33:06.291783+00:00"
 }
