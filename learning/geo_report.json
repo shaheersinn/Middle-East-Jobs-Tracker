@@ -2,11 +2,11 @@
   "cities": [
     {
       "city": "Dubai",
-      "this_week": 5,
-      "last_week": 3,
-      "total_30d": 32,
-      "boost": 1.7723,
-      "trend": "\u2191 heating"
+      "this_week": 4,
+      "last_week": 4,
+      "total_30d": 33,
+      "boost": 1.6178,
+      "trend": "\u2192 stable"
     },
     {
       "city": "Saudi Arabia",
@@ -21,9 +21,9 @@
       "this_week": 0,
       "last_week": 0,
       "total_30d": 3,
-      "boost": 0.9195,
+      "boost": 0.9356,
       "trend": "\u2192 stable"
     }
   ],
-  "generated_at": "2026-08-06T06:25:03.298020+00:00"
+  "generated_at": "2026-08-06T08:46:45.333393+00:00"
 }

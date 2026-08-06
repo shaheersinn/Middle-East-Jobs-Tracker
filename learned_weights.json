@@ -3,25 +3,25 @@
     "Firm Careers Page": 0.2502,
     "Website Monitor": 2.4998,
     "Recruiter": 2.4998,
-    "Google News": 0.4639,
+    "Google News": 0.4649,
     "LinkedIn": 2.4998
   },
   "dept_trend_boosts": {
     "Banking & Finance": 0.9998,
     "Capital Markets": 0.6002,
-    "Corporate / M&A": 1.407,
+    "Corporate / M&A": 1.4056,
     "Data Privacy & Technology": 0.6002,
     "Real Estate": 0.6002,
     "Project Finance & Infrastructure": 0.6002,
     "Energy & Natural Resources": 0.6002,
     "Arbitration & Disputes": 0.6002,
-    "Regulatory & Compliance": 0.6536,
+    "Regulatory & Compliance": 0.6429,
     "Restructuring & Insolvency": 0.6002
   },
   "keyword_boosts": {
     "development": 0.7823,
-    "data": 0.9609,
-    "privacy": 0.9609,
+    "data": 0.9598,
+    "privacy": 0.9598,
     "cybersecurity": 1.1258,
     "capital markets": 1.1229,
     "debt capital markets": 1.1229,
@@ -30,21 +30,21 @@
     "digital assets": 1.7732,
     "digital": 1.7732,
     "property": 0.7823,
-    "corporate": 1.213,
+    "corporate": 1.2108,
     "energy": 0.2502,
-    "real estate": 0.2562,
+    "real estate": 0.2559,
     "banking and finance": 1.4412,
     "banking": 1.4412,
-    "finance": 1.7935,
-    "data privacy": 0.9609,
-    "technology": 1.9164,
+    "finance": 1.8077,
+    "data privacy": 0.9598,
+    "technology": 1.9142,
     "acquisition": 0.2502,
     "disputes associate": 2.4998,
     "deal": 0.421,
-    "m&a": 0.8802
+    "m&a": 0.8791
   },
-  "total_runs": 1499,
-  "last_trained": "2026-08-06T06:25:03.298747+00:00",
+  "total_runs": 1500,
+  "last_trained": "2026-08-06T08:46:45.334042+00:00",
   "firm_velocity": {
     "baker_mckenzie": {
       "firm_name": "Baker McKenzie",
@@ -80,11 +80,11 @@
     },
     "mayer_brown": {
       "firm_name": "Mayer Brown LLP",
-      "this_week": 0,
-      "last_week": 1,
+      "this_week": 1,
+      "last_week": 0,
       "this_month": 1,
-      "acceleration": -1.0,
-      "status": "decelerating"
+      "acceleration": 1.0,
+      "status": "accelerating"
     },
     "omelveny": {
       "firm_name": "O'Melveny & Myers LLP",
@@ -184,11 +184,11 @@
     },
     "shearman": {
       "firm_name": "A&O Shearman",
-      "this_week": 6,
-      "last_week": 3,
-      "this_month": 9,
-      "acceleration": 1.0,
-      "status": "accelerating"
+      "this_week": 4,
+      "last_week": 4,
+      "this_month": 8,
+      "acceleration": 0.0,
+      "status": "stable"
     },
     "reed_smith": {
       "firm_name": "Reed Smith LLP",
@@ -200,36 +200,36 @@
     }
   },
   "seniority_distribution": {
-    "Associate": 0.541,
-    "Attorney / Lawyer": 0.162,
-    "Counsel": 0.081,
-    "Junior Associate": 0.135,
-    "Partner": 0.027,
-    "Senior Associate": 0.054
+    "Associate": 0.553,
+    "Attorney / Lawyer": 0.158,
+    "Counsel": 0.079,
+    "Junior Associate": 0.132,
+    "Partner": 0.026,
+    "Senior Associate": 0.053
   },
-  "partner_signal_ratio": 0.027,
+  "partner_signal_ratio": 0.026,
   "geo_boosts": {
-    "Dubai": 1.7723,
+    "Dubai": 1.6178,
     "United Arab Emirates": 0.9998,
     "Abu Dhabi": 0.9998,
     "Riyadh": 0.9998,
     "UAE": 0.3084,
     "Middle East": 0.9998,
     "Dubai, United Arab Emirates": 0.9994,
-    "Dubai, Dubai, United Arab Emirates": 0.9195,
+    "Dubai, Dubai, United Arab Emirates": 0.9356,
     "Saudi Arabia": 1.0
   },
   "cross_firm_boosts": {
-    "Corporate / M&A": 1.1598,
+    "Corporate / M&A": 1.1438,
     "Real Estate": 1.0798,
     "Energy & Natural Resources": 1.0731
   },
   "time_patterns": {
-    "2": 0.8946,
-    "3": 0.4879,
-    "4": 1.4734,
-    "5": 1.3886,
-    "6": 0.7555
+    "2": 0.9218,
+    "3": 0.5027,
+    "4": 1.3662,
+    "5": 1.4308,
+    "6": 0.7785
   },
   "dedup_confidence": {}
 }
