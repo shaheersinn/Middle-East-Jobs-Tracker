@@ -3,19 +3,19 @@
     "Firm Careers Page": 0.2502,
     "Website Monitor": 2.4998,
     "Recruiter": 2.4998,
-    "Google News": 0.4756,
+    "Google News": 0.4841,
     "LinkedIn": 2.4998
   },
   "dept_trend_boosts": {
     "Banking & Finance": 0.9998,
     "Capital Markets": 0.6002,
-    "Corporate / M&A": 1.4045,
+    "Corporate / M&A": 1.4036,
     "Data Privacy & Technology": 0.6002,
     "Real Estate": 0.6002,
     "Project Finance & Infrastructure": 0.6002,
     "Energy & Natural Resources": 0.6002,
     "Arbitration & Disputes": 0.6002,
-    "Regulatory & Compliance": 0.6343,
+    "Regulatory & Compliance": 0.6274,
     "Restructuring & Insolvency": 0.6002
   },
   "keyword_boosts": {
@@ -30,21 +30,21 @@
     "digital assets": 1.7732,
     "digital": 1.7732,
     "property": 0.7823,
-    "corporate": 1.2064,
+    "corporate": 1.2029,
     "energy": 0.2502,
-    "real estate": 0.2551,
+    "real estate": 0.2545,
     "banking and finance": 1.4412,
     "banking": 1.4412,
-    "finance": 1.8149,
+    "finance": 1.8207,
     "data privacy": 0.9598,
     "technology": 1.9142,
     "acquisition": 0.2502,
     "disputes associate": 2.4998,
     "deal": 0.421,
-    "m&a": 0.8763
+    "m&a": 0.8741
   },
-  "total_runs": 1501,
-  "last_trained": "2026-08-06T10:33:06.292398+00:00",
+  "total_runs": 1502,
+  "last_trained": "2026-08-06T13:52:36.167676+00:00",
   "firm_velocity": {
     "baker_mckenzie": {
       "firm_name": "Baker McKenzie",
@@ -209,18 +209,18 @@
   },
   "partner_signal_ratio": 0.028,
   "geo_boosts": {
-    "Dubai": 1.4942,
+    "Dubai": 1.3954,
     "United Arab Emirates": 0.9998,
     "Abu Dhabi": 0.9998,
     "Riyadh": 0.9998,
     "UAE": 0.3084,
     "Middle East": 0.9998,
     "Dubai, United Arab Emirates": 0.9994,
-    "Dubai, Dubai, United Arab Emirates": 0.9485,
+    "Dubai, Dubai, United Arab Emirates": 0.9588,
     "Saudi Arabia": 1.0
   },
   "cross_firm_boosts": {
-    "Corporate / M&A": 1.131,
+    "Corporate / M&A": 1.1208,
     "Real Estate": 1.0798,
     "Energy & Natural Resources": 1.0731
   },
