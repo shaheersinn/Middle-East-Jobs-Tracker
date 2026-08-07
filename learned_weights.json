@@ -3,19 +3,19 @@
     "Firm Careers Page": 0.2502,
     "Website Monitor": 2.4998,
     "Recruiter": 2.4998,
-    "Google News": 0.4909,
+    "Google News": 0.4964,
     "LinkedIn": 2.4998
   },
   "dept_trend_boosts": {
     "Banking & Finance": 0.9998,
     "Capital Markets": 0.6002,
-    "Corporate / M&A": 1.4029,
+    "Corporate / M&A": 1.4023,
     "Data Privacy & Technology": 0.6002,
     "Real Estate": 0.6002,
     "Project Finance & Infrastructure": 0.6002,
     "Energy & Natural Resources": 0.6002,
     "Arbitration & Disputes": 0.6002,
-    "Regulatory & Compliance": 0.6219,
+    "Regulatory & Compliance": 0.6175,
     "Restructuring & Insolvency": 0.6002
   },
   "keyword_boosts": {
@@ -30,21 +30,21 @@
     "digital assets": 1.7732,
     "digital": 1.7732,
     "property": 0.7823,
-    "corporate": 1.2001,
+    "corporate": 1.1978,
     "energy": 0.2502,
-    "real estate": 0.254,
+    "real estate": 0.2536,
     "banking and finance": 1.4412,
     "banking": 1.4412,
-    "finance": 1.8253,
+    "finance": 1.829,
     "data privacy": 0.9598,
     "technology": 1.9142,
     "acquisition": 0.2502,
     "disputes associate": 2.4998,
     "deal": 0.421,
-    "m&a": 0.8723
+    "m&a": 0.8709
   },
-  "total_runs": 1503,
-  "last_trained": "2026-08-06T23:53:03.608457+00:00",
+  "total_runs": 1504,
+  "last_trained": "2026-08-07T02:24:06.290818+00:00",
   "firm_velocity": {
     "baker_mckenzie": {
       "firm_name": "Baker McKenzie",
@@ -209,18 +209,18 @@
   },
   "partner_signal_ratio": 0.028,
   "geo_boosts": {
-    "Dubai": 1.3163,
+    "Dubai": 1.253,
     "United Arab Emirates": 0.9998,
     "Abu Dhabi": 0.9998,
     "Riyadh": 0.9998,
     "UAE": 0.3084,
     "Middle East": 0.9998,
     "Dubai, United Arab Emirates": 0.9994,
-    "Dubai, Dubai, United Arab Emirates": 0.967,
+    "Dubai, Dubai, United Arab Emirates": 0.9736,
     "Saudi Arabia": 1.0
   },
   "cross_firm_boosts": {
-    "Corporate / M&A": 1.1126,
+    "Corporate / M&A": 1.1061,
     "Real Estate": 1.0798,
     "Energy & Natural Resources": 1.0731
   },
