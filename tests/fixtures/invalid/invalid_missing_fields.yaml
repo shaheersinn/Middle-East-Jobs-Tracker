@@ -1,0 +1,11 @@
+# Invalid: missing required fields (country, source_url, created_at, last_modified, schema_version)
+# and invalid expansion_type.
+record_id: bad-record-missing-fields
+firm_name: "Some Firm LLP"
+expansion_type: unknown_type
+practice_areas:
+  - Corporate & M&A
+announced_date: "2025-03-01"
+source_type: legal_news
+confidence: confirmed
+status: draft
