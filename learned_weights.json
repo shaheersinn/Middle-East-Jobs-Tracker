@@ -3,15 +3,15 @@
     "Firm Careers Page": 0.2502,
     "Website Monitor": 2.4998,
     "Recruiter": 2.4998,
-    "Google News": 0.708,
+    "Google News": 0.7085,
     "LinkedIn": 2.4998
   },
   "dept_trend_boosts": {
     "Banking & Finance": 0.9998,
     "Capital Markets": 0.6002,
-    "Corporate / M&A": 1.2578,
+    "Corporate / M&A": 1.2462,
     "Data Privacy & Technology": 0.6002,
-    "Real Estate": 0.9726,
+    "Real Estate": 0.9781,
     "Project Finance & Infrastructure": 0.6002,
     "Energy & Natural Resources": 0.6002,
     "Arbitration & Disputes": 0.6002,
@@ -30,9 +30,9 @@
     "digital assets": 1.7732,
     "digital": 1.7732,
     "property": 0.7823,
-    "corporate": 1.666,
+    "corporate": 1.6676,
     "energy": 0.2502,
-    "real estate": 0.3006,
+    "real estate": 0.3002,
     "banking and finance": 1.4412,
     "banking": 1.4412,
     "finance": 1.8363,
@@ -41,10 +41,10 @@
     "acquisition": 0.2502,
     "disputes associate": 2.4998,
     "deal": 0.421,
-    "m&a": 1.2125
+    "m&a": 1.2136
   },
-  "total_runs": 1531,
-  "last_trained": "2026-08-09T04:58:50.138750+00:00",
+  "total_runs": 1532,
+  "last_trained": "2026-08-09T06:45:32.262979+00:00",
   "firm_velocity": {
     "baker_mckenzie": {
       "firm_name": "Baker McKenzie",
@@ -209,7 +209,7 @@
   },
   "partner_signal_ratio": 0.027,
   "geo_boosts": {
-    "Dubai": 1.0092,
+    "Dubai": 1.0074,
     "United Arab Emirates": 0.9998,
     "Abu Dhabi": 0.9998,
     "Riyadh": 0.9998,
@@ -217,7 +217,7 @@
     "Middle East": 0.9998,
     "Dubai, United Arab Emirates": 0.9994,
     "Dubai, Dubai, United Arab Emirates": 0.9998,
-    "Saudi Arabia": 1.0995
+    "Saudi Arabia": 1.0996
   },
   "cross_firm_boosts": {
     "Corporate / M&A": 1.0802,
