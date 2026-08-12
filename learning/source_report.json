@@ -25,7 +25,7 @@
       "avg_score": 1.52,
       "hire_signals": 2,
       "last_seen": "2026-08-04",
-      "multiplier": 0.7023
+      "multiplier": 0.7026
     },
     {
       "source": "Firm News",
@@ -38,5 +38,5 @@
     }
   ],
   "total_active": 4,
-  "generated_at": "2026-08-12T01:24:11.467790+00:00"
+  "generated_at": "2026-08-12T04:01:31.699633+00:00"
 }
