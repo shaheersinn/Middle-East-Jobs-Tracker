@@ -7,7 +7,7 @@
       "high_conf": 2,
       "this_week": 1,
       "last_week": 6,
-      "trend_boost": 0.704
+      "trend_boost": 0.6965
     },
     {
       "department": "Real Estate",
@@ -34,7 +34,7 @@
       "high_conf": 0,
       "this_week": 0,
       "last_week": 2,
-      "trend_boost": 0.6429
+      "trend_boost": 0.6343
     }
   ],
   "all_depts": [
@@ -45,7 +45,7 @@
       "high_conf": 2,
       "this_week": 1,
       "last_week": 6,
-      "trend_boost": 0.704
+      "trend_boost": 0.6965
     },
     {
       "department": "Real Estate",
@@ -72,8 +72,8 @@
       "high_conf": 0,
       "this_week": 0,
       "last_week": 2,
-      "trend_boost": 0.6429
+      "trend_boost": 0.6343
     }
   ],
-  "generated_at": "2026-08-12T04:01:31.699399+00:00"
+  "generated_at": "2026-08-12T07:16:02.785385+00:00"
 }
