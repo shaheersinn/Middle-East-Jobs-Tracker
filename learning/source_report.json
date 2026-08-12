@@ -11,21 +11,21 @@
     },
     {
       "source": "LinkedIn",
-      "total_signals": 2,
-      "firm_coverage": 2,
-      "avg_score": 3.38,
+      "total_signals": 4,
+      "firm_coverage": 4,
+      "avg_score": 8.17,
       "hire_signals": 0,
-      "last_seen": "2026-07-22",
+      "last_seen": "2026-08-12",
       "multiplier": 2.4998
     },
     {
       "source": "Google News",
-      "total_signals": 2,
+      "total_signals": 3,
       "firm_coverage": 2,
-      "avg_score": 1.52,
-      "hire_signals": 2,
-      "last_seen": "2026-08-04",
-      "multiplier": 0.7029
+      "avg_score": 2.28,
+      "hire_signals": 3,
+      "last_seen": "2026-08-12",
+      "multiplier": 0.6898
     },
     {
       "source": "Firm News",
@@ -38,5 +38,5 @@
     }
   ],
   "total_active": 4,
-  "generated_at": "2026-08-12T07:16:02.785709+00:00"
+  "generated_at": "2026-08-12T07:37:58.056217+00:00"
 }
