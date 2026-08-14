@@ -5,15 +5,15 @@
       "this_week": 2,
       "last_week": 0,
       "total_30d": 4,
-      "boost": 1.1991,
+      "boost": 1.1993,
       "trend": "\u2191 heating"
     },
     {
       "city": "Dubai",
       "this_week": 5,
       "last_week": 4,
-      "total_30d": 34,
-      "boost": 1.0483,
+      "total_30d": 22,
+      "boost": 1.0886,
       "trend": "\u2191 heating"
     },
     {
@@ -29,9 +29,9 @@
       "this_week": 0,
       "last_week": 1,
       "total_30d": 2,
-      "boost": 0.2504,
+      "boost": 0.2503,
       "trend": "\u2193 cooling"
     }
   ],
-  "generated_at": "2026-08-14T07:32:52.317177+00:00"
+  "generated_at": "2026-08-14T09:02:10.134209+00:00"
 }
