@@ -9,20 +9,20 @@
       "trend": "\u2191 heating"
     },
     {
-      "city": "Dubai",
-      "this_week": 4,
-      "last_week": 5,
-      "total_30d": 23,
-      "boost": 1.0333,
-      "trend": "\u2193 cooling"
-    },
-    {
       "city": "Middle East",
       "this_week": 1,
       "last_week": 1,
       "total_30d": 2,
       "boost": 0.9998,
       "trend": "\u2192 stable"
+    },
+    {
+      "city": "Dubai",
+      "this_week": 4,
+      "last_week": 5,
+      "total_30d": 23,
+      "boost": 0.9866,
+      "trend": "\u2193 cooling"
     },
     {
       "city": "Saudi Arabia",
@@ -33,5 +33,5 @@
       "trend": "\u2193 cooling"
     }
   ],
-  "generated_at": "2026-08-15T12:26:21.163047+00:00"
+  "generated_at": "2026-08-15T14:16:01.059731+00:00"
 }
