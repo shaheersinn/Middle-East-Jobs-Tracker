@@ -7,7 +7,7 @@
       "high_conf": 3,
       "this_week": 2,
       "last_week": 5,
-      "trend_boost": 0.7603
+      "trend_boost": 0.7602
     },
     {
       "department": "Real Estate",
@@ -34,7 +34,7 @@
       "high_conf": 0,
       "this_week": 1,
       "last_week": 1,
-      "trend_boost": 0.999
+      "trend_boost": 0.9992
     }
   ],
   "all_depts": [
@@ -45,7 +45,7 @@
       "high_conf": 3,
       "this_week": 2,
       "last_week": 5,
-      "trend_boost": 0.7603
+      "trend_boost": 0.7602
     },
     {
       "department": "Real Estate",
@@ -72,7 +72,7 @@
       "high_conf": 0,
       "this_week": 1,
       "last_week": 1,
-      "trend_boost": 0.999
+      "trend_boost": 0.9992
     },
     {
       "department": "Data Privacy & Technology",
@@ -85,5 +85,5 @@
       "_rank_score": 1.9996
     }
   ],
-  "generated_at": "2026-08-15T06:27:33.263005+00:00"
+  "generated_at": "2026-08-15T06:47:12.461657+00:00"
 }
