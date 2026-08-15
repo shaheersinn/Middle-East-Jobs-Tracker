@@ -7,7 +7,7 @@
       "high_conf": 3,
       "this_week": 2,
       "last_week": 4,
-      "trend_boost": 0.7838
+      "trend_boost": 0.787
     },
     {
       "department": "Regulatory & Compliance",
@@ -34,7 +34,7 @@
       "high_conf": 0,
       "this_week": 0,
       "last_week": 2,
-      "trend_boost": 0.731
+      "trend_boost": 0.7048
     }
   ],
   "all_depts": [
@@ -45,7 +45,7 @@
       "high_conf": 3,
       "this_week": 2,
       "last_week": 4,
-      "trend_boost": 0.7838
+      "trend_boost": 0.787
     },
     {
       "department": "Regulatory & Compliance",
@@ -72,7 +72,7 @@
       "high_conf": 0,
       "this_week": 0,
       "last_week": 2,
-      "trend_boost": 0.731
+      "trend_boost": 0.7048
     },
     {
       "department": "Data Privacy & Technology",
@@ -85,5 +85,5 @@
       "_rank_score": 1.9996
     }
   ],
-  "generated_at": "2026-08-15T16:17:08.984973+00:00"
+  "generated_at": "2026-08-15T18:19:57.338778+00:00"
 }
