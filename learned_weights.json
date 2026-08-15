@@ -3,15 +3,15 @@
     "Firm Careers Page": 0.2502,
     "Website Monitor": 2.4998,
     "Recruiter": 2.4998,
-    "Google News": 0.5383,
+    "Google News": 0.5377,
     "LinkedIn": 2.4998
   },
   "dept_trend_boosts": {
-    "Banking & Finance": 0.9994,
-    "Capital Markets": 0.7442,
-    "Corporate / M&A": 0.7602,
+    "Banking & Finance": 0.9995,
+    "Capital Markets": 0.7954,
+    "Corporate / M&A": 0.7682,
     "Data Privacy & Technology": 0.9998,
-    "Real Estate": 0.9198,
+    "Real Estate": 0.8558,
     "Project Finance & Infrastructure": 0.6002,
     "Energy & Natural Resources": 0.6002,
     "Arbitration & Disputes": 0.6002,
@@ -30,7 +30,7 @@
     "digital assets": 1.7732,
     "digital": 1.7732,
     "property": 0.7823,
-    "corporate": 1.2773,
+    "corporate": 1.2784,
     "energy": 0.2502,
     "real estate": 0.2502,
     "banking and finance": 1.4412,
@@ -41,11 +41,11 @@
     "acquisition": 0.2502,
     "disputes associate": 2.4998,
     "deal": 0.421,
-    "m&a": 0.7677,
-    "regulatory": 0.3531
+    "m&a": 0.7683,
+    "regulatory": 0.3534
   },
-  "total_runs": 1608,
-  "last_trained": "2026-08-15T08:20:46.110105+00:00",
+  "total_runs": 1609,
+  "last_trained": "2026-08-15T10:16:58.462382+00:00",
   "firm_velocity": {
     "baker_mckenzie": {
       "firm_name": "Baker McKenzie",
@@ -186,9 +186,9 @@
     "shearman": {
       "firm_name": "A&O Shearman",
       "this_week": 5,
-      "last_week": 6,
-      "this_month": 11,
-      "acceleration": -0.167,
+      "last_week": 5,
+      "this_month": 10,
+      "acceleration": 0.0,
       "status": "stable"
     },
     "reed_smith": {
@@ -209,7 +209,7 @@
   },
   "partner_signal_ratio": 0,
   "geo_boosts": {
-    "Dubai": 1.1645,
+    "Dubai": 1.0916,
     "United Arab Emirates": 0.9998,
     "Abu Dhabi": 0.9998,
     "Riyadh": 0.9998,
