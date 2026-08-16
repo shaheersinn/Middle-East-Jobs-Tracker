@@ -3,19 +3,19 @@
     "Firm Careers Page": 0.2502,
     "Website Monitor": 2.4998,
     "Recruiter": 2.4998,
-    "Google News": 0.5355,
+    "Google News": 0.5438,
     "LinkedIn": 2.4998
   },
   "dept_trend_boosts": {
     "Banking & Finance": 0.9998,
-    "Capital Markets": 0.9825,
-    "Corporate / M&A": 0.7973,
+    "Capital Markets": 0.986,
+    "Corporate / M&A": 0.7978,
     "Data Privacy & Technology": 0.9998,
-    "Real Estate": 0.6219,
+    "Real Estate": 0.6175,
     "Project Finance & Infrastructure": 0.6002,
     "Energy & Natural Resources": 0.6002,
     "Arbitration & Disputes": 0.6002,
-    "Regulatory & Compliance": 0.9998,
+    "Regulatory & Compliance": 0.9198,
     "Restructuring & Insolvency": 0.6002
   },
   "keyword_boosts": {
@@ -30,7 +30,7 @@
     "digital assets": 1.7732,
     "digital": 1.7732,
     "property": 0.7823,
-    "corporate": 1.2823,
+    "corporate": 1.279,
     "energy": 0.2502,
     "real estate": 0.2502,
     "banking and finance": 1.4412,
@@ -41,11 +41,11 @@
     "acquisition": 0.2502,
     "disputes associate": 2.4998,
     "deal": 0.421,
-    "m&a": 0.7707,
-    "regulatory": 0.3543
+    "m&a": 0.7687,
+    "regulatory": 0.3534
   },
-  "total_runs": 1620,
-  "last_trained": "2026-08-16T06:49:09.148152+00:00",
+  "total_runs": 1621,
+  "last_trained": "2026-08-16T08:21:35.821080+00:00",
   "firm_velocity": {
     "baker_mckenzie": {
       "firm_name": "Baker McKenzie",
@@ -185,11 +185,11 @@
     },
     "shearman": {
       "firm_name": "A&O Shearman",
-      "this_week": 5,
-      "last_week": 5,
+      "this_week": 4,
+      "last_week": 6,
       "this_month": 10,
-      "acceleration": 0.0,
-      "status": "stable"
+      "acceleration": -0.333,
+      "status": "decelerating"
     },
     "reed_smith": {
       "firm_name": "Reed Smith LLP",
@@ -201,15 +201,15 @@
     }
   },
   "seniority_distribution": {
-    "Associate": 0.571,
-    "Attorney / Lawyer": 0.107,
-    "Counsel": 0.071,
-    "Junior Associate": 0.107,
-    "Senior Associate": 0.143
+    "Associate": 0.56,
+    "Attorney / Lawyer": 0.08,
+    "Counsel": 0.08,
+    "Junior Associate": 0.12,
+    "Senior Associate": 0.16
   },
   "partner_signal_ratio": 0,
   "geo_boosts": {
-    "Dubai": 0.825,
+    "Dubai": 0.76,
     "United Arab Emirates": 0.9998,
     "Abu Dhabi": 0.9998,
     "Riyadh": 0.9998,
