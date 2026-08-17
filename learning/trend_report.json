@@ -7,7 +7,7 @@
       "high_conf": 3,
       "this_week": 2,
       "last_week": 3,
-      "trend_boost": 0.8325
+      "trend_boost": 0.8393
     },
     {
       "department": "Banking & Finance",
@@ -34,7 +34,7 @@
       "high_conf": 0,
       "this_week": 2,
       "last_week": 0,
-      "trend_boost": 0.9996
+      "trend_boost": 0.9997
     }
   ],
   "all_depts": [
@@ -45,7 +45,7 @@
       "high_conf": 3,
       "this_week": 2,
       "last_week": 3,
-      "trend_boost": 0.8325
+      "trend_boost": 0.8393
     },
     {
       "department": "Banking & Finance",
@@ -72,7 +72,7 @@
       "high_conf": 0,
       "this_week": 2,
       "last_week": 0,
-      "trend_boost": 0.9996
+      "trend_boost": 0.9997
     },
     {
       "department": "Regulatory & Compliance",
@@ -81,8 +81,8 @@
       "high_conf": 0,
       "this_week": 0,
       "last_week": 1,
-      "trend_boost": 0.609,
-      "_rank_score": 1.218
+      "trend_boost": 0.6072,
+      "_rank_score": 1.2144
     },
     {
       "department": "Real Estate",
@@ -91,9 +91,9 @@
       "high_conf": 0,
       "this_week": 0,
       "last_week": 2,
-      "trend_boost": 0.6005,
-      "_rank_score": 1.201
+      "trend_boost": 0.6004,
+      "_rank_score": 1.2008
     }
   ],
-  "generated_at": "2026-08-17T14:20:47.873759+00:00"
+  "generated_at": "2026-08-17T16:20:30.493218+00:00"
 }
