@@ -3,19 +3,19 @@
     "Firm Careers Page": 0.2502,
     "Website Monitor": 2.4998,
     "Recruiter": 2.4998,
-    "Google News": 0.5756,
+    "Google News": 0.5806,
     "LinkedIn": 2.4998
   },
   "dept_trend_boosts": {
     "Banking & Finance": 0.9998,
-    "Capital Markets": 0.999,
+    "Capital Markets": 0.9992,
     "Corporate / M&A": 0.7998,
     "Data Privacy & Technology": 0.9998,
-    "Real Estate": 0.6012,
+    "Real Estate": 0.601,
     "Project Finance & Infrastructure": 0.6002,
     "Energy & Natural Resources": 0.6002,
     "Arbitration & Disputes": 0.6002,
-    "Regulatory & Compliance": 0.6219,
+    "Regulatory & Compliance": 0.6175,
     "Restructuring & Insolvency": 0.6002
   },
   "keyword_boosts": {
@@ -23,14 +23,14 @@
     "data": 0.9598,
     "privacy": 0.9598,
     "cybersecurity": 1.1258,
-    "capital markets": 0.9695,
+    "capital markets": 0.842,
     "debt capital markets": 1.1229,
     "equity capital markets": 1.1229,
     "equity": 1.1229,
     "digital assets": 1.7732,
     "digital": 1.7732,
     "property": 0.7823,
-    "corporate": 1.2725,
+    "corporate": 1.2597,
     "energy": 0.2502,
     "real estate": 0.2502,
     "banking and finance": 1.4412,
@@ -41,11 +41,11 @@
     "acquisition": 0.2502,
     "disputes associate": 2.4998,
     "deal": 0.421,
-    "m&a": 0.7648,
-    "regulatory": 0.3518
+    "m&a": 0.7571,
+    "regulatory": 0.3482
   },
-  "total_runs": 1633,
-  "last_trained": "2026-08-17T07:04:11.086187+00:00",
+  "total_runs": 1634,
+  "last_trained": "2026-08-17T08:36:03.910504+00:00",
   "firm_velocity": {
     "baker_mckenzie": {
       "firm_name": "Baker McKenzie",
@@ -201,15 +201,15 @@
     }
   },
   "seniority_distribution": {
-    "Associate": 0.577,
-    "Attorney / Lawyer": 0.077,
-    "Counsel": 0.077,
-    "Junior Associate": 0.115,
-    "Senior Associate": 0.154
+    "Associate": 0.565,
+    "Attorney / Lawyer": 0.087,
+    "Counsel": 0.087,
+    "Junior Associate": 0.13,
+    "Senior Associate": 0.13
   },
   "partner_signal_ratio": 0,
   "geo_boosts": {
-    "Dubai": 0.5513,
+    "Dubai": 0.5744,
     "United Arab Emirates": 0.9998,
     "Abu Dhabi": 0.9998,
     "Riyadh": 0.9998,
