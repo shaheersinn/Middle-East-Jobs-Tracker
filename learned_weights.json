@@ -3,19 +3,19 @@
     "Firm Careers Page": 0.2502,
     "Website Monitor": 2.4998,
     "Recruiter": 2.4998,
-    "Google News": 0.5997,
+    "Google News": 0.6005,
     "LinkedIn": 2.4998
   },
   "dept_trend_boosts": {
-    "Banking & Finance": 1.1198,
+    "Banking & Finance": 1.2158,
     "Capital Markets": 0.9998,
-    "Corporate / M&A": 0.8621,
+    "Corporate / M&A": 0.863,
     "Data Privacy & Technology": 0.9998,
     "Real Estate": 0.6002,
     "Project Finance & Infrastructure": 0.6002,
     "Energy & Natural Resources": 0.6002,
     "Arbitration & Disputes": 0.6002,
-    "Regulatory & Compliance": 0.6012,
+    "Regulatory & Compliance": 0.601,
     "Restructuring & Insolvency": 0.6002
   },
   "keyword_boosts": {
@@ -23,29 +23,29 @@
     "data": 0.9598,
     "privacy": 0.9598,
     "cybersecurity": 1.1258,
-    "capital markets": 0.3688,
+    "capital markets": 0.3631,
     "debt capital markets": 1.1229,
     "equity capital markets": 1.1229,
     "equity": 1.1229,
     "digital assets": 1.7732,
     "digital": 1.7732,
     "property": 0.7823,
-    "corporate": 1.2179,
+    "corporate": 1.222,
     "energy": 0.2502,
     "real estate": 0.2502,
     "banking and finance": 1.4412,
     "banking": 1.4412,
-    "finance": 2.4815,
+    "finance": 2.4668,
     "data privacy": 0.9598,
     "technology": 1.9142,
     "acquisition": 0.2502,
     "disputes associate": 2.4998,
     "deal": 0.421,
-    "m&a": 0.732,
-    "regulatory": 0.3366
+    "m&a": 0.7345,
+    "regulatory": 0.3377
   },
-  "total_runs": 1646,
-  "last_trained": "2026-08-18T06:53:08.494242+00:00",
+  "total_runs": 1647,
+  "last_trained": "2026-08-18T08:28:55.554335+00:00",
   "firm_velocity": {
     "baker_mckenzie": {
       "firm_name": "Baker McKenzie",
@@ -185,10 +185,10 @@
     },
     "shearman": {
       "firm_name": "A&O Shearman",
-      "this_week": 6,
-      "last_week": 5,
+      "this_week": 5,
+      "last_week": 6,
       "this_month": 11,
-      "acceleration": 0.2,
+      "acceleration": -0.167,
       "status": "stable"
     },
     "reed_smith": {
@@ -209,7 +209,7 @@
   },
   "partner_signal_ratio": 0,
   "geo_boosts": {
-    "Dubai": 0.8245,
+    "Dubai": 0.7929,
     "United Arab Emirates": 0.9998,
     "Abu Dhabi": 0.9998,
     "Riyadh": 0.9998,
