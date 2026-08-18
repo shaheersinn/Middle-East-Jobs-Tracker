@@ -6,8 +6,8 @@
       "firm_count": 7,
       "high_conf": 3,
       "this_week": 2,
-      "last_week": 3,
-      "trend_boost": 0.863
+      "last_week": 1,
+      "trend_boost": 1.0104
     },
     {
       "department": "Banking & Finance",
@@ -15,8 +15,8 @@
       "firm_count": 1,
       "high_conf": 0,
       "this_week": 2,
-      "last_week": 1,
-      "trend_boost": 1.2158
+      "last_week": 0,
+      "trend_boost": 1.1726
     },
     {
       "department": "Data Privacy & Technology",
@@ -44,8 +44,8 @@
       "firm_count": 7,
       "high_conf": 3,
       "this_week": 2,
-      "last_week": 3,
-      "trend_boost": 0.863
+      "last_week": 1,
+      "trend_boost": 1.0104
     },
     {
       "department": "Banking & Finance",
@@ -53,8 +53,8 @@
       "firm_count": 1,
       "high_conf": 0,
       "this_week": 2,
-      "last_week": 1,
-      "trend_boost": 1.2158
+      "last_week": 0,
+      "trend_boost": 1.1726
     },
     {
       "department": "Data Privacy & Technology",
@@ -81,8 +81,8 @@
       "high_conf": 0,
       "this_week": 0,
       "last_week": 1,
-      "trend_boost": 0.601,
-      "_rank_score": 1.202
+      "trend_boost": 0.6008,
+      "_rank_score": 1.2016
     },
     {
       "department": "Real Estate",
@@ -95,5 +95,5 @@
       "_rank_score": 1.2004
     }
   ],
-  "generated_at": "2026-08-18T08:28:55.552999+00:00"
+  "generated_at": "2026-08-18T10:21:24.749233+00:00"
 }
