@@ -5,18 +5,18 @@
       "signal_count": 14,
       "firm_count": 7,
       "high_conf": 3,
-      "this_week": 2,
-      "last_week": 1,
-      "trend_boost": 1.5493
+      "this_week": 0,
+      "last_week": 3,
+      "trend_boost": 1.3594
     },
     {
       "department": "Banking & Finance",
       "signal_count": 4,
       "firm_count": 1,
       "high_conf": 0,
-      "this_week": 2,
-      "last_week": 0,
-      "trend_boost": 1.0149
+      "this_week": 1,
+      "last_week": 1,
+      "trend_boost": 1.0119
     },
     {
       "department": "Data Privacy & Technology",
@@ -25,7 +25,7 @@
       "high_conf": 0,
       "this_week": 2,
       "last_week": 1,
-      "trend_boost": 1.1198
+      "trend_boost": 1.2158
     },
     {
       "department": "Capital Markets",
@@ -43,18 +43,18 @@
       "signal_count": 14,
       "firm_count": 7,
       "high_conf": 3,
-      "this_week": 2,
-      "last_week": 1,
-      "trend_boost": 1.5493
+      "this_week": 0,
+      "last_week": 3,
+      "trend_boost": 1.3594
     },
     {
       "department": "Banking & Finance",
       "signal_count": 4,
       "firm_count": 1,
       "high_conf": 0,
-      "this_week": 2,
-      "last_week": 0,
-      "trend_boost": 1.0149
+      "this_week": 1,
+      "last_week": 1,
+      "trend_boost": 1.0119
     },
     {
       "department": "Data Privacy & Technology",
@@ -63,7 +63,7 @@
       "high_conf": 0,
       "this_week": 2,
       "last_week": 1,
-      "trend_boost": 1.1198
+      "trend_boost": 1.2158
     },
     {
       "department": "Capital Markets",
@@ -95,5 +95,5 @@
       "_rank_score": 1.2004
     }
   ],
-  "generated_at": "2026-08-19T06:50:17.718014+00:00"
+  "generated_at": "2026-08-19T08:30:07.737953+00:00"
 }
