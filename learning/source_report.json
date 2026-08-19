@@ -11,11 +11,11 @@
     },
     {
       "source": "LinkedIn",
-      "total_signals": 4,
+      "total_signals": 5,
       "firm_coverage": 4,
-      "avg_score": 8.17,
+      "avg_score": 9.54,
       "hire_signals": 0,
-      "last_seen": "2026-08-12",
+      "last_seen": "2026-08-19",
       "multiplier": 2.4998
     },
     {
@@ -25,9 +25,9 @@
       "avg_score": 2.28,
       "hire_signals": 3,
       "last_seen": "2026-08-12",
-      "multiplier": 0.6033
+      "multiplier": 0.5918
     }
   ],
   "total_active": 3,
-  "generated_at": "2026-08-19T06:34:13.492574+00:00"
+  "generated_at": "2026-08-19T06:50:17.718402+00:00"
 }
