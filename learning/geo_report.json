@@ -5,7 +5,7 @@
       "this_week": 0,
       "last_week": 0,
       "total_30d": 2,
-      "boost": 0.9994,
+      "boost": 0.9995,
       "trend": "\u2192 stable"
     },
     {
@@ -13,7 +13,7 @@
       "this_week": 4,
       "last_week": 4,
       "total_30d": 17,
-      "boost": 0.9474,
+      "boost": 0.9579,
       "trend": "\u2192 stable"
     },
     {
@@ -21,7 +21,7 @@
       "this_week": 1,
       "last_week": 2,
       "total_30d": 5,
-      "boost": 0.5083,
+      "boost": 0.5066,
       "trend": "\u2193 cooling"
     },
     {
@@ -29,9 +29,9 @@
       "this_week": 0,
       "last_week": 1,
       "total_30d": 2,
-      "boost": 0.2598,
+      "boost": 0.2578,
       "trend": "\u2193 cooling"
     }
   ],
-  "generated_at": "2026-08-20T20:21:02.823285+00:00"
+  "generated_at": "2026-08-20T22:20:40.939246+00:00"
 }
