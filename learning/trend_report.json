@@ -7,7 +7,7 @@
       "high_conf": 3,
       "this_week": 0,
       "last_week": 2,
-      "trend_boost": 0.6171
+      "trend_boost": 0.6137
     },
     {
       "department": "Data Privacy & Technology",
@@ -16,7 +16,7 @@
       "high_conf": 0,
       "this_week": 2,
       "last_week": 1,
-      "trend_boost": 1.5914
+      "trend_boost": 1.5931
     },
     {
       "department": "Banking & Finance",
@@ -45,7 +45,7 @@
       "high_conf": 3,
       "this_week": 0,
       "last_week": 2,
-      "trend_boost": 0.6171
+      "trend_boost": 0.6137
     },
     {
       "department": "Data Privacy & Technology",
@@ -54,7 +54,7 @@
       "high_conf": 0,
       "this_week": 2,
       "last_week": 1,
-      "trend_boost": 1.5914
+      "trend_boost": 1.5931
     },
     {
       "department": "Banking & Finance",
@@ -95,5 +95,5 @@
       "_rank_score": 1.2004
     }
   ],
-  "generated_at": "2026-08-20T16:27:43.154743+00:00"
+  "generated_at": "2026-08-20T18:30:24.043798+00:00"
 }
