@@ -7,7 +7,7 @@
       "high_conf": 3,
       "this_week": 0,
       "last_week": 2,
-      "trend_boost": 0.6007
+      "trend_boost": 0.6006
     },
     {
       "department": "Banking & Finance",
@@ -25,7 +25,7 @@
       "high_conf": 0,
       "this_week": 1,
       "last_week": 2,
-      "trend_boost": 1.0094
+      "trend_boost": 0.9675
     },
     {
       "department": "Capital Markets",
@@ -45,7 +45,7 @@
       "high_conf": 3,
       "this_week": 0,
       "last_week": 2,
-      "trend_boost": 0.6007
+      "trend_boost": 0.6006
     },
     {
       "department": "Banking & Finance",
@@ -63,7 +63,7 @@
       "high_conf": 0,
       "this_week": 1,
       "last_week": 2,
-      "trend_boost": 1.0094
+      "trend_boost": 0.9675
     },
     {
       "department": "Capital Markets",
@@ -81,8 +81,8 @@
       "high_conf": 0,
       "this_week": 2,
       "last_week": 0,
-      "trend_boost": 0.9162,
-      "_rank_score": 1.8324
+      "trend_boost": 0.933,
+      "_rank_score": 1.866
     },
     {
       "department": "Regulatory & Compliance",
@@ -105,5 +105,5 @@
       "_rank_score": 1.2004
     }
   ],
-  "generated_at": "2026-08-21T18:28:33.861883+00:00"
+  "generated_at": "2026-08-21T20:18:53.339252+00:00"
 }
