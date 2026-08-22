@@ -2,7 +2,7 @@
   "top4": [
     {
       "department": "Corporate / M&A",
-      "signal_count": 11,
+      "signal_count": 10,
       "firm_count": 5,
       "high_conf": 3,
       "this_week": 0,
@@ -16,7 +16,7 @@
       "high_conf": 0,
       "this_week": 2,
       "last_week": 1,
-      "trend_boost": 1.2162
+      "trend_boost": 1.293
     },
     {
       "department": "Data Privacy & Technology",
@@ -25,7 +25,7 @@
       "high_conf": 0,
       "this_week": 1,
       "last_week": 2,
-      "trend_boost": 0.8351
+      "trend_boost": 0.8281
     },
     {
       "department": "Capital Markets",
@@ -40,7 +40,7 @@
   "all_depts": [
     {
       "department": "Corporate / M&A",
-      "signal_count": 11,
+      "signal_count": 10,
       "firm_count": 5,
       "high_conf": 3,
       "this_week": 0,
@@ -54,7 +54,7 @@
       "high_conf": 0,
       "this_week": 2,
       "last_week": 1,
-      "trend_boost": 1.2162
+      "trend_boost": 1.293
     },
     {
       "department": "Data Privacy & Technology",
@@ -63,7 +63,7 @@
       "high_conf": 0,
       "this_week": 1,
       "last_week": 2,
-      "trend_boost": 0.8351
+      "trend_boost": 0.8281
     },
     {
       "department": "Capital Markets",
@@ -81,8 +81,8 @@
       "high_conf": 0,
       "this_week": 2,
       "last_week": 0,
-      "trend_boost": 0.986,
-      "_rank_score": 1.972
+      "trend_boost": 0.9888,
+      "_rank_score": 1.9776
     },
     {
       "department": "Regulatory & Compliance",
@@ -105,5 +105,5 @@
       "_rank_score": 1.2004
     }
   ],
-  "generated_at": "2026-08-22T08:21:15.516596+00:00"
+  "generated_at": "2026-08-22T10:16:49.811128+00:00"
 }
