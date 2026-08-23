@@ -1,22 +1,22 @@
 {
   "top4": [
     {
-      "department": "Corporate / M&A",
-      "signal_count": 10,
-      "firm_count": 5,
-      "high_conf": 3,
-      "this_week": 0,
-      "last_week": 2,
-      "trend_boost": 0.6002
-    },
-    {
       "department": "Banking & Finance",
       "signal_count": 5,
       "firm_count": 1,
       "high_conf": 0,
       "this_week": 2,
       "last_week": 1,
-      "trend_boost": 1.5789
+      "trend_boost": 1.5831
+    },
+    {
+      "department": "Corporate / M&A",
+      "signal_count": 9,
+      "firm_count": 4,
+      "high_conf": 2,
+      "this_week": 0,
+      "last_week": 2,
+      "trend_boost": 0.6002
     },
     {
       "department": "Data Privacy & Technology",
@@ -25,7 +25,7 @@
       "high_conf": 0,
       "this_week": 1,
       "last_week": 2,
-      "trend_boost": 0.8019
+      "trend_boost": 0.8015
     },
     {
       "department": "Capital Markets",
@@ -39,22 +39,22 @@
   ],
   "all_depts": [
     {
-      "department": "Corporate / M&A",
-      "signal_count": 10,
-      "firm_count": 5,
-      "high_conf": 3,
-      "this_week": 0,
-      "last_week": 2,
-      "trend_boost": 0.6002
-    },
-    {
       "department": "Banking & Finance",
       "signal_count": 5,
       "firm_count": 1,
       "high_conf": 0,
       "this_week": 2,
       "last_week": 1,
-      "trend_boost": 1.5789
+      "trend_boost": 1.5831
+    },
+    {
+      "department": "Corporate / M&A",
+      "signal_count": 9,
+      "firm_count": 4,
+      "high_conf": 2,
+      "this_week": 0,
+      "last_week": 2,
+      "trend_boost": 0.6002
     },
     {
       "department": "Data Privacy & Technology",
@@ -63,7 +63,7 @@
       "high_conf": 0,
       "this_week": 1,
       "last_week": 2,
-      "trend_boost": 0.8019
+      "trend_boost": 0.8015
     },
     {
       "department": "Capital Markets",
@@ -81,8 +81,8 @@
       "high_conf": 0,
       "this_week": 2,
       "last_week": 0,
-      "trend_boost": 0.9992,
-      "_rank_score": 1.9984
+      "trend_boost": 0.9994,
+      "_rank_score": 1.9988
     },
     {
       "department": "Regulatory & Compliance",
@@ -105,5 +105,5 @@
       "_rank_score": 1.2004
     }
   ],
-  "generated_at": "2026-08-23T08:22:26.821342+00:00"
+  "generated_at": "2026-08-23T10:17:26.558092+00:00"
 }
