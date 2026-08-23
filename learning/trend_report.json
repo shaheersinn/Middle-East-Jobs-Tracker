@@ -7,7 +7,7 @@
       "high_conf": 0,
       "this_week": 2,
       "last_week": 1,
-      "trend_boost": 1.5831
+      "trend_boost": 1.5865
     },
     {
       "department": "Corporate / M&A",
@@ -25,7 +25,7 @@
       "high_conf": 0,
       "this_week": 1,
       "last_week": 2,
-      "trend_boost": 0.8015
+      "trend_boost": 0.8012
     },
     {
       "department": "Capital Markets",
@@ -45,7 +45,7 @@
       "high_conf": 0,
       "this_week": 2,
       "last_week": 1,
-      "trend_boost": 1.5831
+      "trend_boost": 1.5865
     },
     {
       "department": "Corporate / M&A",
@@ -63,7 +63,7 @@
       "high_conf": 0,
       "this_week": 1,
       "last_week": 2,
-      "trend_boost": 0.8015
+      "trend_boost": 0.8012
     },
     {
       "department": "Capital Markets",
@@ -81,8 +81,8 @@
       "high_conf": 0,
       "this_week": 2,
       "last_week": 0,
-      "trend_boost": 0.9994,
-      "_rank_score": 1.9988
+      "trend_boost": 0.9995,
+      "_rank_score": 1.999
     },
     {
       "department": "Regulatory & Compliance",
@@ -105,5 +105,5 @@
       "_rank_score": 1.2004
     }
   ],
-  "generated_at": "2026-08-23T10:17:26.558092+00:00"
+  "generated_at": "2026-08-23T12:28:32.229337+00:00"
 }
