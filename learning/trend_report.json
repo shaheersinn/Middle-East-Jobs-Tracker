@@ -7,7 +7,7 @@
       "high_conf": 0,
       "this_week": 2,
       "last_week": 1,
-      "trend_boost": 1.5914
+      "trend_boost": 1.5931
     },
     {
       "department": "Corporate / M&A",
@@ -25,15 +25,15 @@
       "high_conf": 0,
       "this_week": 1,
       "last_week": 2,
-      "trend_boost": 0.8008
+      "trend_boost": 0.8006
     },
     {
-      "department": "Capital Markets",
+      "department": "Restructuring & Insolvency",
       "signal_count": 2,
       "firm_count": 1,
       "high_conf": 0,
-      "this_week": 1,
-      "last_week": 1,
+      "this_week": 2,
+      "last_week": 0,
       "trend_boost": 0.9998
     }
   ],
@@ -45,7 +45,7 @@
       "high_conf": 0,
       "this_week": 2,
       "last_week": 1,
-      "trend_boost": 1.5914
+      "trend_boost": 1.5931
     },
     {
       "department": "Corporate / M&A",
@@ -63,16 +63,7 @@
       "high_conf": 0,
       "this_week": 1,
       "last_week": 2,
-      "trend_boost": 0.8008
-    },
-    {
-      "department": "Capital Markets",
-      "signal_count": 2,
-      "firm_count": 1,
-      "high_conf": 0,
-      "this_week": 1,
-      "last_week": 1,
-      "trend_boost": 0.9998
+      "trend_boost": 0.8006
     },
     {
       "department": "Restructuring & Insolvency",
@@ -81,8 +72,17 @@
       "high_conf": 0,
       "this_week": 2,
       "last_week": 0,
-      "trend_boost": 0.9997,
-      "_rank_score": 1.9994
+      "trend_boost": 0.9998
+    },
+    {
+      "department": "Capital Markets",
+      "signal_count": 2,
+      "firm_count": 1,
+      "high_conf": 0,
+      "this_week": 1,
+      "last_week": 1,
+      "trend_boost": 0.9998,
+      "_rank_score": 1.9996
     },
     {
       "department": "Regulatory & Compliance",
@@ -105,5 +105,5 @@
       "_rank_score": 1.2004
     }
   ],
-  "generated_at": "2026-08-23T16:17:38.631859+00:00"
+  "generated_at": "2026-08-23T18:20:31.474986+00:00"
 }
