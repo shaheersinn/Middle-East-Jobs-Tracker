@@ -3,12 +3,12 @@
     "Firm Careers Page": 0.2502,
     "Website Monitor": 2.4998,
     "Recruiter": 2.4998,
-    "Google News": 0.5218,
+    "Google News": 0.522,
     "LinkedIn": 2.4998
   },
   "dept_trend_boosts": {
-    "Banking & Finance": 1.5997,
-    "Capital Markets": 0.667,
+    "Banking & Finance": 1.5998,
+    "Capital Markets": 0.6536,
     "Corporate / M&A": 0.6002,
     "Data Privacy & Technology": 0.8002,
     "Real Estate": 0.6002,
@@ -47,8 +47,8 @@
     "restructuring": 0.2502,
     "finance associate": 0.8095
   },
-  "total_runs": 1731,
-  "last_trained": "2026-08-24T20:22:56.977627+00:00",
+  "total_runs": 1732,
+  "last_trained": "2026-08-24T22:19:49.153904+00:00",
   "firm_velocity": {
     "baker_mckenzie": {
       "firm_name": "Baker McKenzie",
@@ -212,7 +212,7 @@
   },
   "partner_signal_ratio": 0,
   "geo_boosts": {
-    "Dubai": 1.6306,
+    "Dubai": 1.6045,
     "United Arab Emirates": 0.9998,
     "Abu Dhabi": 0.9998,
     "Riyadh": 0.9998,
