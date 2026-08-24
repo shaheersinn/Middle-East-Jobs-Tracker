@@ -3,12 +3,12 @@
     "Firm Careers Page": 0.2502,
     "Website Monitor": 2.4998,
     "Recruiter": 2.4998,
-    "Google News": 0.5179,
+    "Google News": 0.5188,
     "LinkedIn": 2.4998
   },
   "dept_trend_boosts": {
-    "Banking & Finance": 1.5982,
-    "Capital Markets": 0.9998,
+    "Banking & Finance": 1.5986,
+    "Capital Markets": 0.9198,
     "Corporate / M&A": 0.6002,
     "Data Privacy & Technology": 0.8002,
     "Real Estate": 0.6002,
@@ -36,7 +36,7 @@
     "real estate": 0.2502,
     "banking and finance": 1.4412,
     "banking": 1.4412,
-    "finance": 1.6965,
+    "finance": 1.6963,
     "data privacy": 0.9598,
     "technology": 2.1662,
     "acquisition": 0.2502,
@@ -45,10 +45,10 @@
     "m&a": 0.2502,
     "regulatory": 0.2752,
     "restructuring": 0.2502,
-    "finance associate": 0.81
+    "finance associate": 0.8099
   },
-  "total_runs": 1723,
-  "last_trained": "2026-08-24T06:44:22.982440+00:00",
+  "total_runs": 1724,
+  "last_trained": "2026-08-24T07:05:41.624436+00:00",
   "firm_velocity": {
     "baker_mckenzie": {
       "firm_name": "Baker McKenzie",
@@ -188,11 +188,11 @@
     },
     "shearman": {
       "firm_name": "A&O Shearman",
-      "this_week": 8,
-      "last_week": 4,
+      "this_week": 7,
+      "last_week": 5,
       "this_month": 12,
-      "acceleration": 1.0,
-      "status": "accelerating"
+      "acceleration": 0.4,
+      "status": "stable"
     },
     "reed_smith": {
       "firm_name": "Reed Smith LLP",
@@ -212,7 +212,7 @@
   },
   "partner_signal_ratio": 0,
   "geo_boosts": {
-    "Dubai": 2.2781,
+    "Dubai": 2.1225,
     "United Arab Emirates": 0.9998,
     "Abu Dhabi": 0.9998,
     "Riyadh": 0.9998,
