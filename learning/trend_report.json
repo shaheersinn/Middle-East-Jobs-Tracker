@@ -7,7 +7,7 @@
       "high_conf": 0,
       "this_week": 2,
       "last_week": 1,
-      "trend_boost": 1.5991
+      "trend_boost": 1.5993
     },
     {
       "department": "Corporate / M&A",
@@ -45,7 +45,7 @@
       "high_conf": 0,
       "this_week": 2,
       "last_week": 1,
-      "trend_boost": 1.5991
+      "trend_boost": 1.5993
     },
     {
       "department": "Corporate / M&A",
@@ -81,8 +81,8 @@
       "high_conf": 0,
       "this_week": 0,
       "last_week": 2,
-      "trend_boost": 0.8046,
-      "_rank_score": 1.6092
+      "trend_boost": 0.7637,
+      "_rank_score": 1.5274
     },
     {
       "department": "Regulatory & Compliance",
@@ -105,5 +105,5 @@
       "_rank_score": 1.2004
     }
   ],
-  "generated_at": "2026-08-24T10:31:52.596759+00:00"
+  "generated_at": "2026-08-24T12:37:46.959229+00:00"
 }
