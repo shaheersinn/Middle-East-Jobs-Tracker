@@ -81,8 +81,8 @@
       "high_conf": 0,
       "this_week": 0,
       "last_week": 2,
-      "trend_boost": 0.6274,
-      "_rank_score": 1.2548
+      "trend_boost": 0.6219,
+      "_rank_score": 1.2438
     },
     {
       "department": "Regulatory & Compliance",
@@ -105,5 +105,5 @@
       "_rank_score": 1.2004
     }
   ],
-  "generated_at": "2026-08-25T04:33:03.071096+00:00"
+  "generated_at": "2026-08-25T06:36:08.646924+00:00"
 }
