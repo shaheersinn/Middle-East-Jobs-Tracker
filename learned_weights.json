@@ -7,10 +7,10 @@
     "LinkedIn": 2.4998
   },
   "dept_trend_boosts": {
-    "Banking & Finance": 1.1275,
-    "Capital Markets": 0.609,
+    "Banking & Finance": 1.062,
+    "Capital Markets": 0.6072,
     "Corporate / M&A": 0.6002,
-    "Data Privacy & Technology": 0.8978,
+    "Data Privacy & Technology": 0.9182,
     "Real Estate": 0.6002,
     "Project Finance & Infrastructure": 0.6002,
     "Energy & Natural Resources": 0.6002,
@@ -47,8 +47,8 @@
     "restructuring": 0.2502,
     "finance associate": 0.8095
   },
-  "total_runs": 1740,
-  "last_trained": "2026-08-25T12:36:44.766531+00:00",
+  "total_runs": 1741,
+  "last_trained": "2026-08-25T14:38:28.737978+00:00",
   "firm_velocity": {
     "baker_mckenzie": {
       "firm_name": "Baker McKenzie",
@@ -212,7 +212,7 @@
   },
   "partner_signal_ratio": 0,
   "geo_boosts": {
-    "Dubai": 1.3443,
+    "Dubai": 1.3254,
     "United Arab Emirates": 0.9998,
     "Abu Dhabi": 0.9998,
     "Riyadh": 0.9998,

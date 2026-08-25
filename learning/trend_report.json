@@ -16,7 +16,7 @@
       "high_conf": 0,
       "this_week": 1,
       "last_week": 2,
-      "trend_boost": 1.1275
+      "trend_boost": 1.062
     },
     {
       "department": "Data Privacy & Technology",
@@ -25,7 +25,7 @@
       "high_conf": 0,
       "this_week": 1,
       "last_week": 1,
-      "trend_boost": 0.8978
+      "trend_boost": 0.9182
     },
     {
       "department": "Restructuring & Insolvency",
@@ -54,7 +54,7 @@
       "high_conf": 0,
       "this_week": 1,
       "last_week": 2,
-      "trend_boost": 1.1275
+      "trend_boost": 1.062
     },
     {
       "department": "Data Privacy & Technology",
@@ -63,7 +63,7 @@
       "high_conf": 0,
       "this_week": 1,
       "last_week": 1,
-      "trend_boost": 0.8978
+      "trend_boost": 0.9182
     },
     {
       "department": "Restructuring & Insolvency",
@@ -81,8 +81,8 @@
       "high_conf": 0,
       "this_week": 0,
       "last_week": 2,
-      "trend_boost": 0.609,
-      "_rank_score": 1.218
+      "trend_boost": 0.6072,
+      "_rank_score": 1.2144
     },
     {
       "department": "Regulatory & Compliance",
@@ -105,5 +105,5 @@
       "_rank_score": 1.2004
     }
   ],
-  "generated_at": "2026-08-25T12:36:44.764870+00:00"
+  "generated_at": "2026-08-25T14:38:28.665162+00:00"
 }
