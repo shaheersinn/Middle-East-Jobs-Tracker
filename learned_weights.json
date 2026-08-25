@@ -7,8 +7,8 @@
     "LinkedIn": 2.4998
   },
   "dept_trend_boosts": {
-    "Banking & Finance": 1.5998,
-    "Capital Markets": 0.6219,
+    "Banking & Finance": 1.4398,
+    "Capital Markets": 0.6175,
     "Corporate / M&A": 0.6002,
     "Data Privacy & Technology": 0.8002,
     "Real Estate": 0.6002,
@@ -47,8 +47,8 @@
     "restructuring": 0.2502,
     "finance associate": 0.8095
   },
-  "total_runs": 1736,
-  "last_trained": "2026-08-25T06:36:08.648337+00:00",
+  "total_runs": 1737,
+  "last_trained": "2026-08-25T06:54:31.284731+00:00",
   "firm_velocity": {
     "baker_mckenzie": {
       "firm_name": "Baker McKenzie",
@@ -188,10 +188,10 @@
     },
     "shearman": {
       "firm_name": "A&O Shearman",
-      "this_week": 7,
-      "last_week": 5,
+      "this_week": 6,
+      "last_week": 6,
       "this_month": 12,
-      "acceleration": 0.4,
+      "acceleration": 0.0,
       "status": "stable"
     },
     "reed_smith": {
@@ -212,7 +212,7 @@
   },
   "partner_signal_ratio": 0,
   "geo_boosts": {
-    "Dubai": 1.5428,
+    "Dubai": 1.4342,
     "United Arab Emirates": 0.9998,
     "Abu Dhabi": 0.9998,
     "Riyadh": 0.9998,
