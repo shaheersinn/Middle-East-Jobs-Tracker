@@ -16,7 +16,7 @@
       "high_conf": 0,
       "this_week": 1,
       "last_week": 1,
-      "trend_boost": 0.9724
+      "trend_boost": 0.9779
     },
     {
       "department": "Restructuring & Insolvency",
@@ -54,7 +54,7 @@
       "high_conf": 0,
       "this_week": 1,
       "last_week": 1,
-      "trend_boost": 0.9724
+      "trend_boost": 0.9779
     },
     {
       "department": "Restructuring & Insolvency",
@@ -81,8 +81,8 @@
       "high_conf": 0,
       "this_week": 0,
       "last_week": 2,
-      "trend_boost": 0.6518,
-      "_rank_score": 1.9554
+      "trend_boost": 0.6414,
+      "_rank_score": 1.9242
     },
     {
       "department": "Regulatory & Compliance",
@@ -115,5 +115,5 @@
       "_rank_score": 1.2004
     }
   ],
-  "generated_at": "2026-08-27T06:51:06.331054+00:00"
+  "generated_at": "2026-08-27T17:33:50.067601+00:00"
 }
