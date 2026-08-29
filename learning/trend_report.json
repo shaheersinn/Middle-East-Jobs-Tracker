@@ -2,7 +2,7 @@
   "top4": [
     {
       "department": "Corporate / M&A",
-      "signal_count": 8,
+      "signal_count": 7,
       "firm_count": 4,
       "high_conf": 2,
       "this_week": 0,
@@ -11,12 +11,12 @@
     },
     {
       "department": "Banking & Finance",
-      "signal_count": 5,
+      "signal_count": 4,
       "firm_count": 1,
       "high_conf": 0,
       "this_week": 0,
       "last_week": 2,
-      "trend_boost": 0.9142
+      "trend_boost": 0.8514
     },
     {
       "department": "Arbitration & Disputes",
@@ -34,13 +34,13 @@
       "high_conf": 0,
       "this_week": 0,
       "last_week": 1,
-      "trend_boost": 0.6109
+      "trend_boost": 0.6087
     }
   ],
   "all_depts": [
     {
       "department": "Corporate / M&A",
-      "signal_count": 8,
+      "signal_count": 7,
       "firm_count": 4,
       "high_conf": 2,
       "this_week": 0,
@@ -49,12 +49,12 @@
     },
     {
       "department": "Banking & Finance",
-      "signal_count": 5,
+      "signal_count": 4,
       "firm_count": 1,
       "high_conf": 0,
       "this_week": 0,
       "last_week": 2,
-      "trend_boost": 0.9142
+      "trend_boost": 0.8514
     },
     {
       "department": "Arbitration & Disputes",
@@ -72,7 +72,7 @@
       "high_conf": 0,
       "this_week": 0,
       "last_week": 1,
-      "trend_boost": 0.6109
+      "trend_boost": 0.6087
     },
     {
       "department": "Restructuring & Insolvency",
@@ -81,8 +81,8 @@
       "high_conf": 0,
       "this_week": 0,
       "last_week": 2,
-      "trend_boost": 0.7637,
-      "_rank_score": 1.5274
+      "trend_boost": 0.731,
+      "_rank_score": 1.462
     },
     {
       "department": "Real Estate",
@@ -105,5 +105,5 @@
       "_rank_score": 1.2004
     }
   ],
-  "generated_at": "2026-08-29T08:32:36.295753+00:00"
+  "generated_at": "2026-08-29T12:30:35.345214+00:00"
 }
