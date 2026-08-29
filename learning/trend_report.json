@@ -16,7 +16,7 @@
       "high_conf": 0,
       "this_week": 0,
       "last_week": 2,
-      "trend_boost": 0.8514
+      "trend_boost": 0.8011
     },
     {
       "department": "Arbitration & Disputes",
@@ -34,7 +34,7 @@
       "high_conf": 0,
       "this_week": 0,
       "last_week": 1,
-      "trend_boost": 0.6087
+      "trend_boost": 0.607
     }
   ],
   "all_depts": [
@@ -54,7 +54,7 @@
       "high_conf": 0,
       "this_week": 0,
       "last_week": 2,
-      "trend_boost": 0.8514
+      "trend_boost": 0.8011
     },
     {
       "department": "Arbitration & Disputes",
@@ -72,7 +72,7 @@
       "high_conf": 0,
       "this_week": 0,
       "last_week": 1,
-      "trend_boost": 0.6087
+      "trend_boost": 0.607
     },
     {
       "department": "Restructuring & Insolvency",
@@ -81,8 +81,8 @@
       "high_conf": 0,
       "this_week": 0,
       "last_week": 2,
-      "trend_boost": 0.731,
-      "_rank_score": 1.462
+      "trend_boost": 0.7048,
+      "_rank_score": 1.4096
     },
     {
       "department": "Real Estate",
@@ -105,5 +105,5 @@
       "_rank_score": 1.2004
     }
   ],
-  "generated_at": "2026-08-29T12:30:35.345214+00:00"
+  "generated_at": "2026-08-29T14:53:52.005820+00:00"
 }
