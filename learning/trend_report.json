@@ -16,7 +16,7 @@
       "high_conf": 0,
       "this_week": 0,
       "last_week": 1,
-      "trend_boost": 0.607
+      "trend_boost": 0.6056
     },
     {
       "department": "Arbitration & Disputes",
@@ -54,7 +54,7 @@
       "high_conf": 0,
       "this_week": 0,
       "last_week": 1,
-      "trend_boost": 0.607
+      "trend_boost": 0.6056
     },
     {
       "department": "Arbitration & Disputes",
@@ -81,8 +81,8 @@
       "high_conf": 0,
       "this_week": 0,
       "last_week": 2,
-      "trend_boost": 0.6037,
-      "_rank_score": 1.2074
+      "trend_boost": 0.603,
+      "_rank_score": 1.206
     },
     {
       "department": "Real Estate",
@@ -105,5 +105,5 @@
       "_rank_score": 1.2004
     }
   ],
-  "generated_at": "2026-09-01T09:05:25.612124+00:00"
+  "generated_at": "2026-09-01T11:20:19.426888+00:00"
 }
