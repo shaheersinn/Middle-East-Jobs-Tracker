@@ -5,15 +5,15 @@
       "this_week": 0,
       "last_week": 0,
       "total_30d": 2,
-      "boost": 0.9993,
+      "boost": 0.9994,
       "trend": "\u2192 stable"
     },
     {
       "city": "Dubai",
       "this_week": 1,
-      "last_week": 6,
+      "last_week": 5,
       "total_30d": 17,
-      "boost": 0.2722,
+      "boost": 0.2678,
       "trend": "\u2193 cooling"
     },
     {
@@ -25,5 +25,5 @@
       "trend": "\u2193 cooling"
     }
   ],
-  "generated_at": "2026-09-01T03:10:55.656897+00:00"
+  "generated_at": "2026-09-01T09:05:25.612828+00:00"
 }
