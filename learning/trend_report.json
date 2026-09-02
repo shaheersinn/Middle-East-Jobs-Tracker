@@ -2,7 +2,7 @@
   "top4": [
     {
       "department": "Corporate / M&A",
-      "signal_count": 6,
+      "signal_count": 5,
       "firm_count": 4,
       "high_conf": 2,
       "this_week": 0,
@@ -16,16 +16,7 @@
       "high_conf": 0,
       "this_week": 0,
       "last_week": 1,
-      "trend_boost": 0.6018
-    },
-    {
-      "department": "Arbitration & Disputes",
-      "signal_count": 2,
-      "firm_count": 1,
-      "high_conf": 0,
-      "this_week": 0,
-      "last_week": 2,
-      "trend_boost": 0.9198
+      "trend_boost": 0.6014
     },
     {
       "department": "Data Privacy & Technology",
@@ -35,12 +26,21 @@
       "this_week": 0,
       "last_week": 0,
       "trend_boost": 0.6002
+    },
+    {
+      "department": "Arbitration & Disputes",
+      "signal_count": 2,
+      "firm_count": 1,
+      "high_conf": 0,
+      "this_week": 0,
+      "last_week": 2,
+      "trend_boost": 0.8558
     }
   ],
   "all_depts": [
     {
       "department": "Corporate / M&A",
-      "signal_count": 6,
+      "signal_count": 5,
       "firm_count": 4,
       "high_conf": 2,
       "this_week": 0,
@@ -54,16 +54,7 @@
       "high_conf": 0,
       "this_week": 0,
       "last_week": 1,
-      "trend_boost": 0.6018
-    },
-    {
-      "department": "Arbitration & Disputes",
-      "signal_count": 2,
-      "firm_count": 1,
-      "high_conf": 0,
-      "this_week": 0,
-      "last_week": 2,
-      "trend_boost": 0.9198
+      "trend_boost": 0.6014
     },
     {
       "department": "Data Privacy & Technology",
@@ -73,6 +64,15 @@
       "this_week": 0,
       "last_week": 0,
       "trend_boost": 0.6002
+    },
+    {
+      "department": "Arbitration & Disputes",
+      "signal_count": 2,
+      "firm_count": 1,
+      "high_conf": 0,
+      "this_week": 0,
+      "last_week": 2,
+      "trend_boost": 0.8558
     },
     {
       "department": "Restructuring & Insolvency",
@@ -81,8 +81,8 @@
       "high_conf": 0,
       "this_week": 0,
       "last_week": 2,
-      "trend_boost": 0.601,
-      "_rank_score": 1.202
+      "trend_boost": 0.6008,
+      "_rank_score": 1.2016
     },
     {
       "department": "Real Estate",
@@ -105,5 +105,5 @@
       "_rank_score": 1.2004
     }
   ],
-  "generated_at": "2026-09-02T08:19:04.581190+00:00"
+  "generated_at": "2026-09-02T10:50:55.725544+00:00"
 }

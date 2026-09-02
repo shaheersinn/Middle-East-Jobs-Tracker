@@ -2,9 +2,9 @@
   "sources": [
     {
       "source": "Firm Careers Page",
-      "total_signals": 18,
+      "total_signals": 17,
       "firm_coverage": 2,
-      "avg_score": 1.21,
+      "avg_score": 1.23,
       "hire_signals": 0,
       "last_seen": "2026-08-26",
       "multiplier": 0.2502
@@ -25,9 +25,9 @@
       "avg_score": 2.58,
       "hire_signals": 2,
       "last_seen": "2026-08-12",
-      "multiplier": 0.4993
+      "multiplier": 0.4983
     }
   ],
   "total_active": 3,
-  "generated_at": "2026-09-02T08:19:04.581629+00:00"
+  "generated_at": "2026-09-02T10:50:55.725995+00:00"
 }
