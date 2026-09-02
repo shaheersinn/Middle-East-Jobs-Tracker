@@ -16,16 +16,16 @@
       "high_conf": 0,
       "this_week": 0,
       "last_week": 1,
-      "trend_boost": 0.6023
+      "trend_boost": 0.6018
     },
     {
       "department": "Arbitration & Disputes",
       "signal_count": 2,
       "firm_count": 1,
       "high_conf": 0,
-      "this_week": 1,
-      "last_week": 1,
-      "trend_boost": 0.9998
+      "this_week": 0,
+      "last_week": 2,
+      "trend_boost": 0.9198
     },
     {
       "department": "Data Privacy & Technology",
@@ -33,7 +33,7 @@
       "firm_count": 1,
       "high_conf": 0,
       "this_week": 0,
-      "last_week": 1,
+      "last_week": 0,
       "trend_boost": 0.6002
     }
   ],
@@ -54,16 +54,16 @@
       "high_conf": 0,
       "this_week": 0,
       "last_week": 1,
-      "trend_boost": 0.6023
+      "trend_boost": 0.6018
     },
     {
       "department": "Arbitration & Disputes",
       "signal_count": 2,
       "firm_count": 1,
       "high_conf": 0,
-      "this_week": 1,
-      "last_week": 1,
-      "trend_boost": 0.9998
+      "this_week": 0,
+      "last_week": 2,
+      "trend_boost": 0.9198
     },
     {
       "department": "Data Privacy & Technology",
@@ -71,7 +71,7 @@
       "firm_count": 1,
       "high_conf": 0,
       "this_week": 0,
-      "last_week": 1,
+      "last_week": 0,
       "trend_boost": 0.6002
     },
     {
@@ -81,8 +81,8 @@
       "high_conf": 0,
       "this_week": 0,
       "last_week": 2,
-      "trend_boost": 0.6012,
-      "_rank_score": 1.2024
+      "trend_boost": 0.601,
+      "_rank_score": 1.202
     },
     {
       "department": "Real Estate",
@@ -105,5 +105,5 @@
       "_rank_score": 1.2004
     }
   ],
-  "generated_at": "2026-09-02T02:29:32.417469+00:00"
+  "generated_at": "2026-09-02T08:19:04.581190+00:00"
 }
