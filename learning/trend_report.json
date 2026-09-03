@@ -7,7 +7,7 @@
       "high_conf": 0,
       "this_week": 1,
       "last_week": 1,
-      "trend_boost": 0.6804
+      "trend_boost": 0.7443
     },
     {
       "department": "Corporate / M&A",
@@ -34,7 +34,7 @@
       "high_conf": 0,
       "this_week": 0,
       "last_week": 2,
-      "trend_boost": 0.667
+      "trend_boost": 0.6536
     }
   ],
   "all_depts": [
@@ -45,7 +45,7 @@
       "high_conf": 0,
       "this_week": 1,
       "last_week": 1,
-      "trend_boost": 0.6804
+      "trend_boost": 0.7443
     },
     {
       "department": "Corporate / M&A",
@@ -72,7 +72,7 @@
       "high_conf": 0,
       "this_week": 0,
       "last_week": 2,
-      "trend_boost": 0.667
+      "trend_boost": 0.6536
     },
     {
       "department": "Restructuring & Insolvency",
@@ -105,5 +105,5 @@
       "_rank_score": 1.2004
     }
   ],
-  "generated_at": "2026-09-03T10:56:00.790600+00:00"
+  "generated_at": "2026-09-03T14:03:17.153046+00:00"
 }
