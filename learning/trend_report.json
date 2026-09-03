@@ -16,7 +16,7 @@
       "high_conf": 0,
       "this_week": 0,
       "last_week": 1,
-      "trend_boost": 0.6006
+      "trend_boost": 0.6005
     },
     {
       "department": "Data Privacy & Technology",
@@ -34,7 +34,7 @@
       "high_conf": 0,
       "this_week": 0,
       "last_week": 2,
-      "trend_boost": 0.7048
+      "trend_boost": 0.6838
     }
   ],
   "all_depts": [
@@ -54,7 +54,7 @@
       "high_conf": 0,
       "this_week": 0,
       "last_week": 1,
-      "trend_boost": 0.6006
+      "trend_boost": 0.6005
     },
     {
       "department": "Data Privacy & Technology",
@@ -72,7 +72,7 @@
       "high_conf": 0,
       "this_week": 0,
       "last_week": 2,
-      "trend_boost": 0.7048
+      "trend_boost": 0.6838
     },
     {
       "department": "Restructuring & Insolvency",
@@ -81,8 +81,8 @@
       "high_conf": 0,
       "this_week": 0,
       "last_week": 2,
-      "trend_boost": 0.6003,
-      "_rank_score": 1.2006
+      "trend_boost": 0.6002,
+      "_rank_score": 1.2004
     },
     {
       "department": "Real Estate",
@@ -105,5 +105,5 @@
       "_rank_score": 1.2004
     }
   ],
-  "generated_at": "2026-09-03T02:37:17.430874+00:00"
+  "generated_at": "2026-09-03T08:28:36.855521+00:00"
 }
