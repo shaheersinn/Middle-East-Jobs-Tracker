@@ -7,38 +7,38 @@
     "LinkedIn": 2.4998
   },
   "dept_trend_boosts": {
-    "Banking & Finance": 0.6005,
+    "Banking & Finance": 0.6804,
     "Capital Markets": 0.6002,
     "Corporate / M&A": 0.6002,
     "Data Privacy & Technology": 0.6002,
     "Real Estate": 0.6002,
     "Project Finance & Infrastructure": 0.6002,
     "Energy & Natural Resources": 0.6002,
-    "Arbitration & Disputes": 0.6838,
+    "Arbitration & Disputes": 0.667,
     "Regulatory & Compliance": 0.6002,
     "Restructuring & Insolvency": 0.6002,
-    "Employment & Labour": 0.6019
+    "Employment & Labour": 0.6015
   },
   "keyword_boosts": {
     "development": 0.7823,
-    "data": 1.9519,
+    "data": 1.9343,
     "privacy": 0.9598,
     "cybersecurity": 1.1258,
-    "capital markets": 0.2505,
+    "capital markets": 0.2504,
     "debt capital markets": 1.1229,
     "equity capital markets": 1.1229,
     "equity": 1.1229,
     "digital assets": 1.7732,
-    "digital": 1.9519,
+    "digital": 1.9343,
     "property": 0.7823,
-    "corporate": 0.8573,
+    "corporate": 0.9019,
     "energy": 0.2502,
     "real estate": 0.2502,
     "banking and finance": 1.4412,
     "banking": 1.4412,
-    "finance": 1.5282,
+    "finance": 1.4908,
     "data privacy": 0.9598,
-    "technology": 1.9519,
+    "technology": 1.9343,
     "acquisition": 0.2502,
     "disputes associate": 2.4998,
     "deal": 0.421,
@@ -47,8 +47,8 @@
     "restructuring": 0.2502,
     "finance associate": 0.7294
   },
-  "total_runs": 1794,
-  "last_trained": "2026-09-03T08:28:36.857114+00:00",
+  "total_runs": 1795,
+  "last_trained": "2026-09-03T10:56:00.794176+00:00",
   "firm_velocity": {
     "baker_mckenzie": {
       "firm_name": "Baker McKenzie",
@@ -188,10 +188,10 @@
     },
     "shearman": {
       "firm_name": "A&O Shearman",
-      "this_week": 0,
+      "this_week": 1,
       "last_week": 6,
-      "this_month": 6,
-      "acceleration": -1.0,
+      "this_month": 7,
+      "acceleration": -0.833,
       "status": "decelerating"
     },
     "reed_smith": {
@@ -204,22 +204,21 @@
     }
   },
   "seniority_distribution": {
-    "Associate": 0.7,
-    "Attorney / Lawyer": 0.05,
-    "Junior Associate": 0.05,
-    "Mid-Level Associate": 0.1,
-    "Senior Associate": 0.1
+    "Associate": 0.737,
+    "Attorney / Lawyer": 0.053,
+    "Mid-Level Associate": 0.105,
+    "Senior Associate": 0.105
   },
   "partner_signal_ratio": 0,
   "geo_boosts": {
-    "Dubai": 0.2512,
+    "Dubai": 0.251,
     "United Arab Emirates": 0.9998,
     "Abu Dhabi": 0.9998,
     "Riyadh": 0.9998,
     "UAE": 0.3084,
     "Middle East": 0.9998,
     "Dubai, United Arab Emirates": 0.9994,
-    "Dubai, Dubai, United Arab Emirates": 0.8428,
+    "Dubai, Dubai, United Arab Emirates": 0.8742,
     "Saudi Arabia": 0.9998
   },
   "cross_firm_boosts": {
@@ -228,11 +227,12 @@
     "Energy & Natural Resources": 1.0731
   },
   "time_patterns": {
-    "1": 0.5622,
-    "2": 0.9949,
-    "3": 1.4427,
-    "5": 1.3186,
-    "6": 0.6816
+    "1": 0.6407,
+    "2": 1.134,
+    "3": 1.6444,
+    "4": 0.301,
+    "5": 1.5029,
+    "6": 0.7769
   },
   "dedup_confidence": {}
 }
