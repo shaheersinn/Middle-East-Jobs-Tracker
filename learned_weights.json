@@ -7,21 +7,21 @@
     "LinkedIn": 2.4998
   },
   "dept_trend_boosts": {
-    "Banking & Finance": 0.7954,
+    "Banking & Finance": 0.8363,
     "Capital Markets": 0.6002,
     "Corporate / M&A": 0.6002,
     "Data Privacy & Technology": 0.6002,
     "Real Estate": 0.6002,
     "Project Finance & Infrastructure": 0.6002,
     "Energy & Natural Resources": 0.6002,
-    "Arbitration & Disputes": 0.6429,
+    "Arbitration & Disputes": 0.6343,
     "Regulatory & Compliance": 0.6002,
     "Restructuring & Insolvency": 0.6002,
-    "Employment & Labour": 0.601
+    "Employment & Labour": 0.6008
   },
   "keyword_boosts": {
     "development": 0.7823,
-    "data": 1.9089,
+    "data": 1.8999,
     "privacy": 0.9598,
     "cybersecurity": 1.1258,
     "capital markets": 0.2502,
@@ -29,16 +29,16 @@
     "equity capital markets": 1.1229,
     "equity": 1.1229,
     "digital assets": 1.7732,
-    "digital": 1.9089,
+    "digital": 1.8999,
     "property": 0.7823,
-    "corporate": 0.9661,
+    "corporate": 0.9889,
     "energy": 0.2502,
     "real estate": 0.2502,
     "banking and finance": 1.4412,
     "banking": 1.4412,
-    "finance": 1.437,
+    "finance": 1.4178,
     "data privacy": 0.9598,
-    "technology": 1.9089,
+    "technology": 1.8999,
     "acquisition": 0.2502,
     "disputes associate": 2.4998,
     "deal": 0.421,
@@ -47,8 +47,8 @@
     "restructuring": 0.2502,
     "finance associate": 0.7294
   },
-  "total_runs": 1797,
-  "last_trained": "2026-09-03T19:01:58.040181+00:00",
+  "total_runs": 1798,
+  "last_trained": "2026-09-03T22:09:39.335274+00:00",
   "firm_velocity": {
     "baker_mckenzie": {
       "firm_name": "Baker McKenzie",
@@ -211,14 +211,14 @@
   },
   "partner_signal_ratio": 0,
   "geo_boosts": {
-    "Dubai": 0.2506,
+    "Dubai": 0.2505,
     "United Arab Emirates": 0.9998,
     "Abu Dhabi": 0.9998,
     "Riyadh": 0.9998,
     "UAE": 0.3084,
     "Middle East": 0.9998,
     "Dubai, United Arab Emirates": 0.9994,
-    "Dubai, Dubai, United Arab Emirates": 0.9195,
+    "Dubai, Dubai, United Arab Emirates": 0.9356,
     "Saudi Arabia": 0.9998
   },
   "cross_firm_boosts": {
