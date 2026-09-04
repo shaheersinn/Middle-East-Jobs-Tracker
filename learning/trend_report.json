@@ -2,12 +2,12 @@
   "top4": [
     {
       "department": "Banking & Finance",
-      "signal_count": 4,
-      "firm_count": 1,
-      "high_conf": 0,
-      "this_week": 1,
+      "signal_count": 6,
+      "firm_count": 3,
+      "high_conf": 2,
+      "this_week": 3,
       "last_week": 1,
-      "trend_boost": 0.8952
+      "trend_boost": 1.1562
     },
     {
       "department": "Corporate / M&A",
@@ -34,18 +34,18 @@
       "high_conf": 0,
       "this_week": 0,
       "last_week": 1,
-      "trend_boost": 0.6219
+      "trend_boost": 0.6175
     }
   ],
   "all_depts": [
     {
       "department": "Banking & Finance",
-      "signal_count": 4,
-      "firm_count": 1,
-      "high_conf": 0,
-      "this_week": 1,
+      "signal_count": 6,
+      "firm_count": 3,
+      "high_conf": 2,
+      "this_week": 3,
       "last_week": 1,
-      "trend_boost": 0.8952
+      "trend_boost": 1.1562
     },
     {
       "department": "Corporate / M&A",
@@ -72,7 +72,7 @@
       "high_conf": 0,
       "this_week": 0,
       "last_week": 1,
-      "trend_boost": 0.6219
+      "trend_boost": 0.6175
     },
     {
       "department": "Restructuring & Insolvency",
@@ -105,5 +105,5 @@
       "_rank_score": 1.2004
     }
   ],
-  "generated_at": "2026-09-04T08:24:11.560537+00:00"
+  "generated_at": "2026-09-04T10:52:03.315092+00:00"
 }
