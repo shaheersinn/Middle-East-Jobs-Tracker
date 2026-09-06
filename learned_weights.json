@@ -3,13 +3,13 @@
     "Firm Careers Page": 0.2502,
     "Website Monitor": 2.4998,
     "Recruiter": 2.4998,
-    "Google News": 0.552,
+    "Google News": 0.5526,
     "LinkedIn": 2.4998
   },
   "dept_trend_boosts": {
-    "Banking & Finance": 1.0378,
+    "Banking & Finance": 1.0302,
     "Capital Markets": 0.6002,
-    "Corporate / M&A": 0.9781,
+    "Corporate / M&A": 0.9825,
     "Data Privacy & Technology": 0.6002,
     "Real Estate": 0.6002,
     "Project Finance & Infrastructure": 0.6002,
@@ -21,7 +21,7 @@
   },
   "keyword_boosts": {
     "development": 0.7823,
-    "data": 1.9439,
+    "data": 1.944,
     "privacy": 0.9598,
     "cybersecurity": 1.1258,
     "capital markets": 0.2502,
@@ -29,16 +29,16 @@
     "equity capital markets": 1.1229,
     "equity": 1.1229,
     "digital assets": 1.7732,
-    "digital": 1.9439,
+    "digital": 1.944,
     "property": 0.7823,
-    "corporate": 1.1259,
+    "corporate": 1.1261,
     "energy": 0.2502,
     "real estate": 0.2502,
     "banking and finance": 1.4412,
     "banking": 1.4412,
-    "finance": 1.0751,
+    "finance": 1.0744,
     "data privacy": 0.9598,
-    "technology": 1.9439,
+    "technology": 1.944,
     "acquisition": 0.2502,
     "disputes associate": 2.4998,
     "deal": 0.421,
@@ -47,8 +47,8 @@
     "restructuring": 0.2502,
     "finance associate": 0.7294
   },
-  "total_runs": 1820,
-  "last_trained": "2026-09-06T19:53:16.316600+00:00",
+  "total_runs": 1821,
+  "last_trained": "2026-09-06T21:54:09.965230+00:00",
   "firm_velocity": {
     "baker_mckenzie": {
       "firm_name": "Baker McKenzie",
@@ -212,21 +212,21 @@
   },
   "partner_signal_ratio": 0,
   "geo_boosts": {
-    "Dubai": 0.8281,
+    "Dubai": 0.8625,
     "United Arab Emirates": 0.9998,
     "Abu Dhabi": 0.9998,
     "Riyadh": 0.9998,
     "UAE": 0.3084,
-    "Middle East": 1.1977,
+    "Middle East": 1.1982,
     "Dubai, United Arab Emirates": 0.9994,
-    "Dubai, Dubai, United Arab Emirates": 1.094,
+    "Dubai, Dubai, United Arab Emirates": 1.0952,
     "Saudi Arabia": 0.9998
   },
   "cross_firm_boosts": {
     "Corporate / M&A": 1.0802,
     "Real Estate": 1.0798,
     "Energy & Natural Resources": 1.0731,
-    "Banking & Finance": 1.0791
+    "Banking & Finance": 1.0793
   },
   "time_patterns": {
     "2": 1.0084,
