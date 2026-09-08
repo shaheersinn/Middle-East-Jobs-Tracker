@@ -5,7 +5,7 @@
       "this_week": 3,
       "last_week": 1,
       "total_30d": 15,
-      "boost": 1.8568,
+      "boost": 1.9854,
       "trend": "\u2191 heating"
     },
     {
@@ -13,7 +13,7 @@
       "this_week": 2,
       "last_week": 0,
       "total_30d": 3,
-      "boost": 1.1996,
+      "boost": 1.1997,
       "trend": "\u2191 heating"
     },
     {
@@ -21,9 +21,9 @@
       "this_week": 1,
       "last_week": 0,
       "total_30d": 4,
-      "boost": 1.099,
+      "boost": 1.0992,
       "trend": "\u2191 heating"
     }
   ],
-  "generated_at": "2026-09-07T22:27:00.285037+00:00"
+  "generated_at": "2026-09-08T02:41:25.319582+00:00"
 }
