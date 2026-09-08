@@ -20,14 +20,14 @@
     },
     {
       "source": "Google News",
-      "total_signals": 3,
+      "total_signals": 4,
       "firm_coverage": 3,
-      "avg_score": 2.5,
-      "hire_signals": 3,
-      "last_seen": "2026-09-04",
-      "multiplier": 0.5295
+      "avg_score": 2.46,
+      "hire_signals": 4,
+      "last_seen": "2026-09-08",
+      "multiplier": 0.5273
     }
   ],
   "total_active": 3,
-  "generated_at": "2026-09-08T08:30:25.632101+00:00"
+  "generated_at": "2026-09-08T10:48:42.256598+00:00"
 }
