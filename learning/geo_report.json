@@ -5,7 +5,7 @@
       "this_week": 3,
       "last_week": 0,
       "total_30d": 14,
-      "boost": 2.1521,
+      "boost": 1.9817,
       "trend": "\u2191 heating"
     },
     {
@@ -13,7 +13,7 @@
       "this_week": 3,
       "last_week": 0,
       "total_30d": 4,
-      "boost": 1.2737,
+      "boost": 1.279,
       "trend": "\u2191 heating"
     },
     {
@@ -23,7 +23,15 @@
       "total_30d": 4,
       "boost": 1.0998,
       "trend": "\u2191 heating"
+    },
+    {
+      "city": "Riyadh",
+      "this_week": 2,
+      "last_week": 0,
+      "total_30d": 2,
+      "boost": 1.0398,
+      "trend": "\u2191 heating"
     }
   ],
-  "generated_at": "2026-09-09T08:32:52.201028+00:00"
+  "generated_at": "2026-09-09T11:01:36.130572+00:00"
 }
