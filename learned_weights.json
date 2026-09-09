@@ -3,13 +3,13 @@
     "Firm Careers Page": 0.2502,
     "Website Monitor": 2.4998,
     "Recruiter": 2.4998,
-    "Google News": 0.522,
+    "Google News": 0.5213,
     "LinkedIn": 2.4998
   },
   "dept_trend_boosts": {
-    "Banking & Finance": 1.0014,
+    "Banking & Finance": 1.0011,
     "Capital Markets": 0.6002,
-    "Corporate / M&A": 0.9992,
+    "Corporate / M&A": 0.9994,
     "Data Privacy & Technology": 0.6002,
     "Real Estate": 0.6002,
     "Project Finance & Infrastructure": 0.6002,
@@ -21,34 +21,34 @@
   },
   "keyword_boosts": {
     "development": 0.7823,
-    "data": 1.9657,
+    "data": 1.9652,
     "privacy": 0.9598,
     "cybersecurity": 1.1258,
-    "capital markets": 0.2507,
+    "capital markets": 0.2506,
     "debt capital markets": 1.1229,
     "equity capital markets": 1.1229,
     "equity": 1.1229,
     "digital assets": 1.7732,
-    "digital": 1.9657,
+    "digital": 1.9652,
     "property": 0.7823,
-    "corporate": 1.0034,
+    "corporate": 0.9899,
     "energy": 0.2502,
     "real estate": 0.2502,
     "banking and finance": 1.4412,
-    "banking": 0.6451,
-    "finance": 0.9291,
+    "banking": 0.6298,
+    "finance": 0.926,
     "data privacy": 0.9598,
-    "technology": 1.9657,
+    "technology": 1.9652,
     "acquisition": 0.2502,
     "disputes associate": 2.4998,
     "deal": 0.421,
     "m&a": 0.2502,
     "regulatory": 0.2814,
     "restructuring": 0.2502,
-    "finance associate": 0.7254
+    "finance associate": 0.7248
   },
-  "total_runs": 1835,
-  "last_trained": "2026-09-09T02:41:33.941257+00:00",
+  "total_runs": 1836,
+  "last_trained": "2026-09-09T08:32:52.201910+00:00",
   "firm_velocity": {
     "baker_mckenzie": {
       "firm_name": "Baker McKenzie",
@@ -189,9 +189,9 @@
     "shearman": {
       "firm_name": "A&O Shearman",
       "this_week": 3,
-      "last_week": 1,
-      "this_month": 4,
-      "acceleration": 2.0,
+      "last_week": 0,
+      "this_month": 3,
+      "acceleration": 3.0,
       "status": "accelerating"
     },
     "reed_smith": {
@@ -212,12 +212,12 @@
   },
   "partner_signal_ratio": 0,
   "geo_boosts": {
-    "Dubai": 2.3651,
+    "Dubai": 2.1521,
     "United Arab Emirates": 0.9998,
     "Abu Dhabi": 0.9998,
     "Riyadh": 0.9998,
     "UAE": 0.3084,
-    "Middle East": 1.2671,
+    "Middle East": 1.2737,
     "Dubai, United Arab Emirates": 0.9994,
     "Dubai, Dubai, United Arab Emirates": 1.0998,
     "Saudi Arabia": 0.9998
@@ -229,11 +229,11 @@
     "Banking & Finance": 1.0798
   },
   "time_patterns": {
-    "2": 1.1244,
-    "3": 1.5888,
-    "4": 0.314,
-    "5": 1.0263,
-    "6": 0.9465
+    "2": 1.113,
+    "3": 1.5727,
+    "4": 0.3108,
+    "5": 1.0159,
+    "6": 0.9875
   },
   "dedup_confidence": {}
 }
