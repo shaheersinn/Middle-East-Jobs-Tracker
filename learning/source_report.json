@@ -16,7 +16,7 @@
       "avg_score": 2.01,
       "hire_signals": 4,
       "last_seen": "2026-09-11",
-      "multiplier": 0.4718
+      "multiplier": 0.4672
     },
     {
       "source": "RSS:Legal Business",
@@ -25,7 +25,7 @@
       "avg_score": 1.88,
       "hire_signals": 2,
       "last_seen": "2026-09-09",
-      "multiplier": 0.4176
+      "multiplier": 0.4167
     },
     {
       "source": "LinkedIn",
@@ -38,5 +38,5 @@
     }
   ],
   "total_active": 4,
-  "generated_at": "2026-09-11T17:41:44.658810+00:00"
+  "generated_at": "2026-09-11T20:20:52.183649+00:00"
 }
