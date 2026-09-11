@@ -10,22 +10,13 @@
       "multiplier": 0.2502
     },
     {
-      "source": "LinkedIn",
-      "total_signals": 4,
-      "firm_coverage": 3,
-      "avg_score": 11.23,
-      "hire_signals": 0,
-      "last_seen": "2026-09-05",
-      "multiplier": 2.4998
-    },
-    {
       "source": "Google News",
-      "total_signals": 4,
-      "firm_coverage": 3,
-      "avg_score": 2.46,
-      "hire_signals": 4,
+      "total_signals": 3,
+      "firm_coverage": 2,
+      "avg_score": 2.02,
+      "hire_signals": 3,
       "last_seen": "2026-09-08",
-      "multiplier": 0.5083
+      "multiplier": 0.4939
     },
     {
       "source": "RSS:Legal Business",
@@ -34,9 +25,18 @@
       "avg_score": 1.88,
       "hire_signals": 2,
       "last_seen": "2026-09-09",
-      "multiplier": 0.4284
+      "multiplier": 0.4222
+    },
+    {
+      "source": "LinkedIn",
+      "total_signals": 2,
+      "firm_coverage": 2,
+      "avg_score": 9.51,
+      "hire_signals": 0,
+      "last_seen": "2026-09-05",
+      "multiplier": 2.4998
     }
   ],
   "total_active": 4,
-  "generated_at": "2026-09-11T02:36:58.698279+00:00"
+  "generated_at": "2026-09-11T08:29:29.599952+00:00"
 }
