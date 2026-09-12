@@ -7,7 +7,7 @@
       "high_conf": 2,
       "this_week": 2,
       "last_week": 3,
-      "trend_boost": 1.2409
+      "trend_boost": 1.1661
     },
     {
       "department": "Capital Markets",
@@ -16,7 +16,7 @@
       "high_conf": 2,
       "this_week": 2,
       "last_week": 0,
-      "trend_boost": 0.991
+      "trend_boost": 0.9928
     },
     {
       "department": "Corporate / M&A",
@@ -45,7 +45,7 @@
       "high_conf": 2,
       "this_week": 2,
       "last_week": 3,
-      "trend_boost": 1.2409
+      "trend_boost": 1.1661
     },
     {
       "department": "Capital Markets",
@@ -54,7 +54,7 @@
       "high_conf": 2,
       "this_week": 2,
       "last_week": 0,
-      "trend_boost": 0.991
+      "trend_boost": 0.9928
     },
     {
       "department": "Corporate / M&A",
@@ -95,5 +95,5 @@
       "_rank_score": 1.2004
     }
   ],
-  "generated_at": "2026-09-11T23:48:47.587650+00:00"
+  "generated_at": "2026-09-12T02:46:28.964702+00:00"
 }
