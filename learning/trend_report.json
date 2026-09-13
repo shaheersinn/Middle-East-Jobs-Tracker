@@ -7,7 +7,7 @@
       "high_conf": 2,
       "this_week": 2,
       "last_week": 3,
-      "trend_boost": 0.9295
+      "trend_boost": 0.9169
     },
     {
       "department": "Corporate / M&A",
@@ -16,7 +16,7 @@
       "high_conf": 2,
       "this_week": 2,
       "last_week": 1,
-      "trend_boost": 1.4426
+      "trend_boost": 1.4741
     },
     {
       "department": "Capital Markets",
@@ -25,7 +25,7 @@
       "high_conf": 2,
       "this_week": 2,
       "last_week": 0,
-      "trend_boost": 0.9985
+      "trend_boost": 0.9988
     },
     {
       "department": "Restructuring & Insolvency",
@@ -45,7 +45,7 @@
       "high_conf": 2,
       "this_week": 2,
       "last_week": 3,
-      "trend_boost": 0.9295
+      "trend_boost": 0.9169
     },
     {
       "department": "Corporate / M&A",
@@ -54,7 +54,7 @@
       "high_conf": 2,
       "this_week": 2,
       "last_week": 1,
-      "trend_boost": 1.4426
+      "trend_boost": 1.4741
     },
     {
       "department": "Capital Markets",
@@ -63,7 +63,7 @@
       "high_conf": 2,
       "this_week": 2,
       "last_week": 0,
-      "trend_boost": 0.9985
+      "trend_boost": 0.9988
     },
     {
       "department": "Restructuring & Insolvency",
@@ -73,16 +73,6 @@
       "this_week": 0,
       "last_week": 0,
       "trend_boost": 0.6002
-    },
-    {
-      "department": "Data Privacy & Technology",
-      "signal_count": 2,
-      "firm_count": 1,
-      "high_conf": 0,
-      "this_week": 0,
-      "last_week": 0,
-      "trend_boost": 0.6002,
-      "_rank_score": 1.2004
     },
     {
       "department": "Arbitration & Disputes",
@@ -95,5 +85,5 @@
       "_rank_score": 1.2004
     }
   ],
-  "generated_at": "2026-09-13T02:44:23.663873+00:00"
+  "generated_at": "2026-09-13T08:42:38.118326+00:00"
 }
