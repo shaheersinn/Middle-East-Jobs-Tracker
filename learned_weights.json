@@ -3,20 +3,20 @@
     "Firm Careers Page": 0.2502,
     "Website Monitor": 2.4998,
     "Recruiter": 2.4998,
-    "Google News": 0.465,
+    "Google News": 0.4713,
     "LinkedIn": 2.4998,
-    "RSS:Legal Business": 0.4291
+    "RSS:Legal Business": 0.419
   },
   "dept_trend_boosts": {
-    "Banking & Finance": 0.8799,
-    "Capital Markets": 0.9997,
-    "Corporate / M&A": 1.567,
+    "Banking & Finance": 0.8239,
+    "Capital Markets": 0.9998,
+    "Corporate / M&A": 1.7536,
     "Data Privacy & Technology": 0.6002,
     "Real Estate": 0.6002,
     "Project Finance & Infrastructure": 0.6002,
     "Energy & Natural Resources": 0.6002,
     "Arbitration & Disputes": 0.6002,
-    "Regulatory & Compliance": 0.9954,
+    "Regulatory & Compliance": 0.9963,
     "Restructuring & Insolvency": 0.6002,
     "Employment & Labour": 0.6002
   },
@@ -25,19 +25,19 @@
     "data": 2.4774,
     "privacy": 0.9598,
     "cybersecurity": 1.1258,
-    "capital markets": 0.4687,
+    "capital markets": 0.4763,
     "debt capital markets": 1.1229,
     "equity capital markets": 1.1229,
     "equity": 1.1229,
     "digital assets": 1.7732,
     "digital": 2.4774,
     "property": 0.7823,
-    "corporate": 0.6803,
+    "corporate": 0.6579,
     "energy": 0.2502,
     "real estate": 0.2502,
     "banking and finance": 1.4412,
-    "banking": 0.7837,
-    "finance": 0.5662,
+    "banking": 0.7895,
+    "finance": 0.5694,
     "data privacy": 0.9598,
     "technology": 2.4774,
     "acquisition": 0.2502,
@@ -46,10 +46,10 @@
     "m&a": 0.2502,
     "regulatory": 0.2814,
     "restructuring": 0.2502,
-    "finance associate": 0.9962
+    "finance associate": 1.0036
   },
-  "total_runs": 1868,
-  "last_trained": "2026-09-14T09:29:04.447239+00:00",
+  "total_runs": 1869,
+  "last_trained": "2026-09-14T12:06:18.682321+00:00",
   "firm_velocity": {
     "baker_mckenzie": {
       "firm_name": "Baker McKenzie",
@@ -117,11 +117,11 @@
     },
     "sullivan_cromwell": {
       "firm_name": "Sullivan & Cromwell LLP",
-      "this_week": 0,
-      "last_week": 1,
-      "this_month": 1,
-      "acceleration": -1.0,
-      "status": "decelerating"
+      "this_week": 2,
+      "last_week": 0,
+      "this_month": 2,
+      "acceleration": 2.0,
+      "status": "accelerating"
     },
     "white_case": {
       "firm_name": "White & Case LLP",
@@ -141,11 +141,11 @@
     },
     "mcdermott": {
       "firm_name": "McDermott Will & Emery LLP",
-      "this_week": 0,
-      "last_week": 12,
-      "this_month": 12,
-      "acceleration": -1.0,
-      "status": "decelerating"
+      "this_week": 1,
+      "last_week": 0,
+      "this_month": 1,
+      "acceleration": 1.0,
+      "status": "accelerating"
     },
     "paul_hastings": {
       "firm_name": "Paul Hastings LLP",
@@ -189,11 +189,11 @@
     },
     "shearman": {
       "firm_name": "A&O Shearman",
-      "this_week": 3,
-      "last_week": 1,
+      "this_week": 1,
+      "last_week": 3,
       "this_month": 4,
-      "acceleration": 2.0,
-      "status": "accelerating"
+      "acceleration": -0.667,
+      "status": "decelerating"
     },
     "reed_smith": {
       "firm_name": "Reed Smith LLP",
@@ -205,44 +205,45 @@
     },
     "latham": {
       "firm_name": "Latham & Watkins LLP",
-      "this_week": 1,
+      "this_week": 3,
       "last_week": 0,
-      "this_month": 1,
-      "acceleration": 1.0,
+      "this_month": 3,
+      "acceleration": 3.0,
       "status": "accelerating"
     }
   },
   "seniority_distribution": {
-    "Associate": 0.643,
-    "Attorney / Lawyer": 0.071,
-    "Counsel": 0.071,
-    "Junior Associate": 0.071,
-    "Mid-Level Associate": 0.143
+    "Associate": 0.6,
+    "Attorney / Lawyer": 0.133,
+    "Counsel": 0.067,
+    "Junior Associate": 0.067,
+    "Mid-Level Associate": 0.133
   },
   "partner_signal_ratio": 0,
   "geo_boosts": {
-    "Dubai": 2.4922,
+    "Dubai": 2.0604,
     "United Arab Emirates": 0.9998,
-    "Abu Dhabi": 0.9998,
+    "Abu Dhabi": 1.0998,
     "Riyadh": 1.1998,
     "UAE": 0.3084,
-    "Middle East": 1.0034,
+    "Middle East": 1.0027,
     "Dubai, United Arab Emirates": 0.9994,
-    "Dubai, Dubai, United Arab Emirates": 0.2967,
+    "Dubai, Dubai, United Arab Emirates": 0.2874,
     "Saudi Arabia": 0.9998
   },
   "cross_firm_boosts": {
-    "Corporate / M&A": 1.0802,
+    "Corporate / M&A": 1.0962,
     "Real Estate": 1.0798,
     "Energy & Natural Resources": 1.0731,
     "Banking & Finance": 1.0798
   },
   "time_patterns": {
-    "2": 0.883,
-    "3": 2.3226,
-    "4": 0.25,
-    "5": 0.7645,
-    "6": 0.7834
+    "1": 0.6842,
+    "2": 0.9388,
+    "3": 2.4693,
+    "4": 0.2622,
+    "5": 0.8128,
+    "6": 0.8329
   },
   "dedup_confidence": {}
 }

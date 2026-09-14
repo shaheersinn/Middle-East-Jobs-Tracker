@@ -1,22 +1,22 @@
 {
   "top4": [
     {
+      "department": "Corporate / M&A",
+      "signal_count": 8,
+      "firm_count": 5,
+      "high_conf": 6,
+      "this_week": 7,
+      "last_week": 1,
+      "trend_boost": 1.7536
+    },
+    {
       "department": "Banking & Finance",
       "signal_count": 7,
       "firm_count": 3,
       "high_conf": 2,
-      "this_week": 2,
-      "last_week": 3,
-      "trend_boost": 0.8799
-    },
-    {
-      "department": "Corporate / M&A",
-      "signal_count": 3,
-      "firm_count": 2,
-      "high_conf": 2,
-      "this_week": 2,
-      "last_week": 1,
-      "trend_boost": 1.567
+      "this_week": 0,
+      "last_week": 5,
+      "trend_boost": 0.8239
     },
     {
       "department": "Capital Markets",
@@ -25,7 +25,7 @@
       "high_conf": 2,
       "this_week": 2,
       "last_week": 0,
-      "trend_boost": 0.9997
+      "trend_boost": 0.9998
     },
     {
       "department": "Restructuring & Insolvency",
@@ -39,22 +39,22 @@
   ],
   "all_depts": [
     {
+      "department": "Corporate / M&A",
+      "signal_count": 8,
+      "firm_count": 5,
+      "high_conf": 6,
+      "this_week": 7,
+      "last_week": 1,
+      "trend_boost": 1.7536
+    },
+    {
       "department": "Banking & Finance",
       "signal_count": 7,
       "firm_count": 3,
       "high_conf": 2,
-      "this_week": 2,
-      "last_week": 3,
-      "trend_boost": 0.8799
-    },
-    {
-      "department": "Corporate / M&A",
-      "signal_count": 3,
-      "firm_count": 2,
-      "high_conf": 2,
-      "this_week": 2,
-      "last_week": 1,
-      "trend_boost": 1.567
+      "this_week": 0,
+      "last_week": 5,
+      "trend_boost": 0.8239
     },
     {
       "department": "Capital Markets",
@@ -63,7 +63,7 @@
       "high_conf": 2,
       "this_week": 2,
       "last_week": 0,
-      "trend_boost": 0.9997
+      "trend_boost": 0.9998
     },
     {
       "department": "Restructuring & Insolvency",
@@ -85,5 +85,5 @@
       "_rank_score": 1.2004
     }
   ],
-  "generated_at": "2026-09-14T09:29:04.445625+00:00"
+  "generated_at": "2026-09-14T12:06:18.681047+00:00"
 }
