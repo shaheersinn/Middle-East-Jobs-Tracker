@@ -3,20 +3,20 @@
     "Firm Careers Page": 0.2502,
     "Website Monitor": 2.4998,
     "Recruiter": 2.4998,
-    "Google News": 0.4863,
+    "Google News": 0.4884,
     "LinkedIn": 2.4998,
-    "RSS:Legal Business": 0.3953
+    "RSS:Legal Business": 0.392
   },
   "dept_trend_boosts": {
-    "Banking & Finance": 0.6917,
+    "Banking & Finance": 0.6734,
     "Capital Markets": 0.9998,
-    "Corporate / M&A": 2.1942,
+    "Corporate / M&A": 2.2554,
     "Data Privacy & Technology": 0.6002,
     "Real Estate": 0.6002,
     "Project Finance & Infrastructure": 0.6002,
     "Energy & Natural Resources": 0.6002,
     "Arbitration & Disputes": 0.6002,
-    "Regulatory & Compliance": 0.9985,
+    "Regulatory & Compliance": 0.9988,
     "Restructuring & Insolvency": 0.6002,
     "Employment & Labour": 0.6002
   },
@@ -25,19 +25,19 @@
     "data": 2.4774,
     "privacy": 0.9598,
     "cybersecurity": 1.1258,
-    "capital markets": 0.4942,
+    "capital markets": 0.4967,
     "debt capital markets": 1.1229,
     "equity capital markets": 1.1229,
     "equity": 1.1229,
     "digital assets": 1.7732,
     "digital": 2.4774,
     "property": 0.7823,
-    "corporate": 0.6051,
+    "corporate": 0.5978,
     "energy": 0.2502,
     "real estate": 0.2502,
     "banking and finance": 1.4412,
-    "banking": 0.8033,
-    "finance": 0.577,
+    "banking": 0.8052,
+    "finance": 0.5781,
     "data privacy": 0.9598,
     "technology": 2.4774,
     "acquisition": 0.2502,
@@ -46,18 +46,18 @@
     "m&a": 0.2502,
     "regulatory": 0.2814,
     "restructuring": 0.2502,
-    "finance associate": 1.0212
+    "finance associate": 1.0236
   },
-  "total_runs": 1873,
-  "last_trained": "2026-09-15T07:05:15.204427+00:00",
+  "total_runs": 1874,
+  "last_trained": "2026-09-15T11:31:35.429411+00:00",
   "firm_velocity": {
     "baker_mckenzie": {
       "firm_name": "Baker McKenzie",
-      "this_week": 2,
-      "last_week": 1,
+      "this_week": 1,
+      "last_week": 2,
       "this_month": 3,
-      "acceleration": 1.0,
-      "status": "accelerating"
+      "acceleration": -0.5,
+      "status": "decelerating"
     },
     "gibson_dunn": {
       "firm_name": "Gibson, Dunn & Crutcher LLP",
@@ -117,10 +117,10 @@
     },
     "sullivan_cromwell": {
       "firm_name": "Sullivan & Cromwell LLP",
-      "this_week": 2,
+      "this_week": 3,
       "last_week": 0,
-      "this_month": 2,
-      "acceleration": 2.0,
+      "this_month": 3,
+      "acceleration": 3.0,
       "status": "accelerating"
     },
     "white_case": {
@@ -221,29 +221,29 @@
   },
   "partner_signal_ratio": 0,
   "geo_boosts": {
-    "Dubai": 1.0407,
+    "Dubai": 0.8992,
     "United Arab Emirates": 0.9998,
-    "Abu Dhabi": 1.336,
+    "Abu Dhabi": 1.3888,
     "Riyadh": 1.1998,
     "UAE": 0.3084,
-    "Middle East": 1.0011,
+    "Middle East": 0.8675,
     "Dubai, United Arab Emirates": 0.9994,
-    "Dubai, Dubai, United Arab Emirates": 0.2653,
+    "Dubai, Dubai, United Arab Emirates": 0.2622,
     "Saudi Arabia": 0.9998
   },
   "cross_firm_boosts": {
-    "Corporate / M&A": 1.1339,
+    "Corporate / M&A": 1.1391,
     "Real Estate": 1.0798,
     "Energy & Natural Resources": 1.0731,
     "Banking & Finance": 1.0798
   },
   "time_patterns": {
-    "1": 0.6842,
-    "2": 0.9388,
-    "3": 2.4693,
-    "4": 0.2622,
-    "5": 0.8128,
-    "6": 0.8329
+    "1": 0.672,
+    "2": 1.1466,
+    "3": 2.4255,
+    "4": 0.2575,
+    "5": 0.6803,
+    "6": 0.8181
   },
   "dedup_confidence": {}
 }
