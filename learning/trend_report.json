@@ -7,7 +7,7 @@
       "high_conf": 6,
       "this_week": 7,
       "last_week": 1,
-      "trend_boost": 2.1178
+      "trend_boost": 2.1942
     },
     {
       "department": "Banking & Finance",
@@ -16,7 +16,7 @@
       "high_conf": 2,
       "this_week": 0,
       "last_week": 5,
-      "trend_boost": 0.7146
+      "trend_boost": 0.6917
     },
     {
       "department": "Capital Markets",
@@ -45,7 +45,7 @@
       "high_conf": 6,
       "this_week": 7,
       "last_week": 1,
-      "trend_boost": 2.1178
+      "trend_boost": 2.1942
     },
     {
       "department": "Banking & Finance",
@@ -54,7 +54,7 @@
       "high_conf": 2,
       "this_week": 0,
       "last_week": 5,
-      "trend_boost": 0.7146
+      "trend_boost": 0.6917
     },
     {
       "department": "Capital Markets",
@@ -85,5 +85,5 @@
       "_rank_score": 1.2004
     }
   ],
-  "generated_at": "2026-09-15T00:10:31.001773+00:00"
+  "generated_at": "2026-09-15T07:05:15.202684+00:00"
 }
