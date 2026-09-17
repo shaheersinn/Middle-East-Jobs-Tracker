@@ -2,9 +2,9 @@
   "sources": [
     {
       "source": "Firm Careers Page",
-      "total_signals": 13,
+      "total_signals": 12,
       "firm_coverage": 2,
-      "avg_score": 1.21,
+      "avg_score": 1.23,
       "hire_signals": 0,
       "last_seen": "2026-09-16",
       "multiplier": 0.2502
@@ -16,7 +16,7 @@
       "avg_score": 2.05,
       "hire_signals": 8,
       "last_seen": "2026-09-16",
-      "multiplier": 0.4829
+      "multiplier": 0.4809
     },
     {
       "source": "RSS:Legal Business",
@@ -25,7 +25,7 @@
       "avg_score": 1.64,
       "hire_signals": 5,
       "last_seen": "2026-09-14",
-      "multiplier": 0.3713
+      "multiplier": 0.3693
     },
     {
       "source": "Website Monitor",
@@ -34,7 +34,7 @@
       "avg_score": 4.63,
       "hire_signals": 0,
       "last_seen": "2026-09-16",
-      "multiplier": 1.6105
+      "multiplier": 1.5232
     },
     {
       "source": "LinkedIn",
@@ -47,5 +47,5 @@
     }
   ],
   "total_active": 5,
-  "generated_at": "2026-09-17T03:00:58.865116+00:00"
+  "generated_at": "2026-09-17T09:06:30.628532+00:00"
 }
