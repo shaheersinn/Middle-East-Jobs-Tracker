@@ -1,16 +1,16 @@
 {
   "source_multipliers": {
     "Firm Careers Page": 0.2502,
-    "Website Monitor": 1.5243,
+    "Website Monitor": 1.7194,
     "Recruiter": 2.4998,
-    "Google News": 0.6768,
+    "Google News": 0.7417,
     "LinkedIn": 2.4998,
-    "RSS:Legal Business": 0.3763
+    "RSS:Legal Business": 0.3965
   },
   "dept_trend_boosts": {
-    "Banking & Finance": 0.6014,
-    "Capital Markets": 0.8137,
-    "Corporate / M&A": 2.4956,
+    "Banking & Finance": 0.6011,
+    "Capital Markets": 0.851,
+    "Corporate / M&A": 2.4965,
     "Data Privacy & Technology": 0.6002,
     "Real Estate": 0.6002,
     "Project Finance & Infrastructure": 0.6002,
@@ -25,19 +25,19 @@
     "data": 2.4774,
     "privacy": 0.9598,
     "cybersecurity": 1.1258,
-    "capital markets": 0.6846,
+    "capital markets": 0.76,
     "debt capital markets": 1.1229,
     "equity capital markets": 1.1229,
     "equity": 1.1229,
     "digital assets": 1.7732,
     "digital": 2.4774,
     "property": 0.7823,
-    "corporate": 0.6463,
+    "corporate": 0.7156,
     "energy": 0.2502,
     "real estate": 0.2502,
     "banking and finance": 1.4412,
-    "banking": 0.9233,
-    "finance": 0.7023,
+    "banking": 1.0226,
+    "finance": 0.7807,
     "data privacy": 0.9598,
     "technology": 2.4774,
     "acquisition": 0.2502,
@@ -45,18 +45,19 @@
     "deal": 0.421,
     "m&a": 0.2502,
     "regulatory": 0.2814,
-    "restructuring": 0.2556,
-    "finance associate": 1.1735
+    "restructuring": 0.2611,
+    "finance associate": 1.2998,
+    "offering": 1.0129
   },
-  "total_runs": 1892,
-  "last_trained": "2026-09-18T08:40:30.675140+00:00",
+  "total_runs": 1893,
+  "last_trained": "2026-09-18T10:49:00.887100+00:00",
   "firm_velocity": {
     "baker_mckenzie": {
       "firm_name": "Baker McKenzie",
-      "this_week": 3,
+      "this_week": 2,
       "last_week": 2,
-      "this_month": 5,
-      "acceleration": 0.5,
+      "this_month": 4,
+      "acceleration": 0.0,
       "status": "stable"
     },
     "gibson_dunn": {
@@ -133,10 +134,10 @@
     },
     "hogan_lovells": {
       "firm_name": "Hogan Lovells US LLP",
-      "this_week": 3,
-      "last_week": 1,
+      "this_week": 4,
+      "last_week": 0,
       "this_month": 4,
-      "acceleration": 2.0,
+      "acceleration": 4.0,
       "status": "accelerating"
     },
     "mcdermott": {
@@ -221,29 +222,29 @@
   },
   "partner_signal_ratio": 0,
   "geo_boosts": {
-    "Dubai": 2.2646,
+    "Dubai": 2.3117,
     "United Arab Emirates": 0.9998,
-    "Abu Dhabi": 1.5962,
-    "Riyadh": 0.3153,
+    "Abu Dhabi": 1.597,
+    "Riyadh": 0.3022,
     "UAE": 0.3084,
-    "Middle East": 0.3429,
+    "Middle East": 0.3243,
     "Dubai, United Arab Emirates": 0.9994,
     "Dubai, Dubai, United Arab Emirates": 0.2503,
     "Saudi Arabia": 0.9998
   },
   "cross_firm_boosts": {
-    "Corporate / M&A": 1.2932,
+    "Corporate / M&A": 1.2986,
     "Real Estate": 1.0798,
     "Energy & Natural Resources": 1.0731,
     "Banking & Finance": 1.0798
   },
   "time_patterns": {
-    "1": 0.6597,
-    "2": 1.1255,
-    "3": 1.9431,
-    "4": 0.7859,
-    "5": 0.6678,
-    "6": 0.818
+    "1": 0.6633,
+    "2": 1.1316,
+    "3": 1.9536,
+    "4": 0.7901,
+    "5": 0.6391,
+    "6": 0.8224
   },
   "dedup_confidence": {}
 }
