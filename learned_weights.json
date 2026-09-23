@@ -1,17 +1,17 @@
 {
   "source_multipliers": {
-    "Firm Careers Page": 0.539,
-    "Website Monitor": 2.4992,
+    "Firm Careers Page": 0.5934,
+    "Website Monitor": 2.4754,
     "Recruiter": 2.4998,
-    "Google News": 1.6367,
+    "Google News": 1.8094,
     "LinkedIn": 2.4998,
-    "RSS:Legal Business": 0.3082
+    "RSS:Legal Business": 0.2966
   },
   "dept_trend_boosts": {
-    "Banking & Finance": 0.9857,
-    "Capital Markets": 0.9998,
-    "Corporate / M&A": 1.1188,
-    "Data Privacy & Technology": 0.9162,
+    "Banking & Finance": 0.9886,
+    "Capital Markets": 1.1198,
+    "Corporate / M&A": 1.055,
+    "Data Privacy & Technology": 0.933,
     "Real Estate": 0.6002,
     "Project Finance & Infrastructure": 0.6002,
     "Energy & Natural Resources": 0.6002,
@@ -22,23 +22,23 @@
   },
   "keyword_boosts": {
     "development": 0.7823,
-    "data": 1.8632,
-    "privacy": 1.5449,
+    "data": 1.8364,
+    "privacy": 1.5818,
     "cybersecurity": 1.1258,
-    "capital markets": 0.7608,
+    "capital markets": 0.7499,
     "debt capital markets": 1.1229,
     "equity capital markets": 1.1229,
     "equity": 1.1229,
     "digital assets": 1.7732,
     "digital": 2.4774,
     "property": 0.7823,
-    "corporate": 0.7115,
+    "corporate": 0.7013,
     "energy": 0.2502,
     "real estate": 0.2502,
     "banking and finance": 1.4412,
-    "banking": 0.7533,
-    "finance": 0.7821,
-    "data privacy": 1.5449,
+    "banking": 0.7389,
+    "finance": 0.7794,
+    "data privacy": 1.5818,
     "technology": 2.4774,
     "acquisition": 0.2502,
     "disputes associate": 2.4998,
@@ -47,19 +47,19 @@
     "regulatory": 0.2814,
     "restructuring": 0.2644,
     "finance associate": 1.5861,
-    "offering": 0.7629,
-    "AI": 1.5533
+    "offering": 0.7346,
+    "AI": 1.5885
   },
-  "total_runs": 1924,
-  "last_trained": "2026-09-23T09:00:07.704523+00:00",
+  "total_runs": 1925,
+  "last_trained": "2026-09-23T11:02:21.689824+00:00",
   "firm_velocity": {
     "baker_mckenzie": {
       "firm_name": "Baker McKenzie",
-      "this_week": 3,
-      "last_week": 1,
+      "this_week": 2,
+      "last_week": 2,
       "this_month": 4,
-      "acceleration": 2.0,
-      "status": "accelerating"
+      "acceleration": 0.0,
+      "status": "stable"
     },
     "gibson_dunn": {
       "firm_name": "Gibson, Dunn & Crutcher LLP",
@@ -135,11 +135,11 @@
     },
     "hogan_lovells": {
       "firm_name": "Hogan Lovells US LLP",
-      "this_week": 5,
-      "last_week": 0,
-      "this_month": 5,
-      "acceleration": 5.0,
-      "status": "accelerating"
+      "this_week": 3,
+      "last_week": 3,
+      "this_month": 6,
+      "acceleration": 0.0,
+      "status": "stable"
     },
     "mcdermott": {
       "firm_name": "McDermott Will & Emery LLP",
@@ -208,8 +208,8 @@
     "latham": {
       "firm_name": "Latham & Watkins LLP",
       "this_week": 0,
-      "last_week": 3,
-      "this_month": 3,
+      "last_week": 2,
+      "this_month": 2,
       "acceleration": -1.0,
       "status": "decelerating"
     }
@@ -224,10 +224,10 @@
   },
   "partner_signal_ratio": 0,
   "geo_boosts": {
-    "Dubai": 2.4994,
+    "Dubai": 2.3595,
     "United Arab Emirates": 0.9998,
-    "Abu Dhabi": 0.3784,
-    "Riyadh": 0.2502,
+    "Abu Dhabi": 0.3527,
+    "Riyadh": 0.4202,
     "UAE": 0.3084,
     "Middle East": 0.2502,
     "Dubai, United Arab Emirates": 0.9994,
@@ -235,18 +235,18 @@
     "Saudi Arabia": 0.9998
   },
   "cross_firm_boosts": {
-    "Corporate / M&A": 1.1917,
+    "Corporate / M&A": 1.1854,
     "Real Estate": 1.0798,
     "Energy & Natural Resources": 1.0731,
     "Banking & Finance": 1.0798
   },
   "time_patterns": {
-    "1": 0.5466,
-    "2": 1.3866,
-    "3": 1.6551,
-    "4": 0.731,
-    "5": 0.5142,
-    "6": 1.1664
+    "1": 0.554,
+    "2": 1.4053,
+    "3": 1.5965,
+    "4": 0.7409,
+    "5": 0.5211,
+    "6": 1.1822
   },
   "dedup_confidence": {}
 }
