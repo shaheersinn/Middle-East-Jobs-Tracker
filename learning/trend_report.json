@@ -2,21 +2,21 @@
   "top4": [
     {
       "department": "Corporate / M&A",
-      "signal_count": 17,
+      "signal_count": 18,
       "firm_count": 8,
       "high_conf": 13,
-      "this_week": 3,
-      "last_week": 12,
-      "trend_boost": 0.7482
+      "this_week": 4,
+      "last_week": 11,
+      "trend_boost": 0.7477
     },
     {
       "department": "Capital Markets",
       "signal_count": 5,
       "firm_count": 3,
       "high_conf": 3,
-      "this_week": 2,
-      "last_week": 1,
-      "trend_boost": 1.5587
+      "this_week": 1,
+      "last_week": 2,
+      "trend_boost": 1.407
     },
     {
       "department": "Banking & Finance",
@@ -25,7 +25,7 @@
       "high_conf": 2,
       "this_week": 2,
       "last_week": 0,
-      "trend_boost": 0.999
+      "trend_boost": 0.9992
     },
     {
       "department": "Data Privacy & Technology",
@@ -34,27 +34,27 @@
       "high_conf": 0,
       "this_week": 2,
       "last_week": 0,
-      "trend_boost": 0.9942
+      "trend_boost": 0.9954
     }
   ],
   "all_depts": [
     {
       "department": "Corporate / M&A",
-      "signal_count": 17,
+      "signal_count": 18,
       "firm_count": 8,
       "high_conf": 13,
-      "this_week": 3,
-      "last_week": 12,
-      "trend_boost": 0.7482
+      "this_week": 4,
+      "last_week": 11,
+      "trend_boost": 0.7477
     },
     {
       "department": "Capital Markets",
       "signal_count": 5,
       "firm_count": 3,
       "high_conf": 3,
-      "this_week": 2,
-      "last_week": 1,
-      "trend_boost": 1.5587
+      "this_week": 1,
+      "last_week": 2,
+      "trend_boost": 1.407
     },
     {
       "department": "Banking & Finance",
@@ -63,7 +63,7 @@
       "high_conf": 2,
       "this_week": 2,
       "last_week": 0,
-      "trend_boost": 0.999
+      "trend_boost": 0.9992
     },
     {
       "department": "Data Privacy & Technology",
@@ -72,7 +72,7 @@
       "high_conf": 0,
       "this_week": 2,
       "last_week": 0,
-      "trend_boost": 0.9942
+      "trend_boost": 0.9954
     },
     {
       "department": "Regulatory & Compliance",
@@ -80,10 +80,10 @@
       "firm_count": 1,
       "high_conf": 0,
       "this_week": 0,
-      "last_week": 2,
-      "trend_boost": 0.6343,
-      "_rank_score": 1.2686
+      "last_week": 1,
+      "trend_boost": 0.6274,
+      "_rank_score": 1.2548
     }
   ],
-  "generated_at": "2026-09-25T09:17:17.925467+00:00"
+  "generated_at": "2026-09-25T11:28:42.782712+00:00"
 }
