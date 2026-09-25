@@ -7,16 +7,7 @@
       "high_conf": 13,
       "this_week": 4,
       "last_week": 11,
-      "trend_boost": 0.7473
-    },
-    {
-      "department": "Capital Markets",
-      "signal_count": 5,
-      "firm_count": 3,
-      "high_conf": 3,
-      "this_week": 1,
-      "last_week": 2,
-      "trend_boost": 1.2856
+      "trend_boost": 0.7469
     },
     {
       "department": "Banking & Finance",
@@ -25,7 +16,16 @@
       "high_conf": 2,
       "this_week": 2,
       "last_week": 0,
-      "trend_boost": 0.9994
+      "trend_boost": 0.9995
+    },
+    {
+      "department": "Capital Markets",
+      "signal_count": 5,
+      "firm_count": 3,
+      "high_conf": 3,
+      "this_week": 1,
+      "last_week": 2,
+      "trend_boost": 1.1885
     },
     {
       "department": "Data Privacy & Technology",
@@ -34,7 +34,7 @@
       "high_conf": 0,
       "this_week": 2,
       "last_week": 0,
-      "trend_boost": 0.9963
+      "trend_boost": 0.997
     }
   ],
   "all_depts": [
@@ -45,16 +45,7 @@
       "high_conf": 13,
       "this_week": 4,
       "last_week": 11,
-      "trend_boost": 0.7473
-    },
-    {
-      "department": "Capital Markets",
-      "signal_count": 5,
-      "firm_count": 3,
-      "high_conf": 3,
-      "this_week": 1,
-      "last_week": 2,
-      "trend_boost": 1.2856
+      "trend_boost": 0.7469
     },
     {
       "department": "Banking & Finance",
@@ -63,7 +54,16 @@
       "high_conf": 2,
       "this_week": 2,
       "last_week": 0,
-      "trend_boost": 0.9994
+      "trend_boost": 0.9995
+    },
+    {
+      "department": "Capital Markets",
+      "signal_count": 5,
+      "firm_count": 3,
+      "high_conf": 3,
+      "this_week": 1,
+      "last_week": 2,
+      "trend_boost": 1.1885
     },
     {
       "department": "Data Privacy & Technology",
@@ -72,7 +72,7 @@
       "high_conf": 0,
       "this_week": 2,
       "last_week": 0,
-      "trend_boost": 0.9963
+      "trend_boost": 0.997
     },
     {
       "department": "Regulatory & Compliance",
@@ -81,9 +81,9 @@
       "high_conf": 0,
       "this_week": 0,
       "last_week": 1,
-      "trend_boost": 0.6219,
-      "_rank_score": 1.2438
+      "trend_boost": 0.6175,
+      "_rank_score": 1.235
     }
   ],
-  "generated_at": "2026-09-25T14:55:49.465361+00:00"
+  "generated_at": "2026-09-25T19:45:58.707133+00:00"
 }
