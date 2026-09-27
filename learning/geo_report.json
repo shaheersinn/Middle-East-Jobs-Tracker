@@ -5,7 +5,7 @@
       "this_week": 2,
       "last_week": 0,
       "total_30d": 4,
-      "boost": 1.1698,
+      "boost": 1.1758,
       "trend": "\u2191 heating"
     },
     {
@@ -13,7 +13,7 @@
       "this_week": 0,
       "last_week": 0,
       "total_30d": 4,
-      "boost": 0.9485,
+      "boost": 0.9588,
       "trend": "\u2192 stable"
     },
     {
@@ -21,7 +21,7 @@
       "this_week": 7,
       "last_week": 8,
       "total_30d": 19,
-      "boost": 0.8795,
+      "boost": 0.8786,
       "trend": "\u2193 cooling"
     },
     {
@@ -29,9 +29,9 @@
       "this_week": 2,
       "last_week": 7,
       "total_30d": 9,
-      "boost": 0.2769,
+      "boost": 0.2787,
       "trend": "\u2193 cooling"
     }
   ],
-  "generated_at": "2026-09-27T09:44:55.124417+00:00"
+  "generated_at": "2026-09-27T11:38:33.680336+00:00"
 }
