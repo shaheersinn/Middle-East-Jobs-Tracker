@@ -7,7 +7,7 @@
       "high_conf": 18,
       "this_week": 8,
       "last_week": 3,
-      "trend_boost": 1.8383
+      "trend_boost": 1.8706
     },
     {
       "department": "Capital Markets",
@@ -16,16 +16,16 @@
       "high_conf": 3,
       "this_week": 0,
       "last_week": 5,
-      "trend_boost": 1.0048
+      "trend_boost": 0.9238
     },
     {
       "department": "Banking & Finance",
-      "signal_count": 6,
-      "firm_count": 4,
-      "high_conf": 2,
+      "signal_count": 4,
+      "firm_count": 2,
+      "high_conf": 0,
       "this_week": 0,
       "last_week": 1,
-      "trend_boost": 0.6015
+      "trend_boost": 0.6012
     },
     {
       "department": "Data Privacy & Technology",
@@ -34,7 +34,7 @@
       "high_conf": 0,
       "this_week": 0,
       "last_week": 2,
-      "trend_boost": 0.6015
+      "trend_boost": 0.6012
     }
   ],
   "all_depts": [
@@ -45,7 +45,7 @@
       "high_conf": 18,
       "this_week": 8,
       "last_week": 3,
-      "trend_boost": 1.8383
+      "trend_boost": 1.8706
     },
     {
       "department": "Capital Markets",
@@ -54,16 +54,16 @@
       "high_conf": 3,
       "this_week": 0,
       "last_week": 5,
-      "trend_boost": 1.0048
+      "trend_boost": 0.9238
     },
     {
       "department": "Banking & Finance",
-      "signal_count": 6,
-      "firm_count": 4,
-      "high_conf": 2,
+      "signal_count": 4,
+      "firm_count": 2,
+      "high_conf": 0,
       "this_week": 0,
       "last_week": 1,
-      "trend_boost": 0.6015
+      "trend_boost": 0.6012
     },
     {
       "department": "Data Privacy & Technology",
@@ -72,7 +72,7 @@
       "high_conf": 0,
       "this_week": 0,
       "last_week": 2,
-      "trend_boost": 0.6015
+      "trend_boost": 0.6012
     },
     {
       "department": "Regulatory & Compliance",
@@ -85,5 +85,5 @@
       "_rank_score": 1.2004
     }
   ],
-  "generated_at": "2026-10-04T07:40:45.154418+00:00"
+  "generated_at": "2026-10-04T12:01:29.052626+00:00"
 }
