@@ -7,7 +7,7 @@
       "avg_score": 3.99,
       "hire_signals": 16,
       "last_seen": "2026-10-03",
-      "multiplier": 1.798
+      "multiplier": 1.8194
     },
     {
       "source": "Firm Careers Page",
@@ -16,7 +16,7 @@
       "avg_score": 2.15,
       "hire_signals": 0,
       "last_seen": "2026-10-01",
-      "multiplier": 0.6019
+      "multiplier": 0.6038
     },
     {
       "source": "Website Monitor",
@@ -52,9 +52,9 @@
       "avg_score": 2.95,
       "hire_signals": 0,
       "last_seen": "2026-10-03",
-      "multiplier": 1.3525
+      "multiplier": 1.3169
     }
   ],
   "total_active": 6,
-  "generated_at": "2026-10-04T17:57:16.172842+00:00"
+  "generated_at": "2026-10-04T20:53:32.620195+00:00"
 }
