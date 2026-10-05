@@ -7,7 +7,7 @@
       "high_conf": 19,
       "this_week": 9,
       "last_week": 3,
-      "trend_boost": 2.0061
+      "trend_boost": 2.0449
     },
     {
       "department": "Capital Markets",
@@ -16,7 +16,7 @@
       "high_conf": 3,
       "this_week": 0,
       "last_week": 5,
-      "trend_boost": 0.6849
+      "trend_boost": 0.6679
     },
     {
       "department": "Banking & Finance",
@@ -25,16 +25,16 @@
       "high_conf": 0,
       "this_week": 0,
       "last_week": 1,
-      "trend_boost": 0.6003
+      "trend_boost": 0.6002
     },
     {
-      "department": "Data Privacy & Technology",
+      "department": "Regulatory & Compliance",
       "signal_count": 2,
       "firm_count": 1,
       "high_conf": 0,
       "this_week": 0,
-      "last_week": 2,
-      "trend_boost": 0.6003
+      "last_week": 0,
+      "trend_boost": 0.6002
     }
   ],
   "all_depts": [
@@ -45,7 +45,7 @@
       "high_conf": 19,
       "this_week": 9,
       "last_week": 3,
-      "trend_boost": 2.0061
+      "trend_boost": 2.0449
     },
     {
       "department": "Capital Markets",
@@ -54,7 +54,7 @@
       "high_conf": 3,
       "this_week": 0,
       "last_week": 5,
-      "trend_boost": 0.6849
+      "trend_boost": 0.6679
     },
     {
       "department": "Banking & Finance",
@@ -63,16 +63,7 @@
       "high_conf": 0,
       "this_week": 0,
       "last_week": 1,
-      "trend_boost": 0.6003
-    },
-    {
-      "department": "Data Privacy & Technology",
-      "signal_count": 2,
-      "firm_count": 1,
-      "high_conf": 0,
-      "this_week": 0,
-      "last_week": 2,
-      "trend_boost": 0.6003
+      "trend_boost": 0.6002
     },
     {
       "department": "Regulatory & Compliance",
@@ -81,9 +72,18 @@
       "high_conf": 0,
       "this_week": 0,
       "last_week": 0,
+      "trend_boost": 0.6002
+    },
+    {
+      "department": "Data Privacy & Technology",
+      "signal_count": 2,
+      "firm_count": 1,
+      "high_conf": 0,
+      "this_week": 0,
+      "last_week": 2,
       "trend_boost": 0.6002,
       "_rank_score": 1.2004
     }
   ],
-  "generated_at": "2026-10-05T13:54:02.860297+00:00"
+  "generated_at": "2026-10-05T19:00:36.880533+00:00"
 }
