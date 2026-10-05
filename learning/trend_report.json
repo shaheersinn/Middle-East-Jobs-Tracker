@@ -4,10 +4,10 @@
       "department": "Corporate / M&A",
       "signal_count": 26,
       "firm_count": 10,
-      "high_conf": 18,
-      "this_week": 8,
+      "high_conf": 19,
+      "this_week": 9,
       "last_week": 3,
-      "trend_boost": 1.9576
+      "trend_boost": 2.0061
     },
     {
       "department": "Capital Markets",
@@ -16,7 +16,7 @@
       "high_conf": 3,
       "this_week": 0,
       "last_week": 5,
-      "trend_boost": 0.7061
+      "trend_boost": 0.6849
     },
     {
       "department": "Banking & Finance",
@@ -25,7 +25,7 @@
       "high_conf": 0,
       "this_week": 0,
       "last_week": 1,
-      "trend_boost": 0.6004
+      "trend_boost": 0.6003
     },
     {
       "department": "Data Privacy & Technology",
@@ -34,7 +34,7 @@
       "high_conf": 0,
       "this_week": 0,
       "last_week": 2,
-      "trend_boost": 0.6004
+      "trend_boost": 0.6003
     }
   ],
   "all_depts": [
@@ -42,10 +42,10 @@
       "department": "Corporate / M&A",
       "signal_count": 26,
       "firm_count": 10,
-      "high_conf": 18,
-      "this_week": 8,
+      "high_conf": 19,
+      "this_week": 9,
       "last_week": 3,
-      "trend_boost": 1.9576
+      "trend_boost": 2.0061
     },
     {
       "department": "Capital Markets",
@@ -54,7 +54,7 @@
       "high_conf": 3,
       "this_week": 0,
       "last_week": 5,
-      "trend_boost": 0.7061
+      "trend_boost": 0.6849
     },
     {
       "department": "Banking & Finance",
@@ -63,7 +63,7 @@
       "high_conf": 0,
       "this_week": 0,
       "last_week": 1,
-      "trend_boost": 0.6004
+      "trend_boost": 0.6003
     },
     {
       "department": "Data Privacy & Technology",
@@ -72,7 +72,7 @@
       "high_conf": 0,
       "this_week": 0,
       "last_week": 2,
-      "trend_boost": 0.6004
+      "trend_boost": 0.6003
     },
     {
       "department": "Regulatory & Compliance",
@@ -85,5 +85,5 @@
       "_rank_score": 1.2004
     }
   ],
-  "generated_at": "2026-10-05T08:08:45.052666+00:00"
+  "generated_at": "2026-10-05T13:54:02.860297+00:00"
 }

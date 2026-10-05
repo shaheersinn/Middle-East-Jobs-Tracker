@@ -2,12 +2,12 @@
   "sources": [
     {
       "source": "Google News",
-      "total_signals": 16,
+      "total_signals": 17,
       "firm_coverage": 6,
-      "avg_score": 3.99,
-      "hire_signals": 16,
-      "last_seen": "2026-10-03",
-      "multiplier": 1.8502
+      "avg_score": 4.19,
+      "hire_signals": 17,
+      "last_seen": "2026-10-05",
+      "multiplier": 1.8903
     },
     {
       "source": "Firm Careers Page",
@@ -16,7 +16,7 @@
       "avg_score": 2.15,
       "hire_signals": 0,
       "last_seen": "2026-10-01",
-      "multiplier": 0.6065
+      "multiplier": 0.6075
     },
     {
       "source": "Website Monitor",
@@ -47,14 +47,14 @@
     },
     {
       "source": "LinkedIn",
-      "total_signals": 2,
+      "total_signals": 1,
       "firm_coverage": 1,
-      "avg_score": 2.95,
+      "avg_score": 1.88,
       "hire_signals": 0,
       "last_seen": "2026-10-03",
       "multiplier": 1.2657
     }
   ],
   "total_active": 6,
-  "generated_at": "2026-10-05T08:08:45.053076+00:00"
+  "generated_at": "2026-10-05T13:54:02.860869+00:00"
 }
