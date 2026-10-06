@@ -1,16 +1,16 @@
 {
   "source_multipliers": {
-    "Firm Careers Page": 0.6094,
+    "Firm Careers Page": 0.6101,
     "Website Monitor": 0.8206,
     "Recruiter": 2.4998,
-    "Google News": 1.9685,
+    "Google News": 2.0447,
     "LinkedIn": 1.2657,
     "RSS:Legal Business": 0.2502
   },
   "dept_trend_boosts": {
     "Banking & Finance": 0.6002,
-    "Capital Markets": 0.6434,
-    "Corporate / M&A": 2.1007,
+    "Capital Markets": 0.6278,
+    "Corporate / M&A": 2.2445,
     "Data Privacy & Technology": 0.6002,
     "Real Estate": 0.6002,
     "Project Finance & Infrastructure": 0.6002,
@@ -18,27 +18,27 @@
     "Arbitration & Disputes": 0.6002,
     "Regulatory & Compliance": 0.6002,
     "Restructuring & Insolvency": 0.6002,
-    "Employment & Labour": 0.6112
+    "Employment & Labour": 0.6072
   },
   "keyword_boosts": {
     "development": 0.7823,
-    "data": 1.743,
-    "privacy": 1.743,
+    "data": 1.7418,
+    "privacy": 1.7418,
     "cybersecurity": 1.1258,
-    "capital markets": 0.7117,
+    "capital markets": 0.7112,
     "debt capital markets": 1.1229,
     "equity capital markets": 1.1229,
     "equity": 1.1229,
     "digital assets": 1.7732,
     "digital": 2.4774,
     "property": 0.7823,
-    "corporate": 0.7628,
+    "corporate": 0.7621,
     "energy": 0.2502,
     "real estate": 0.2502,
     "banking and finance": 1.4412,
-    "banking": 0.6868,
-    "finance": 1.0158,
-    "data privacy": 1.743,
+    "banking": 0.6863,
+    "finance": 1.0216,
+    "data privacy": 1.7418,
     "technology": 2.4774,
     "acquisition": 0.2502,
     "disputes associate": 2.4998,
@@ -47,11 +47,11 @@
     "regulatory": 0.2814,
     "restructuring": 0.2644,
     "finance associate": 1.5861,
-    "offering": 0.6309,
-    "AI": 1.743
+    "offering": 0.6305,
+    "AI": 1.7418
   },
-  "total_runs": 1993,
-  "last_trained": "2026-10-06T08:27:28.975118+00:00",
+  "total_runs": 1995,
+  "last_trained": "2026-10-06T16:26:54.147204+00:00",
   "firm_velocity": {
     "baker_mckenzie": {
       "firm_name": "Baker McKenzie",
@@ -136,9 +136,9 @@
     "hogan_lovells": {
       "firm_name": "Hogan Lovells US LLP",
       "this_week": 1,
-      "last_week": 6,
-      "this_month": 7,
-      "acceleration": -0.833,
+      "last_week": 5,
+      "this_month": 6,
+      "acceleration": -0.8,
       "status": "decelerating"
     },
     "mcdermott": {
@@ -192,10 +192,10 @@
     "shearman": {
       "firm_name": "A&O Shearman",
       "this_week": 2,
-      "last_week": 4,
-      "this_month": 6,
-      "acceleration": -0.5,
-      "status": "decelerating"
+      "last_week": 1,
+      "this_month": 3,
+      "acceleration": 1.0,
+      "status": "accelerating"
     },
     "reed_smith": {
       "firm_name": "Reed Smith LLP",
@@ -207,11 +207,11 @@
     },
     "latham": {
       "firm_name": "Latham & Watkins LLP",
-      "this_week": 0,
-      "last_week": 2,
-      "this_month": 2,
-      "acceleration": -1.0,
-      "status": "decelerating"
+      "this_week": 1,
+      "last_week": 0,
+      "this_month": 1,
+      "acceleration": 1.0,
+      "status": "accelerating"
     },
     "morgan_lewis": {
       "firm_name": "Morgan, Lewis & Bockius LLP",
@@ -231,30 +231,30 @@
   },
   "partner_signal_ratio": 0,
   "geo_boosts": {
-    "Dubai": 0.2563,
+    "Dubai": 0.344,
     "United Arab Emirates": 0.9998,
-    "Abu Dhabi": 0.5539,
-    "Riyadh": 0.2714,
-    "UAE": 1.1952,
-    "Middle East": 1.0589,
+    "Abu Dhabi": 0.7145,
+    "Riyadh": 0.2637,
+    "UAE": 1.197,
+    "Middle East": 1.0737,
     "Dubai, United Arab Emirates": 0.9994,
     "Dubai, Dubai, United Arab Emirates": 1.0416,
     "Saudi Arabia": 0.9998,
-    "Oman": 1.2994
+    "Oman": 1.2996
   },
   "cross_firm_boosts": {
-    "Corporate / M&A": 1.2056,
+    "Corporate / M&A": 1.2468,
     "Real Estate": 1.0798,
     "Energy & Natural Resources": 1.0731,
     "Banking & Finance": 1.0798
   },
   "time_patterns": {
-    "1": 0.7276,
-    "2": 1.4342,
-    "3": 1.4426,
-    "4": 0.8694,
-    "5": 0.517,
-    "6": 1.0092
+    "1": 0.7149,
+    "2": 1.5141,
+    "3": 1.4174,
+    "4": 0.8542,
+    "5": 0.508,
+    "6": 0.9915
   },
   "dedup_confidence": {}
 }
