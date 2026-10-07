@@ -5,9 +5,9 @@
       "signal_count": 27,
       "firm_count": 10,
       "high_conf": 20,
-      "this_week": 10,
-      "last_week": 1,
-      "trend_boost": 2.3692
+      "this_week": 7,
+      "last_week": 4,
+      "trend_boost": 2.1854
     },
     {
       "department": "Capital Markets",
@@ -15,55 +15,8 @@
       "firm_count": 3,
       "high_conf": 3,
       "this_week": 0,
-      "last_week": 5,
-      "trend_boost": 0.6142
-    },
-    {
-      "department": "Banking & Finance",
-      "signal_count": 4,
-      "firm_count": 2,
-      "high_conf": 0,
-      "this_week": 0,
-      "last_week": 0,
-      "trend_boost": 0.6002
-    },
-    {
-      "department": "Regulatory & Compliance",
-      "signal_count": 2,
-      "firm_count": 1,
-      "high_conf": 0,
-      "this_week": 0,
-      "last_week": 0,
-      "trend_boost": 0.6002
-    }
-  ],
-  "all_depts": [
-    {
-      "department": "Corporate / M&A",
-      "signal_count": 27,
-      "firm_count": 10,
-      "high_conf": 20,
-      "this_week": 10,
-      "last_week": 1,
-      "trend_boost": 2.3692
-    },
-    {
-      "department": "Capital Markets",
-      "signal_count": 9,
-      "firm_count": 3,
-      "high_conf": 3,
-      "this_week": 0,
-      "last_week": 5,
-      "trend_boost": 0.6142
-    },
-    {
-      "department": "Banking & Finance",
-      "signal_count": 4,
-      "firm_count": 2,
-      "high_conf": 0,
-      "this_week": 0,
-      "last_week": 0,
-      "trend_boost": 0.6002
+      "last_week": 4,
+      "trend_boost": 0.6114
     },
     {
       "department": "Regulatory & Compliance",
@@ -81,9 +34,56 @@
       "high_conf": 0,
       "this_week": 0,
       "last_week": 0,
+      "trend_boost": 0.6002
+    }
+  ],
+  "all_depts": [
+    {
+      "department": "Corporate / M&A",
+      "signal_count": 27,
+      "firm_count": 10,
+      "high_conf": 20,
+      "this_week": 7,
+      "last_week": 4,
+      "trend_boost": 2.1854
+    },
+    {
+      "department": "Capital Markets",
+      "signal_count": 9,
+      "firm_count": 3,
+      "high_conf": 3,
+      "this_week": 0,
+      "last_week": 4,
+      "trend_boost": 0.6114
+    },
+    {
+      "department": "Regulatory & Compliance",
+      "signal_count": 2,
+      "firm_count": 1,
+      "high_conf": 0,
+      "this_week": 0,
+      "last_week": 0,
+      "trend_boost": 0.6002
+    },
+    {
+      "department": "Data Privacy & Technology",
+      "signal_count": 2,
+      "firm_count": 1,
+      "high_conf": 0,
+      "this_week": 0,
+      "last_week": 0,
+      "trend_boost": 0.6002
+    },
+    {
+      "department": "Banking & Finance",
+      "signal_count": 2,
+      "firm_count": 2,
+      "high_conf": 0,
+      "this_week": 0,
+      "last_week": 0,
       "trend_boost": 0.6002,
       "_rank_score": 1.2004
     }
   ],
-  "generated_at": "2026-10-07T10:47:36.339991+00:00"
+  "generated_at": "2026-10-07T12:54:41.361863+00:00"
 }
