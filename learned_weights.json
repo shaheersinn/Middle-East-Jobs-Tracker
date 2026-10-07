@@ -1,16 +1,16 @@
 {
   "source_multipliers": {
-    "Firm Careers Page": 0.6103,
+    "Firm Careers Page": 0.6105,
     "Website Monitor": 0.8206,
     "Recruiter": 2.4998,
-    "Google News": 2.0718,
+    "Google News": 2.0935,
     "LinkedIn": 1.2657,
     "RSS:Legal Business": 0.2502
   },
   "dept_trend_boosts": {
     "Banking & Finance": 0.6002,
-    "Capital Markets": 0.6222,
-    "Corporate / M&A": 2.2956,
+    "Capital Markets": 0.6178,
+    "Corporate / M&A": 2.3365,
     "Data Privacy & Technology": 0.6002,
     "Real Estate": 0.6002,
     "Project Finance & Infrastructure": 0.6002,
@@ -18,27 +18,27 @@
     "Arbitration & Disputes": 0.6002,
     "Regulatory & Compliance": 0.6002,
     "Restructuring & Insolvency": 0.6002,
-    "Employment & Labour": 0.6058
+    "Employment & Labour": 0.6046
   },
   "keyword_boosts": {
     "development": 0.7823,
-    "data": 1.7414,
-    "privacy": 1.7414,
+    "data": 1.741,
+    "privacy": 1.741,
     "cybersecurity": 1.1258,
-    "capital markets": 0.711,
+    "capital markets": 0.7109,
     "debt capital markets": 1.1229,
     "equity capital markets": 1.1229,
     "equity": 1.1229,
     "digital assets": 1.7732,
     "digital": 2.4774,
     "property": 0.7823,
-    "corporate": 0.7619,
+    "corporate": 0.7617,
     "energy": 0.2502,
     "real estate": 0.2502,
     "banking and finance": 1.4412,
-    "banking": 0.6861,
-    "finance": 1.0237,
-    "data privacy": 1.7414,
+    "banking": 0.686,
+    "finance": 1.0253,
+    "data privacy": 1.741,
     "technology": 2.4774,
     "acquisition": 0.2502,
     "disputes associate": 2.4998,
@@ -47,11 +47,11 @@
     "regulatory": 0.2814,
     "restructuring": 0.2644,
     "finance associate": 1.5861,
-    "offering": 0.6303,
-    "AI": 1.7414
+    "offering": 0.6302,
+    "AI": 1.741
   },
-  "total_runs": 1996,
-  "last_trained": "2026-10-06T22:11:07.261440+00:00",
+  "total_runs": 1997,
+  "last_trained": "2026-10-07T03:53:30.979965+00:00",
   "firm_velocity": {
     "baker_mckenzie": {
       "firm_name": "Baker McKenzie",
@@ -231,19 +231,19 @@
   },
   "partner_signal_ratio": 0,
   "geo_boosts": {
-    "Dubai": 0.3752,
+    "Dubai": 0.4002,
     "United Arab Emirates": 0.9998,
-    "Abu Dhabi": 0.7716,
-    "Riyadh": 0.261,
-    "UAE": 1.1976,
-    "Middle East": 1.079,
+    "Abu Dhabi": 0.8173,
+    "Riyadh": 0.2588,
+    "UAE": 1.1981,
+    "Middle East": 1.0832,
     "Dubai, United Arab Emirates": 0.9994,
     "Dubai, Dubai, United Arab Emirates": 1.0416,
     "Saudi Arabia": 0.9998,
-    "Oman": 1.2997
+    "Oman": 1.2998
   },
   "cross_firm_boosts": {
-    "Corporate / M&A": 1.2614,
+    "Corporate / M&A": 1.2731,
     "Real Estate": 1.0798,
     "Energy & Natural Resources": 1.0731,
     "Banking & Finance": 1.0798
