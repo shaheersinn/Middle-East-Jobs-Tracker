@@ -1,16 +1,16 @@
 {
   "source_multipliers": {
-    "Firm Careers Page": 0.6529,
-    "Website Monitor": 0.8206,
+    "Firm Careers Page": 0.6715,
+    "Website Monitor": 0.8363,
     "Recruiter": 2.4998,
-    "Google News": 2.2274,
-    "LinkedIn": 1.2657,
+    "Google News": 2.237,
+    "LinkedIn": 1.2416,
     "RSS:Legal Business": 0.2502
   },
   "dept_trend_boosts": {
     "Banking & Finance": 0.6002,
-    "Capital Markets": 0.6019,
-    "Corporate / M&A": 1.1696,
+    "Capital Markets": 0.6015,
+    "Corporate / M&A": 1.1357,
     "Data Privacy & Technology": 0.6002,
     "Real Estate": 0.6002,
     "Project Finance & Infrastructure": 0.6002,
@@ -18,12 +18,12 @@
     "Arbitration & Disputes": 0.6002,
     "Regulatory & Compliance": 0.6002,
     "Restructuring & Insolvency": 0.6002,
-    "Employment & Labour": 0.6005
+    "Employment & Labour": 0.6004
   },
   "keyword_boosts": {
     "development": 0.7823,
-    "data": 1.6767,
-    "privacy": 1.6767,
+    "data": 1.6674,
+    "privacy": 1.6674,
     "cybersecurity": 1.1258,
     "capital markets": 0.6845,
     "debt capital markets": 1.1229,
@@ -32,13 +32,13 @@
     "digital assets": 1.7732,
     "digital": 2.4774,
     "property": 0.7823,
-    "corporate": 0.7198,
+    "corporate": 0.7145,
     "energy": 0.2502,
     "real estate": 0.2502,
     "banking and finance": 1.4412,
     "banking": 0.6859,
     "finance": 1.0266,
-    "data privacy": 1.6767,
+    "data privacy": 1.6674,
     "technology": 2.4774,
     "acquisition": 0.2502,
     "disputes associate": 2.4998,
@@ -47,11 +47,11 @@
     "regulatory": 0.2814,
     "restructuring": 0.2644,
     "finance associate": 1.5861,
-    "offering": 0.6069,
-    "AI": 1.6767
+    "offering": 0.6035,
+    "AI": 1.6674
   },
-  "total_runs": 2007,
-  "last_trained": "2026-10-09T08:21:33.384119+00:00",
+  "total_runs": 2008,
+  "last_trained": "2026-10-09T12:48:06.066542+00:00",
   "firm_velocity": {
     "baker_mckenzie": {
       "firm_name": "Baker McKenzie",
@@ -96,10 +96,10 @@
     "omelveny": {
       "firm_name": "O'Melveny & Myers LLP",
       "this_week": 1,
-      "last_week": 1,
-      "this_month": 2,
-      "acceleration": 0.0,
-      "status": "stable"
+      "last_week": 0,
+      "this_month": 1,
+      "acceleration": 1.0,
+      "status": "accelerating"
     },
     "skadden": {
       "firm_name": "Skadden, Arps, Slate, Meagher & Flom LLP",
@@ -191,10 +191,10 @@
     },
     "shearman": {
       "firm_name": "A&O Shearman",
-      "this_week": 0,
+      "this_week": 1,
       "last_week": 3,
-      "this_month": 3,
-      "acceleration": -1.0,
+      "this_month": 4,
+      "acceleration": -0.667,
       "status": "decelerating"
     },
     "reed_smith": {
@@ -223,38 +223,38 @@
     }
   },
   "seniority_distribution": {
-    "Associate": 0.231,
-    "Attorney / Lawyer": 0.308,
-    "Counsel": 0.231,
-    "Junior Associate": 0.154,
-    "Senior Associate": 0.077
+    "Associate": 0.286,
+    "Attorney / Lawyer": 0.286,
+    "Counsel": 0.214,
+    "Junior Associate": 0.143,
+    "Senior Associate": 0.071
   },
   "partner_signal_ratio": 0,
   "geo_boosts": {
-    "Dubai": 0.3417,
+    "Dubai": 0.3234,
     "United Arab Emirates": 0.9998,
-    "Abu Dhabi": 0.5867,
-    "Riyadh": 0.2509,
-    "UAE": 1.0266,
-    "Middle East": 1.0982,
+    "Abu Dhabi": 0.536,
+    "Riyadh": 0.2507,
+    "UAE": 1.0213,
+    "Middle East": 1.0986,
     "Dubai, United Arab Emirates": 0.9994,
-    "Dubai, Dubai, United Arab Emirates": 1.0416,
+    "Dubai, Dubai, United Arab Emirates": 1.0733,
     "Saudi Arabia": 0.9998,
-    "Oman": 0.4393
+    "Oman": 0.4014
   },
   "cross_firm_boosts": {
-    "Corporate / M&A": 1.2139,
+    "Corporate / M&A": 1.2191,
     "Real Estate": 1.0798,
     "Energy & Natural Resources": 1.0731,
     "Banking & Finance": 1.0798
   },
   "time_patterns": {
-    "1": 0.6987,
-    "2": 1.4797,
-    "3": 1.3852,
-    "4": 0.8348,
-    "5": 0.4964,
-    "6": 1.1052
+    "1": 0.6913,
+    "2": 1.4641,
+    "3": 1.3706,
+    "4": 0.826,
+    "5": 0.5544,
+    "6": 1.0935
   },
   "dedup_confidence": {}
 }
