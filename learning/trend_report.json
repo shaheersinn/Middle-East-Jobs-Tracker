@@ -7,7 +7,7 @@
       "high_conf": 19,
       "this_week": 5,
       "last_week": 6,
-      "trend_boost": 1.1357
+      "trend_boost": 1.1086
     },
     {
       "department": "Capital Markets",
@@ -16,7 +16,7 @@
       "high_conf": 1,
       "this_week": 0,
       "last_week": 4,
-      "trend_boost": 0.6015
+      "trend_boost": 0.6012
     },
     {
       "department": "Regulatory & Compliance",
@@ -45,7 +45,7 @@
       "high_conf": 19,
       "this_week": 5,
       "last_week": 6,
-      "trend_boost": 1.1357
+      "trend_boost": 1.1086
     },
     {
       "department": "Capital Markets",
@@ -54,7 +54,7 @@
       "high_conf": 1,
       "this_week": 0,
       "last_week": 4,
-      "trend_boost": 0.6015
+      "trend_boost": 0.6012
     },
     {
       "department": "Regulatory & Compliance",
@@ -85,5 +85,5 @@
       "_rank_score": 1.2004
     }
   ],
-  "generated_at": "2026-10-09T12:48:06.064580+00:00"
+  "generated_at": "2026-10-09T16:45:47.123409+00:00"
 }
