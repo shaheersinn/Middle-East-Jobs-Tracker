@@ -1,16 +1,16 @@
 {
   "source_multipliers": {
-    "Firm Careers Page": 0.6983,
-    "Website Monitor": 0.859,
+    "Firm Careers Page": 0.7078,
+    "Website Monitor": 0.8671,
     "Recruiter": 2.4998,
-    "Google News": 2.2509,
-    "LinkedIn": 1.2068,
+    "Google News": 2.2558,
+    "LinkedIn": 1.1944,
     "RSS:Legal Business": 0.2502
   },
   "dept_trend_boosts": {
     "Banking & Finance": 0.6002,
-    "Capital Markets": 0.601,
-    "Corporate / M&A": 1.0869,
+    "Capital Markets": 0.6008,
+    "Corporate / M&A": 1.0695,
     "Data Privacy & Technology": 0.6002,
     "Real Estate": 0.6002,
     "Project Finance & Infrastructure": 0.6002,
@@ -22,8 +22,8 @@
   },
   "keyword_boosts": {
     "development": 0.7823,
-    "data": 1.654,
-    "privacy": 1.654,
+    "data": 1.6492,
+    "privacy": 1.6492,
     "cybersecurity": 1.1258,
     "capital markets": 0.6845,
     "debt capital markets": 1.1229,
@@ -32,13 +32,13 @@
     "digital assets": 1.7732,
     "digital": 2.4774,
     "property": 0.7823,
-    "corporate": 0.7068,
+    "corporate": 0.7041,
     "energy": 0.2502,
     "real estate": 0.2502,
     "banking and finance": 1.4412,
     "banking": 0.6859,
     "finance": 1.0266,
-    "data privacy": 1.654,
+    "data privacy": 1.6492,
     "technology": 2.4774,
     "acquisition": 0.2502,
     "disputes associate": 2.4998,
@@ -47,11 +47,11 @@
     "regulatory": 0.2814,
     "restructuring": 0.2644,
     "finance associate": 1.5861,
-    "offering": 0.5987,
-    "AI": 1.654
+    "offering": 0.597,
+    "AI": 1.6492
   },
-  "total_runs": 2010,
-  "last_trained": "2026-10-09T22:08:38.907611+00:00",
+  "total_runs": 2011,
+  "last_trained": "2026-10-10T03:57:29.746770+00:00",
   "firm_velocity": {
     "baker_mckenzie": {
       "firm_name": "Baker McKenzie",
@@ -231,19 +231,19 @@
   },
   "partner_signal_ratio": 0,
   "geo_boosts": {
-    "Dubai": 0.297,
+    "Dubai": 0.2876,
     "United Arab Emirates": 0.9998,
-    "Abu Dhabi": 0.4631,
-    "Riyadh": 0.2505,
-    "UAE": 1.0136,
-    "Middle East": 1.0991,
+    "Abu Dhabi": 0.4371,
+    "Riyadh": 0.2504,
+    "UAE": 1.0109,
+    "Middle East": 1.0993,
     "Dubai, United Arab Emirates": 0.9994,
-    "Dubai, Dubai, United Arab Emirates": 1.1189,
+    "Dubai, Dubai, United Arab Emirates": 1.1351,
     "Saudi Arabia": 0.9998,
-    "Oman": 0.3469
+    "Oman": 0.3275
   },
   "cross_firm_boosts": {
-    "Corporate / M&A": 1.2266,
+    "Corporate / M&A": 1.2293,
     "Real Estate": 1.0798,
     "Energy & Natural Resources": 1.0731,
     "Banking & Finance": 1.0798
