@@ -1,16 +1,16 @@
 {
   "source_multipliers": {
-    "Firm Careers Page": 0.721,
-    "Website Monitor": 0.8966,
+    "Firm Careers Page": 0.7263,
+    "Website Monitor": 0.8971,
     "Recruiter": 2.4998,
-    "Google News": 2.345,
-    "LinkedIn": 1.1492,
+    "Google News": 2.3523,
+    "LinkedIn": 1.0853,
     "RSS:Legal Business": 0.2502
   },
   "dept_trend_boosts": {
     "Banking & Finance": 0.6002,
     "Capital Markets": 0.6006,
-    "Corporate / M&A": 0.8274,
+    "Corporate / M&A": 0.8175,
     "Data Privacy & Technology": 0.6002,
     "Real Estate": 0.6002,
     "Project Finance & Infrastructure": 0.6002,
@@ -22,8 +22,8 @@
   },
   "keyword_boosts": {
     "development": 0.7823,
-    "data": 1.5895,
-    "privacy": 1.5895,
+    "data": 1.5908,
+    "privacy": 1.5908,
     "cybersecurity": 1.1258,
     "capital markets": 0.6845,
     "debt capital markets": 1.1229,
@@ -32,13 +32,13 @@
     "digital assets": 1.7732,
     "digital": 2.4774,
     "property": 0.7823,
-    "corporate": 0.675,
+    "corporate": 0.6691,
     "energy": 0.2502,
     "real estate": 0.2502,
     "banking and finance": 1.4412,
     "banking": 0.6859,
     "finance": 1.0266,
-    "data privacy": 1.5895,
+    "data privacy": 1.5908,
     "technology": 2.4774,
     "acquisition": 0.2502,
     "disputes associate": 2.4998,
@@ -47,11 +47,11 @@
     "regulatory": 0.2814,
     "restructuring": 0.2644,
     "finance associate": 1.5861,
-    "offering": 0.5755,
-    "AI": 1.5895
+    "offering": 0.5759,
+    "AI": 1.5908
   },
-  "total_runs": 2022,
-  "last_trained": "2026-10-12T08:27:29.081801+00:00",
+  "total_runs": 2023,
+  "last_trained": "2026-10-12T14:43:50.409892+00:00",
   "firm_velocity": {
     "baker_mckenzie": {
       "firm_name": "Baker McKenzie",
@@ -95,11 +95,11 @@
     },
     "omelveny": {
       "firm_name": "O'Melveny & Myers LLP",
-      "this_week": 0,
+      "this_week": 1,
       "last_week": 1,
-      "this_month": 1,
-      "acceleration": -1.0,
-      "status": "decelerating"
+      "this_month": 2,
+      "acceleration": 0.0,
+      "status": "stable"
     },
     "skadden": {
       "firm_name": "Skadden, Arps, Slate, Meagher & Flom LLP",
@@ -135,11 +135,11 @@
     },
     "hogan_lovells": {
       "firm_name": "Hogan Lovells US LLP",
-      "this_week": 1,
-      "last_week": 0,
+      "this_week": 0,
+      "last_week": 1,
       "this_month": 1,
-      "acceleration": 1.0,
-      "status": "accelerating"
+      "acceleration": -1.0,
+      "status": "decelerating"
     },
     "mcdermott": {
       "firm_name": "McDermott Will & Emery LLP",
@@ -223,38 +223,39 @@
     }
   },
   "seniority_distribution": {
-    "Associate": 0.357,
-    "Attorney / Lawyer": 0.214,
-    "Counsel": 0.214,
-    "Junior Associate": 0.143,
-    "Senior Associate": 0.071
+    "Associate": 0.333,
+    "Attorney / Lawyer": 0.2,
+    "Counsel": 0.2,
+    "Junior Associate": 0.133,
+    "Mid-Level Associate": 0.067,
+    "Senior Associate": 0.067
   },
   "partner_signal_ratio": 0,
   "geo_boosts": {
-    "Dubai": 0.9227,
+    "Dubai": 0.9382,
     "United Arab Emirates": 0.9998,
-    "Abu Dhabi": 0.9374,
-    "Riyadh": 0.9195,
-    "UAE": 0.3314,
+    "Abu Dhabi": 0.9499,
+    "Riyadh": 0.9356,
+    "UAE": 0.3151,
     "Middle East": 1.0998,
     "Dubai, United Arab Emirates": 0.9994,
-    "Dubai, Dubai, United Arab Emirates": 1.0158,
+    "Dubai, Dubai, United Arab Emirates": 1.0126,
     "Saudi Arabia": 0.9998,
-    "Oman": 0.2566
+    "Oman": 0.2553
   },
   "cross_firm_boosts": {
-    "Corporate / M&A": 1.0962,
+    "Corporate / M&A": 1.093,
     "Real Estate": 1.0798,
     "Energy & Natural Resources": 1.0731,
     "Banking & Finance": 1.0798
   },
   "time_patterns": {
-    "1": 0.7316,
-    "2": 1.7076,
-    "3": 1.0184,
-    "4": 0.8741,
-    "5": 0.5867,
-    "6": 1.0816
+    "1": 0.7086,
+    "2": 1.715,
+    "3": 1.0229,
+    "4": 0.8779,
+    "5": 0.5893,
+    "6": 1.0863
   },
   "dedup_confidence": {}
 }
