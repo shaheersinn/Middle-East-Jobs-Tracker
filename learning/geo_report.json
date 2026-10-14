@@ -5,7 +5,7 @@
       "this_week": 1,
       "last_week": 1,
       "total_30d": 2,
-      "boost": 1.0034,
+      "boost": 1.0027,
       "trend": "\u2192 stable"
     },
     {
@@ -13,7 +13,7 @@
       "this_week": 1,
       "last_week": 1,
       "total_30d": 17,
-      "boost": 0.9838,
+      "boost": 0.987,
       "trend": "\u2192 stable"
     },
     {
@@ -21,7 +21,7 @@
       "this_week": 0,
       "last_week": 0,
       "total_30d": 2,
-      "boost": 0.9831,
+      "boost": 0.9865,
       "trend": "\u2192 stable"
     },
     {
@@ -29,7 +29,7 @@
       "this_week": 0,
       "last_week": 2,
       "total_30d": 11,
-      "boost": 0.6208,
+      "boost": 0.5466,
       "trend": "\u2193 cooling"
     },
     {
@@ -37,7 +37,7 @@
       "this_week": 0,
       "last_week": 2,
       "total_30d": 3,
-      "boost": 0.2671,
+      "boost": 0.2637,
       "trend": "\u2193 cooling"
     },
     {
@@ -45,9 +45,9 @@
       "this_week": 0,
       "last_week": 3,
       "total_30d": 3,
-      "boost": 0.2514,
+      "boost": 0.2511,
       "trend": "\u2193 cooling"
     }
   ],
-  "generated_at": "2026-10-13T22:12:25.353165+00:00"
+  "generated_at": "2026-10-14T03:12:28.613313+00:00"
 }
