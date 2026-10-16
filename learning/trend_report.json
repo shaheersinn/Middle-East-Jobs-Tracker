@@ -2,16 +2,16 @@
   "top4": [
     {
       "department": "Corporate / M&A",
-      "signal_count": 23,
+      "signal_count": 20,
       "firm_count": 8,
-      "high_conf": 14,
-      "this_week": 4,
-      "last_week": 4,
-      "trend_boost": 0.941
+      "high_conf": 11,
+      "this_week": 3,
+      "last_week": 5,
+      "trend_boost": 0.9208
     },
     {
       "department": "Capital Markets",
-      "signal_count": 7,
+      "signal_count": 6,
       "firm_count": 1,
       "high_conf": 1,
       "this_week": 0,
@@ -40,16 +40,16 @@
   "all_depts": [
     {
       "department": "Corporate / M&A",
-      "signal_count": 23,
+      "signal_count": 20,
       "firm_count": 8,
-      "high_conf": 14,
-      "this_week": 4,
-      "last_week": 4,
-      "trend_boost": 0.941
+      "high_conf": 11,
+      "this_week": 3,
+      "last_week": 5,
+      "trend_boost": 0.9208
     },
     {
       "department": "Capital Markets",
-      "signal_count": 7,
+      "signal_count": 6,
       "firm_count": 1,
       "high_conf": 1,
       "this_week": 0,
@@ -75,5 +75,5 @@
       "trend_boost": 0.6002
     }
   ],
-  "generated_at": "2026-10-16T10:57:39.432395+00:00"
+  "generated_at": "2026-10-16T14:27:52.832786+00:00"
 }
