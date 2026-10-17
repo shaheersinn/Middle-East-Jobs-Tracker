@@ -2,10 +2,10 @@
   "cities": [
     {
       "city": "Dubai",
-      "this_week": 3,
-      "last_week": 0,
-      "total_30d": 14,
-      "boost": 1.2998,
+      "this_week": 2,
+      "last_week": 1,
+      "total_30d": 12,
+      "boost": 1.4398,
       "trend": "\u2191 heating"
     },
     {
@@ -21,33 +21,33 @@
       "this_week": 0,
       "last_week": 0,
       "total_30d": 3,
-      "boost": 0.9485,
+      "boost": 0.9588,
       "trend": "\u2192 stable"
     },
     {
       "city": "Dubai, Dubai, United Arab Emirates",
       "this_week": 1,
-      "last_week": 2,
+      "last_week": 1,
       "total_30d": 3,
-      "boost": 0.4967,
-      "trend": "\u2193 cooling"
+      "boost": 0.5974,
+      "trend": "\u2192 stable"
+    },
+    {
+      "city": "UAE",
+      "this_week": 0,
+      "last_week": 0,
+      "total_30d": 3,
+      "boost": 0.4002,
+      "trend": "\u2192 stable"
     },
     {
       "city": "Abu Dhabi",
       "this_week": 0,
       "last_week": 1,
       "total_30d": 5,
-      "boost": 0.2534,
-      "trend": "\u2193 cooling"
-    },
-    {
-      "city": "UAE",
-      "this_week": 0,
-      "last_week": 1,
-      "total_30d": 3,
-      "boost": 0.2502,
+      "boost": 0.2527,
       "trend": "\u2193 cooling"
     }
   ],
-  "generated_at": "2026-10-17T10:22:27.062393+00:00"
+  "generated_at": "2026-10-17T13:24:39.242985+00:00"
 }
