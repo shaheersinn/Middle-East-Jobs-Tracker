@@ -7,13 +7,13 @@
       "high_conf": 10,
       "this_week": 2,
       "last_week": 4,
-      "trend_boost": 0.8139
+      "trend_boost": 0.8111
     },
     {
       "department": "Capital Markets",
-      "signal_count": 6,
+      "signal_count": 5,
       "firm_count": 1,
-      "high_conf": 1,
+      "high_conf": 0,
       "this_week": 0,
       "last_week": 0,
       "trend_boost": 0.6006
@@ -45,13 +45,13 @@
       "high_conf": 10,
       "this_week": 2,
       "last_week": 4,
-      "trend_boost": 0.8139
+      "trend_boost": 0.8111
     },
     {
       "department": "Capital Markets",
-      "signal_count": 6,
+      "signal_count": 5,
       "firm_count": 1,
-      "high_conf": 1,
+      "high_conf": 0,
       "this_week": 0,
       "last_week": 0,
       "trend_boost": 0.6006
@@ -75,5 +75,5 @@
       "trend_boost": 0.6002
     }
   ],
-  "generated_at": "2026-10-18T10:38:14.011137+00:00"
+  "generated_at": "2026-10-18T13:43:25.272475+00:00"
 }
