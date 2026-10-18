@@ -7,7 +7,7 @@
       "high_conf": 10,
       "this_week": 2,
       "last_week": 4,
-      "trend_boost": 0.8174
+      "trend_boost": 0.8139
     },
     {
       "department": "Capital Markets",
@@ -45,7 +45,7 @@
       "high_conf": 10,
       "this_week": 2,
       "last_week": 4,
-      "trend_boost": 0.8174
+      "trend_boost": 0.8139
     },
     {
       "department": "Capital Markets",
@@ -75,5 +75,5 @@
       "trend_boost": 0.6002
     }
   ],
-  "generated_at": "2026-10-18T08:29:06.202480+00:00"
+  "generated_at": "2026-10-18T10:38:14.011137+00:00"
 }
