@@ -16,7 +16,7 @@
       "avg_score": 2.04,
       "hire_signals": 0,
       "last_seen": "2026-10-21",
-      "multiplier": 0.5131
+      "multiplier": 0.5116
     },
     {
       "source": "Website Monitor",
@@ -34,7 +34,7 @@
       "avg_score": 1.71,
       "hire_signals": 0,
       "last_seen": "2026-10-21",
-      "multiplier": 0.3596
+      "multiplier": 0.352
     },
     {
       "source": "Recruiter",
@@ -47,5 +47,5 @@
     }
   ],
   "total_active": 5,
-  "generated_at": "2026-10-22T02:58:21.370605+00:00"
+  "generated_at": "2026-10-22T09:05:41.610776+00:00"
 }
