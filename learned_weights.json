@@ -1,18 +1,18 @@
 {
   "source_multipliers": {
-    "Firm Careers Page": 0.3186,
-    "Website Monitor": 0.4916,
+    "Firm Careers Page": 0.3049,
+    "Website Monitor": 0.5188,
     "Recruiter": 2.0264,
     "Google News": 2.4998,
-    "LinkedIn": 0.569,
+    "LinkedIn": 0.5844,
     "RSS:Legal Business": 0.2502
   },
   "dept_trend_boosts": {
     "Banking & Finance": 0.6002,
     "Capital Markets": 0.6006,
-    "Corporate / M&A": 1.0203,
+    "Corporate / M&A": 1.0162,
     "Data Privacy & Technology": 0.6002,
-    "Real Estate": 0.7048,
+    "Real Estate": 0.6838,
     "Project Finance & Infrastructure": 0.9998,
     "Energy & Natural Resources": 0.6002,
     "Arbitration & Disputes": 0.6002,
@@ -32,7 +32,7 @@
     "digital assets": 1.7732,
     "digital": 2.4774,
     "property": 0.7823,
-    "corporate": 1.2215,
+    "corporate": 1.2479,
     "energy": 0.2502,
     "real estate": 0.2502,
     "banking and finance": 1.4412,
@@ -47,11 +47,11 @@
     "regulatory": 0.2814,
     "restructuring": 0.2644,
     "finance associate": 1.5861,
-    "offering": 0.8618,
+    "offering": 0.892,
     "AI": 1.5788
   },
-  "total_runs": 2086,
-  "last_trained": "2026-10-23T09:00:22.645334+00:00",
+  "total_runs": 2087,
+  "last_trained": "2026-10-23T11:15:09.042437+00:00",
   "firm_velocity": {
     "baker_mckenzie": {
       "firm_name": "Baker McKenzie",
@@ -207,11 +207,11 @@
     },
     "latham": {
       "firm_name": "Latham & Watkins LLP",
-      "this_week": 0,
-      "last_week": 1,
+      "this_week": 1,
+      "last_week": 0,
       "this_month": 1,
-      "acceleration": -1.0,
-      "status": "decelerating"
+      "acceleration": 1.0,
+      "status": "accelerating"
     },
     "morgan_lewis": {
       "firm_name": "Morgan, Lewis & Bockius LLP",
@@ -232,30 +232,30 @@
   },
   "partner_signal_ratio": 0,
   "geo_boosts": {
-    "Dubai": 0.8667,
+    "Dubai": 0.8267,
     "United Arab Emirates": 0.9998,
-    "Abu Dhabi": 0.9831,
+    "Abu Dhabi": 0.9865,
     "Riyadh": 0.9998,
     "UAE": 0.9998,
     "Middle East": 1.0998,
     "Dubai, United Arab Emirates": 0.9994,
-    "Dubai, Dubai, United Arab Emirates": 1.931,
+    "Dubai, Dubai, United Arab Emirates": 1.9448,
     "Saudi Arabia": 0.9998,
-    "Oman": 1.0931
+    "Oman": 1.0945
   },
   "cross_firm_boosts": {
-    "Corporate / M&A": 1.0866,
+    "Corporate / M&A": 1.0853,
     "Real Estate": 1.0798,
     "Energy & Natural Resources": 1.0731,
     "Banking & Finance": 1.0798
   },
   "time_patterns": {
-    "1": 0.7768,
-    "2": 1.9499,
-    "3": 0.7653,
-    "4": 0.7244,
-    "5": 0.6995,
-    "6": 1.084
+    "1": 0.784,
+    "2": 1.9679,
+    "3": 0.7724,
+    "4": 0.7311,
+    "5": 0.6507,
+    "6": 1.094
   },
   "dedup_confidence": {}
 }
