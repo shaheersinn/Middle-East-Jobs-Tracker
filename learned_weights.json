@@ -1,18 +1,18 @@
 {
   "source_multipliers": {
-    "Firm Careers Page": 0.2939,
-    "Website Monitor": 0.5406,
+    "Firm Careers Page": 0.2851,
+    "Website Monitor": 0.558,
     "Recruiter": 2.0264,
     "Google News": 2.4998,
-    "LinkedIn": 0.5967,
+    "LinkedIn": 0.6066,
     "RSS:Legal Business": 0.2502
   },
   "dept_trend_boosts": {
     "Banking & Finance": 0.6002,
     "Capital Markets": 0.6006,
-    "Corporate / M&A": 1.053,
+    "Corporate / M&A": 1.0824,
     "Data Privacy & Technology": 0.6002,
-    "Real Estate": 0.667,
+    "Real Estate": 0.6536,
     "Project Finance & Infrastructure": 0.9998,
     "Energy & Natural Resources": 0.6002,
     "Arbitration & Disputes": 0.6002,
@@ -32,7 +32,7 @@
     "digital assets": 1.7732,
     "digital": 2.4774,
     "property": 0.7823,
-    "corporate": 1.269,
+    "corporate": 1.2859,
     "energy": 0.2502,
     "real estate": 0.2502,
     "banking and finance": 1.4412,
@@ -47,11 +47,11 @@
     "regulatory": 0.2814,
     "restructuring": 0.2644,
     "finance associate": 1.5861,
-    "offering": 0.9162,
+    "offering": 0.9355,
     "AI": 1.5788
   },
-  "total_runs": 2088,
-  "last_trained": "2026-10-23T14:35:10.391242+00:00",
+  "total_runs": 2089,
+  "last_trained": "2026-10-23T19:43:24.887820+00:00",
   "firm_velocity": {
     "baker_mckenzie": {
       "firm_name": "Baker McKenzie",
@@ -232,19 +232,19 @@
   },
   "partner_signal_ratio": 0,
   "geo_boosts": {
-    "Dubai": 0.7947,
+    "Dubai": 0.7691,
     "United Arab Emirates": 0.9998,
-    "Abu Dhabi": 0.9892,
+    "Abu Dhabi": 0.9914,
     "Riyadh": 0.9998,
     "UAE": 0.9998,
     "Middle East": 1.0998,
     "Dubai, United Arab Emirates": 0.9994,
-    "Dubai, Dubai, United Arab Emirates": 1.7958,
+    "Dubai, Dubai, United Arab Emirates": 1.6766,
     "Saudi Arabia": 0.9998,
-    "Oman": 1.0956
+    "Oman": 1.0965
   },
   "cross_firm_boosts": {
-    "Corporate / M&A": 1.0842,
+    "Corporate / M&A": 1.0834,
     "Real Estate": 1.0798,
     "Energy & Natural Resources": 1.0731,
     "Banking & Finance": 1.0798
