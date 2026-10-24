@@ -1,19 +1,19 @@
 {
   "source_multipliers": {
-    "Firm Careers Page": 0.2574,
-    "Website Monitor": 0.6177,
+    "Firm Careers Page": 0.2559,
+    "Website Monitor": 0.6213,
     "Recruiter": 2.0264,
     "Google News": 2.4998,
-    "LinkedIn": 0.7439,
+    "LinkedIn": 0.7603,
     "RSS:Legal Business": 0.2502
   },
   "dept_trend_boosts": {
     "Banking & Finance": 0.6002,
     "Capital Markets": 0.6006,
-    "Corporate / M&A": 1.8711,
+    "Corporate / M&A": 1.9969,
     "Data Privacy & Technology": 0.6002,
-    "Real Estate": 0.6112,
-    "Project Finance & Infrastructure": 0.7637,
+    "Real Estate": 0.609,
+    "Project Finance & Infrastructure": 0.731,
     "Energy & Natural Resources": 0.6002,
     "Arbitration & Disputes": 0.6002,
     "Regulatory & Compliance": 0.6002,
@@ -32,7 +32,7 @@
     "digital assets": 1.7732,
     "digital": 2.4774,
     "property": 0.7823,
-    "corporate": 1.2919,
+    "corporate": 1.2882,
     "energy": 0.2502,
     "real estate": 0.2502,
     "banking and finance": 1.4412,
@@ -43,15 +43,15 @@
     "acquisition": 0.2502,
     "disputes associate": 2.4998,
     "deal": 0.421,
-    "m&a": 0.3791,
+    "m&a": 0.397,
     "regulatory": 0.2814,
     "restructuring": 0.2644,
     "finance associate": 1.5861,
-    "offering": 1.0205,
+    "offering": 1.027,
     "AI": 1.5788
   },
-  "total_runs": 2096,
-  "last_trained": "2026-10-24T20:04:56.635365+00:00",
+  "total_runs": 2097,
+  "last_trained": "2026-10-24T23:56:28.374624+00:00",
   "firm_velocity": {
     "baker_mckenzie": {
       "firm_name": "Baker McKenzie",
@@ -232,19 +232,19 @@
   },
   "partner_signal_ratio": 0,
   "geo_boosts": {
-    "Dubai": 1.407,
+    "Dubai": 1.5256,
     "United Arab Emirates": 0.9998,
-    "Abu Dhabi": 0.9982,
+    "Abu Dhabi": 0.9986,
     "Riyadh": 0.9998,
     "UAE": 0.9998,
     "Middle East": 1.0998,
     "Dubai, United Arab Emirates": 0.9994,
-    "Dubai, Dubai, United Arab Emirates": 1.7723,
+    "Dubai, Dubai, United Arab Emirates": 1.8178,
     "Saudi Arabia": 0.9998,
-    "Oman": 1.0993
+    "Oman": 1.0994
   },
   "cross_firm_boosts": {
-    "Corporate / M&A": 1.1279,
+    "Corporate / M&A": 1.1343,
     "Real Estate": 1.0798,
     "Energy & Natural Resources": 1.0731,
     "Banking & Finance": 1.0798
