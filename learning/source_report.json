@@ -7,7 +7,7 @@
       "avg_score": 0.94,
       "hire_signals": 0,
       "last_seen": "2026-10-24",
-      "multiplier": 0.2615
+      "multiplier": 0.2592
     },
     {
       "source": "Google News",
@@ -25,7 +25,7 @@
       "avg_score": 2.03,
       "hire_signals": 0,
       "last_seen": "2026-10-24",
-      "multiplier": 0.6979
+      "multiplier": 0.7235
     },
     {
       "source": "Website Monitor",
@@ -34,7 +34,7 @@
       "avg_score": 1.67,
       "hire_signals": 0,
       "last_seen": "2026-09-26",
-      "multiplier": 0.6077
+      "multiplier": 0.6133
     },
     {
       "source": "Recruiter",
@@ -56,5 +56,5 @@
     }
   ],
   "total_active": 6,
-  "generated_at": "2026-10-24T13:47:33.486377+00:00"
+  "generated_at": "2026-10-24T17:09:24.384719+00:00"
 }
