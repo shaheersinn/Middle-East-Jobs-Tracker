@@ -6,8 +6,8 @@
       "firm_count": 6,
       "high_conf": 9,
       "this_week": 7,
-      "last_week": 3,
-      "trend_boost": 1.2718
+      "last_week": 2,
+      "trend_boost": 1.5174
     },
     {
       "department": "Capital Markets",
@@ -26,8 +26,8 @@
       "firm_count": 6,
       "high_conf": 9,
       "this_week": 7,
-      "last_week": 3,
-      "trend_boost": 1.2718
+      "last_week": 2,
+      "trend_boost": 1.5174
     },
     {
       "department": "Capital Markets",
@@ -39,5 +39,5 @@
       "trend_boost": 0.6006
     }
   ],
-  "generated_at": "2026-10-24T10:33:21.443724+00:00"
+  "generated_at": "2026-10-24T13:47:33.486022+00:00"
 }
