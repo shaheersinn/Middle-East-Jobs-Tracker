@@ -7,7 +7,7 @@
       "avg_score": 0.94,
       "hire_signals": 0,
       "last_seen": "2026-10-24",
-      "multiplier": 0.253
+      "multiplier": 0.2524
     },
     {
       "source": "Google News",
@@ -25,7 +25,7 @@
       "avg_score": 2.03,
       "hire_signals": 0,
       "last_seen": "2026-10-24",
-      "multiplier": 0.7923
+      "multiplier": 0.799
     },
     {
       "source": "Website Monitor",
@@ -34,16 +34,7 @@
       "avg_score": 1.67,
       "hire_signals": 0,
       "last_seen": "2026-09-26",
-      "multiplier": 0.6282
-    },
-    {
-      "source": "Recruiter",
-      "total_signals": 1,
-      "firm_coverage": 1,
-      "avg_score": 3.41,
-      "hire_signals": 0,
-      "last_seen": "2026-09-25",
-      "multiplier": 2.0264
+      "multiplier": 0.6297
     },
     {
       "source": "RSS:Legal Business",
@@ -55,6 +46,6 @@
       "multiplier": 0.2502
     }
   ],
-  "total_active": 6,
-  "generated_at": "2026-10-25T11:00:00.761505+00:00"
+  "total_active": 5,
+  "generated_at": "2026-10-25T14:03:26.081439+00:00"
 }
