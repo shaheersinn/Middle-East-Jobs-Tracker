@@ -6,8 +6,8 @@
       "firm_count": 6,
       "high_conf": 9,
       "this_week": 8,
-      "last_week": 2,
-      "trend_boost": 2.4325
+      "last_week": 1,
+      "trend_boost": 2.446
     }
   ],
   "all_depts": [
@@ -17,9 +17,9 @@
       "firm_count": 6,
       "high_conf": 9,
       "this_week": 8,
-      "last_week": 2,
-      "trend_boost": 2.4325
+      "last_week": 1,
+      "trend_boost": 2.446
     }
   ],
-  "generated_at": "2026-10-26T12:31:10.655066+00:00"
+  "generated_at": "2026-10-26T16:24:53.369099+00:00"
 }
