@@ -2,18 +2,18 @@
   "source_multipliers": {
     "Firm Careers Page": 0.2502,
     "Website Monitor": 0.6331,
-    "Recruiter": 2.0264,
-    "Google News": 2.4998,
-    "LinkedIn": 0.7843,
+    "Recruiter": 2.1211,
+    "Google News": 2.1194,
+    "LinkedIn": 0.6939,
     "RSS:Legal Business": 0.2502
   },
   "dept_trend_boosts": {
     "Banking & Finance": 0.6002,
     "Capital Markets": 0.6006,
-    "Corporate / M&A": 1.4886,
+    "Corporate / M&A": 1.5509,
     "Data Privacy & Technology": 0.6002,
     "Real Estate": 0.6002,
-    "Project Finance & Infrastructure": 0.6008,
+    "Project Finance & Infrastructure": 0.6006,
     "Energy & Natural Resources": 0.6002,
     "Arbitration & Disputes": 0.6002,
     "Regulatory & Compliance": 0.6002,
@@ -32,7 +32,7 @@
     "digital assets": 1.7732,
     "digital": 2.4774,
     "property": 0.7823,
-    "corporate": 1.2891,
+    "corporate": 1.1954,
     "energy": 0.2502,
     "real estate": 0.2502,
     "banking and finance": 1.4412,
@@ -43,15 +43,17 @@
     "acquisition": 0.2502,
     "disputes associate": 2.4998,
     "deal": 0.421,
-    "m&a": 0.8877,
+    "m&a": 0.7602,
     "regulatory": 0.2814,
     "restructuring": 0.2644,
     "finance associate": 1.5861,
     "offering": 1.1036,
-    "AI": 1.5788
+    "AI": 1.5788,
+    "corporate governance": 1.3,
+    "governance": 1.3
   },
-  "total_runs": 2120,
-  "last_trained": "2026-10-29T07:55:43.259169+00:00",
+  "total_runs": 2121,
+  "last_trained": "2026-10-29T12:32:38.510835+00:00",
   "firm_velocity": {
     "baker_mckenzie": {
       "firm_name": "Baker McKenzie",
@@ -95,11 +97,11 @@
     },
     "omelveny": {
       "firm_name": "O'Melveny & Myers LLP",
-      "this_week": 0,
-      "last_week": 1,
-      "this_month": 1,
-      "acceleration": -1.0,
-      "status": "decelerating"
+      "this_week": 2,
+      "last_week": 0,
+      "this_month": 2,
+      "acceleration": 2.0,
+      "status": "accelerating"
     },
     "skadden": {
       "firm_name": "Skadden, Arps, Slate, Meagher & Flom LLP",
@@ -192,10 +194,10 @@
     "shearman": {
       "firm_name": "A&O Shearman",
       "this_week": 3,
-      "last_week": 5,
-      "this_month": 8,
-      "acceleration": -0.4,
-      "status": "decelerating"
+      "last_week": 3,
+      "this_month": 6,
+      "acceleration": 0.0,
+      "status": "stable"
     },
     "reed_smith": {
       "firm_name": "Reed Smith LLP",
@@ -223,39 +225,39 @@
     }
   },
   "seniority_distribution": {
-    "Associate": 0.533,
-    "Attorney / Lawyer": 0.067,
-    "Counsel": 0.067,
-    "Junior Associate": 0.067,
-    "Mid-Level Associate": 0.067,
-    "Senior Associate": 0.2
+    "Associate": 0.588,
+    "Attorney / Lawyer": 0.059,
+    "Counsel": 0.059,
+    "Junior Associate": 0.059,
+    "Mid-Level Associate": 0.059,
+    "Senior Associate": 0.176
   },
   "partner_signal_ratio": 0,
   "geo_boosts": {
-    "Dubai": 1.6952,
+    "Dubai": 1.8562,
     "United Arab Emirates": 0.9998,
     "Abu Dhabi": 0.9998,
     "Riyadh": 0.9998,
-    "UAE": 0.9998,
+    "UAE": 1.0198,
     "Middle East": 1.0998,
     "Dubai, United Arab Emirates": 0.9994,
-    "Dubai, Dubai, United Arab Emirates": 0.9904,
+    "Dubai, Dubai, United Arab Emirates": 0.8923,
     "Saudi Arabia": 0.9998,
-    "Oman": 0.5284
+    "Oman": 0.4727
   },
   "cross_firm_boosts": {
-    "Corporate / M&A": 1.1061,
+    "Corporate / M&A": 1.1169,
     "Real Estate": 1.0798,
     "Energy & Natural Resources": 1.0731,
     "Banking & Finance": 1.0798
   },
   "time_patterns": {
-    "1": 0.8273,
-    "2": 1.9714,
-    "3": 0.8132,
-    "4": 0.7324,
-    "5": 0.6518,
-    "6": 1.0039
+    "1": 0.6338,
+    "2": 1.5102,
+    "3": 0.6229,
+    "4": 1.9647,
+    "5": 0.4993,
+    "6": 0.7691
   },
   "dedup_confidence": {}
 }
