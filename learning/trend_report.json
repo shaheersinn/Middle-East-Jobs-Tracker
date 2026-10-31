@@ -2,24 +2,24 @@
   "top4": [
     {
       "department": "Corporate / M&A",
-      "signal_count": 22,
+      "signal_count": 19,
       "firm_count": 7,
-      "high_conf": 6,
+      "high_conf": 5,
       "this_week": 4,
       "last_week": 7,
-      "trend_boost": 1.3908
+      "trend_boost": 1.2784
     }
   ],
   "all_depts": [
     {
       "department": "Corporate / M&A",
-      "signal_count": 22,
+      "signal_count": 19,
       "firm_count": 7,
-      "high_conf": 6,
+      "high_conf": 5,
       "this_week": 4,
       "last_week": 7,
-      "trend_boost": 1.3908
+      "trend_boost": 1.2784
     }
   ],
-  "generated_at": "2026-10-31T11:56:11.352086+00:00"
+  "generated_at": "2026-10-31T14:13:12.372735+00:00"
 }
