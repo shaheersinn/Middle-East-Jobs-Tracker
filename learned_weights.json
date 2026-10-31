@@ -2,15 +2,15 @@
   "source_multipliers": {
     "Firm Careers Page": 0.2502,
     "Website Monitor": 0.6331,
-    "Recruiter": 2.4491,
-    "Google News": 0.8818,
-    "LinkedIn": 0.3778,
+    "Recruiter": 2.4593,
+    "Google News": 0.8487,
+    "LinkedIn": 0.3678,
     "RSS:Legal Business": 0.2502
   },
   "dept_trend_boosts": {
     "Banking & Finance": 0.6002,
     "Capital Markets": 0.6006,
-    "Corporate / M&A": 1.5313,
+    "Corporate / M&A": 1.3908,
     "Data Privacy & Technology": 0.6002,
     "Real Estate": 0.6002,
     "Project Finance & Infrastructure": 0.6002,
@@ -32,7 +32,7 @@
     "digital assets": 1.7732,
     "digital": 2.4774,
     "property": 0.7823,
-    "corporate": 0.8708,
+    "corporate": 0.8607,
     "energy": 0.2502,
     "real estate": 0.2502,
     "banking and finance": 1.4412,
@@ -43,17 +43,17 @@
     "acquisition": 0.2502,
     "disputes associate": 2.4998,
     "deal": 0.421,
-    "m&a": 0.3185,
+    "m&a": 0.3048,
     "regulatory": 0.2814,
     "restructuring": 0.2644,
     "finance associate": 1.5861,
     "offering": 1.1036,
     "AI": 1.5788,
-    "corporate governance": 2.3389,
-    "governance": 2.3389
+    "corporate governance": 2.3711,
+    "governance": 2.3711
   },
-  "total_runs": 2130,
-  "last_trained": "2026-10-31T07:54:16.198937+00:00",
+  "total_runs": 2131,
+  "last_trained": "2026-10-31T11:56:11.353909+00:00",
   "firm_velocity": {
     "baker_mckenzie": {
       "firm_name": "Baker McKenzie",
@@ -137,11 +137,11 @@
     },
     "hogan_lovells": {
       "firm_name": "Hogan Lovells US LLP",
-      "this_week": 1,
-      "last_week": 0,
+      "this_week": 0,
+      "last_week": 1,
       "this_month": 1,
-      "acceleration": 1.0,
-      "status": "accelerating"
+      "acceleration": -1.0,
+      "status": "decelerating"
     },
     "mcdermott": {
       "firm_name": "McDermott Will & Emery LLP",
@@ -193,11 +193,11 @@
     },
     "shearman": {
       "firm_name": "A&O Shearman",
-      "this_week": 3,
-      "last_week": 3,
-      "this_month": 6,
-      "acceleration": 0.0,
-      "status": "stable"
+      "this_week": 1,
+      "last_week": 4,
+      "this_month": 5,
+      "acceleration": -0.75,
+      "status": "decelerating"
     },
     "reed_smith": {
       "firm_name": "Reed Smith LLP",
@@ -242,19 +242,19 @@
   },
   "partner_signal_ratio": 0,
   "geo_boosts": {
-    "Dubai": 2.4136,
+    "Dubai": 2.0809,
     "United Arab Emirates": 0.9998,
     "Abu Dhabi": 0.9998,
     "Riyadh": 0.9998,
-    "UAE": 1.0893,
+    "UAE": 1.0914,
     "Middle East": 1.0998,
     "Dubai, United Arab Emirates": 0.9994,
-    "Dubai, Dubai, United Arab Emirates": 0.5526,
+    "Dubai, Dubai, United Arab Emirates": 0.4921,
     "Saudi Arabia": 0.9998,
-    "Oman": 0.2799
+    "Oman": 0.2739
   },
   "cross_firm_boosts": {
-    "Corporate / M&A": 1.1542,
+    "Corporate / M&A": 1.1394,
     "Real Estate": 1.0798,
     "Energy & Natural Resources": 1.0731,
     "Banking & Finance": 1.0798
