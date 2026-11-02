@@ -7,7 +7,7 @@
       "high_conf": 5,
       "this_week": 4,
       "last_week": 7,
-      "trend_boost": 0.9229
+      "trend_boost": 0.904
     },
     {
       "department": "Project Finance & Infrastructure",
@@ -16,7 +16,7 @@
       "high_conf": 0,
       "this_week": 1,
       "last_week": 0,
-      "trend_boost": 0.7954
+      "trend_boost": 0.8363
     }
   ],
   "all_depts": [
@@ -27,7 +27,7 @@
       "high_conf": 5,
       "this_week": 4,
       "last_week": 7,
-      "trend_boost": 0.9229
+      "trend_boost": 0.904
     },
     {
       "department": "Project Finance & Infrastructure",
@@ -36,8 +36,8 @@
       "high_conf": 0,
       "this_week": 1,
       "last_week": 0,
-      "trend_boost": 0.7954
+      "trend_boost": 0.8363
     }
   ],
-  "generated_at": "2026-11-01T21:36:14.198487+00:00"
+  "generated_at": "2026-11-02T01:10:55.874473+00:00"
 }
