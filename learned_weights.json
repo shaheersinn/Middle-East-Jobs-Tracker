@@ -8,12 +8,12 @@
     "RSS:Legal Business": 0.2502
   },
   "dept_trend_boosts": {
-    "Banking & Finance": 0.997,
+    "Banking & Finance": 0.9976,
     "Capital Markets": 0.6006,
-    "Corporate / M&A": 0.8458,
+    "Corporate / M&A": 0.8195,
     "Data Privacy & Technology": 0.6002,
     "Real Estate": 0.6002,
-    "Project Finance & Infrastructure": 0.997,
+    "Project Finance & Infrastructure": 0.9976,
     "Energy & Natural Resources": 0.6002,
     "Arbitration & Disputes": 0.6002,
     "Regulatory & Compliance": 0.6002,
@@ -32,7 +32,7 @@
     "digital assets": 1.7732,
     "digital": 2.4774,
     "property": 0.7823,
-    "corporate": 1.0178,
+    "corporate": 1.0183,
     "energy": 0.2502,
     "real estate": 0.2502,
     "banking and finance": 1.4412,
@@ -49,12 +49,12 @@
     "finance associate": 1.5861,
     "offering": 1.1036,
     "AI": 1.5788,
-    "corporate governance": 2.4997,
-    "governance": 2.4997,
-    "construction": 0.2555
+    "corporate governance": 2.4998,
+    "governance": 2.4998,
+    "construction": 0.2544
   },
-  "total_runs": 2158,
-  "last_trained": "2026-11-06T04:46:30.743867+00:00",
+  "total_runs": 2159,
+  "last_trained": "2026-11-06T13:38:06.665845+00:00",
   "firm_velocity": {
     "baker_mckenzie": {
       "firm_name": "Baker McKenzie",
@@ -226,11 +226,11 @@
     },
     "milbank": {
       "firm_name": "Milbank LLP",
-      "this_week": 1,
-      "last_week": 0,
+      "this_week": 0,
+      "last_week": 1,
       "this_month": 1,
-      "acceleration": 1.0,
-      "status": "accelerating"
+      "acceleration": -1.0,
+      "status": "decelerating"
     }
   },
   "seniority_distribution": {
@@ -242,15 +242,15 @@
   },
   "partner_signal_ratio": 0,
   "geo_boosts": {
-    "Dubai": 0.35,
+    "Dubai": 0.33,
     "United Arab Emirates": 0.9998,
     "Abu Dhabi": 0.9998,
     "Riyadh": 0.9998,
     "UAE": 1.0991,
-    "Middle East": 1.1993,
+    "Middle East": 1.1994,
     "Dubai, United Arab Emirates": 0.9994,
-    "Dubai, Dubai, United Arab Emirates": 0.2506,
-    "Saudi Arabia": 1.1955,
+    "Dubai, Dubai, United Arab Emirates": 0.2505,
+    "Saudi Arabia": 1.1964,
     "Oman": 0.2739
   },
   "cross_firm_boosts": {
@@ -260,12 +260,12 @@
     "Banking & Finance": 1.0798
   },
   "time_patterns": {
-    "1": 0.5372,
-    "2": 1.4885,
-    "3": 0.614,
-    "4": 2.1405,
-    "5": 0.4838,
-    "6": 0.736
+    "1": 0.5474,
+    "2": 1.4857,
+    "3": 0.6128,
+    "4": 2.1365,
+    "5": 0.4829,
+    "6": 0.7346
   },
   "dedup_confidence": {}
 }
