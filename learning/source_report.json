@@ -2,11 +2,11 @@
   "sources": [
     {
       "source": "Firm Careers Page",
-      "total_signals": 12,
+      "total_signals": 14,
       "firm_coverage": 2,
-      "avg_score": 1.14,
+      "avg_score": 1.48,
       "hire_signals": 0,
-      "last_seen": "2026-11-02",
+      "last_seen": "2026-11-06",
       "multiplier": 0.2502
     },
     {
@@ -16,7 +16,16 @@
       "avg_score": 2.06,
       "hire_signals": 0,
       "last_seen": "2026-10-24",
-      "multiplier": 0.3267
+      "multiplier": 0.3212
+    },
+    {
+      "source": "Google News",
+      "total_signals": 3,
+      "firm_coverage": 3,
+      "avg_score": 3.28,
+      "hire_signals": 3,
+      "last_seen": "2026-11-06",
+      "multiplier": 0.6612
     },
     {
       "source": "Recruiter",
@@ -35,17 +44,8 @@
       "hire_signals": 1,
       "last_seen": "2026-10-23",
       "multiplier": 0.2502
-    },
-    {
-      "source": "Google News",
-      "total_signals": 1,
-      "firm_coverage": 1,
-      "avg_score": 5.98,
-      "hire_signals": 1,
-      "last_seen": "2026-10-21",
-      "multiplier": 0.726
     }
   ],
   "total_active": 5,
-  "generated_at": "2026-11-06T13:38:06.664429+00:00"
+  "generated_at": "2026-11-06T14:02:52.735454+00:00"
 }

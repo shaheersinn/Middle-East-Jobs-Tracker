@@ -3,17 +3,17 @@
     "Firm Careers Page": 0.2502,
     "Website Monitor": 0.6331,
     "Recruiter": 2.4998,
-    "Google News": 0.726,
-    "LinkedIn": 0.3267,
+    "Google News": 0.6612,
+    "LinkedIn": 0.3212,
     "RSS:Legal Business": 0.2502
   },
   "dept_trend_boosts": {
-    "Banking & Finance": 0.9976,
+    "Banking & Finance": 0.9981,
     "Capital Markets": 0.6006,
-    "Corporate / M&A": 0.8195,
+    "Corporate / M&A": 0.8213,
     "Data Privacy & Technology": 0.6002,
     "Real Estate": 0.6002,
-    "Project Finance & Infrastructure": 0.9976,
+    "Project Finance & Infrastructure": 0.9981,
     "Energy & Natural Resources": 0.6002,
     "Arbitration & Disputes": 0.6002,
     "Regulatory & Compliance": 0.6002,
@@ -32,12 +32,12 @@
     "digital assets": 1.7732,
     "digital": 2.4774,
     "property": 0.7823,
-    "corporate": 1.0183,
+    "corporate": 1.0612,
     "energy": 0.2502,
     "real estate": 0.2502,
     "banking and finance": 1.4412,
     "banking": 0.6859,
-    "finance": 1.0266,
+    "finance": 0.9032,
     "data privacy": 1.5788,
     "technology": 2.4774,
     "acquisition": 0.2502,
@@ -46,15 +46,16 @@
     "m&a": 0.2502,
     "regulatory": 0.2814,
     "restructuring": 0.2644,
-    "finance associate": 1.5861,
+    "finance associate": 1.3597,
     "offering": 1.1036,
     "AI": 1.5788,
     "corporate governance": 2.4998,
     "governance": 2.4998,
-    "construction": 0.2544
+    "construction": 0.2535,
+    "structured finance": 0.8908
   },
-  "total_runs": 2159,
-  "last_trained": "2026-11-06T13:38:06.665845+00:00",
+  "total_runs": 2160,
+  "last_trained": "2026-11-06T14:02:52.737154+00:00",
   "firm_velocity": {
     "baker_mckenzie": {
       "firm_name": "Baker McKenzie",
@@ -178,11 +179,11 @@
     },
     "norton_rose": {
       "firm_name": "Norton Rose Fulbright US LLP",
-      "this_week": 0,
-      "last_week": 1,
+      "this_week": 1,
+      "last_week": 0,
       "this_month": 1,
-      "acceleration": -1.0,
-      "status": "decelerating"
+      "acceleration": 1.0,
+      "status": "accelerating"
     },
     "dentons": {
       "firm_name": "Dentons US LLP",
@@ -194,19 +195,19 @@
     },
     "shearman": {
       "firm_name": "A&O Shearman",
-      "this_week": 4,
+      "this_week": 6,
       "last_week": 3,
-      "this_month": 7,
-      "acceleration": 0.333,
-      "status": "stable"
+      "this_month": 9,
+      "acceleration": 1.0,
+      "status": "accelerating"
     },
     "reed_smith": {
       "firm_name": "Reed Smith LLP",
-      "this_week": 0,
-      "last_week": 1,
+      "this_week": 1,
+      "last_week": 0,
       "this_month": 1,
-      "acceleration": -1.0,
-      "status": "decelerating"
+      "acceleration": 1.0,
+      "status": "accelerating"
     },
     "latham": {
       "firm_name": "Latham & Watkins LLP",
@@ -234,38 +235,38 @@
     }
   },
   "seniority_distribution": {
-    "Associate": 0.526,
-    "Attorney / Lawyer": 0.158,
-    "Junior Associate": 0.105,
-    "Mid-Level Associate": 0.053,
-    "Senior Associate": 0.158
+    "Associate": 0.571,
+    "Attorney / Lawyer": 0.143,
+    "Junior Associate": 0.095,
+    "Mid-Level Associate": 0.048,
+    "Senior Associate": 0.143
   },
   "partner_signal_ratio": 0,
   "geo_boosts": {
-    "Dubai": 0.33,
+    "Dubai": 0.344,
     "United Arab Emirates": 0.9998,
     "Abu Dhabi": 0.9998,
-    "Riyadh": 0.9998,
+    "Riyadh": 1.0398,
     "UAE": 1.0991,
-    "Middle East": 1.1994,
+    "Middle East": 1.1995,
     "Dubai, United Arab Emirates": 0.9994,
-    "Dubai, Dubai, United Arab Emirates": 0.2505,
-    "Saudi Arabia": 1.1964,
+    "Dubai, Dubai, United Arab Emirates": 0.2504,
+    "Saudi Arabia": 1.1971,
     "Oman": 0.2739
   },
   "cross_firm_boosts": {
-    "Corporate / M&A": 1.0804,
+    "Corporate / M&A": 1.0803,
     "Real Estate": 1.0798,
     "Energy & Natural Resources": 1.0731,
     "Banking & Finance": 1.0798
   },
   "time_patterns": {
-    "1": 0.5474,
-    "2": 1.4857,
-    "3": 0.6128,
-    "4": 2.1365,
-    "5": 0.4829,
-    "6": 0.7346
+    "1": 0.5397,
+    "2": 1.4647,
+    "3": 0.6042,
+    "4": 2.1063,
+    "5": 0.5609,
+    "6": 0.7242
   },
   "dedup_confidence": {}
 }
