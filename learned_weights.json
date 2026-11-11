@@ -1,19 +1,19 @@
 {
   "source_multipliers": {
-    "Firm Careers Page": 0.2952,
+    "Firm Careers Page": 0.2979,
     "Website Monitor": 0.6331,
     "Recruiter": 2.4998,
-    "Google News": 0.3925,
-    "LinkedIn": 0.2536,
+    "Google News": 0.3905,
+    "LinkedIn": 0.2529,
     "RSS:Legal Business": 0.2502
   },
   "dept_trend_boosts": {
-    "Banking & Finance": 2.2948,
+    "Banking & Finance": 2.3358,
     "Capital Markets": 0.6006,
-    "Corporate / M&A": 0.859,
+    "Corporate / M&A": 0.8552,
     "Data Privacy & Technology": 0.6002,
     "Real Estate": 0.6002,
-    "Project Finance & Infrastructure": 0.8865,
+    "Project Finance & Infrastructure": 0.9092,
     "Energy & Natural Resources": 0.6002,
     "Arbitration & Disputes": 0.6002,
     "Regulatory & Compliance": 0.6002,
@@ -33,12 +33,12 @@
     "digital assets": 1.7732,
     "digital": 2.4774,
     "property": 0.7823,
-    "corporate": 1.3403,
+    "corporate": 1.3776,
     "energy": 0.2502,
     "real estate": 0.2502,
     "banking and finance": 1.4412,
     "banking": 0.6859,
-    "finance": 0.6511,
+    "finance": 0.6645,
     "data privacy": 1.5788,
     "technology": 2.4774,
     "acquisition": 0.2502,
@@ -47,17 +47,17 @@
     "m&a": 0.2502,
     "regulatory": 0.2814,
     "restructuring": 0.2644,
-    "finance associate": 0.7217,
+    "finance associate": 0.7358,
     "offering": 1.1036,
     "AI": 1.5788,
     "corporate governance": 2.4998,
     "governance": 2.4998,
     "construction": 0.2502,
-    "structured finance": 0.6613,
-    "project finance": 1.0064
+    "structured finance": 0.6708,
+    "project finance": 1.0035
   },
-  "total_runs": 2182,
-  "last_trained": "2026-11-11T13:49:03.875954+00:00",
+  "total_runs": 2183,
+  "last_trained": "2026-11-11T17:38:29.126900+00:00",
   "firm_velocity": {
     "baker_mckenzie": {
       "firm_name": "Baker McKenzie",
@@ -237,23 +237,22 @@
     }
   },
   "seniority_distribution": {
-    "Associate": 0.52,
-    "Attorney / Lawyer": 0.12,
-    "Junior Associate": 0.08,
-    "Mid-Level Associate": 0.04,
-    "Senior Associate": 0.24
+    "Associate": 0.542,
+    "Attorney / Lawyer": 0.125,
+    "Junior Associate": 0.083,
+    "Senior Associate": 0.25
   },
   "partner_signal_ratio": 0,
   "geo_boosts": {
-    "Dubai": 2.2497,
+    "Dubai": 2.2998,
     "United Arab Emirates": 0.9998,
     "Abu Dhabi": 0.9998,
-    "Riyadh": 1.1989,
+    "Riyadh": 1.1991,
     "UAE": 1.0991,
-    "Middle East": 0.2918,
+    "Middle East": 0.2834,
     "Dubai, United Arab Emirates": 0.9994,
-    "Dubai, Dubai, United Arab Emirates": 0.9892,
-    "Saudi Arabia": 0.3775,
+    "Dubai, Dubai, United Arab Emirates": 0.9914,
+    "Saudi Arabia": 0.352,
     "Oman": 0.2739
   },
   "cross_firm_boosts": {
