@@ -1,19 +1,19 @@
 {
   "source_multipliers": {
-    "Firm Careers Page": 0.3064,
+    "Firm Careers Page": 0.3068,
     "Website Monitor": 0.6331,
     "Recruiter": 2.4998,
-    "Google News": 0.3842,
-    "LinkedIn": 0.2506,
+    "Google News": 0.3838,
+    "LinkedIn": 0.2505,
     "RSS:Legal Business": 0.2502
   },
   "dept_trend_boosts": {
-    "Banking & Finance": 2.4656,
+    "Banking & Finance": 2.1725,
     "Capital Markets": 0.6006,
-    "Corporate / M&A": 1.0107,
+    "Corporate / M&A": 0.9486,
     "Data Privacy & Technology": 0.6002,
     "Real Estate": 0.6002,
-    "Project Finance & Infrastructure": 0.981,
+    "Project Finance & Infrastructure": 0.9848,
     "Energy & Natural Resources": 0.6002,
     "Arbitration & Disputes": 0.6002,
     "Regulatory & Compliance": 0.6002,
@@ -33,12 +33,12 @@
     "digital assets": 1.7732,
     "digital": 2.4774,
     "property": 0.7823,
-    "corporate": 1.4955,
+    "corporate": 1.5017,
     "energy": 0.2502,
     "real estate": 0.2502,
     "banking and finance": 1.4412,
     "banking": 0.6859,
-    "finance": 0.7069,
+    "finance": 0.7092,
     "data privacy": 1.5788,
     "technology": 2.4774,
     "acquisition": 0.2502,
@@ -47,17 +47,17 @@
     "m&a": 0.2502,
     "regulatory": 0.2814,
     "restructuring": 0.2644,
-    "finance associate": 0.7804,
+    "finance associate": 0.7828,
     "offering": 1.1036,
     "AI": 1.5788,
     "corporate governance": 2.4998,
     "governance": 2.4998,
     "construction": 0.2502,
-    "structured finance": 0.7008,
-    "project finance": 0.9944
+    "structured finance": 0.7024,
+    "project finance": 0.9939
   },
-  "total_runs": 2190,
-  "last_trained": "2026-11-13T13:47:54.575378+00:00",
+  "total_runs": 2191,
+  "last_trained": "2026-11-13T14:08:55.543905+00:00",
   "firm_velocity": {
     "baker_mckenzie": {
       "firm_name": "Baker McKenzie",
@@ -181,11 +181,11 @@
     },
     "norton_rose": {
       "firm_name": "Norton Rose Fulbright US LLP",
-      "this_week": 1,
-      "last_week": 0,
+      "this_week": 0,
+      "last_week": 1,
       "this_month": 1,
-      "acceleration": 1.0,
-      "status": "accelerating"
+      "acceleration": -1.0,
+      "status": "decelerating"
     },
     "dentons": {
       "firm_name": "Dentons US LLP",
@@ -197,19 +197,19 @@
     },
     "shearman": {
       "firm_name": "A&O Shearman",
-      "this_week": 8,
-      "last_week": 4,
+      "this_week": 6,
+      "last_week": 6,
       "this_month": 12,
-      "acceleration": 1.0,
-      "status": "accelerating"
+      "acceleration": 0.0,
+      "status": "stable"
     },
     "reed_smith": {
       "firm_name": "Reed Smith LLP",
-      "this_week": 1,
-      "last_week": 0,
+      "this_week": 0,
+      "last_week": 1,
       "this_month": 1,
-      "acceleration": 1.0,
-      "status": "accelerating"
+      "acceleration": -1.0,
+      "status": "decelerating"
     },
     "latham": {
       "firm_name": "Latham & Watkins LLP",
@@ -244,15 +244,15 @@
   },
   "partner_signal_ratio": 0,
   "geo_boosts": {
-    "Dubai": 2.3179,
+    "Dubai": 2.3543,
     "United Arab Emirates": 0.9998,
     "Abu Dhabi": 0.9998,
-    "Riyadh": 1.1998,
+    "Riyadh": 1.0098,
     "UAE": 1.0991,
-    "Middle East": 0.257,
+    "Middle East": 0.2556,
     "Dubai, United Arab Emirates": 0.9994,
-    "Dubai, Dubai, United Arab Emirates": 0.9982,
-    "Saudi Arabia": 0.2714,
+    "Dubai, Dubai, United Arab Emirates": 0.9986,
+    "Saudi Arabia": 0.2671,
     "Oman": 0.2739
   },
   "cross_firm_boosts": {
