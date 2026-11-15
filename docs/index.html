@@ -54,7 +54,7 @@ a{color:var(--gold);text-decoration:none}a:hover{text-decoration:underline}
 <body>
 <div class="header">
   <div class="header-left"><h1>⚖️ ME Legal Jobs Tracker</h1><p>US BigLaw associate openings &amp; ME expansion intelligence</p></div>
-  <div class="header-right">Updated 14 Nov 2026 13:10 UTC<br><a href="https://middle-east-jobs-tracker.vercel.app/" target="_blank">🖥 Live Dashboard</a></div>
+  <div class="header-right">Updated 15 Nov 2026 13:39 UTC<br><a href="https://middle-east-jobs-tracker.vercel.app/" target="_blank">🖥 Live Dashboard</a></div>
 </div>
 <div class="stats-bar">
   <div class="stat-box"><div class="val">1</div><div class="lbl">Active Firms</div></div>
@@ -62,7 +62,7 @@ a{color:var(--gold);text-decoration:none}a:hover{text-decoration:underline}
   <div class="stat-box"><div class="val">0</div><div class="lbl">Lateral Hires</div></div>
   <div class="stat-box"><div class="val">0</div><div class="lbl">Regulatory Filings</div></div>
   <div class="stat-box"><div class="val">145</div><div class="lbl">Total Jobs Logged</div></div>
-  <div class="stat-box ai-box"><div class="val">2195</div><div class="lbl">AI Training Cycles</div></div>
+  <div class="stat-box ai-box"><div class="val">2200</div><div class="lbl">AI Training Cycles</div></div>
 </div>
 
 <div class="section">
@@ -100,7 +100,7 @@ a{color:var(--gold);text-decoration:none}a:hover{text-decoration:underline}
 
 <div class="footer">
   <span>ME Legal Jobs Tracker · <a href="https://middle-east-jobs-tracker.vercel.app/">Vercel Dashboard</a></span>
-  <span>AI self-training: 2195 cycles · Last: 2026-11-14</span>
+  <span>AI self-training: 2200 cycles · Last: 2026-11-15</span>
 </div>
 
 <script>
@@ -184,11 +184,11 @@ const geoCtx = document.getElementById('geoChart').getContext('2d');
 new Chart(geoCtx, {
   type: 'bar',
   data: {
-    labels: ["Dubai", "Dubai, Dubai, United Arab Emirates", "Riyadh", "Saudi Arabia", "Middle East"],
+    labels: ["Dubai", "Dubai, Dubai, United Arab Emirates", "Middle East", "Riyadh", "Saudi Arabia"],
     datasets: [{
       label: 'Signals this week',
       data: [6, 0, 0, 0, 0],
-      backgroundColor: ["#D4A83C", "#5BA8D4", "#D45B5B", "#D45B5B", "#D45B5B"],
+      backgroundColor: ["#D4A83C", "#5BA8D4", "#5BA8D4", "#D45B5B", "#D45B5B"],
       borderRadius: 5,
       borderWidth: 0,
     }]
