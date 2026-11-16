@@ -1,25 +1,25 @@
 {
   "source_multipliers": {
-    "Firm Careers Page": 0.3093,
+    "Firm Careers Page": 0.3037,
     "Website Monitor": 0.6331,
     "Recruiter": 2.4998,
-    "Google News": 0.3664,
+    "Google News": 0.3606,
     "LinkedIn": 0.2502,
     "RSS:Legal Business": 0.2502
   },
   "dept_trend_boosts": {
-    "Banking & Finance": 1.273,
+    "Banking & Finance": 1.1917,
     "Capital Markets": 0.6006,
-    "Corporate / M&A": 0.731,
+    "Corporate / M&A": 0.7048,
     "Data Privacy & Technology": 0.6002,
     "Real Estate": 0.6002,
-    "Project Finance & Infrastructure": 0.9993,
+    "Project Finance & Infrastructure": 0.9994,
     "Energy & Natural Resources": 0.6002,
     "Arbitration & Disputes": 0.6002,
     "Regulatory & Compliance": 0.6002,
     "Restructuring & Insolvency": 0.6002,
     "Employment & Labour": 0.6002,
-    "Construction & Engineering": 1.0
+    "Construction & Engineering": 0.92
   },
   "keyword_boosts": {
     "development": 0.7823,
@@ -33,12 +33,12 @@
     "digital assets": 1.7732,
     "digital": 2.4774,
     "property": 0.7823,
-    "corporate": 1.485,
+    "corporate": 1.4807,
     "energy": 0.2502,
     "real estate": 0.2502,
     "banking and finance": 1.4412,
     "banking": 0.6859,
-    "finance": 0.6987,
+    "finance": 0.6966,
     "data privacy": 1.5788,
     "technology": 2.4774,
     "acquisition": 0.2502,
@@ -47,17 +47,17 @@
     "m&a": 0.2502,
     "regulatory": 0.2814,
     "restructuring": 0.2644,
-    "finance associate": 0.7707,
+    "finance associate": 0.7684,
     "offering": 1.1036,
     "AI": 1.5788,
     "corporate governance": 2.4998,
     "governance": 2.4998,
     "construction": 0.2502,
-    "structured finance": 0.6896,
-    "project finance": 0.9657
+    "structured finance": 0.6876,
+    "project finance": 0.9627
   },
-  "total_runs": 2205,
-  "last_trained": "2026-11-16T15:03:36.848158+00:00",
+  "total_runs": 2206,
+  "last_trained": "2026-11-16T23:56:36.297955+00:00",
   "firm_velocity": {
     "baker_mckenzie": {
       "firm_name": "Baker McKenzie",
@@ -197,11 +197,11 @@
     },
     "shearman": {
       "firm_name": "A&O Shearman",
-      "this_week": 6,
-      "last_week": 2,
+      "this_week": 3,
+      "last_week": 5,
       "this_month": 8,
-      "acceleration": 2.0,
-      "status": "accelerating"
+      "acceleration": -0.4,
+      "status": "decelerating"
     },
     "reed_smith": {
       "firm_name": "Reed Smith LLP",
@@ -244,15 +244,15 @@
   },
   "partner_signal_ratio": 0,
   "geo_boosts": {
-    "Dubai": 2.4935,
+    "Dubai": 2.1148,
     "United Arab Emirates": 0.9998,
     "Abu Dhabi": 0.9998,
-    "Riyadh": 0.2834,
+    "Riyadh": 0.2767,
     "UAE": 1.0991,
-    "Middle East": 0.8037,
+    "Middle East": 0.843,
     "Dubai, United Arab Emirates": 0.9994,
     "Dubai, Dubai, United Arab Emirates": 0.9998,
-    "Saudi Arabia": 0.4007,
+    "Saudi Arabia": 0.5206,
     "Oman": 0.2739
   },
   "cross_firm_boosts": {
