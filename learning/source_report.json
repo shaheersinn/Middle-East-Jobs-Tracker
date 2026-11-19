@@ -7,7 +7,7 @@
       "avg_score": 2.51,
       "hire_signals": 0,
       "last_seen": "2026-11-17",
-      "multiplier": 0.2784
+      "multiplier": 0.2769
     },
     {
       "source": "Google News",
@@ -16,7 +16,7 @@
       "avg_score": 3.28,
       "hire_signals": 3,
       "last_seen": "2026-11-06",
-      "multiplier": 0.3423
+      "multiplier": 0.3413
     },
     {
       "source": "Recruiter",
@@ -47,5 +47,5 @@
     }
   ],
   "total_active": 5,
-  "generated_at": "2026-11-18T18:35:07.203876+00:00"
+  "generated_at": "2026-11-19T01:37:11.339718+00:00"
 }
