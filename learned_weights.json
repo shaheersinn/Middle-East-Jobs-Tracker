@@ -1,25 +1,25 @@
 {
   "source_multipliers": {
-    "Firm Careers Page": 0.2728,
+    "Firm Careers Page": 0.2772,
     "Website Monitor": 0.6331,
     "Recruiter": 2.4998,
-    "Google News": 0.3387,
+    "Google News": 0.321,
     "LinkedIn": 0.2502,
     "RSS:Legal Business": 0.2502
   },
   "dept_trend_boosts": {
-    "Banking & Finance": 0.6362,
+    "Banking & Finance": 0.629,
     "Capital Markets": 0.6006,
-    "Corporate / M&A": 0.7299,
+    "Corporate / M&A": 0.7839,
     "Data Privacy & Technology": 0.6002,
     "Real Estate": 0.6002,
-    "Project Finance & Infrastructure": 0.6274,
+    "Project Finance & Infrastructure": 0.6219,
     "Energy & Natural Resources": 0.6002,
-    "Arbitration & Disputes": 0.6002,
+    "Arbitration & Disputes": 0.6802,
     "Regulatory & Compliance": 0.6002,
     "Restructuring & Insolvency": 0.6002,
     "Employment & Labour": 0.6002,
-    "Construction & Engineering": 0.6175
+    "Construction & Engineering": 0.614
   },
   "keyword_boosts": {
     "development": 0.7823,
@@ -33,12 +33,12 @@
     "digital assets": 1.7732,
     "digital": 2.4774,
     "property": 0.7823,
-    "corporate": 1.4941,
+    "corporate": 1.5007,
     "energy": 0.2502,
     "real estate": 0.2502,
     "banking and finance": 1.4412,
     "banking": 0.6859,
-    "finance": 0.7028,
+    "finance": 0.7059,
     "data privacy": 1.5788,
     "technology": 2.4774,
     "acquisition": 0.2502,
@@ -47,17 +47,17 @@
     "m&a": 0.2502,
     "regulatory": 0.2814,
     "restructuring": 0.2644,
-    "finance associate": 0.7753,
+    "finance associate": 0.7787,
     "offering": 1.1036,
     "AI": 1.5788,
     "corporate governance": 2.4998,
     "governance": 2.4998,
     "construction": 0.2502,
-    "structured finance": 0.6936,
-    "project finance": 0.9708
+    "structured finance": 0.6966,
+    "project finance": 0.9751
   },
-  "total_runs": 2219,
-  "last_trained": "2026-11-20T09:33:15.647252+00:00",
+  "total_runs": 2220,
+  "last_trained": "2026-11-20T15:07:30.858520+00:00",
   "firm_velocity": {
     "baker_mckenzie": {
       "firm_name": "Baker McKenzie",
@@ -197,10 +197,10 @@
     },
     "shearman": {
       "firm_name": "A&O Shearman",
-      "this_week": 1,
-      "last_week": 8,
-      "this_month": 9,
-      "acceleration": -0.875,
+      "this_week": 2,
+      "last_week": 6,
+      "this_month": 8,
+      "acceleration": -0.667,
       "status": "decelerating"
     },
     "reed_smith": {
@@ -237,22 +237,22 @@
     }
   },
   "seniority_distribution": {
-    "Associate": 0.545,
-    "Attorney / Lawyer": 0.136,
-    "Junior Associate": 0.091,
-    "Senior Associate": 0.227
+    "Associate": 0.619,
+    "Attorney / Lawyer": 0.143,
+    "Junior Associate": 0.048,
+    "Senior Associate": 0.19
   },
   "partner_signal_ratio": 0,
   "geo_boosts": {
-    "Dubai": 0.3574,
+    "Dubai": 0.3526,
     "United Arab Emirates": 0.9998,
     "Abu Dhabi": 0.9998,
-    "Riyadh": 0.2514,
+    "Riyadh": 0.4011,
     "UAE": 1.0991,
-    "Middle East": 0.9914,
+    "Middle East": 0.9931,
     "Dubai, United Arab Emirates": 0.9994,
     "Dubai, Dubai, United Arab Emirates": 0.9998,
-    "Saudi Arabia": 0.9737,
+    "Saudi Arabia": 0.979,
     "Oman": 0.2739
   },
   "cross_firm_boosts": {
@@ -262,12 +262,12 @@
     "Banking & Finance": 1.0798
   },
   "time_patterns": {
-    "1": 0.6341,
-    "2": 1.3532,
-    "3": 0.635,
-    "4": 2.2338,
-    "5": 0.6289,
-    "6": 0.515
+    "1": 0.6401,
+    "2": 1.366,
+    "3": 0.641,
+    "4": 2.2549,
+    "5": 0.5781,
+    "6": 0.5199
   },
   "dedup_confidence": {}
 }

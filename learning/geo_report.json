@@ -1,19 +1,11 @@
 {
   "cities": [
     {
-      "city": "Dubai, Dubai, United Arab Emirates",
-      "this_week": 0,
-      "last_week": 0,
-      "total_30d": 2,
-      "boost": 0.9998,
-      "trend": "\u2192 stable"
-    },
-    {
       "city": "Middle East",
       "this_week": 0,
       "last_week": 0,
       "total_30d": 2,
-      "boost": 0.9914,
+      "boost": 0.9931,
       "trend": "\u2192 stable"
     },
     {
@@ -21,25 +13,25 @@
       "this_week": 0,
       "last_week": 0,
       "total_30d": 2,
-      "boost": 0.9737,
+      "boost": 0.979,
       "trend": "\u2192 stable"
-    },
-    {
-      "city": "Dubai",
-      "this_week": 1,
-      "last_week": 8,
-      "total_30d": 16,
-      "boost": 0.3574,
-      "trend": "\u2193 cooling"
     },
     {
       "city": "Riyadh",
       "this_week": 0,
-      "last_week": 2,
+      "last_week": 0,
       "total_30d": 2,
-      "boost": 0.2514,
+      "boost": 0.4011,
+      "trend": "\u2192 stable"
+    },
+    {
+      "city": "Dubai",
+      "this_week": 2,
+      "last_week": 6,
+      "total_30d": 16,
+      "boost": 0.3526,
       "trend": "\u2193 cooling"
     }
   ],
-  "generated_at": "2026-11-20T09:33:15.646305+00:00"
+  "generated_at": "2026-11-20T15:07:30.857802+00:00"
 }
