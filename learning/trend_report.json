@@ -7,7 +7,7 @@
       "high_conf": 3,
       "this_week": 1,
       "last_week": 1,
-      "trend_boost": 0.9292
+      "trend_boost": 0.9434
     },
     {
       "department": "Banking & Finance",
@@ -16,7 +16,7 @@
       "high_conf": 0,
       "this_week": 0,
       "last_week": 3,
-      "trend_boost": 0.6095
+      "trend_boost": 0.6076
     },
     {
       "department": "Project Finance & Infrastructure",
@@ -25,7 +25,7 @@
       "high_conf": 0,
       "this_week": 0,
       "last_week": 1,
-      "trend_boost": 0.6072
+      "trend_boost": 0.6058
     }
   ],
   "all_depts": [
@@ -36,7 +36,7 @@
       "high_conf": 3,
       "this_week": 1,
       "last_week": 1,
-      "trend_boost": 0.9292
+      "trend_boost": 0.9434
     },
     {
       "department": "Banking & Finance",
@@ -45,7 +45,7 @@
       "high_conf": 0,
       "this_week": 0,
       "last_week": 3,
-      "trend_boost": 0.6095
+      "trend_boost": 0.6076
     },
     {
       "department": "Project Finance & Infrastructure",
@@ -54,8 +54,8 @@
       "high_conf": 0,
       "this_week": 0,
       "last_week": 1,
-      "trend_boost": 0.6072
+      "trend_boost": 0.6058
     }
   ],
-  "generated_at": "2026-11-21T17:02:56.521728+00:00"
+  "generated_at": "2026-11-21T22:41:30.534264+00:00"
 }
