@@ -1,25 +1,25 @@
 {
   "source_multipliers": {
-    "Firm Careers Page": 0.29,
+    "Firm Careers Page": 0.2909,
     "Website Monitor": 0.6331,
     "Recruiter": 2.4998,
-    "Google News": 0.2686,
+    "Google News": 0.2649,
     "LinkedIn": 0.2502,
     "RSS:Legal Business": 0.2502
   },
   "dept_trend_boosts": {
-    "Banking & Finance": 0.6076,
+    "Banking & Finance": 0.6061,
     "Capital Markets": 0.6006,
-    "Corporate / M&A": 0.9434,
+    "Corporate / M&A": 0.9547,
     "Data Privacy & Technology": 0.6002,
     "Real Estate": 0.6002,
-    "Project Finance & Infrastructure": 0.6058,
+    "Project Finance & Infrastructure": 0.6046,
     "Energy & Natural Resources": 0.6002,
-    "Arbitration & Disputes": 0.9162,
+    "Arbitration & Disputes": 0.933,
     "Regulatory & Compliance": 0.6002,
     "Restructuring & Insolvency": 0.6002,
     "Employment & Labour": 0.6002,
-    "Construction & Engineering": 0.6037
+    "Construction & Engineering": 0.603
   },
   "keyword_boosts": {
     "development": 0.7823,
@@ -33,12 +33,12 @@
     "digital assets": 1.7732,
     "digital": 2.4774,
     "property": 0.7823,
-    "corporate": 1.52,
+    "corporate": 1.5214,
     "energy": 0.2502,
     "real estate": 0.2502,
     "banking and finance": 1.4412,
     "banking": 0.6859,
-    "finance": 0.7151,
+    "finance": 0.7157,
     "data privacy": 1.5788,
     "technology": 2.4774,
     "acquisition": 0.2502,
@@ -47,17 +47,17 @@
     "m&a": 0.2502,
     "regulatory": 0.2814,
     "restructuring": 0.2644,
-    "finance associate": 0.7887,
+    "finance associate": 0.7894,
     "offering": 1.1036,
     "AI": 1.5788,
     "corporate governance": 2.4998,
     "governance": 2.4998,
     "construction": 0.2502,
-    "structured finance": 0.7056,
-    "project finance": 0.9876
+    "structured finance": 0.7062,
+    "project finance": 0.9885
   },
-  "total_runs": 2226,
-  "last_trained": "2026-11-21T22:41:30.535306+00:00",
+  "total_runs": 2227,
+  "last_trained": "2026-11-22T04:42:57.890356+00:00",
   "firm_velocity": {
     "baker_mckenzie": {
       "firm_name": "Baker McKenzie",
@@ -244,15 +244,15 @@
   },
   "partner_signal_ratio": 0,
   "geo_boosts": {
-    "Dubai": 0.3383,
+    "Dubai": 0.3373,
     "United Arab Emirates": 0.9998,
     "Abu Dhabi": 0.9998,
-    "Riyadh": 0.843,
+    "Riyadh": 0.8744,
     "UAE": 1.0991,
-    "Middle East": 0.9982,
+    "Middle East": 0.9986,
     "Dubai, United Arab Emirates": 0.9994,
     "Dubai, Dubai, United Arab Emirates": 0.9998,
-    "Saudi Arabia": 0.9945,
+    "Saudi Arabia": 0.9956,
     "Oman": 0.2739
   },
   "cross_firm_boosts": {
