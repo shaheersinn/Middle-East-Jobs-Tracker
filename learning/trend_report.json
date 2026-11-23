@@ -2,12 +2,12 @@
   "top4": [
     {
       "department": "Corporate / M&A",
-      "signal_count": 13,
-      "firm_count": 6,
+      "signal_count": 10,
+      "firm_count": 5,
       "high_conf": 2,
       "this_week": 1,
       "last_week": 1,
-      "trend_boost": 0.9814
+      "trend_boost": 0.9851
     },
     {
       "department": "Banking & Finance",
@@ -16,7 +16,7 @@
       "high_conf": 0,
       "this_week": 0,
       "last_week": 3,
-      "trend_boost": 0.6025
+      "trend_boost": 0.602
     },
     {
       "department": "Project Finance & Infrastructure",
@@ -25,18 +25,18 @@
       "high_conf": 0,
       "this_week": 0,
       "last_week": 1,
-      "trend_boost": 0.6019
+      "trend_boost": 0.6015
     }
   ],
   "all_depts": [
     {
       "department": "Corporate / M&A",
-      "signal_count": 13,
-      "firm_count": 6,
+      "signal_count": 10,
+      "firm_count": 5,
       "high_conf": 2,
       "this_week": 1,
       "last_week": 1,
-      "trend_boost": 0.9814
+      "trend_boost": 0.9851
     },
     {
       "department": "Banking & Finance",
@@ -45,7 +45,7 @@
       "high_conf": 0,
       "this_week": 0,
       "last_week": 3,
-      "trend_boost": 0.6025
+      "trend_boost": 0.602
     },
     {
       "department": "Project Finance & Infrastructure",
@@ -54,8 +54,8 @@
       "high_conf": 0,
       "this_week": 0,
       "last_week": 1,
-      "trend_boost": 0.6019
+      "trend_boost": 0.6015
     }
   ],
-  "generated_at": "2026-11-23T02:07:37.274626+00:00"
+  "generated_at": "2026-11-23T13:57:03.235226+00:00"
 }
