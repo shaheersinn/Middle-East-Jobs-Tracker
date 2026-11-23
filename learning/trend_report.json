@@ -2,12 +2,12 @@
   "top4": [
     {
       "department": "Corporate / M&A",
-      "signal_count": 10,
+      "signal_count": 12,
       "firm_count": 5,
       "high_conf": 2,
-      "this_week": 1,
-      "last_week": 1,
-      "trend_boost": 0.9851
+      "this_week": 3,
+      "last_week": 0,
+      "trend_boost": 0.9881
     },
     {
       "department": "Banking & Finance",
@@ -15,8 +15,17 @@
       "firm_count": 1,
       "high_conf": 0,
       "this_week": 0,
-      "last_week": 3,
-      "trend_boost": 0.602
+      "last_week": 2,
+      "trend_boost": 0.6016
+    },
+    {
+      "department": "Regulatory & Compliance",
+      "signal_count": 2,
+      "firm_count": 1,
+      "high_conf": 0,
+      "this_week": 2,
+      "last_week": 0,
+      "trend_boost": 0.6802
     },
     {
       "department": "Project Finance & Infrastructure",
@@ -25,18 +34,18 @@
       "high_conf": 0,
       "this_week": 0,
       "last_week": 1,
-      "trend_boost": 0.6015
+      "trend_boost": 0.6012
     }
   ],
   "all_depts": [
     {
       "department": "Corporate / M&A",
-      "signal_count": 10,
+      "signal_count": 12,
       "firm_count": 5,
       "high_conf": 2,
-      "this_week": 1,
-      "last_week": 1,
-      "trend_boost": 0.9851
+      "this_week": 3,
+      "last_week": 0,
+      "trend_boost": 0.9881
     },
     {
       "department": "Banking & Finance",
@@ -44,8 +53,17 @@
       "firm_count": 1,
       "high_conf": 0,
       "this_week": 0,
-      "last_week": 3,
-      "trend_boost": 0.602
+      "last_week": 2,
+      "trend_boost": 0.6016
+    },
+    {
+      "department": "Regulatory & Compliance",
+      "signal_count": 2,
+      "firm_count": 1,
+      "high_conf": 0,
+      "this_week": 2,
+      "last_week": 0,
+      "trend_boost": 0.6802
     },
     {
       "department": "Project Finance & Infrastructure",
@@ -54,8 +72,8 @@
       "high_conf": 0,
       "this_week": 0,
       "last_week": 1,
-      "trend_boost": 0.6015
+      "trend_boost": 0.6012
     }
   ],
-  "generated_at": "2026-11-23T13:57:03.235226+00:00"
+  "generated_at": "2026-11-23T17:37:41.320658+00:00"
 }
