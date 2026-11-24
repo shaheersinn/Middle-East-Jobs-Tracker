@@ -7,7 +7,7 @@
       "high_conf": 2,
       "this_week": 2,
       "last_week": 1,
-      "trend_boost": 1.1139
+      "trend_boost": 1.2111
     },
     {
       "department": "Banking & Finance",
@@ -25,7 +25,7 @@
       "high_conf": 0,
       "this_week": 2,
       "last_week": 0,
-      "trend_boost": 0.8363
+      "trend_boost": 0.869
     },
     {
       "department": "Project Finance & Infrastructure",
@@ -45,7 +45,7 @@
       "high_conf": 2,
       "this_week": 2,
       "last_week": 1,
-      "trend_boost": 1.1139
+      "trend_boost": 1.2111
     },
     {
       "department": "Banking & Finance",
@@ -63,7 +63,7 @@
       "high_conf": 0,
       "this_week": 2,
       "last_week": 0,
-      "trend_boost": 0.8363
+      "trend_boost": 0.869
     },
     {
       "department": "Project Finance & Infrastructure",
@@ -75,5 +75,5 @@
       "trend_boost": 0.6008
     }
   ],
-  "generated_at": "2026-11-24T17:12:05.408171+00:00"
+  "generated_at": "2026-11-24T21:51:45.264517+00:00"
 }
