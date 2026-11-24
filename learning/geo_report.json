@@ -5,7 +5,7 @@
       "this_week": 0,
       "last_week": 0,
       "total_30d": 2,
-      "boost": 0.9997,
+      "boost": 0.9998,
       "trend": "\u2192 stable"
     },
     {
@@ -13,15 +13,7 @@
       "this_week": 0,
       "last_week": 0,
       "total_30d": 2,
-      "boost": 0.9991,
-      "trend": "\u2192 stable"
-    },
-    {
-      "city": "Riyadh",
-      "this_week": 0,
-      "last_week": 0,
-      "total_30d": 2,
-      "boost": 0.9737,
+      "boost": 0.9993,
       "trend": "\u2192 stable"
     },
     {
@@ -29,9 +21,17 @@
       "this_week": 5,
       "last_week": 3,
       "total_30d": 16,
-      "boost": 0.8142,
+      "boost": 0.9847,
       "trend": "\u2191 heating"
+    },
+    {
+      "city": "Riyadh",
+      "this_week": 0,
+      "last_week": 0,
+      "total_30d": 2,
+      "boost": 0.979,
+      "trend": "\u2192 stable"
     }
   ],
-  "generated_at": "2026-11-24T01:28:54.437178+00:00"
+  "generated_at": "2026-11-24T11:55:26.091849+00:00"
 }

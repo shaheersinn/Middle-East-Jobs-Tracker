@@ -7,7 +7,7 @@
       "high_conf": 2,
       "this_week": 3,
       "last_week": 0,
-      "trend_boost": 0.9905
+      "trend_boost": 0.9924
     },
     {
       "department": "Banking & Finance",
@@ -16,7 +16,7 @@
       "high_conf": 0,
       "this_week": 0,
       "last_week": 2,
-      "trend_boost": 0.6013
+      "trend_boost": 0.601
     },
     {
       "department": "Regulatory & Compliance",
@@ -25,7 +25,7 @@
       "high_conf": 0,
       "this_week": 2,
       "last_week": 0,
-      "trend_boost": 0.7442
+      "trend_boost": 0.7954
     },
     {
       "department": "Project Finance & Infrastructure",
@@ -34,7 +34,7 @@
       "high_conf": 0,
       "this_week": 0,
       "last_week": 1,
-      "trend_boost": 0.601
+      "trend_boost": 0.6008
     }
   ],
   "all_depts": [
@@ -45,7 +45,7 @@
       "high_conf": 2,
       "this_week": 3,
       "last_week": 0,
-      "trend_boost": 0.9905
+      "trend_boost": 0.9924
     },
     {
       "department": "Banking & Finance",
@@ -54,7 +54,7 @@
       "high_conf": 0,
       "this_week": 0,
       "last_week": 2,
-      "trend_boost": 0.6013
+      "trend_boost": 0.601
     },
     {
       "department": "Regulatory & Compliance",
@@ -63,7 +63,7 @@
       "high_conf": 0,
       "this_week": 2,
       "last_week": 0,
-      "trend_boost": 0.7442
+      "trend_boost": 0.7954
     },
     {
       "department": "Project Finance & Infrastructure",
@@ -72,8 +72,8 @@
       "high_conf": 0,
       "this_week": 0,
       "last_week": 1,
-      "trend_boost": 0.601
+      "trend_boost": 0.6008
     }
   ],
-  "generated_at": "2026-11-24T01:28:54.436393+00:00"
+  "generated_at": "2026-11-24T11:55:26.091128+00:00"
 }
